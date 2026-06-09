@@ -1,0 +1,6788 @@
+[
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "preposition",
+    "article": null,
+    "germanWord": "ab",
+    "extraForms": null,
+    "englishMeaning": "from",
+    "exampleSentence": "Ab morgen arbeite ich wieder."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "conjunction",
+    "article": null,
+    "germanWord": "aber",
+    "extraForms": null,
+    "englishMeaning": "but",
+    "exampleSentence": "Ich bin müde, aber glücklich."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "abfahren",
+    "extraForms": "fährt ab, ist abgefahren",
+    "englishMeaning": "to depart",
+    "exampleSentence": "Der Zug fährt um acht Uhr ab."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Adresse",
+    "extraForms": "-n",
+    "englishMeaning": "address",
+    "exampleSentence": "Wie ist deine Adresse?"
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "alt",
+    "extraForms": null,
+    "englishMeaning": "old",
+    "exampleSentence": "Mein Großvater ist sehr alt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adverb",
+    "article": null,
+    "germanWord": "also",
+    "extraForms": null,
+    "englishMeaning": "so / therefore",
+    "exampleSentence": "Ich lerne Deutsch, also übe ich jeden Tag."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "preposition",
+    "article": null,
+    "germanWord": "an",
+    "extraForms": null,
+    "englishMeaning": "at / on",
+    "exampleSentence": "Das Bild hängt an der Wand."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "ankommen",
+    "extraForms": "kommt an, ist angekommen",
+    "englishMeaning": "to arrive",
+    "exampleSentence": "Der Bus kommt pünktlich an."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adverb",
+    "article": null,
+    "germanWord": "auch",
+    "extraForms": null,
+    "englishMeaning": "also / too",
+    "exampleSentence": "Ich komme auch mit."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Auto",
+    "extraForms": "-s",
+    "englishMeaning": "car",
+    "exampleSentence": "Mein Auto ist neu."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Anfang",
+    "extraForms": "Anfänge",
+    "englishMeaning": "beginning",
+    "exampleSentence": "Das ist erst der Anfang."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Antwort",
+    "extraForms": "-en",
+    "englishMeaning": "answer",
+    "exampleSentence": "Ich kenne die Antwort."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "anziehen",
+    "extraForms": "zieht an, hat angezogen",
+    "englishMeaning": "to wear / put on",
+    "exampleSentence": "Sie zieht eine Jacke an."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "aufgeregt",
+    "extraForms": null,
+    "englishMeaning": "excited / nervous",
+    "exampleSentence": "Vor der Prüfung bin ich aufgeregt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "aufhören",
+    "extraForms": "hört auf, hat aufgehört",
+    "englishMeaning": "to stop",
+    "exampleSentence": "Bitte hör auf!"
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "aufmachen",
+    "extraForms": "macht auf, hat aufgemacht",
+    "englishMeaning": "to open",
+    "exampleSentence": "Mach bitte das Fenster auf."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adverb",
+    "article": null,
+    "germanWord": "außerdem",
+    "extraForms": null,
+    "englishMeaning": "besides / moreover",
+    "exampleSentence": "Außerdem lerne ich Englisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "preposition",
+    "article": null,
+    "germanWord": "außer",
+    "extraForms": null,
+    "englishMeaning": "except",
+    "exampleSentence": "Alle kommen außer Tom."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Abend",
+    "extraForms": "-e",
+    "englishMeaning": "evening",
+    "exampleSentence": "Am Abend sehe ich fern."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adverb",
+    "article": null,
+    "germanWord": "abends",
+    "extraForms": null,
+    "englishMeaning": "in the evening",
+    "exampleSentence": "Abends lese ich ein Buch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Abfahrt",
+    "extraForms": "-en",
+    "englishMeaning": "departure",
+    "exampleSentence": "Die Abfahrt ist um acht Uhr."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "abhängig",
+    "extraForms": null,
+    "englishMeaning": "dependent",
+    "exampleSentence": "Kinder sind von ihren Eltern abhängig."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Achtung",
+    "extraForms": null,
+    "englishMeaning": "attention",
+    "exampleSentence": "Achtung! Das Auto kommt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "aktiv",
+    "extraForms": null,
+    "englishMeaning": "active",
+    "exampleSentence": "Mein Großvater ist sehr aktiv."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "pronoun",
+    "article": null,
+    "germanWord": "alle",
+    "extraForms": null,
+    "englishMeaning": "all",
+    "exampleSentence": "Alle Freunde kommen heute."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "allein",
+    "extraForms": null,
+    "englishMeaning": "alone",
+    "exampleSentence": "Ich wohne allein."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "anders",
+    "extraForms": null,
+    "englishMeaning": "different",
+    "exampleSentence": "Heute ist alles anders."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "anfangen",
+    "extraForms": "fängt an, hat angefangen",
+    "englishMeaning": "to begin",
+    "exampleSentence": "Der Film fängt um neun Uhr an."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "angenehm",
+    "extraForms": null,
+    "englishMeaning": "pleasant",
+    "exampleSentence": "Das Wetter ist angenehm."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": null,
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "anrufen",
+    "extraForms": "ruft an, hat angerufen",
+    "englishMeaning": "to call",
+    "exampleSentence": "Ich rufe meine Mutter an."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "J",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Januar",
+    "extraForms": null,
+    "englishMeaning": "January",
+    "exampleSentence": "Mein Geburtstag ist im Januar."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Februar",
+    "extraForms": null,
+    "englishMeaning": "February",
+    "exampleSentence": "Im Februar ist es kalt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "März",
+    "extraForms": null,
+    "englishMeaning": "March",
+    "exampleSentence": "Im März beginnt der Frühling."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "April",
+    "extraForms": null,
+    "englishMeaning": "April",
+    "exampleSentence": "Im April regnet es oft."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Mai",
+    "extraForms": null,
+    "englishMeaning": "May",
+    "exampleSentence": "Im Mai ist das Wetter schön."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "J",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Juni",
+    "extraForms": null,
+    "englishMeaning": "June",
+    "exampleSentence": "Im Juni fahren wir in Urlaub."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "J",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Juli",
+    "extraForms": null,
+    "englishMeaning": "July",
+    "exampleSentence": "Im Juli ist es sehr warm."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "August",
+    "extraForms": null,
+    "englishMeaning": "August",
+    "exampleSentence": "Im August haben wir Ferien."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "September",
+    "extraForms": null,
+    "englishMeaning": "September",
+    "exampleSentence": "Die Schule beginnt im September."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "O",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Oktober",
+    "extraForms": null,
+    "englishMeaning": "October",
+    "exampleSentence": "Im Oktober fallen die Blätter."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "N",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "November",
+    "extraForms": null,
+    "englishMeaning": "November",
+    "exampleSentence": "Im November regnet es viel."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "D",
+    "topic": "Monatsnamen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Dezember",
+    "extraForms": null,
+    "englishMeaning": "December",
+    "exampleSentence": "Weihnachten ist im Dezember."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Montag",
+    "extraForms": "-e",
+    "englishMeaning": "Monday",
+    "exampleSentence": "Am Montag habe ich Deutschkurs."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "D",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Dienstag",
+    "extraForms": "-e",
+    "englishMeaning": "Tuesday",
+    "exampleSentence": "Am Dienstag arbeite ich lange."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Mittwoch",
+    "extraForms": "-e",
+    "englishMeaning": "Wednesday",
+    "exampleSentence": "Mittwoch ist mein Lieblingstag."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "D",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Donnerstag",
+    "extraForms": "-e",
+    "englishMeaning": "Thursday",
+    "exampleSentence": "Am Donnerstag spiele ich Fußball."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Freitag",
+    "extraForms": "-e",
+    "englishMeaning": "Friday",
+    "exampleSentence": "Freitag gehe ich ins Kino."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Samstag",
+    "extraForms": "-e",
+    "englishMeaning": "Saturday",
+    "exampleSentence": "Am Samstag kaufe ich ein."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Wochentage",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Sonntag",
+    "extraForms": "-e",
+    "englishMeaning": "Sunday",
+    "exampleSentence": "Sonntag schlafe ich lange."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Jahreszeiten",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Frühling",
+    "extraForms": "-e",
+    "englishMeaning": "spring",
+    "exampleSentence": "Im Frühling blühen die Blumen."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Jahreszeiten",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Sommer",
+    "extraForms": "-",
+    "englishMeaning": "summer",
+    "exampleSentence": "Im Sommer ist es warm."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "H",
+    "topic": "Jahreszeiten",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Herbst",
+    "extraForms": "-e",
+    "englishMeaning": "autumn",
+    "exampleSentence": "Im Herbst fallen die Blätter."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Jahreszeiten",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Winter",
+    "extraForms": "-",
+    "englishMeaning": "winter",
+    "exampleSentence": "Im Winter schneit es oft."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "N",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "null",
+    "extraForms": null,
+    "englishMeaning": "zero",
+    "exampleSentence": "Das Ergebnis ist null."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "E",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "eins",
+    "extraForms": null,
+    "englishMeaning": "one",
+    "exampleSentence": "Ich habe eins gekauft."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "Z",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "zwei",
+    "extraForms": null,
+    "englishMeaning": "two",
+    "exampleSentence": "Wir haben zwei Katzen."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "D",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "drei",
+    "extraForms": null,
+    "englishMeaning": "three",
+    "exampleSentence": "Drei Studenten lernen Deutsch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "V",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "vier",
+    "extraForms": null,
+    "englishMeaning": "four",
+    "exampleSentence": "Der Tisch hat vier Stühle."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "fünf",
+    "extraForms": null,
+    "englishMeaning": "five",
+    "exampleSentence": "Fünf Leute warten draußen."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "sechs",
+    "extraForms": null,
+    "englishMeaning": "six",
+    "exampleSentence": "Ich habe sechs Bücher."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "sieben",
+    "extraForms": null,
+    "englishMeaning": "seven",
+    "exampleSentence": "Sieben Tage hat die Woche."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "acht",
+    "extraForms": null,
+    "englishMeaning": "eight",
+    "exampleSentence": "Der Kurs beginnt um acht Uhr."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "N",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "neun",
+    "extraForms": null,
+    "englishMeaning": "nine",
+    "exampleSentence": "Neun Schüler sind heute hier."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "Z",
+    "topic": "Zahlen",
+    "wordType": "number",
+    "article": null,
+    "germanWord": "zehn",
+    "extraForms": null,
+    "englishMeaning": "ten",
+    "exampleSentence": "Ich habe zehn Euro."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "R",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "rot",
+    "extraForms": null,
+    "englishMeaning": "red",
+    "exampleSentence": "Das Auto ist rot."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "B",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "blau",
+    "extraForms": null,
+    "englishMeaning": "blue",
+    "exampleSentence": "Der Himmel ist blau."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "G",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "grün",
+    "extraForms": null,
+    "englishMeaning": "green",
+    "exampleSentence": "Die Tasche ist grün."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "G",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "gelb",
+    "extraForms": null,
+    "englishMeaning": "yellow",
+    "exampleSentence": "Die Banane ist gelb."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "schwarz",
+    "extraForms": null,
+    "englishMeaning": "black",
+    "exampleSentence": "Ich habe schwarze Schuhe."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "weiß",
+    "extraForms": null,
+    "englishMeaning": "white",
+    "exampleSentence": "Die Wand ist weiß."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "B",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "braun",
+    "extraForms": null,
+    "englishMeaning": "brown",
+    "exampleSentence": "Der Tisch ist braun."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "G",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "grau",
+    "extraForms": null,
+    "englishMeaning": "gray",
+    "exampleSentence": "Heute ist der Himmel grau."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "O",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "orange",
+    "extraForms": null,
+    "englishMeaning": "orange",
+    "exampleSentence": "Die Orange ist orange."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "L",
+    "topic": "Farben",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "lila",
+    "extraForms": null,
+    "englishMeaning": "purple",
+    "exampleSentence": "Sie trägt ein lila Kleid."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Familie",
+    "extraForms": "-n",
+    "englishMeaning": "family",
+    "exampleSentence": "Meine Familie lebt in Berlin."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Mutter",
+    "extraForms": "Mütter",
+    "englishMeaning": "mother",
+    "exampleSentence": "Meine Mutter arbeitet im Büro."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "V",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Vater",
+    "extraForms": "Väter",
+    "englishMeaning": "father",
+    "exampleSentence": "Mein Vater kocht gern."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "B",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Bruder",
+    "extraForms": "Brüder",
+    "englishMeaning": "brother",
+    "exampleSentence": "Mein Bruder studiert Informatik."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Schwester",
+    "extraForms": "-n",
+    "englishMeaning": "sister",
+    "exampleSentence": "Meine Schwester wohnt in Hamburg."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "O",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Oma",
+    "extraForms": "-s",
+    "englishMeaning": "grandmother",
+    "exampleSentence": "Meine Oma backt Kuchen."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "O",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Opa",
+    "extraForms": "-s",
+    "englishMeaning": "grandfather",
+    "exampleSentence": "Mein Opa liest die Zeitung."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "K",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Kind",
+    "extraForms": "Kinder",
+    "englishMeaning": "child",
+    "exampleSentence": "Das Kind spielt im Garten."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "E",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Eltern",
+    "extraForms": null,
+    "englishMeaning": "parents",
+    "exampleSentence": "Meine Eltern sprechen Deutsch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Sohn",
+    "extraForms": "Söhne",
+    "englishMeaning": "son",
+    "exampleSentence": "Ihr Sohn ist zehn Jahre alt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "T",
+    "topic": "Familie",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Tochter",
+    "extraForms": "Töchter",
+    "englishMeaning": "daughter",
+    "exampleSentence": "Die Tochter lernt Englisch."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Arzt",
+    "extraForms": "Ärzte",
+    "englishMeaning": "doctor",
+    "exampleSentence": "Der Arzt arbeitet im Krankenhaus."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Ärztin",
+    "extraForms": "-nen",
+    "englishMeaning": "female doctor",
+    "exampleSentence": "Die Ärztin ist sehr freundlich."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "L",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Lehrer",
+    "extraForms": "-",
+    "englishMeaning": "teacher",
+    "exampleSentence": "Mein Lehrer kommt aus Wien."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "L",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Lehrerin",
+    "extraForms": "-nen",
+    "englishMeaning": "female teacher",
+    "exampleSentence": "Die Lehrerin erklärt die Grammatik."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Student",
+    "extraForms": "-en",
+    "englishMeaning": "student",
+    "exampleSentence": "Der Student lernt Deutsch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Studentin",
+    "extraForms": "-nen",
+    "englishMeaning": "female student",
+    "exampleSentence": "Die Studentin wohnt in Berlin."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "I",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Ingenieur",
+    "extraForms": "-e",
+    "englishMeaning": "engineer",
+    "exampleSentence": "Mein Bruder ist Ingenieur."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "K",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Koch",
+    "extraForms": "Köche",
+    "englishMeaning": "cook",
+    "exampleSentence": "Der Koch macht Pizza."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "V",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Verkäufer",
+    "extraForms": "-",
+    "englishMeaning": "salesman",
+    "exampleSentence": "Der Verkäufer arbeitet im Supermarkt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "V",
+    "topic": "Berufe",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Verkäuferin",
+    "extraForms": "-nen",
+    "englishMeaning": "saleswoman",
+    "exampleSentence": "Die Verkäuferin hilft der Kundin."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "D",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Deutschland",
+    "extraForms": null,
+    "englishMeaning": "Germany",
+    "exampleSentence": "Deutschland liegt in Europa."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "I",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Indien",
+    "extraForms": null,
+    "englishMeaning": "India",
+    "exampleSentence": "Ich komme aus Indien."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Frankreich",
+    "extraForms": null,
+    "englishMeaning": "France",
+    "exampleSentence": "Paris liegt in Frankreich."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "I",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Italien",
+    "extraForms": null,
+    "englishMeaning": "Italy",
+    "exampleSentence": "Italien ist sehr schön."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Spanien",
+    "extraForms": null,
+    "englishMeaning": "Spain",
+    "exampleSentence": "Meine Freundin wohnt in Spanien."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "C",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "China",
+    "extraForms": null,
+    "englishMeaning": "China",
+    "exampleSentence": "China hat viele Einwohner."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "J",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Japan",
+    "extraForms": null,
+    "englishMeaning": "Japan",
+    "exampleSentence": "Japan ist bekannt für Technologie."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "R",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Russland",
+    "extraForms": null,
+    "englishMeaning": "Russia",
+    "exampleSentence": "Russland ist sehr groß."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "T",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Türkei",
+    "extraForms": null,
+    "englishMeaning": "Turkey",
+    "exampleSentence": "Viele Menschen reisen in die Türkei."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Länder",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Amerika",
+    "extraForms": null,
+    "englishMeaning": "America",
+    "exampleSentence": "Amerika ist weit entfernt."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "D",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Deutsch",
+    "extraForms": null,
+    "englishMeaning": "German",
+    "exampleSentence": "Ich lerne Deutsch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "E",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Englisch",
+    "extraForms": null,
+    "englishMeaning": "English",
+    "exampleSentence": "Sie spricht Englisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Französisch",
+    "extraForms": null,
+    "englishMeaning": "French",
+    "exampleSentence": "Französisch ist nicht einfach."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Spanisch",
+    "extraForms": null,
+    "englishMeaning": "Spanish",
+    "exampleSentence": "Mein Freund spricht Spanisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "I",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Italienisch",
+    "extraForms": null,
+    "englishMeaning": "Italian",
+    "exampleSentence": "Italienisch klingt schön."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "C",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Chinesisch",
+    "extraForms": null,
+    "englishMeaning": "Chinese",
+    "exampleSentence": "Er lernt Chinesisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "R",
+    "topic": "Sprachen",
+    "wordType": "noun",
+    "article": null,
+    "germanWord": "Russisch",
+    "extraForms": null,
+    "englishMeaning": "Russian",
+    "exampleSentence": "Sie versteht Russisch."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "B",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Brot",
+    "extraForms": "-e",
+    "englishMeaning": "bread",
+    "exampleSentence": "Ich esse Brot zum Frühstück."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "K",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Käse",
+    "extraForms": "-",
+    "englishMeaning": "cheese",
+    "exampleSentence": "Der Käse schmeckt gut."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Apfel",
+    "extraForms": "Äpfel",
+    "englishMeaning": "apple",
+    "exampleSentence": "Der Apfel ist frisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "B",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Banane",
+    "extraForms": "-n",
+    "englishMeaning": "banana",
+    "exampleSentence": "Die Banane ist gelb."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Fisch",
+    "extraForms": "-e",
+    "englishMeaning": "fish",
+    "exampleSentence": "Heute essen wir Fisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Fleisch",
+    "extraForms": "-",
+    "englishMeaning": "meat",
+    "exampleSentence": "Ich esse nicht viel Fleisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "R",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Reis",
+    "extraForms": "-",
+    "englishMeaning": "rice",
+    "exampleSentence": "Zum Mittagessen gibt es Reis."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Suppe",
+    "extraForms": "-n",
+    "englishMeaning": "soup",
+    "exampleSentence": "Die Suppe ist heiß."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Essen",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Salat",
+    "extraForms": "-e",
+    "englishMeaning": "salad",
+    "exampleSentence": "Ich esse gern Salat."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "E",
+    "topic": "Essen",
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "essen",
+    "extraForms": "isst, hat gegessen",
+    "englishMeaning": "to eat",
+    "exampleSentence": "Wir essen zusammen."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Wasser",
+    "extraForms": "-",
+    "englishMeaning": "water",
+    "exampleSentence": "Ich trinke viel Wasser."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "K",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Kaffee",
+    "extraForms": "-s",
+    "englishMeaning": "coffee",
+    "exampleSentence": "Morgens trinke ich Kaffee."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "T",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Tee",
+    "extraForms": "-s",
+    "englishMeaning": "tea",
+    "exampleSentence": "Der Tee ist heiß."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Milch",
+    "extraForms": "-",
+    "englishMeaning": "milk",
+    "exampleSentence": "Die Milch ist frisch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Saft",
+    "extraForms": "Säfte",
+    "englishMeaning": "juice",
+    "exampleSentence": "Ich trinke Orangensaft."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "B",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Bier",
+    "extraForms": "-e",
+    "englishMeaning": "beer",
+    "exampleSentence": "Er bestellt ein Bier."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Wein",
+    "extraForms": "-e",
+    "englishMeaning": "wine",
+    "exampleSentence": "Der Wein kommt aus Italien."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "C",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Cola",
+    "extraForms": "-s",
+    "englishMeaning": "cola",
+    "exampleSentence": "Die Cola ist kalt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "L",
+    "topic": "Getränke",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Limonade",
+    "extraForms": "-n",
+    "englishMeaning": "lemonade",
+    "exampleSentence": "Im Sommer trinke ich gern Limonade."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "T",
+    "topic": "Getränke",
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "trinken",
+    "extraForms": "trinkt, hat getrunken",
+    "englishMeaning": "to drink",
+    "exampleSentence": "Wir trinken zusammen Kaffee."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "H",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Hemd",
+    "extraForms": "-en",
+    "englishMeaning": "shirt",
+    "exampleSentence": "Das Hemd ist blau."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "H",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Hose",
+    "extraForms": "-n",
+    "englishMeaning": "pants",
+    "exampleSentence": "Die Hose ist schwarz."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "J",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Jacke",
+    "extraForms": "-n",
+    "englishMeaning": "jacket",
+    "exampleSentence": "Ich brauche eine warme Jacke."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "K",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Kleid",
+    "extraForms": "-er",
+    "englishMeaning": "dress",
+    "exampleSentence": "Das Kleid ist sehr schön."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Schuh",
+    "extraForms": "-e",
+    "englishMeaning": "shoe",
+    "exampleSentence": "Meine Schuhe sind neu."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "T",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "T-Shirt",
+    "extraForms": "-s",
+    "englishMeaning": "T-shirt",
+    "exampleSentence": "Er trägt ein weißes T-Shirt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Mütze",
+    "extraForms": "-n",
+    "englishMeaning": "cap",
+    "exampleSentence": "Im Winter trage ich eine Mütze."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Schal",
+    "extraForms": "-s",
+    "englishMeaning": "scarf",
+    "exampleSentence": "Der Schal ist warm."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Kleidung",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Socke",
+    "extraForms": "-n",
+    "englishMeaning": "sock",
+    "exampleSentence": "Wo sind meine Socken?"
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Kleidung",
+    "wordType": "verb",
+    "article": null,
+    "germanWord": "anziehen",
+    "extraForms": "zieht an, hat angezogen",
+    "englishMeaning": "to put on / wear",
+    "exampleSentence": "Sie zieht ihren Mantel an."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "R",
+    "topic": "Wetter",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Regen",
+    "extraForms": "-",
+    "englishMeaning": "rain",
+    "exampleSentence": "Heute gibt es viel Regen."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Wetter",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Schnee",
+    "extraForms": "-",
+    "englishMeaning": "snow",
+    "exampleSentence": "Im Winter liegt Schnee."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Wetter",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Sonne",
+    "extraForms": "-n",
+    "englishMeaning": "sun",
+    "exampleSentence": "Die Sonne scheint heute."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Wetter",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Wind",
+    "extraForms": "-e",
+    "englishMeaning": "wind",
+    "exampleSentence": "Der Wind ist stark."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Wetter",
+    "wordType": "noun",
+    "article": "das",
+    "germanWord": "Wetter",
+    "extraForms": "-",
+    "englishMeaning": "weather",
+    "exampleSentence": "Das Wetter ist schön."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "K",
+    "topic": "Wetter",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "kalt",
+    "extraForms": null,
+    "englishMeaning": "cold",
+    "exampleSentence": "Heute ist es kalt."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "W",
+    "topic": "Wetter",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "warm",
+    "extraForms": null,
+    "englishMeaning": "warm",
+    "exampleSentence": "Im Sommer ist es warm."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "H",
+    "topic": "Wetter",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "heiß",
+    "extraForms": null,
+    "englishMeaning": "hot",
+    "exampleSentence": "Heute ist es sehr heiß."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Wetter",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "sonnig",
+    "extraForms": null,
+    "englishMeaning": "sunny",
+    "exampleSentence": "Morgen wird es sonnig."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "R",
+    "topic": "Wetter",
+    "wordType": "adjective",
+    "article": null,
+    "germanWord": "regnerisch",
+    "extraForms": null,
+    "englishMeaning": "rainy",
+    "exampleSentence": "Das Wetter ist regnerisch."
+  },
+  {
+    "levelCode": "A1",
+    "letter": "U",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Uhr",
+    "extraForms": "-en",
+    "englishMeaning": "clock / o'clock",
+    "exampleSentence": "Es ist drei Uhr."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Morgen",
+    "extraForms": "-",
+    "englishMeaning": "morning",
+    "exampleSentence": "Am Morgen trinke ich Kaffee."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Mittag",
+    "extraForms": "-e",
+    "englishMeaning": "midday",
+    "exampleSentence": "Wir essen zu Mittag."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "N",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Nachmittag",
+    "extraForms": "-e",
+    "englishMeaning": "afternoon",
+    "exampleSentence": "Am Nachmittag lerne ich Deutsch."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "A",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "der",
+    "germanWord": "Abend",
+    "extraForms": "-e",
+    "englishMeaning": "evening",
+    "exampleSentence": "Am Abend sehe ich fern."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "N",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Nacht",
+    "extraForms": "Nächte",
+    "englishMeaning": "night",
+    "exampleSentence": "In der Nacht schlafe ich."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "F",
+    "topic": "Uhrzeit",
+    "wordType": "adverb",
+    "article": null,
+    "germanWord": "früh",
+    "extraForms": null,
+    "englishMeaning": "early",
+    "exampleSentence": "Ich stehe früh auf."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Uhrzeit",
+    "wordType": "adverb",
+    "article": null,
+    "germanWord": "spät",
+    "extraForms": null,
+    "englishMeaning": "late",
+    "exampleSentence": "Heute komme ich spät nach Hause."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "M",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Minute",
+    "extraForms": "-n",
+    "englishMeaning": "minute",
+    "exampleSentence": "Der Bus kommt in fünf Minuten."
+  },
+
+  {
+    "levelCode": "A1",
+    "letter": "S",
+    "topic": "Uhrzeit",
+    "wordType": "noun",
+    "article": "die",
+    "germanWord": "Stunde",
+    "extraForms": "-n",
+    "englishMeaning": "hour",
+    "exampleSentence": "Der Kurs dauert zwei Stunden."
+  },
+  
+  {
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Baby",
+  "extraForms": "Babys",
+  "englishMeaning": "baby",
+  "exampleSentence": "Das Baby schläft."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Bäckerei",
+  "extraForms": "Bäckereien",
+  "englishMeaning": "bakery",
+  "exampleSentence": "Ich kaufe Brot in der Bäckerei."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bad",
+  "extraForms": "Bäder",
+  "englishMeaning": "bathroom",
+  "exampleSentence": "Das Bad ist klein."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "baden",
+  "extraForms": "badet, hat gebadet",
+  "englishMeaning": "to bathe",
+  "exampleSentence": "Im Sommer bade ich gern."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Bahn",
+  "extraForms": "Bahnen",
+  "englishMeaning": "train",
+  "exampleSentence": "Wir fahren mit der Bahn."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bahnhof",
+  "extraForms": "Bahnhöfe",
+  "englishMeaning": "train station",
+  "exampleSentence": "Der Bahnhof ist groß."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bahnsteig",
+  "extraForms": "Bahnsteige",
+  "englishMeaning": "platform",
+  "exampleSentence": "Der Zug fährt von Bahnsteig drei."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adverb",
+  "article": null,
+  "germanWord": "bald",
+  "extraForms": null,
+  "englishMeaning": "soon",
+  "exampleSentence": "Ich komme bald."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Balkon",
+  "extraForms": "Balkone",
+  "englishMeaning": "balcony",
+  "exampleSentence": "Die Wohnung hat einen Balkon."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "preposition",
+  "article": null,
+  "germanWord": "bei",
+  "extraForms": null,
+  "englishMeaning": "at / near",
+  "exampleSentence": "Ich wohne bei meinen Eltern."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "beginnen",
+  "extraForms": "beginnt, hat begonnen",
+  "englishMeaning": "to begin",
+  "exampleSentence": "Der Kurs beginnt morgen."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bekommen",
+  "extraForms": "bekommt, hat bekommen",
+  "englishMeaning": "to receive",
+  "exampleSentence": "Ich habe eine E-Mail bekommen."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Beispiel",
+  "extraForms": "Beispiele",
+  "englishMeaning": "example",
+  "exampleSentence": "Das ist ein gutes Beispiel."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "benutzen",
+  "extraForms": "benutzt, hat benutzt",
+  "englishMeaning": "to use",
+  "exampleSentence": "Kann ich dein Handy benutzen?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Beruf",
+  "extraForms": "Berufe",
+  "englishMeaning": "profession",
+  "exampleSentence": "Was ist dein Beruf?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "besuchen",
+  "extraForms": "besucht, hat besucht",
+  "englishMeaning": "to visit",
+  "exampleSentence": "Wir besuchen unsere Freunde."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bett",
+  "extraForms": "Betten",
+  "englishMeaning": "bed",
+  "exampleSentence": "Das Bett ist bequem."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bezahlen",
+  "extraForms": "bezahlt, hat bezahlt",
+  "englishMeaning": "to pay",
+  "exampleSentence": "Ich bezahle mit Karte."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "billig",
+  "extraForms": null,
+  "englishMeaning": "cheap",
+  "exampleSentence": "Die Schuhe sind billig."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bleiben",
+  "extraForms": "bleibt, ist geblieben",
+  "englishMeaning": "to stay",
+  "exampleSentence": "Ich bleibe heute zu Hause."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Blume",
+  "extraForms": "Blumen",
+  "englishMeaning": "flower",
+  "exampleSentence": "Die Blume ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "böse",
+  "extraForms": null,
+  "englishMeaning": "angry",
+  "exampleSentence": "Er ist böse auf mich."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "brauchen",
+  "extraForms": "braucht, hat gebraucht",
+  "englishMeaning": "to need",
+  "exampleSentence": "Ich brauche Hilfe."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Brief",
+  "extraForms": "Briefe",
+  "englishMeaning": "letter",
+  "exampleSentence": "Ich schreibe einen Brief."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bringen",
+  "extraForms": "bringt, hat gebracht",
+  "englishMeaning": "to bring",
+  "exampleSentence": "Kannst du Wasser bringen?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Brötchen",
+  "extraForms": "Brötchen",
+  "englishMeaning": "bread roll",
+  "exampleSentence": "Zum Frühstück esse ich Brötchen."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Buch",
+  "extraForms": "Bücher",
+  "englishMeaning": "book",
+  "exampleSentence": "Das Buch ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "buchstabieren",
+  "extraForms": "buchstabiert, hat buchstabiert",
+  "englishMeaning": "to spell",
+  "exampleSentence": "Kannst du deinen Namen buchstabieren?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bus",
+  "extraForms": "Busse",
+  "englishMeaning": "bus",
+  "exampleSentence": "Der Bus kommt gleich."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Essen",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Banane",
+  "extraForms": "Bananen",
+  "englishMeaning": "banana",
+  "exampleSentence": "Die Banane ist gelb."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Bank",
+  "extraForms": "Banken",
+  "englishMeaning": "bank",
+  "exampleSentence": "Die Bank schließt um vier Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "bar",
+  "extraForms": null,
+  "englishMeaning": "cash",
+  "exampleSentence": "Kann ich bar bezahlen?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bauch",
+  "extraForms": "Bäuche",
+  "englishMeaning": "stomach",
+  "exampleSentence": "Mein Bauch tut weh."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Baum",
+  "extraForms": "Bäume",
+  "englishMeaning": "tree",
+  "exampleSentence": "Der Baum ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Beamte",
+  "extraForms": "Beamten",
+  "englishMeaning": "official",
+  "exampleSentence": "Der Beamte hilft den Kunden."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "pronoun",
+  "article": null,
+  "germanWord": "beide",
+  "extraForms": null,
+  "englishMeaning": "both",
+  "exampleSentence": "Beide kommen heute."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bein",
+  "extraForms": "Beine",
+  "englishMeaning": "leg",
+  "exampleSentence": "Mein Bein tut weh."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "bekannt",
+  "extraForms": null,
+  "englishMeaning": "famous / known",
+  "exampleSentence": "Berlin ist sehr bekannt."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "besetzt",
+  "extraForms": null,
+  "englishMeaning": "occupied",
+  "exampleSentence": "Der Platz ist besetzt."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "besichtigen",
+  "extraForms": "besichtigt, hat besichtigt",
+  "englishMeaning": "to visit / inspect",
+  "exampleSentence": "Wir besichtigen das Museum."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "besser",
+  "extraForms": null,
+  "englishMeaning": "better",
+  "exampleSentence": "Heute geht es mir besser."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bestellen",
+  "extraForms": "bestellt, hat bestellt",
+  "englishMeaning": "to order",
+  "exampleSentence": "Wir bestellen eine Pizza."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bier",
+  "extraForms": "Biere",
+  "englishMeaning": "beer",
+  "exampleSentence": "Er trinkt ein Bier."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bild",
+  "extraForms": "Bilder",
+  "englishMeaning": "picture",
+  "exampleSentence": "Das Bild ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Essen",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Birne",
+  "extraForms": "Birnen",
+  "englishMeaning": "pear",
+  "exampleSentence": "Die Birne schmeckt süß."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "preposition",
+  "article": null,
+  "germanWord": "bis",
+  "extraForms": null,
+  "englishMeaning": "until / to",
+  "exampleSentence": "Ich arbeite bis fünf Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adverb",
+  "article": null,
+  "germanWord": "bisschen",
+  "extraForms": null,
+  "englishMeaning": "a little",
+  "exampleSentence": "Ich spreche ein bisschen Deutsch."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adverb",
+  "article": null,
+  "germanWord": "bitte",
+  "extraForms": null,
+  "englishMeaning": "please",
+  "exampleSentence": "Komm bitte hierher."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bitten",
+  "extraForms": "bittet, hat gebeten",
+  "englishMeaning": "to ask",
+  "exampleSentence": "Ich bitte um Hilfe."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "bitter",
+  "extraForms": null,
+  "englishMeaning": "bitter",
+  "exampleSentence": "Der Kaffee schmeckt bitter."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bleistift",
+  "extraForms": "Bleistifte",
+  "englishMeaning": "pencil",
+  "exampleSentence": "Ich brauche einen Bleistift."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Blick",
+  "extraForms": "Blicke",
+  "englishMeaning": "view",
+  "exampleSentence": "Der Blick ist wunderbar."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bogen",
+  "extraForms": "Bögen",
+  "englishMeaning": "sheet",
+  "exampleSentence": "Schreiben Sie auf den Bogen."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "breit",
+  "extraForms": null,
+  "englishMeaning": "wide",
+  "exampleSentence": "Die Straße ist breit."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Briefmarke",
+  "extraForms": "Briefmarken",
+  "englishMeaning": "stamp",
+  "exampleSentence": "Ich kaufe Briefmarken."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Familie",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bruder",
+  "extraForms": "Brüder",
+  "englishMeaning": "brother",
+  "exampleSentence": "Mein Bruder wohnt in Berlin."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Buchstabe",
+  "extraForms": "Buchstaben",
+  "englishMeaning": "letter",
+  "exampleSentence": "Dieser Buchstabe ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Butter",
+  "extraForms": null,
+  "englishMeaning": "butter",
+  "exampleSentence": "Ich esse Brot mit Butter."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Essen",
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Brot",
+  "extraForms": "Brote",
+  "englishMeaning": "bread",
+  "exampleSentence": "Ich esse Brot zum Frühstück."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Brötchen",
+  "extraForms": "Brötchen",
+  "englishMeaning": "bread roll",
+  "exampleSentence": "Zum Frühstück esse ich Brötchen."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Buch",
+  "extraForms": "Bücher",
+  "englishMeaning": "book",
+  "exampleSentence": "Das Buch ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bus",
+  "extraForms": "Busse",
+  "englishMeaning": "bus",
+  "exampleSentence": "Der Bus kommt gleich."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Butter",
+  "extraForms": null,
+  "englishMeaning": "butter",
+  "exampleSentence": "Ich esse Brot mit Butter."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "buchstabieren",
+  "extraForms": "buchstabiert, hat buchstabiert",
+  "englishMeaning": "to spell",
+  "exampleSentence": "Kannst du deinen Namen buchstabieren?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Buchstabe",
+  "extraForms": "Buchstaben",
+  "englishMeaning": "letter",
+  "exampleSentence": "Dieser Buchstabe ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "bunt",
+  "extraForms": null,
+  "englishMeaning": "colorful",
+  "exampleSentence": "Das Bild ist bunt."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Büro",
+  "extraForms": "Büros",
+  "englishMeaning": "office",
+  "exampleSentence": "Mein Büro ist klein."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bürger",
+  "extraForms": "Bürger",
+  "englishMeaning": "citizen",
+  "exampleSentence": "Der Bürger wohnt in Berlin."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "berühmt",
+  "extraForms": null,
+  "englishMeaning": "famous",
+  "exampleSentence": "Der Schauspieler ist berühmt."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Bibliothek",
+  "extraForms": "Bibliotheken",
+  "englishMeaning": "library",
+  "exampleSentence": "Ich lerne in der Bibliothek."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "buchen",
+  "extraForms": "bucht, hat gebucht",
+  "englishMeaning": "to book",
+  "exampleSentence": "Wir buchen ein Hotelzimmer."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Besuch",
+  "extraForms": "Besuche",
+  "englishMeaning": "visit",
+  "exampleSentence": "Der Besuch kommt morgen."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "besonders",
+  "extraForms": null,
+  "englishMeaning": "special",
+  "exampleSentence": "Heute ist ein besonderer Tag."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adverb",
+  "article": null,
+  "germanWord": "besonders",
+  "extraForms": null,
+  "englishMeaning": "especially",
+  "exampleSentence": "Das Essen ist heute besonders gut."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Besichtigung",
+  "extraForms": "Besichtigungen",
+  "englishMeaning": "tour / viewing",
+  "exampleSentence": "Die Besichtigung beginnt um zehn Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Besucher",
+  "extraForms": "Besucher",
+  "englishMeaning": "visitor",
+  "exampleSentence": "Viele Besucher kommen ins Museum."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "bequem",
+  "extraForms": null,
+  "englishMeaning": "comfortable",
+  "exampleSentence": "Das Sofa ist bequem."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Bewegung",
+  "extraForms": "Bewegungen",
+  "englishMeaning": "movement",
+  "exampleSentence": "Sport ist gut für Bewegung."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bewegen",
+  "extraForms": "bewegt, hat bewegt",
+  "englishMeaning": "to move",
+  "exampleSentence": "Bitte bewegen Sie den Tisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bügeleisen",
+  "extraForms": "Bügeleisen",
+  "englishMeaning": "iron",
+  "exampleSentence": "Das Bügeleisen ist heiß."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bügeln",
+  "extraForms": "bügelt, hat gebügelt",
+  "englishMeaning": "to iron",
+  "exampleSentence": "Ich bügle mein Hemd."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bäcker",
+  "extraForms": "Bäcker",
+  "englishMeaning": "baker",
+  "exampleSentence": "Der Bäcker verkauft Brot."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Bäckerei",
+  "extraForms": "Bäckereien",
+  "englishMeaning": "bakery",
+  "exampleSentence": "Ich kaufe Brot in der Bäckerei."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "baden",
+  "extraForms": "badet, hat gebadet",
+  "englishMeaning": "to bathe / swim",
+  "exampleSentence": "Wir baden im See."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bad",
+  "extraForms": "Bäder",
+  "englishMeaning": "bathroom / bath",
+  "exampleSentence": "Das Bad ist sauber."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bahnhof",
+  "extraForms": "Bahnhöfe",
+  "englishMeaning": "train station",
+  "exampleSentence": "Der Bahnhof ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Ball",
+  "extraForms": "Bälle",
+  "englishMeaning": "ball",
+  "exampleSentence": "Der Ball ist rot."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Banane",
+  "extraForms": "Bananen",
+  "englishMeaning": "banana",
+  "exampleSentence": "Die Banane ist gelb."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bauen",
+  "extraForms": "baut, hat gebaut",
+  "englishMeaning": "to build",
+  "exampleSentence": "Sie bauen ein Haus."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "bequem",
+  "extraForms": null,
+  "englishMeaning": "comfortable",
+  "exampleSentence": "Das Sofa ist bequem."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "beginnen",
+  "extraForms": "beginnt, hat begonnen",
+  "englishMeaning": "to begin",
+  "exampleSentence": "Der Film beginnt um acht Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bekommen",
+  "extraForms": "bekommt, hat bekommen",
+  "englishMeaning": "to get / receive",
+  "exampleSentence": "Ich bekomme eine E-Mail."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Beruf",
+  "extraForms": "Berufe",
+  "englishMeaning": "profession",
+  "exampleSentence": "Mein Beruf ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bezahlen",
+  "extraForms": "bezahlt, hat bezahlt",
+  "englishMeaning": "to pay",
+  "exampleSentence": "Ich bezahle die Rechnung."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "billig",
+  "extraForms": null,
+  "englishMeaning": "cheap",
+  "exampleSentence": "Das T-Shirt ist billig."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bleiben",
+  "extraForms": "bleibt, ist geblieben",
+  "englishMeaning": "to stay",
+  "exampleSentence": "Ich bleibe heute zu Hause."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Blume",
+  "extraForms": "Blumen",
+  "englishMeaning": "flower",
+  "exampleSentence": "Die Blume ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Brot",
+  "extraForms": "Brote",
+  "englishMeaning": "bread",
+  "exampleSentence": "Das Brot ist frisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Brief",
+  "extraForms": "Briefe",
+  "englishMeaning": "letter",
+  "exampleSentence": "Ich schreibe einen Brief."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "bringen",
+  "extraForms": "bringt, hat gebracht",
+  "englishMeaning": "to bring",
+  "exampleSentence": "Kannst du Wasser bringen?"
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bruder",
+  "extraForms": "Brüder",
+  "englishMeaning": "brother",
+  "exampleSentence": "Mein Bruder studiert in Berlin."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Buch",
+  "extraForms": "Bücher",
+  "englishMeaning": "book",
+  "exampleSentence": "Das Buch ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Büro",
+  "extraForms": "Büros",
+  "englishMeaning": "office",
+  "exampleSentence": "Mein Büro ist klein."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bus",
+  "extraForms": "Busse",
+  "englishMeaning": "bus",
+  "exampleSentence": "Der Bus kommt um neun Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Bäcker",
+  "extraForms": "Bäcker",
+  "englishMeaning": "baker",
+  "exampleSentence": "Der Bäcker verkauft Brot."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "blau",
+  "extraForms": null,
+  "englishMeaning": "blue",
+  "exampleSentence": "Das Auto ist blau."
+},
+{
+  "levelCode": "A1",
+  "letter": "B",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Bier",
+  "extraForms": "Biere",
+  "englishMeaning": "beer",
+  "exampleSentence": "Er trinkt ein Bier."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Café",
+  "extraForms": "Cafés",
+  "englishMeaning": "cafe",
+  "exampleSentence": "Wir sitzen im Café."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Chef",
+  "extraForms": "Chefs",
+  "englishMeaning": "boss",
+  "exampleSentence": "Der Chef ist freundlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Computer",
+  "extraForms": "Computer",
+  "englishMeaning": "computer",
+  "exampleSentence": "Der Computer ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "CD",
+  "extraForms": "CDs",
+  "englishMeaning": "CD",
+  "exampleSentence": "Die CD gefällt mir."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Chaos",
+  "extraForms": null,
+  "englishMeaning": "chaos",
+  "exampleSentence": "Das Zimmer ist ein Chaos."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "cool",
+  "extraForms": null,
+  "englishMeaning": "cool",
+  "exampleSentence": "Das Fahrrad ist cool."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Club",
+  "extraForms": "Clubs",
+  "englishMeaning": "club",
+  "exampleSentence": "Der Club ist heute voll."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Creme",
+  "extraForms": "Cremes",
+  "englishMeaning": "cream",
+  "exampleSentence": "Die Creme riecht gut."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Curry",
+  "extraForms": "Currys",
+  "englishMeaning": "curry",
+  "exampleSentence": "Das Curry schmeckt lecker."
+},
+{
+  "levelCode": "A1",
+  "letter": "C",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Campingplatz",
+  "extraForms": "Campingplätze",
+  "englishMeaning": "campground",
+  "exampleSentence": "Der Campingplatz ist ruhig."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Datum",
+  "extraForms": "Daten",
+  "englishMeaning": "date",
+  "exampleSentence": "Welches Datum ist heute?"
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Decke",
+  "extraForms": "Decken",
+  "englishMeaning": "blanket / ceiling",
+  "exampleSentence": "Die Decke ist weiß."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Dorf",
+  "extraForms": "Dörfer",
+  "englishMeaning": "village",
+  "exampleSentence": "Das Dorf ist klein."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Diskothek",
+  "extraForms": "Diskotheken",
+  "englishMeaning": "disco / nightclub",
+  "exampleSentence": "Die Diskothek ist voll."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Dokument",
+  "extraForms": "Dokumente",
+  "englishMeaning": "document",
+  "exampleSentence": "Das Dokument ist wichtig."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Donnerstag",
+  "extraForms": "Donnerstage",
+  "englishMeaning": "Thursday",
+  "exampleSentence": "Am Donnerstag habe ich frei."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "danken",
+  "extraForms": "dankt, hat gedankt",
+  "englishMeaning": "to thank",
+  "exampleSentence": "Ich danke dir."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "denken",
+  "extraForms": "denkt, hat gedacht",
+  "englishMeaning": "to think",
+  "exampleSentence": "Ich denke an meine Familie."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "duschen",
+  "extraForms": "duscht, hat geduscht",
+  "englishMeaning": "to shower",
+  "exampleSentence": "Ich dusche morgens."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "dunkel",
+  "extraForms": null,
+  "englishMeaning": "dark",
+  "exampleSentence": "Das Zimmer ist dunkel."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": "Sprachen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Deutsch",
+  "extraForms": null,
+  "englishMeaning": "German",
+  "exampleSentence": "Ich lerne Deutsch."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": "Länder",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Deutschland",
+  "extraForms": null,
+  "englishMeaning": "Germany",
+  "exampleSentence": "Deutschland liegt in Europa."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "dunkelblau",
+  "extraForms": null,
+  "englishMeaning": "dark blue",
+  "exampleSentence": "Die Jacke ist dunkelblau."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Doktor",
+  "extraForms": "Doktoren",
+  "englishMeaning": "doctor",
+  "exampleSentence": "Der Doktor arbeitet im Krankenhaus."
+},
+{
+  "levelCode": "A1",
+  "letter": "D",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Dose",
+  "extraForms": "Dosen",
+  "englishMeaning": "can / tin",
+  "exampleSentence": "Die Dose ist leer."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Ei",
+  "extraForms": "Eier",
+  "englishMeaning": "egg",
+  "exampleSentence": "Ich esse ein Ei."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "E-Mail",
+  "extraForms": "E-Mails",
+  "englishMeaning": "email",
+  "exampleSentence": "Ich schreibe eine E-Mail."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Eintritt",
+  "extraForms": null,
+  "englishMeaning": "entry / admission",
+  "exampleSentence": "Der Eintritt ist kostenlos."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Elternteil",
+  "extraForms": "Elternteile",
+  "englishMeaning": "parent",
+  "exampleSentence": "Meine Elternteile arbeiten viel."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Ende",
+  "extraForms": "Enden",
+  "englishMeaning": "end",
+  "exampleSentence": "Der Film ist zu Ende."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Essen",
+  "extraForms": null,
+  "englishMeaning": "food",
+  "exampleSentence": "Das Essen schmeckt gut."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "essen",
+  "extraForms": "isst, hat gegessen",
+  "englishMeaning": "to eat",
+  "exampleSentence": "Wir essen zusammen."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "entschuldigen",
+  "extraForms": "entschuldigt, hat entschuldigt",
+  "englishMeaning": "to excuse",
+  "exampleSentence": "Entschuldigen Sie bitte."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "einfach",
+  "extraForms": null,
+  "englishMeaning": "easy / simple",
+  "exampleSentence": "Die Aufgabe ist einfach."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "eng",
+  "extraForms": null,
+  "englishMeaning": "narrow / tight",
+  "exampleSentence": "Die Hose ist eng."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "ernst",
+  "extraForms": null,
+  "englishMeaning": "serious",
+  "exampleSentence": "Der Lehrer ist ernst."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "orange",
+  "extraForms": null,
+  "englishMeaning": "orange",
+  "exampleSentence": "Die Orange ist orange."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Espresso",
+  "extraForms": "Espressos",
+  "englishMeaning": "espresso",
+  "exampleSentence": "Ich trinke einen Espresso."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Elektriker",
+  "extraForms": "Elektriker",
+  "englishMeaning": "electrician",
+  "exampleSentence": "Der Elektriker repariert das Licht."
+},
+{
+  "levelCode": "A1",
+  "letter": "E",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Einladung",
+  "extraForms": "Einladungen",
+  "englishMeaning": "invitation",
+  "exampleSentence": "Danke für die Einladung."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Familie",
+  "extraForms": "Familien",
+  "englishMeaning": "family",
+  "exampleSentence": "Meine Familie ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Fahrrad",
+  "extraForms": "Fahrräder",
+  "englishMeaning": "bicycle",
+  "exampleSentence": "Mein Fahrrad ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Farbe",
+  "extraForms": "Farben",
+  "englishMeaning": "color",
+  "exampleSentence": "Die Farbe gefällt mir."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Fenster",
+  "extraForms": "Fenster",
+  "englishMeaning": "window",
+  "exampleSentence": "Das Fenster ist offen."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Fehler",
+  "extraForms": "Fehler",
+  "englishMeaning": "mistake",
+  "exampleSentence": "Das ist ein Fehler."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Film",
+  "extraForms": "Filme",
+  "englishMeaning": "movie",
+  "exampleSentence": "Der Film ist spannend."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Flasche",
+  "extraForms": "Flaschen",
+  "englishMeaning": "bottle",
+  "exampleSentence": "Die Flasche ist leer."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Flughafen",
+  "extraForms": "Flughäfen",
+  "englishMeaning": "airport",
+  "exampleSentence": "Der Flughafen ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "finden",
+  "extraForms": "findet, hat gefunden",
+  "englishMeaning": "to find",
+  "exampleSentence": "Ich finde meinen Schlüssel nicht."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "fotografieren",
+  "extraForms": "fotografiert, hat fotografiert",
+  "englishMeaning": "to photograph",
+  "exampleSentence": "Sie fotografiert die Stadt."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "falsch",
+  "extraForms": null,
+  "englishMeaning": "wrong",
+  "exampleSentence": "Die Antwort ist falsch."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "fertig",
+  "extraForms": null,
+  "englishMeaning": "finished / ready",
+  "exampleSentence": "Ich bin fertig."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": "null",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "frei",
+  "extraForms": null,
+  "englishMeaning": "free",
+  "exampleSentence": "Der Platz ist frei."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Fruchtsaft",
+  "extraForms": "Fruchtsäfte",
+  "englishMeaning": "fruit juice",
+  "exampleSentence": "Ich trinke Fruchtsaft."
+},
+{
+  "levelCode": "A1",
+  "letter": "F",
+  "topic": "Jahreszeiten",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Frühling",
+  "extraForms": "Frühlinge",
+  "englishMeaning": "spring",
+  "exampleSentence": "Im Frühling blühen die Blumen."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Garten",
+  "extraForms": "Gärten",
+  "englishMeaning": "garden",
+  "exampleSentence": "Der Garten ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Gebäude",
+  "extraForms": "Gebäude",
+  "englishMeaning": "building",
+  "exampleSentence": "Das Gebäude ist alt."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Geld",
+  "extraForms": null,
+  "englishMeaning": "money",
+  "exampleSentence": "Ich habe kein Geld."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Gemüse",
+  "extraForms": null,
+  "englishMeaning": "vegetables",
+  "exampleSentence": "Gemüse ist gesund."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Geschenk",
+  "extraForms": "Geschenke",
+  "englishMeaning": "gift",
+  "exampleSentence": "Das Geschenk ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Gesicht",
+  "extraForms": "Gesichter",
+  "englishMeaning": "face",
+  "exampleSentence": "Sie hat ein freundliches Gesicht."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Gespräch",
+  "extraForms": "Gespräche",
+  "englishMeaning": "conversation",
+  "exampleSentence": "Das Gespräch war interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "gefallen",
+  "extraForms": "gefällt, hat gefallen",
+  "englishMeaning": "to like / please",
+  "exampleSentence": "Das Buch gefällt mir."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "gehen",
+  "extraForms": "geht, ist gegangen",
+  "englishMeaning": "to go",
+  "exampleSentence": "Wir gehen nach Hause."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "gehören",
+  "extraForms": "gehört, hat gehört",
+  "englishMeaning": "to belong",
+  "exampleSentence": "Das Buch gehört mir."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "gewinnen",
+  "extraForms": "gewinnt, hat gewonnen",
+  "englishMeaning": "to win",
+  "exampleSentence": "Unsere Mannschaft gewinnt."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "genau",
+  "extraForms": null,
+  "englishMeaning": "exact",
+  "exampleSentence": "Das ist genau richtig."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "gesund",
+  "extraForms": null,
+  "englishMeaning": "healthy",
+  "exampleSentence": "Obst ist gesund."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "grau",
+  "extraForms": null,
+  "englishMeaning": "gray",
+  "exampleSentence": "Der Himmel ist grau."
+},
+{
+  "levelCode": "A1",
+  "letter": "G",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Getränk",
+  "extraForms": "Getränke",
+  "englishMeaning": "drink",
+  "exampleSentence": "Das Getränk ist kalt."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Haar",
+  "extraForms": "Haare",
+  "englishMeaning": "hair",
+  "exampleSentence": "Sie hat lange Haare."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Haus",
+  "extraForms": "Häuser",
+  "englishMeaning": "house",
+  "exampleSentence": "Das Haus ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Hafen",
+  "extraForms": "Häfen",
+  "englishMeaning": "harbor",
+  "exampleSentence": "Der Hafen ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Handy",
+  "extraForms": "Handys",
+  "englishMeaning": "mobile phone",
+  "exampleSentence": "Mein Handy ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Himmel",
+  "extraForms": "Himmel",
+  "englishMeaning": "sky",
+  "exampleSentence": "Der Himmel ist blau."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Hunger",
+  "extraForms": null,
+  "englishMeaning": "hunger",
+  "exampleSentence": "Ich habe Hunger."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "haben",
+  "extraForms": "hat, hat gehabt",
+  "englishMeaning": "to have",
+  "exampleSentence": "Ich habe ein Auto."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "heißen",
+  "extraForms": "heißt, hat geheißen",
+  "englishMeaning": "to be called",
+  "exampleSentence": "Wie heißt du?"
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "helfen",
+  "extraForms": "hilft, hat geholfen",
+  "englishMeaning": "to help",
+  "exampleSentence": "Kannst du mir helfen?"
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "hören",
+  "extraForms": "hört, hat gehört",
+  "englishMeaning": "to hear / listen",
+  "exampleSentence": "Ich höre Musik."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "heiß",
+  "extraForms": null,
+  "englishMeaning": "hot",
+  "exampleSentence": "Der Kaffee ist heiß."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "hell",
+  "extraForms": null,
+  "englishMeaning": "bright",
+  "exampleSentence": "Das Zimmer ist hell."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "hellblau",
+  "extraForms": null,
+  "englishMeaning": "light blue",
+  "exampleSentence": "Das Hemd ist hellblau."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Hausmeister",
+  "extraForms": "Hausmeister",
+  "englishMeaning": "caretaker / janitor",
+  "exampleSentence": "Der Hausmeister repariert die Tür."
+},
+{
+  "levelCode": "A1",
+  "letter": "H",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Heiße Schokolade",
+  "extraForms": null,
+  "englishMeaning": "hot chocolate",
+  "exampleSentence": "Ich trinke heiße Schokolade."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Idee",
+  "extraForms": "Ideen",
+  "englishMeaning": "idea",
+  "exampleSentence": "Das ist eine gute Idee."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Information",
+  "extraForms": "Informationen",
+  "englishMeaning": "information",
+  "exampleSentence": "Danke für die Information."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Internet",
+  "extraForms": null,
+  "englishMeaning": "internet",
+  "exampleSentence": "Das Internet ist langsam."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Interesse",
+  "extraForms": "Interessen",
+  "englishMeaning": "interest",
+  "exampleSentence": "Ich habe Interesse an Musik."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "interessieren",
+  "extraForms": "interessiert, hat interessiert",
+  "englishMeaning": "to interest",
+  "exampleSentence": "Deutsch interessiert mich."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "informieren",
+  "extraForms": "informiert, hat informiert",
+  "englishMeaning": "to inform",
+  "exampleSentence": "Ich informiere meinen Freund."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "interessant",
+  "extraForms": null,
+  "englishMeaning": "interesting",
+  "exampleSentence": "Das Buch ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "international",
+  "extraForms": null,
+  "englishMeaning": "international",
+  "exampleSentence": "Die Firma ist international."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "intelligent",
+  "extraForms": null,
+  "englishMeaning": "intelligent",
+  "exampleSentence": "Der Student ist intelligent."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": "Sprachen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Italienisch",
+  "extraForms": null,
+  "englishMeaning": "Italian",
+  "exampleSentence": "Sie spricht Italienisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": "Länder",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Italien",
+  "extraForms": null,
+  "englishMeaning": "Italy",
+  "exampleSentence": "Italien ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Instantkaffee",
+  "extraForms": null,
+  "englishMeaning": "instant coffee",
+  "exampleSentence": "Ich trinke Instantkaffee."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Insel",
+  "extraForms": "Inseln",
+  "englishMeaning": "island",
+  "exampleSentence": "Die Insel ist klein."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Industrie",
+  "extraForms": "Industrien",
+  "englishMeaning": "industry",
+  "exampleSentence": "Die Industrie wächst schnell."
+},
+{
+  "levelCode": "A1",
+  "letter": "I",
+  "topic": null,
+  "wordType": "adverb",
+  "article": null,
+  "germanWord": "immer",
+  "extraForms": null,
+  "englishMeaning": "always",
+  "exampleSentence": "Er kommt immer pünktlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Jacke",
+  "extraForms": "Jacken",
+  "englishMeaning": "jacket",
+  "exampleSentence": "Die Jacke ist warm."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Jahr",
+  "extraForms": "Jahre",
+  "englishMeaning": "year",
+  "exampleSentence": "Das Jahr geht schnell vorbei."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Junge",
+  "extraForms": "Jungen",
+  "englishMeaning": "boy",
+  "exampleSentence": "Der Junge spielt Fußball."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Jugend",
+  "extraForms": null,
+  "englishMeaning": "youth",
+  "exampleSentence": "Die Jugend lernt schnell."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "joggen",
+  "extraForms": "joggt, ist gejoggt",
+  "englishMeaning": "to jog",
+  "exampleSentence": "Ich jogge jeden Morgen."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "jubeln",
+  "extraForms": "jubelt, hat gejubelt",
+  "englishMeaning": "to cheer",
+  "exampleSentence": "Die Fans jubeln laut."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "jung",
+  "extraForms": null,
+  "englishMeaning": "young",
+  "exampleSentence": "Der Hund ist jung."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "jetzt",
+  "extraForms": null,
+  "englishMeaning": "now",
+  "exampleSentence": "Ich habe jetzt Zeit."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Januar",
+  "extraForms": null,
+  "englishMeaning": "January",
+  "exampleSentence": "Im Januar ist es kalt."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Juni",
+  "extraForms": null,
+  "englishMeaning": "June",
+  "exampleSentence": "Im Juni fahren wir nach Italien."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Juli",
+  "extraForms": null,
+  "englishMeaning": "July",
+  "exampleSentence": "Der Juli ist sehr warm."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": "Länder",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Japan",
+  "extraForms": null,
+  "englishMeaning": "Japan",
+  "exampleSentence": "Japan liegt in Asien."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": "Sprachen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Japanisch",
+  "extraForms": null,
+  "englishMeaning": "Japanese",
+  "exampleSentence": "Er spricht Japanisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "jadegrün",
+  "extraForms": null,
+  "englishMeaning": "jade green",
+  "exampleSentence": "Die Tasche ist jadegrün."
+},
+{
+  "levelCode": "A1",
+  "letter": "J",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Jobcenter",
+  "extraForms": "Jobcenter",
+  "englishMeaning": "job center",
+  "exampleSentence": "Das Jobcenter ist heute geöffnet."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Kaffee",
+  "extraForms": "Kaffees",
+  "englishMeaning": "coffee",
+  "exampleSentence": "Ich trinke jeden Morgen Kaffee."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Keller",
+  "extraForms": "Keller",
+  "englishMeaning": "basement",
+  "exampleSentence": "Die Fahrräder stehen im Keller."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Kind",
+  "extraForms": "Kinder",
+  "englishMeaning": "child",
+  "exampleSentence": "Das Kind spielt draußen."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Kino",
+  "extraForms": "Kinos",
+  "englishMeaning": "cinema",
+  "exampleSentence": "Wir gehen ins Kino."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Kirche",
+  "extraForms": "Kirchen",
+  "englishMeaning": "church",
+  "exampleSentence": "Die Kirche ist alt."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Klasse",
+  "extraForms": "Klassen",
+  "englishMeaning": "class",
+  "exampleSentence": "Die Klasse beginnt um neun Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Kleid",
+  "extraForms": "Kleider",
+  "englishMeaning": "dress",
+  "exampleSentence": "Das Kleid ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Koffer",
+  "extraForms": "Koffer",
+  "englishMeaning": "suitcase",
+  "exampleSentence": "Der Koffer ist schwer."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Küche",
+  "extraForms": "Küchen",
+  "englishMeaning": "kitchen",
+  "exampleSentence": "Die Küche ist sauber."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "kaufen",
+  "extraForms": "kauft, hat gekauft",
+  "englishMeaning": "to buy",
+  "exampleSentence": "Ich kaufe Brot."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "kommen",
+  "extraForms": "kommt, ist gekommen",
+  "englishMeaning": "to come",
+  "exampleSentence": "Mein Freund kommt heute."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "klein",
+  "extraForms": null,
+  "englishMeaning": "small",
+  "exampleSentence": "Die Wohnung ist klein."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "kalt",
+  "extraForms": null,
+  "englishMeaning": "cold",
+  "exampleSentence": "Das Wasser ist kalt."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "khaki",
+  "extraForms": null,
+  "englishMeaning": "khaki",
+  "exampleSentence": "Die Hose ist khaki."
+},
+{
+  "levelCode": "A1",
+  "letter": "K",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Kellner",
+  "extraForms": "Kellner",
+  "englishMeaning": "waiter",
+  "exampleSentence": "Der Kellner bringt das Essen."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Laden",
+  "extraForms": "Läden",
+  "englishMeaning": "shop",
+  "exampleSentence": "Der Laden ist geschlossen."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Land",
+  "extraForms": "Länder",
+  "englishMeaning": "country",
+  "exampleSentence": "Deutschland ist ein schönes Land."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Leben",
+  "extraForms": null,
+  "englishMeaning": "life",
+  "exampleSentence": "Das Leben ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Licht",
+  "extraForms": "Lichter",
+  "englishMeaning": "light",
+  "exampleSentence": "Das Licht ist an."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Liste",
+  "extraForms": "Listen",
+  "englishMeaning": "list",
+  "exampleSentence": "Die Liste ist lang."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Luft",
+  "extraForms": null,
+  "englishMeaning": "air",
+  "exampleSentence": "Die Luft ist frisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "lernen",
+  "extraForms": "lernt, hat gelernt",
+  "englishMeaning": "to learn",
+  "exampleSentence": "Ich lerne Deutsch."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "lesen",
+  "extraForms": "liest, hat gelesen",
+  "englishMeaning": "to read",
+  "exampleSentence": "Sie liest ein Buch."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "lieben",
+  "extraForms": "liebt, hat geliebt",
+  "englishMeaning": "to love",
+  "exampleSentence": "Ich liebe Musik."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "lang",
+  "extraForms": null,
+  "englishMeaning": "long",
+  "exampleSentence": "Die Straße ist lang."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "laut",
+  "extraForms": null,
+  "englishMeaning": "loud",
+  "exampleSentence": "Die Musik ist laut."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "lila",
+  "extraForms": null,
+  "englishMeaning": "purple",
+  "exampleSentence": "Die Tasche ist lila."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Limonade",
+  "extraForms": "Limonaden",
+  "englishMeaning": "lemonade",
+  "exampleSentence": "Die Limonade ist kalt."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Lehrer",
+  "extraForms": "Lehrer",
+  "englishMeaning": "teacher",
+  "exampleSentence": "Der Lehrer erklärt die Aufgabe."
+},
+{
+  "levelCode": "A1",
+  "letter": "L",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Lehrerin",
+  "extraForms": "Lehrerinnen",
+  "englishMeaning": "female teacher",
+  "exampleSentence": "Die Lehrerin ist freundlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Mann",
+  "extraForms": "Männer",
+  "englishMeaning": "man",
+  "exampleSentence": "Der Mann wartet draußen."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Mädchen",
+  "extraForms": "Mädchen",
+  "englishMeaning": "girl",
+  "exampleSentence": "Das Mädchen liest ein Buch."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Miete",
+  "extraForms": "Mieten",
+  "englishMeaning": "rent",
+  "exampleSentence": "Die Miete ist teuer."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Milch",
+  "extraForms": null,
+  "englishMeaning": "milk",
+  "exampleSentence": "Ich trinke jeden Morgen Milch."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Minute",
+  "extraForms": "Minuten",
+  "englishMeaning": "minute",
+  "exampleSentence": "Der Bus kommt in fünf Minuten."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Musik",
+  "extraForms": null,
+  "englishMeaning": "music",
+  "exampleSentence": "Die Musik ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "machen",
+  "extraForms": "macht, hat gemacht",
+  "englishMeaning": "to do / make",
+  "exampleSentence": "Was machst du heute?"
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "meinen",
+  "extraForms": "meint, hat gemeint",
+  "englishMeaning": "to mean / think",
+  "exampleSentence": "Was meinst du?"
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "mitbringen",
+  "extraForms": "bringt mit, hat mitgebracht",
+  "englishMeaning": "to bring along",
+  "exampleSentence": "Ich bringe einen Kuchen mit."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "möchten",
+  "extraForms": "möchte, hat gemocht",
+  "englishMeaning": "would like",
+  "exampleSentence": "Ich möchte einen Kaffee."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "müde",
+  "extraForms": null,
+  "englishMeaning": "tired",
+  "exampleSentence": "Ich bin müde."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "modern",
+  "extraForms": null,
+  "englishMeaning": "modern",
+  "exampleSentence": "Die Wohnung ist modern."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Mai",
+  "extraForms": null,
+  "englishMeaning": "May",
+  "exampleSentence": "Im Mai blühen viele Blumen."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "März",
+  "extraForms": null,
+  "englishMeaning": "March",
+  "exampleSentence": "Im März beginnt der Frühling."
+},
+{
+  "levelCode": "A1",
+  "letter": "M",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Mechaniker",
+  "extraForms": "Mechaniker",
+  "englishMeaning": "mechanic",
+  "exampleSentence": "Der Mechaniker repariert das Auto."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Nachricht",
+  "extraForms": "Nachrichten",
+  "englishMeaning": "message / news",
+  "exampleSentence": "Ich bekomme eine Nachricht."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Nacht",
+  "extraForms": "Nächte",
+  "englishMeaning": "night",
+  "exampleSentence": "Die Nacht ist ruhig."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Name",
+  "extraForms": "Namen",
+  "englishMeaning": "name",
+  "exampleSentence": "Mein Name ist Karthik."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Natur",
+  "extraForms": null,
+  "englishMeaning": "nature",
+  "exampleSentence": "Die Natur ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Nummer",
+  "extraForms": "Nummern",
+  "englishMeaning": "number",
+  "exampleSentence": "Wie ist deine Nummer?"
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "nehmen",
+  "extraForms": "nimmt, hat genommen",
+  "englishMeaning": "to take",
+  "exampleSentence": "Ich nehme den Bus."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "nennen",
+  "extraForms": "nennt, hat genannt",
+  "englishMeaning": "to name / call",
+  "exampleSentence": "Er nennt mich Anna."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "nutzen",
+  "extraForms": "nutzt, hat genutzt",
+  "englishMeaning": "to use",
+  "exampleSentence": "Ich nutze das Internet jeden Tag."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "neu",
+  "extraForms": null,
+  "englishMeaning": "new",
+  "exampleSentence": "Das Auto ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "nett",
+  "extraForms": null,
+  "englishMeaning": "nice",
+  "exampleSentence": "Die Nachbarn sind nett."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "normal",
+  "extraForms": null,
+  "englishMeaning": "normal",
+  "exampleSentence": "Das ist ganz normal."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "November",
+  "extraForms": null,
+  "englishMeaning": "November",
+  "exampleSentence": "Im November regnet es oft."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "navyblau",
+  "extraForms": null,
+  "englishMeaning": "navy blue",
+  "exampleSentence": "Die Jacke ist navyblau."
+},
+{
+  "levelCode": "A1",
+  "letter": "N",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Nussmilch",
+  "extraForms": "Nussmilchsorten",
+  "englishMeaning": "nut milk",
+  "exampleSentence": "Ich trinke gern Nussmilch."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Obst",
+  "extraForms": null,
+  "englishMeaning": "fruit",
+  "exampleSentence": "Obst ist gesund."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Ohr",
+  "extraForms": "Ohren",
+  "englishMeaning": "ear",
+  "exampleSentence": "Mein Ohr tut weh."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Ort",
+  "extraForms": "Orte",
+  "englishMeaning": "place",
+  "exampleSentence": "Das ist ein schöner Ort."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "öffnen",
+  "extraForms": "öffnet, hat geöffnet",
+  "englishMeaning": "to open",
+  "exampleSentence": "Ich öffne das Fenster."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "ordnen",
+  "extraForms": "ordnet, hat geordnet",
+  "englishMeaning": "to organize",
+  "exampleSentence": "Sie ordnet die Bücher."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "offen",
+  "extraForms": null,
+  "englishMeaning": "open",
+  "exampleSentence": "Die Tür ist offen."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "ordentlich",
+  "extraForms": null,
+  "englishMeaning": "tidy",
+  "exampleSentence": "Das Zimmer ist ordentlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "oft",
+  "extraForms": null,
+  "englishMeaning": "often",
+  "exampleSentence": "Ich gehe oft spazieren."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": "Monatsnamen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Oktober",
+  "extraForms": null,
+  "englishMeaning": "October",
+  "exampleSentence": "Im Oktober ist es kalt."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "orange",
+  "extraForms": null,
+  "englishMeaning": "orange",
+  "exampleSentence": "Die Orange ist orange."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Orangensaft",
+  "extraForms": "Orangensäfte",
+  "englishMeaning": "orange juice",
+  "exampleSentence": "Ich trinke Orangensaft."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Optiker",
+  "extraForms": "Optiker",
+  "englishMeaning": "optician",
+  "exampleSentence": "Der Optiker verkauft Brillen."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": "Länder",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Österreich",
+  "extraForms": null,
+  "englishMeaning": "Austria",
+  "exampleSentence": "Österreich liegt in Europa."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Organisation",
+  "extraForms": "Organisationen",
+  "englishMeaning": "organization",
+  "exampleSentence": "Die Organisation hilft vielen Menschen."
+},
+{
+  "levelCode": "A1",
+  "letter": "O",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Oper",
+  "extraForms": "Opern",
+  "englishMeaning": "opera",
+  "exampleSentence": "Die Oper beginnt um acht Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Papier",
+  "extraForms": "Papiere",
+  "englishMeaning": "paper",
+  "exampleSentence": "Das Papier liegt auf dem Tisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Park",
+  "extraForms": "Parks",
+  "englishMeaning": "park",
+  "exampleSentence": "Wir gehen in den Park."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Party",
+  "extraForms": "Partys",
+  "englishMeaning": "party",
+  "exampleSentence": "Die Party war toll."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Pause",
+  "extraForms": "Pausen",
+  "englishMeaning": "break",
+  "exampleSentence": "Wir machen eine Pause."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Person",
+  "extraForms": "Personen",
+  "englishMeaning": "person",
+  "exampleSentence": "Die Person ist freundlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Polizei",
+  "extraForms": null,
+  "englishMeaning": "police",
+  "exampleSentence": "Die Polizei hilft den Menschen."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Post",
+  "extraForms": null,
+  "englishMeaning": "post office / mail",
+  "exampleSentence": "Ich gehe zur Post."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "passieren",
+  "extraForms": "passiert, ist passiert",
+  "englishMeaning": "to happen",
+  "exampleSentence": "Was ist passiert?"
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "putzen",
+  "extraForms": "putzt, hat geputzt",
+  "englishMeaning": "to clean",
+  "exampleSentence": "Ich putze mein Zimmer."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "praktisch",
+  "extraForms": null,
+  "englishMeaning": "practical",
+  "exampleSentence": "Die Tasche ist praktisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "pünktlich",
+  "extraForms": null,
+  "englishMeaning": "punctual",
+  "exampleSentence": "Der Zug ist pünktlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "pink",
+  "extraForms": null,
+  "englishMeaning": "pink",
+  "exampleSentence": "Das Kleid ist pink."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Pils",
+  "extraForms": "Pilsbiere",
+  "englishMeaning": "pilsner beer",
+  "exampleSentence": "Er bestellt ein Pils."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Polizist",
+  "extraForms": "Polizisten",
+  "englishMeaning": "policeman",
+  "exampleSentence": "Der Polizist arbeitet nachts."
+},
+{
+  "levelCode": "A1",
+  "letter": "P",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Pilotin",
+  "extraForms": "Pilotinnen",
+  "englishMeaning": "female pilot",
+  "exampleSentence": "Die Pilotin fliegt nach Berlin."
+},
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Qualität",
+  "extraForms": "Qualitäten",
+  "englishMeaning": "quality",
+  "exampleSentence": "Die Qualität ist sehr gut."
+},
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Quittung",
+  "extraForms": "Quittungen",
+  "englishMeaning": "receipt",
+  "exampleSentence": "Brauchen Sie eine Quittung?"
+},
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Quelle",
+  "extraForms": "Quellen",
+  "englishMeaning": "source",
+  "exampleSentence": "Die Quelle ist bekannt."
+},
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Quiz",
+  "extraForms": "Quiz",
+  "englishMeaning": "quiz",
+  "exampleSentence": "Das Quiz ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "quatschen",
+  "extraForms": "quatscht, hat gequatscht",
+  "englishMeaning": "to chat",
+  "exampleSentence": "Wir quatschen lange."
+},
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "quer",
+  "extraForms": null,
+  "englishMeaning": "across / sideways",
+  "exampleSentence": "Das Bild hängt quer."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "Q",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Quittensaft",
+  "extraForms": "Quittensäfte",
+  "englishMeaning": "quince juice",
+  "exampleSentence": "Ich probiere Quittensaft."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Radio",
+  "extraForms": "Radios",
+  "englishMeaning": "radio",
+  "exampleSentence": "Das Radio ist laut."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Raum",
+  "extraForms": "Räume",
+  "englishMeaning": "room",
+  "exampleSentence": "Der Raum ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Rechnung",
+  "extraForms": "Rechnungen",
+  "englishMeaning": "bill / invoice",
+  "exampleSentence": "Die Rechnung ist hoch."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Restaurant",
+  "extraForms": "Restaurants",
+  "englishMeaning": "restaurant",
+  "exampleSentence": "Das Restaurant ist voll."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Regen",
+  "extraForms": null,
+  "englishMeaning": "rain",
+  "exampleSentence": "Der Regen ist stark."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "reisen",
+  "extraForms": "reist, ist gereist",
+  "englishMeaning": "to travel",
+  "exampleSentence": "Wir reisen nach Berlin."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "rennen",
+  "extraForms": "rennt, ist gerannt",
+  "englishMeaning": "to run",
+  "exampleSentence": "Das Kind rennt schnell."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "rufen",
+  "extraForms": "ruft, hat gerufen",
+  "englishMeaning": "to call / shout",
+  "exampleSentence": "Ich rufe meinen Freund an."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "ruhig",
+  "extraForms": null,
+  "englishMeaning": "quiet",
+  "exampleSentence": "Das Zimmer ist ruhig."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "richtig",
+  "extraForms": null,
+  "englishMeaning": "correct",
+  "exampleSentence": "Die Antwort ist richtig."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "rot",
+  "extraForms": null,
+  "englishMeaning": "red",
+  "exampleSentence": "Die Rose ist rot."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Rotwein",
+  "extraForms": "Rotweine",
+  "englishMeaning": "red wine",
+  "exampleSentence": "Er bestellt einen Rotwein."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Rezeptionist",
+  "extraForms": "Rezeptionisten",
+  "englishMeaning": "receptionist",
+  "exampleSentence": "Der Rezeptionist hilft den Gästen."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Reinigungskraft",
+  "extraForms": "Reinigungskräfte",
+  "englishMeaning": "cleaner",
+  "exampleSentence": "Die Reinigungskraft arbeitet morgens."
+},
+{
+  "levelCode": "A1",
+  "letter": "R",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Reise",
+  "extraForms": "Reisen",
+  "englishMeaning": "trip / journey",
+  "exampleSentence": "Die Reise war schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Sache",
+  "extraForms": "Sachen",
+  "englishMeaning": "thing",
+  "exampleSentence": "Die Sache ist wichtig."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Schlüssel",
+  "extraForms": "Schlüssel",
+  "englishMeaning": "key",
+  "exampleSentence": "Wo ist mein Schlüssel?"
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Schule",
+  "extraForms": "Schulen",
+  "englishMeaning": "school",
+  "exampleSentence": "Die Schule beginnt um acht Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Schuh",
+  "extraForms": "Schuhe",
+  "englishMeaning": "shoe",
+  "exampleSentence": "Der Schuh ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Stadt",
+  "extraForms": "Städte",
+  "englishMeaning": "city",
+  "exampleSentence": "Berlin ist eine große Stadt."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "schlafen",
+  "extraForms": "schläft, hat geschlafen",
+  "englishMeaning": "to sleep",
+  "exampleSentence": "Das Kind schläft."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "schreiben",
+  "extraForms": "schreibt, hat geschrieben",
+  "englishMeaning": "to write",
+  "exampleSentence": "Ich schreibe eine Nachricht."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "schwimmen",
+  "extraForms": "schwimmt, ist geschwommen",
+  "englishMeaning": "to swim",
+  "exampleSentence": "Wir schwimmen im See."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "schnell",
+  "extraForms": null,
+  "englishMeaning": "fast",
+  "exampleSentence": "Der Zug ist schnell."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "schön",
+  "extraForms": null,
+  "englishMeaning": "beautiful",
+  "exampleSentence": "Die Stadt ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "schwarz",
+  "extraForms": null,
+  "englishMeaning": "black",
+  "exampleSentence": "Das Auto ist schwarz."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Saft",
+  "extraForms": "Säfte",
+  "englishMeaning": "juice",
+  "exampleSentence": "Ich trinke Apfelsaft."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Student",
+  "extraForms": "Studenten",
+  "englishMeaning": "student",
+  "exampleSentence": "Der Student lernt Deutsch."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Studentin",
+  "extraForms": "Studentinnen",
+  "englishMeaning": "female student",
+  "exampleSentence": "Die Studentin kommt aus Italien."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Straße",
+  "extraForms": "Straßen",
+  "englishMeaning": "street",
+  "exampleSentence": "Die Straße ist lang."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Stuhl",
+  "extraForms": "Stühle",
+  "englishMeaning": "chair",
+  "exampleSentence": "Der Stuhl ist bequem."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Stunde",
+  "extraForms": "Stunden",
+  "englishMeaning": "hour",
+  "exampleSentence": "Der Kurs dauert zwei Stunden."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Stück",
+  "extraForms": "Stücke",
+  "englishMeaning": "piece",
+  "exampleSentence": "Ich nehme ein Stück Kuchen."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Supermarkt",
+  "extraForms": "Supermärkte",
+  "englishMeaning": "supermarket",
+  "exampleSentence": "Der Supermarkt ist offen."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "setzen",
+  "extraForms": "setzt, hat gesetzt",
+  "englishMeaning": "to place / sit",
+  "exampleSentence": "Bitte setzen Sie sich."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "singen",
+  "extraForms": "singt, hat gesungen",
+  "englishMeaning": "to sing",
+  "exampleSentence": "Sie singt ein Lied."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "sprechen",
+  "extraForms": "spricht, hat gesprochen",
+  "englishMeaning": "to speak",
+  "exampleSentence": "Wir sprechen Deutsch."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "studieren",
+  "extraForms": "studiert, hat studiert",
+  "englishMeaning": "to study",
+  "exampleSentence": "Ich studiere Informatik."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "sicher",
+  "extraForms": null,
+  "englishMeaning": "safe / sure",
+  "exampleSentence": "Das Auto ist sicher."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "spät",
+  "extraForms": null,
+  "englishMeaning": "late",
+  "exampleSentence": "Es ist schon spät."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "stark",
+  "extraForms": null,
+  "englishMeaning": "strong",
+  "exampleSentence": "Der Kaffee ist stark."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Länder",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Spanien",
+  "extraForms": null,
+  "englishMeaning": "Spain",
+  "exampleSentence": "Spanien ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Sprachen",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Spanisch",
+  "extraForms": null,
+  "englishMeaning": "Spanish",
+  "exampleSentence": "Sie spricht Spanisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "S",
+  "topic": "Wetter",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Schnee",
+  "extraForms": null,
+  "englishMeaning": "snow",
+  "exampleSentence": "Der Schnee ist weiß."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Tasche",
+  "extraForms": "Taschen",
+  "englishMeaning": "bag",
+  "exampleSentence": "Die Tasche ist schwer."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Tasse",
+  "extraForms": "Tassen",
+  "englishMeaning": "cup",
+  "exampleSentence": "Die Tasse ist heiß."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Telefon",
+  "extraForms": "Telefone",
+  "englishMeaning": "telephone",
+  "exampleSentence": "Das Telefon klingelt."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Termin",
+  "extraForms": "Termine",
+  "englishMeaning": "appointment",
+  "exampleSentence": "Ich habe einen Termin."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Tisch",
+  "extraForms": "Tische",
+  "englishMeaning": "table",
+  "exampleSentence": "Der Tisch ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "telefonieren",
+  "extraForms": "telefoniert, hat telefoniert",
+  "englishMeaning": "to call",
+  "exampleSentence": "Ich telefoniere mit meiner Mutter."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "tragen",
+  "extraForms": "trägt, hat getragen",
+  "englishMeaning": "to carry / wear",
+  "exampleSentence": "Sie trägt ein rotes Kleid."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "trinken",
+  "extraForms": "trinkt, hat getrunken",
+  "englishMeaning": "to drink",
+  "exampleSentence": "Ich trinke Wasser."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "teuer",
+  "extraForms": null,
+  "englishMeaning": "expensive",
+  "exampleSentence": "Das Hotel ist teuer."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "trocken",
+  "extraForms": null,
+  "englishMeaning": "dry",
+  "exampleSentence": "Die Kleidung ist trocken."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "toll",
+  "extraForms": null,
+  "englishMeaning": "great",
+  "exampleSentence": "Das Konzert war toll."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Tee",
+  "extraForms": "Tees",
+  "englishMeaning": "tea",
+  "exampleSentence": "Ich trinke gern Tee."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "türkis",
+  "extraForms": null,
+  "englishMeaning": "turquoise",
+  "exampleSentence": "Das Kleid ist türkis."
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Toilette",
+  "extraForms": "Toiletten",
+  "englishMeaning": "toilet",
+  "exampleSentence": "Wo ist die Toilette?"
+},
+{
+  "levelCode": "A1",
+  "letter": "T",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Ticket",
+  "extraForms": "Tickets",
+  "englishMeaning": "ticket",
+  "exampleSentence": "Ich kaufe ein Ticket."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Uhr",
+  "extraForms": "Uhren",
+  "englishMeaning": "clock / watch",
+  "exampleSentence": "Die Uhr ist neu."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Universität",
+  "extraForms": "Universitäten",
+  "englishMeaning": "university",
+  "exampleSentence": "Die Universität ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Urlaub",
+  "extraForms": "Urlaube",
+  "englishMeaning": "vacation",
+  "exampleSentence": "Im Sommer habe ich Urlaub."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "üben",
+  "extraForms": "übt, hat geübt",
+  "englishMeaning": "to practice",
+  "exampleSentence": "Ich übe Deutsch jeden Tag."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "unterschreiben",
+  "extraForms": "unterschreibt, hat unterschrieben",
+  "englishMeaning": "to sign",
+  "exampleSentence": "Bitte unterschreiben Sie hier."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "unglaublich",
+  "extraForms": null,
+  "englishMeaning": "unbelievable",
+  "exampleSentence": "Das Konzert war unglaublich."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "unfreundlich",
+  "extraForms": null,
+  "englishMeaning": "unfriendly",
+  "exampleSentence": "Der Mann war unfreundlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "preposition",
+  "article": null,
+  "germanWord": "unter",
+  "extraForms": null,
+  "englishMeaning": "under",
+  "exampleSentence": "Die Tasche ist unter dem Tisch."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "preposition",
+  "article": null,
+  "germanWord": "über",
+  "extraForms": null,
+  "englishMeaning": "over / about",
+  "exampleSentence": "Wir sprechen über Musik."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Unterhaltung",
+  "extraForms": "Unterhaltungen",
+  "englishMeaning": "conversation / entertainment",
+  "exampleSentence": "Die Unterhaltung war interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Unterschrift",
+  "extraForms": "Unterschriften",
+  "englishMeaning": "signature",
+  "exampleSentence": "Hier fehlt die Unterschrift."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Unterricht",
+  "extraForms": null,
+  "englishMeaning": "lesson / class",
+  "exampleSentence": "Der Unterricht beginnt um acht Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": "Uhrzeit",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Uhrzeit",
+  "extraForms": "Uhrzeiten",
+  "englishMeaning": "time",
+  "exampleSentence": "Wie ist die Uhrzeit?"
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "unterschiedlich",
+  "extraForms": null,
+  "englishMeaning": "different",
+  "exampleSentence": "Die Antworten sind unterschiedlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "U",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "überrascht",
+  "extraForms": null,
+  "englishMeaning": "surprised",
+  "exampleSentence": "Ich bin überrascht."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Vater",
+  "extraForms": "Väter",
+  "englishMeaning": "father",
+  "exampleSentence": "Mein Vater arbeitet viel."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Verkäufer",
+  "extraForms": "Verkäufer",
+  "englishMeaning": "salesman",
+  "exampleSentence": "Der Verkäufer hilft mir."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Vertrag",
+  "extraForms": "Verträge",
+  "englishMeaning": "contract",
+  "exampleSentence": "Ich unterschreibe den Vertrag."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Video",
+  "extraForms": "Videos",
+  "englishMeaning": "video",
+  "exampleSentence": "Das Video ist interessant."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Vorlesung",
+  "extraForms": "Vorlesungen",
+  "englishMeaning": "lecture",
+  "exampleSentence": "Die Vorlesung beginnt um zehn Uhr."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "verkaufen",
+  "extraForms": "verkauft, hat verkauft",
+  "englishMeaning": "to sell",
+  "exampleSentence": "Er verkauft sein Auto."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "verstehen",
+  "extraForms": "versteht, hat verstanden",
+  "englishMeaning": "to understand",
+  "exampleSentence": "Ich verstehe die Aufgabe."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "vorstellen",
+  "extraForms": "stellt vor, hat vorgestellt",
+  "englishMeaning": "to introduce / imagine",
+  "exampleSentence": "Ich stelle meinen Freund vor."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "voll",
+  "extraForms": null,
+  "englishMeaning": "full",
+  "exampleSentence": "Das Restaurant ist voll."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "vorsichtig",
+  "extraForms": null,
+  "englishMeaning": "careful",
+  "exampleSentence": "Sei bitte vorsichtig."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "verheiratet",
+  "extraForms": null,
+  "englishMeaning": "married",
+  "exampleSentence": "Meine Eltern sind verheiratet."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "violett",
+  "extraForms": null,
+  "englishMeaning": "violet",
+  "exampleSentence": "Die Blume ist violett."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Verkäuferin",
+  "extraForms": "Verkäuferinnen",
+  "englishMeaning": "saleswoman",
+  "exampleSentence": "Die Verkäuferin ist freundlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "V",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Verbindung",
+  "extraForms": "Verbindungen",
+  "englishMeaning": "connection",
+  "exampleSentence": "Die Internetverbindung ist langsam."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Wasser",
+  "extraForms": null,
+  "englishMeaning": "water",
+  "exampleSentence": "Ich trinke viel Wasser."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Wetter",
+  "extraForms": null,
+  "englishMeaning": "weather",
+  "exampleSentence": "Das Wetter ist schön."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Wohnung",
+  "extraForms": "Wohnungen",
+  "englishMeaning": "apartment",
+  "exampleSentence": "Die Wohnung ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Woche",
+  "extraForms": "Wochen",
+  "englishMeaning": "week",
+  "exampleSentence": "Die Woche geht schnell vorbei."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Welt",
+  "extraForms": "Welten",
+  "englishMeaning": "world",
+  "exampleSentence": "Die Welt ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "warten",
+  "extraForms": "wartet, hat gewartet",
+  "englishMeaning": "to wait",
+  "exampleSentence": "Ich warte auf den Bus."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "wohnen",
+  "extraForms": "wohnt, hat gewohnt",
+  "englishMeaning": "to live",
+  "exampleSentence": "Ich wohne in Berlin."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "wissen",
+  "extraForms": "weiß, hat gewusst",
+  "englishMeaning": "to know",
+  "exampleSentence": "Ich weiß die Antwort."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "wichtig",
+  "extraForms": null,
+  "englishMeaning": "important",
+  "exampleSentence": "Das ist wichtig."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "warm",
+  "extraForms": null,
+  "englishMeaning": "warm",
+  "exampleSentence": "Das Wasser ist warm."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "weiß",
+  "extraForms": null,
+  "englishMeaning": "white",
+  "exampleSentence": "Der Schnee ist weiß."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Wein",
+  "extraForms": "Weine",
+  "englishMeaning": "wine",
+  "exampleSentence": "Er trinkt ein Glas Wein."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Wissenschaftler",
+  "extraForms": "Wissenschaftler",
+  "englishMeaning": "scientist",
+  "exampleSentence": "Der Wissenschaftler arbeitet im Labor."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": "Wetter",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Wind",
+  "extraForms": "Winde",
+  "englishMeaning": "wind",
+  "exampleSentence": "Der Wind ist stark."
+},
+{
+  "levelCode": "A1",
+  "letter": "W",
+  "topic": "Wochentage",
+  "wordType": "noun",
+  "article": null,
+  "germanWord": "Wochenende",
+  "extraForms": "Wochenenden",
+  "englishMeaning": "weekend",
+  "exampleSentence": "Am Wochenende habe ich frei."
+},
+{
+  "levelCode": "A1",
+  "letter": "X",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Xylofon",
+  "extraForms": "Xylofone",
+  "englishMeaning": "xylophone",
+  "exampleSentence": "Das Xylofon klingt schön."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "X",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Xylophonist",
+  "extraForms": "Xylophonisten",
+  "englishMeaning": "xylophonist",
+  "exampleSentence": "Der Xylophonist spielt im Konzert."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "Y",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Yoghurt",
+  "extraForms": "Yoghurts",
+  "englishMeaning": "yogurt",
+  "exampleSentence": "Ich esse gern Yoghurt."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "Y",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Yogalehrer",
+  "extraForms": "Yogalehrer",
+  "englishMeaning": "yoga teacher",
+  "exampleSentence": "Der Yogalehrer ist freundlich."
+},
+
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Zahl",
+  "extraForms": "Zahlen",
+  "englishMeaning": "number",
+  "exampleSentence": "Die Zahl ist groß."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Zeit",
+  "extraForms": "Zeiten",
+  "englishMeaning": "time",
+  "exampleSentence": "Ich habe keine Zeit."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Zimmer",
+  "extraForms": "Zimmer",
+  "englishMeaning": "room",
+  "exampleSentence": "Das Zimmer ist sauber."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Zug",
+  "extraForms": "Züge",
+  "englishMeaning": "train",
+  "exampleSentence": "Der Zug kommt pünktlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "zeigen",
+  "extraForms": "zeigt, hat gezeigt",
+  "englishMeaning": "to show",
+  "exampleSentence": "Er zeigt mir das Foto."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "zahlen",
+  "extraForms": "zahlt, hat gezahlt",
+  "englishMeaning": "to pay",
+  "exampleSentence": "Ich zahle die Rechnung."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "verb",
+  "article": null,
+  "germanWord": "zusammenarbeiten",
+  "extraForms": "arbeitet zusammen, hat zusammengearbeitet",
+  "englishMeaning": "to work together",
+  "exampleSentence": "Wir arbeiten gut zusammen."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "zufrieden",
+  "extraForms": null,
+  "englishMeaning": "satisfied",
+  "exampleSentence": "Ich bin zufrieden."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "zentral",
+  "extraForms": null,
+  "englishMeaning": "central",
+  "exampleSentence": "Die Wohnung liegt zentral."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": "Farben",
+  "wordType": "adjective",
+  "article": null,
+  "germanWord": "zitronengelb",
+  "extraForms": null,
+  "englishMeaning": "lemon yellow",
+  "exampleSentence": "Die Wand ist zitronengelb."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": "Getränke",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Zitronenlimonade",
+  "extraForms": "Zitronenlimonaden",
+  "englishMeaning": "lemonade",
+  "exampleSentence": "Die Zitronenlimonade ist kalt."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "der",
+  "germanWord": "Zahnarzt",
+  "extraForms": "Zahnärzte",
+  "englishMeaning": "dentist",
+  "exampleSentence": "Der Zahnarzt untersucht die Zähne."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": "Berufe",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Zahnärztin",
+  "extraForms": "Zahnärztinnen",
+  "englishMeaning": "female dentist",
+  "exampleSentence": "Die Zahnärztin ist freundlich."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": "null",
+  "wordType": "noun",
+  "article": "die",
+  "germanWord": "Zukunft",
+  "extraForms": "Zukünfte",
+  "englishMeaning": "future",
+  "exampleSentence": "Ich denke an die Zukunft."
+},
+{
+  "levelCode": "A1",
+  "letter": "Z",
+  "topic": null,
+  "wordType": "noun",
+  "article": "das",
+  "germanWord": "Ziel",
+  "extraForms": "Ziele",
+  "englishMeaning": "goal",
+  "exampleSentence": "Mein Ziel ist Deutsch zu lernen."
+}
+]

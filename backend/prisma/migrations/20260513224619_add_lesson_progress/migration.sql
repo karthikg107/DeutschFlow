@@ -1,0 +1,16 @@
+-- CreateTable
+CREATE TABLE "LessonProgress" (
+    "id" TEXT NOT NULL,
+    "userId" TEXT NOT NULL,
+    "lessonSlug" TEXT NOT NULL,
+    "completed" BOOLEAN NOT NULL DEFAULT false,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "LessonProgress_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "LessonProgress_userId_lessonSlug_key" ON "LessonProgress"("userId", "lessonSlug");
+
+-- AddForeignKey
+ALTER TABLE "LessonProgress" ADD CONSTRAINT "LessonProgress_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
