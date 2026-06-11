@@ -52,6 +52,8 @@ function SavedVocabulary() {
 
     };
 
+    
+
   const removeWord =
     async (wordId) => {
 
@@ -64,7 +66,7 @@ function SavedVocabulary() {
         setSavedWords(
           savedWords.filter(
             (item) =>
-              item.wordId !== wordId
+              item.word.id !== wordId
           )
         );
 
@@ -85,26 +87,62 @@ function SavedVocabulary() {
     };
 
   const filteredWords =
-    savedWords.filter((item) => {
+  savedWords.filter((item) => {
 
-      const query =
-        search.toLowerCase();
+    const query =
+      search.toLowerCase();
 
-      return (
+    return (
 
-        item.word.germanWord
-          .toLowerCase()
-          .includes(query)
+      item.word.germanWord
+        .toLowerCase()
+        .includes(query)
 
-        ||
+      ||
 
-        item.word.englishMeaning
-          .toLowerCase()
-          .includes(query)
+      item.word.englishMeaning
+        .toLowerCase()
+        .includes(query)
+
+    );
+
+  });
+
+const groupedLevels = {
+  A1: [],
+  A2: [],
+  B1: []
+};
+
+filteredWords.forEach((item) => {
+
+  const level =
+    item.word.levelCode;
+
+  if (groupedLevels[level]) {
+
+    groupedLevels[level]
+      .push(item);
+
+  }
+
+});
+
+Object.keys(groupedLevels)
+  .forEach((level) => {
+
+    groupedLevels[level]
+      .sort((a, b) =>
+
+        a.word.germanWord
+          .localeCompare(
+            b.word.germanWord,
+            "de"
+          )
 
       );
 
-    });
+});
 
   if (loading) {
 
@@ -141,7 +179,8 @@ function SavedVocabulary() {
 
         <h1
           style={{
-            fontSize: "52px",
+            fontSize: "48px",
+            fontWeight: "700",
             marginBottom: "12px"
           }}
         >
@@ -210,103 +249,126 @@ function SavedVocabulary() {
 
         ) : (
 
-          filteredWords.map((item) => {
+          Object.entries(groupedLevels)
+  .filter(
+    ([, words]) =>
+      words.length > 0
+  )
+  .map(([level, words]) => (
 
-            const word =
-              item.word;
+    <div
+      key={level}
+      style={{
+        marginBottom: "60px"
+      }}
+    >
 
-            return (
+      <h2
+  style={{
+    fontSize: "32px",
+    fontWeight: "700",
+    marginBottom: "24px",
+    paddingBottom: "12px",
+    borderBottom:
+      "1px solid rgba(255,255,255,.08)",
+    color: "#818cf8"
+  }}
+>
+        {level} Vocabulary
+        {" "}
+        ({words.length})
+      </h2>
+
+      {words.map((item) => {
+
+        const word =
+          item.word;
+
+        return (
+
+          <div
+            key={item.id}
+            style={{
+              marginBottom: "32px",
+              lineHeight: "1.7"
+            }}
+          >
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent:
+                  "space-between",
+                alignItems:
+                  "center"
+              }}
+            >
 
               <div
-                key={item.id}
                 style={{
-                  marginBottom: "32px",
-                  lineHeight: "1.7"
+                  fontSize: "24px",
+                  fontWeight: "600"
                 }}
               >
 
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent:
-                      "space-between",
-                    alignItems:
-                      "center"
-                  }}
-                >
+                {word.article &&
+                  `${word.article} `}
 
-                  <div
-                    style={{
-                      fontSize: "24px",
-                      fontWeight: "600"
-                    }}
-                  >
+                {word.germanWord}
 
-                    {word.article &&
-                      `${word.article} `}
-
-                    {word.germanWord}
-
-                    {word.extraForms &&
-                      `, ${word.extraForms}`}
-
-                  </div>
-
-                  <Bookmark
-                    size={22}
-                    fill="#8b5cf6"
-                    color="#8b5cf6"
-                    onClick={() =>
-                      removeWord(
-                        word.id
-                      )
-                    }
-                    style={{
-                      cursor:
-                        "pointer"
-                    }}
-                  />
-
-                </div>
-
-                <div
-                  style={{
-                    color: "#cbd5e1",
-                    fontSize: "18px"
-                  }}
-                >
-                  eng — {
-                    word.englishMeaning
-                  }
-                </div>
-
-                <div
-                  style={{
-                    color: "#94a3b8",
-                    fontSize: "17px"
-                  }}
-                >
-                  {
-                    word.exampleSentence
-                  }
-                </div>
-
-                <div
-                  style={{
-                    marginTop: "8px",
-                    color: "#818cf8",
-                    fontSize: "14px"
-                  }}
-                >
-                  {word.levelCode}
-                </div>
+                {word.extraForms &&
+                  `, ${word.extraForms}`}
 
               </div>
 
-            );
+              <Bookmark
+                size={22}
+                fill="#8b5cf6"
+                color="#8b5cf6"
+                onClick={() =>
+                  removeWord(
+                    word.id
+                  )
+                }
+                style={{
+                  cursor:
+                    "pointer"
+                }}
+              />
 
-          })
+            </div>
 
+            <div
+              style={{
+                color: "#cbd5e1",
+                fontSize: "18px"
+              }}
+            >
+              eng — {
+                word.englishMeaning
+              }
+            </div>
+
+            <div
+              style={{
+                color: "#94a3b8",
+                fontSize: "17px"
+              }}
+            >
+              {
+                word.exampleSentence
+              }
+            </div>
+
+          </div>
+
+        );
+
+      })}
+
+    </div>
+
+))
         )}
 
       </div>
