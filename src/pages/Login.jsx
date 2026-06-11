@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import { Eye, EyeOff } from "lucide-react";
+
 import { useAuth } from "../context/AuthContext";
 
 import api from "../utils/api";
@@ -13,11 +15,17 @@ function Login() {
   const { login } = useAuth();
 
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
 
-  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] =
+    useState(false);
 
-  const [error, setError] = useState("");
+  const [loading, setLoading] =
+    useState(false);
+
+  const [error, setError] =
+    useState("");
 
   const handleSubmit = async (e) => {
 
@@ -29,28 +37,40 @@ function Login() {
 
     try {
 
-  const response = await api.post(
-    "/auth/login",
-    {
-      email,
-      password,
+      const response =
+        await api.post(
+          "/auth/login",
+          {
+            email,
+            password,
+          }
+        );
+
+      const data =
+        response.data;
+
+      login(data);
+
+      navigate(
+        "/dashboard"
+      );
+
+    } catch (err) {
+
+      setError(
+
+        err.response?.data?.message ||
+
+        "Login failed. Please try again."
+
+      );
+
+    } finally {
+
+      setLoading(false);
+
     }
-  );
 
-  const data = response.data;
-
-  login(data);
-
-  navigate("/dashboard");
-
-} catch (err) {
-
-  setError(
-    err.response?.data?.message ||
-    "Login failed"
-  );
-
-}
   };
 
   return (
@@ -62,13 +82,15 @@ function Login() {
         justifyContent: "center",
         alignItems: "center",
         background: "#0f172a",
+        padding: "20px",
       }}
     >
 
       <form
         onSubmit={handleSubmit}
         style={{
-          width: "350px",
+          width: "100%",
+          maxWidth: "350px",
           background: "#111827",
           padding: "40px",
           borderRadius: "16px",
@@ -85,23 +107,33 @@ function Login() {
         </h1>
 
         {error && (
+
           <p
             style={{
-              color: "red",
+              color: "#ef4444",
               marginBottom: "20px",
             }}
           >
             {error}
           </p>
+
         )}
 
         <input
           type="email"
           placeholder="Email"
           value={email}
-          onChange={(e) =>
-            setEmail(e.target.value)
-          }
+          onChange={(e) => {
+
+            setEmail(
+              e.target.value
+            );
+
+            if (error) {
+              setError("");
+            }
+
+          }}
           required
           style={{
             width: "100%",
@@ -109,25 +141,76 @@ function Login() {
             marginBottom: "16px",
             borderRadius: "10px",
             border: "none",
+            boxSizing: "border-box",
           }}
         />
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) =>
-            setPassword(e.target.value)
-          }
-          required
+        <div
           style={{
-            width: "100%",
-            padding: "14px",
+            position: "relative",
             marginBottom: "20px",
-            borderRadius: "10px",
-            border: "none",
           }}
-        />
+        >
+
+          <input
+            type={
+              showPassword
+                ? "text"
+                : "password"
+            }
+            placeholder="Password"
+            value={password}
+            onChange={(e) => {
+
+              setPassword(
+                e.target.value
+              );
+
+              if (error) {
+                setError("");
+              }
+
+            }}
+            required
+            style={{
+              width: "100%",
+              padding: "14px",
+              paddingRight: "45px",
+              borderRadius: "10px",
+              border: "none",
+              boxSizing: "border-box",
+            }}
+          />
+
+          <button
+            type="button"
+            onClick={() =>
+              setShowPassword(
+                !showPassword
+              )
+            }
+            style={{
+              position: "absolute",
+              right: "12px",
+              top: "50%",
+              transform:
+                "translateY(-50%)",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: "#6b7280",
+            }}
+          >
+
+            {
+              showPassword
+                ? <EyeOff size={18} />
+                : <Eye size={18} />
+            }
+
+          </button>
+
+        </div>
 
         <button
           type="submit"
@@ -141,15 +224,25 @@ function Login() {
             color: "white",
             fontWeight: "bold",
             cursor: "pointer",
+            opacity:
+              loading ? 0.7 : 1,
           }}
         >
-          {loading ? "Loading..." : "Login"}
+
+          {
+            loading
+              ? "Loading..."
+              : "Login"
+          }
+
         </button>
 
       </form>
 
     </div>
+
   );
+
 }
 
 export default Login;

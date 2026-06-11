@@ -30,7 +30,6 @@ export const getVocabularyByLevel =
 
         });
 
-
       res.json(words);
 
     } catch (error) {
@@ -238,6 +237,43 @@ export const getSavedWords =
       res.status(500).json({
         message:
           "Failed to fetch saved words"
+      });
+
+    }
+
+};
+
+/* ======================================
+   REMOVE SAVED WORD
+====================================== */
+
+export const removeSavedWord =
+  async (req, res) => {
+
+    try {
+
+      const { wordId } = req.params;
+
+      await prisma.savedWord.deleteMany({
+
+        where: {
+          userId: req.user.id,
+          wordId: Number(wordId)
+        }
+
+      });
+
+      res.json({
+        message: "Word removed"
+      });
+
+    } catch (error) {
+
+      console.log(error);
+
+      res.status(500).json({
+        message:
+          "Failed to remove word"
       });
 
     }

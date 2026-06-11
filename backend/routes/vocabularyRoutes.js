@@ -6,6 +6,7 @@ import {
   getTopicVocabulary,
   saveWord,
   getSavedWords,
+  removeSavedWord,
 } from "../controllers/vocabularyController.js";
 
 import protect from "../middleware/authMiddleware.js";
@@ -17,22 +18,16 @@ router.get(
   getVocabularyByLevel
 );
 
-router.get(
-  "/search",
-  protect,
-  searchVocabulary
-);
-
-router.get(
-  "/topic/:level/:topic",
-  protect,
-  getTopicVocabulary
-);
-
 router.post(
   "/save/:wordId",
   protect,
   saveWord
+);
+
+router.delete(
+  "/save/:wordId",
+  protect,
+  removeSavedWord
 );
 
 router.get(
