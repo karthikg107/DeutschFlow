@@ -12,6 +12,9 @@ import toast from "react-hot-toast";
 
 function VocabularyLevel() {
 
+  const isMobile =
+  window.innerWidth < 768;
+
   const { level } = useParams();
 
   const [words, setWords] =
@@ -238,7 +241,10 @@ words.forEach((word) => {
 
       <div
         style={{
-          padding: "40px",
+          padding:
+  isMobile
+    ? "20px"
+    : "40px",
           color: "white",
           maxWidth: "1100px"
         }}
@@ -250,7 +256,10 @@ words.forEach((word) => {
 
         <h1
           style={{
-            fontSize: "52px",
+            fontSize:
+  isMobile
+    ? "40px"
+    : "52px",
             marginBottom: "30px",
             fontWeight: "700"
           }}
@@ -278,11 +287,27 @@ words.forEach((word) => {
 
             width: "100%",
 
-            maxWidth: "500px",
+            maxWidth:
+  isMobile
+    ? "100%"
+    : "500px",
 
-            padding: "16px 18px",
+boxSizing: "border-box",    
 
-            marginBottom: "50px",
+padding:
+  isMobile
+    ? "14px 16px"
+    : "16px 18px",
+
+marginBottom:
+  isMobile
+    ? "35px"
+    : "50px",
+
+fontSize:
+  isMobile
+    ? "16px"
+    : "18px",
 
             borderRadius: "14px",
 
@@ -294,7 +319,6 @@ words.forEach((word) => {
 
             color: "white",
 
-            fontSize: "18px",
 
             outline: "none"
 
@@ -314,7 +338,10 @@ words.forEach((word) => {
 
           <h2
             style={{
-              fontSize: "32px",
+              fontSize:
+  isMobile
+    ? "26px"
+    : "32px",
               marginBottom: "20px"
             }}
           >
@@ -342,7 +369,10 @@ words.forEach((word) => {
 
     <h3
       style={{
-        fontSize: "24px",
+        fontSize:
+  isMobile
+    ? "20px"
+    : "24px",
         marginBottom: "14px",
         color: "#a5b4fc"
       }}
@@ -369,7 +399,9 @@ words.forEach((word) => {
               "rgba(255,255,255,.05)",
 
             padding:
-              "10px 16px",
+  isMobile
+    ? "8px 12px"
+    : "10px 16px",
 
             borderRadius:
               "12px",
@@ -426,7 +458,10 @@ words.forEach((word) => {
 
             <h2
               style={{
-                fontSize: "42px",
+                fontSize:
+  isMobile
+    ? "32px"
+    : "42px",
                 marginBottom: "24px",
                 color: "#818cf8"
               }}
@@ -440,7 +475,10 @@ words.forEach((word) => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "22px"
+                gap:
+  isMobile
+    ? "16px"
+    : "22px",
               }}
             >
 
@@ -461,13 +499,21 @@ words.forEach((word) => {
   style={{
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
-    fontSize: "24px",
+    alignItems: "flex-start",
+    gap: "12px",
+    fontSize:
+      isMobile
+        ? "20px"
+        : "24px",
     fontWeight: "600"
   }}
 >
 
-  <div>
+  <div
+  style={{
+    flex: 1
+  }}
+>
 
     {word.article &&
       `${word.article} `}
@@ -495,9 +541,10 @@ words.forEach((word) => {
         : "#94a3b8"
     }
     style={{
-      cursor: "pointer",
-      transition: "all .2s ease"
-    }}
+  cursor: "pointer",
+  transition: "all .2s ease",
+  flexShrink: 0
+}}
   />
 
 </div>
@@ -507,7 +554,10 @@ words.forEach((word) => {
                   <div
                     style={{
                       color: "#cbd5e1",
-                      fontSize: "18px"
+                      fontSize:
+  isMobile
+    ? "16px"
+    : "18px",
                     }}
                   >
 
@@ -523,7 +573,10 @@ words.forEach((word) => {
                     style={{
                       color: "#94a3b8",
                       marginTop: "4px",
-                      fontSize: "17px"
+                      fontSize:
+  isMobile
+    ? "15px"
+    : "17px",
                     }}
                   >
 
