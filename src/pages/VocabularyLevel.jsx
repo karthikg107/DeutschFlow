@@ -7,6 +7,9 @@ import AppLayout from
 
 import api from "../utils/api";
 
+import { Bookmark } from "lucide-react";
+import toast from "react-hot-toast";
+
 function VocabularyLevel() {
 
   const { level } = useParams();
@@ -14,18 +17,14 @@ function VocabularyLevel() {
   const [words, setWords] =
     useState([]);
 
-
   const [loading, setLoading] =
     useState(true);
 
   const [search, setSearch] =
     useState("");
 
-  useEffect(() => {
-
-    fetchVocabulary();
-
-  }, [level]);
+  const [savedIds, setSavedIds] =
+    useState([]);
 
   const fetchVocabulary =
     async () => {
@@ -50,6 +49,92 @@ function VocabularyLevel() {
       }
 
     };
+
+  const fetchSavedWords =
+    async () => {
+
+      try {
+
+        const response =
+          await api.get(
+            "/vocabulary/saved"
+          );
+
+        const ids =
+          response.data.map(
+            (item) => item.wordId
+          );
+
+        setSavedIds(ids);
+
+      } catch (error) {
+
+        console.log(error);
+
+      }
+
+    };
+
+  const toggleSaveWord =
+    async (wordId) => {
+
+      try {
+
+        const isSaved =
+          savedIds.includes(wordId);
+
+        if (isSaved) {
+
+          await api.delete(
+            `/vocabulary/save/${wordId}`
+          );
+
+          setSavedIds((prev) =>
+  prev.filter(
+    (id) => id !== wordId
+  )
+);
+
+          toast.success(
+            "Removed from saved vocabulary"
+          );
+
+        } else {
+
+          await api.post(
+            `/vocabulary/save/${wordId}`
+          );
+
+          setSavedIds((prev) => [
+  ...prev,
+  wordId
+]);
+
+          toast.success(
+            "Saved to vocabulary"
+          );
+
+        }
+
+      } catch (error) {
+
+        console.log(error);
+
+        toast.error(
+          "Something went wrong"
+        );
+
+      }
+
+    };
+
+  useEffect(() => {
+
+    fetchVocabulary();
+
+    fetchSavedWords();
+
+  }, [level]);
 
   /* ======================
       GROUP WORDS BY LETTER
@@ -145,6 +230,7 @@ words.forEach((word) => {
     );
 
   }
+  
 
   return (
 
@@ -372,21 +458,49 @@ words.forEach((word) => {
                   {/* GERMAN WORD */}
 
                   <div
-                    style={{
-                      fontSize: "24px",
-                      fontWeight: "600"
-                    }}
-                  >
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    fontSize: "24px",
+    fontWeight: "600"
+  }}
+>
 
-                    {word.article &&
-                      `${word.article} `}
+  <div>
 
-                    {word.germanWord}
+    {word.article &&
+      `${word.article} `}
 
-                    {word.extraForms &&
-                      `, ${word.extraForms}`}
+    {word.germanWord}
 
-                  </div>
+    {word.extraForms &&
+      `, ${word.extraForms}`}
+
+  </div>
+
+  <Bookmark
+    size={22}
+    onClick={() =>
+      toggleSaveWord(word.id)
+    }
+    fill={
+      savedIds.includes(word.id)
+        ? "#8b5cf6"
+        : "none"
+    }
+    color={
+      savedIds.includes(word.id)
+        ? "#8b5cf6"
+        : "#94a3b8"
+    }
+    style={{
+      cursor: "pointer",
+      transition: "all .2s ease"
+    }}
+  />
+
+</div>
 
                   {/* ENGLISH */}
 

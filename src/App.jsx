@@ -11,6 +11,7 @@ import Vocabulary from "./pages/Vocabulary";
 import VocabularyLevel from "./pages/VocabularyLevel";
 import VocabularyQuiz from "./pages/VocabularyQuiz";
 import SavedVocabulary from "./pages/SavedVocabulary";
+import { Toaster } from "react-hot-toast";
 
 // 🔥 NEW IMPORT
 import Grammar from "./pages/Grammar";
@@ -18,6 +19,18 @@ import Grammar from "./pages/Grammar";
 function App() {
   return (
     <BrowserRouter>
+
+      <Toaster
+  position="bottom-right"
+  toastOptions={{
+    duration: 2000,
+    style: {
+      background: "#111827",
+      color: "#fff",
+      border: "1px solid rgba(255,255,255,.08)",
+    },
+  }}
+/>
 
       <Routes>
 
@@ -94,7 +107,7 @@ function App() {
 />
 
 <Route
-  path="/saved-vocabulary"
+  path="/vocabulary/saved"
   element={
     <ProtectedRoute>
       <SavedVocabulary />
