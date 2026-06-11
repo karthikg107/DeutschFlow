@@ -8,6 +8,9 @@ import api from "../utils/api";
 
 function Vocabulary() {
 
+  const isMobile =
+  window.innerWidth < 768;
+
   const [savedCount, setSavedCount] =
   useState(0);
 
@@ -70,7 +73,10 @@ const fetchSavedCount =
 
       <div
         style={{
-          padding: "40px",
+          padding:
+  isMobile
+    ? "20px"
+    : "40px",
           color: "white",
           maxWidth: "1200px"
         }}
@@ -78,7 +84,10 @@ const fetchSavedCount =
 
         <h1
           style={{
-            fontSize: "48px",
+            fontSize:
+  isMobile
+    ? "40px"
+    : "48px",
             fontWeight: "700",
             marginBottom: "12px"
           }}
@@ -90,21 +99,26 @@ const fetchSavedCount =
           style={{
             color: "#94a3b8",
             marginBottom: "40px",
-            fontSize: "18px"
+            fontSize:
+  isMobile
+    ? "16px"
+    : "18px"
           }}
         >
           Build your German vocabulary by level.
         </p>
 
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "1fr 420px",
-            gap: "18px",
-            alignItems: "start"
-          }}
-        >
+  style={{
+    display: "grid",
+    gridTemplateColumns:
+      isMobile
+        ? "1fr"
+        : "1fr 420px",
+    gap: "18px",
+    alignItems: "start"
+  }}
+>
 
           {/* LEFT COLUMN */}
 
@@ -147,9 +161,15 @@ const fetchSavedCount =
 
     borderRadius: "20px",
 
-    padding: "22px",
+    padding:
+  isMobile
+    ? "18px"
+    : "22px",
 
-    minHeight: "150px",
+minHeight:
+  isMobile
+    ? "130px"
+    : "150px",
 
     transition: "all .25s ease",
 
@@ -159,7 +179,10 @@ const fetchSavedCount =
 
                   <div
                     style={{
-                      fontSize: "32px",
+                      fontSize:
+  isMobile
+    ? "28px"
+    : "32px",
                       fontWeight: "700",
                       color: "#818cf8"
                     }}
@@ -169,7 +192,10 @@ const fetchSavedCount =
 
                   <div
                     style={{
-                      fontSize: "20px",
+                      fontSize:
+  isMobile
+    ? "18px"
+    : "20px",
                       fontWeight: "600",
                       marginTop: "6px"
                     }}
@@ -222,9 +248,15 @@ const fetchSavedCount =
 
       borderRadius: "24px",
 
-      padding: "30px",
+      padding:
+  isMobile
+    ? "22px"
+    : "30px",
 
-      minHeight: "220px",
+minHeight:
+  isMobile
+    ? "180px"
+    : "220px",
 
       display: "flex",
 
@@ -239,8 +271,17 @@ const fetchSavedCount =
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
+flexDirection:
+  isMobile
+    ? "column"
+    : "row",
+
+justifyContent: "space-between",
+
+alignItems:
+  isMobile
+    ? "flex-start"
+    : "flex-start",
           marginBottom: "24px"
         }}
       >
@@ -249,7 +290,10 @@ const fetchSavedCount =
 
           <div
             style={{
-              fontSize: "28px",
+              fontSize:
+  isMobile
+    ? "24px"
+    : "28px",
               fontWeight: "700"
             }}
           >
@@ -271,10 +315,13 @@ const fetchSavedCount =
         </div>
 
         <div
-          style={{
-            textAlign: "right"
-          }}
-        >
+  style={{
+    textAlign:
+      isMobile
+        ? "left"
+        : "right"
+  }}
+>
 
           <div
   style={{
@@ -310,6 +357,8 @@ const fetchSavedCount =
         </div>
 
       </div>
+
+      
 
     </AppLayout>
 
