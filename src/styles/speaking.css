@@ -30,10 +30,6 @@
   cursor: pointer;
 }
 
-.speaking-level-card:hover {
-  transform: translateY(-2px);
-  border-color: #3b82f6;
-}
 
 .speaking-level-card h2 {
   margin-bottom: 10px;
@@ -65,13 +61,11 @@
   border-radius: 16px;
 
   padding: 20px;
-
+  
+  cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.speaking-card:hover {
-  transform: translateY(-2px);
-}
 
 .speaking-card-top {
   display: flex;
@@ -125,9 +119,10 @@
 ====================================== */
 
 .selected-scenario {
-  margin-top: 30px;
+  margin-top: 24px;
 
   background: #111827;
+  border: 1px solid #1f2937;
 
   border-radius: 16px;
 
@@ -156,4 +151,89 @@
     grid-template-columns: 1fr;
   }
 
+}
+
+@media (max-width: 768px) {
+
+  .speaking-page {
+    padding: 20px;
+  }
+
+}
+
+.speaking-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.speaking-page h1 {
+  margin-bottom: 10px;
+}
+
+.speaking-page > p {
+  margin-bottom: 30px;
+  color: #94a3b8;
+}
+
+
+.speaking-level-card:hover {
+  transform: translateY(-3px);
+  border-color: #3b82f6;
+  box-shadow: 0 0 20px rgba(59,130,246,.15);
+}
+
+@media (max-width: 768px) {
+
+  .speaking-card {
+    min-height: 180px;
+  }
+
+}
+
+
+.level-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.level-arrow {
+  font-size: 2rem;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.mic-btn {
+  width: 64px;
+  height: 64px;
+
+  margin: 20px auto 0;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  background: #2563eb;
+  color: white;
+
+  box-shadow: 0 8px 24px rgba(37,99,235,.35);
+
+  transition: all 0.2s ease;
+}
+
+.mic-btn:hover {
+  transform: scale(1.05);
+}
+
+
+
+.speaking-card:hover {
+  transform: translateY(-3px);
+  border-color: #3b82f6;
 }

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
 
@@ -9,8 +10,38 @@ function ScenarioPractice() {
   const [selectedScenario, setSelectedScenario] =
     useState(null);
 
+  const [transcript, setTranscript] =
+    useState("");
+
   const scenarios =
     speakingScenarios[level] || [];
+
+  function startRecording() {
+    const SpeechRecognition =
+      window.SpeechRecognition ||
+      window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert(
+        "Speech recognition is not supported in your browser."
+      );
+      return;
+    }
+
+    const recognition =
+      new SpeechRecognition();
+
+    recognition.lang = "de-DE";
+
+    recognition.start();
+
+    recognition.onresult = (event) => {
+      const text =
+        event.results[0][0].transcript;
+
+      setTranscript(text);
+    };
+  }
 
   return (
     <div className="page">
@@ -42,9 +73,10 @@ function ScenarioPractice() {
 
             <button
               className="start-btn"
-              onClick={() =>
-                setSelectedScenario(scenario)
-              }
+              onClick={() => {
+                setSelectedScenario(scenario);
+                setTranscript("");
+              }}
             >
               Start Practice
             </button>
@@ -78,6 +110,33 @@ function ScenarioPractice() {
           <p>
             {selectedScenario.example}
           </p>
+
+          <button
+            className="mic-btn"
+            onClick={startRecording}
+          >
+            <Mic size={28} />
+          </button>
+
+          {transcript && (
+
+            <div
+              style={{
+                marginTop: "24px"
+              }}
+            >
+
+              <h3>
+                Your Transcript
+              </h3>
+
+              <p>
+                {transcript}
+              </p>
+
+            </div>
+
+          )}
 
         </div>
 
