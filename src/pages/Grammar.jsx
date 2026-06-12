@@ -129,6 +129,10 @@ setCompletedLessons(completed);
       (level) => level.topics
     );
 
+    console.log("Levels:", levels);
+
+console.log("All Topics:", allTopics);
+
     const nextLesson =
   allTopics.find(
     (topic) =>
@@ -161,8 +165,8 @@ setCompletedLessons(completed);
 
   <div
     style={{
-      marginTop: "30px",
-      marginBottom: "40px",
+      marginTop: "20px",
+      marginBottom: "30px",
       padding: "24px",
       borderRadius: "20px",
 
@@ -247,7 +251,7 @@ setCompletedLessons(completed);
                 <div
                   key={unitIndex}
                   style={{
-                    marginBottom: "60px",
+                    marginBottom: "40px",
                   }}
                 >
 
@@ -329,41 +333,59 @@ setCompletedLessons(completed);
 
                             {/* LESSON CARD */}
                             <div
-                              onClick={() => {
+  onClick={() => {
 
-                                if (isLocked)
-                                  return;
+    if (isLocked)
+      return;
 
-                                navigate(
-                                  `/grammar/${topic.slug}`
-                                );
-                              }}
-                              style={{
-                                background:
-                                  "rgba(255,255,255,0.03)",
+    navigate(
+      `/grammar/${topic.slug}`
+    );
 
-                                border:
-                                  "1px solid rgba(255,255,255,0.05)",
+  }}
 
-                                borderRadius: "18px",
+  onMouseEnter={(e) => {
 
-                                padding:
-                                  "15px 18px",
+    if (!isLocked) {
 
-                                cursor:
-                                  isLocked
-                                    ? "not-allowed"
-                                    : "pointer",
+      e.currentTarget.style.borderColor =
+        "rgba(124,92,255,0.35)";
 
-                                transition:
-                                  "0.2s ease",
+    }
 
-                                opacity:
-                                  isLocked
-                                    ? 0.55
-                                    : 1,
-                              }}
-                            >
+  }}
+
+  onMouseLeave={(e) => {
+
+    e.currentTarget.style.borderColor =
+      "rgba(255,255,255,0.05)";
+
+  }}
+
+  style={{
+    background:
+      "rgba(255,255,255,0.03)",
+
+    border:
+      "1px solid rgba(255,255,255,0.05)",
+
+    borderRadius: "18px",
+
+    padding: "24px",
+
+    cursor:
+      isLocked
+        ? "not-allowed"
+        : "pointer",
+
+    transition: "0.2s ease",
+
+    opacity:
+      isLocked
+        ? 0.55
+        : 1,
+  }}
+>
 
                               <div
                                 style={{

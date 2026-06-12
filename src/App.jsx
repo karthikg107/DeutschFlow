@@ -12,6 +12,10 @@ import VocabularyLevel from "./pages/VocabularyLevel";
 import VocabularyQuiz from "./pages/VocabularyQuiz";
 import SavedVocabulary from "./pages/SavedVocabulary";
 import { Toaster } from "react-hot-toast";
+import Speak from "./pages/Speak";
+import SpeakingLevel from "./pages/SpeakingLevel";
+import ScenarioPractice from "./pages/ScenarioPractice";
+import PronunciationPractice from "./pages/PronunciationPractice";
 
 // 🔥 NEW IMPORT
 import Grammar from "./pages/Grammar";
@@ -111,6 +115,46 @@ function App() {
   element={
     <ProtectedRoute>
       <SavedVocabulary />
+    </ProtectedRoute>
+  }
+/>
+
+/* ======================================
+   SPEAKING
+====================================== */
+
+<Route
+  path="/speaking"
+  element={
+    <ProtectedRoute>
+      <Speak />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/speaking/:level"
+  element={
+    <ProtectedRoute>
+      <SpeakingLevel />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/speaking/:level/scenarios"
+  element={
+    <ProtectedRoute>
+      <ScenarioPractice />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/speaking/:level/pronunciation"
+  element={
+    <ProtectedRoute>
+      <PronunciationPractice />
     </ProtectedRoute>
   }
 />

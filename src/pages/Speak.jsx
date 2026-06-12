@@ -1,117 +1,71 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import AppLayout from "../components/Layout/AppLayout";
+
+import "../styles/speaking.css";
 
 function Speak() {
-  const [spokenText, setSpokenText] =
-    useState("");
-
-  const [result, setResult] =
-    useState("");
-
-  const [loading, setLoading] =
-    useState(false);
-
-  function startMic() {
-    const SpeechRecognition =
-      window.SpeechRecognition ||
-      window.webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-      alert(
-        "Speech recognition not supported."
-      );
-      return;
+  const levels = [
+    {
+      level: "a1",
+      title: "A1 Beginner",
+      description:
+        "Basic introductions, family, food and daily life."
+    },
+    {
+      level: "a2",
+      title: "A2 Elementary",
+      description:
+        "Travel, shopping and everyday conversations."
+    },
+    {
+      level: "b1",
+      title: "B1 Intermediate",
+      description:
+        "Opinions, work, studies and real discussions."
     }
-
-    const recognition =
-      new SpeechRecognition();
-
-    recognition.lang = "de-DE";
-    recognition.start();
-
-    recognition.onresult = (event) => {
-      const text =
-        event.results[0][0].transcript;
-
-      setSpokenText(text);
-    };
-  }
-
-  async function checkGerman() {
-    if (!spokenText.trim()) return;
-
-    setLoading(true);
-
-    try {
-      const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_KEY}`,
-            "Content-Type":
-              "application/json"
-          },
-          body: JSON.stringify({
-            model:
-              "openai/gpt-oss-120b:free",
-            messages: [
-              {
-                role: "system",
-                content:
-                "You are a German tutor. Reply in plain text only using format: Correct: ... Meaning: ... Tip: ... No markdown symbols."
-              },
-              {
-                role: "user",
-                content: spokenText
-              }
-            ]
-          })
-        }
-      );
-
-      const data = await response.json();
-
-      setResult(
-        data.choices[0].message.content
-      );
-    } catch {
-      setResult("Connection issue.");
-    }
-
-    setLoading(false);
-  }
+  ];
 
   return (
-    <div className="page">
-      <h1>Speak German</h1>
+    <AppLayout>
 
-      <button onClick={startMic}>
-        🎤 Start Speaking
-      </button>
+      <div className="speaking-page">
 
-      <div className="speechBox">
-        {spokenText ||
-          "Your spoken text will appear here"}
+        <h1>
+          🗣 Speaking Practice
+        </h1>
+
+        <p>
+          Choose your German speaking level.
+        </p>
+
+        <div className="speaking-levels">
+
+          {levels.map((item) => (
+            <Link
+              key={item.level}
+              to={`/speaking/${item.level}`}
+              className="speaking-level-card"
+            >
+              <div className="level-content">
+
+                <div>
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                </div>
+
+                <span className="level-arrow">
+                  →
+                </span>
+
+              </div>
+            </Link>
+          ))}
+
+        </div>
+
       </div>
 
-      <button onClick={checkGerman}>
-        {loading
-          ? "Checking..."
-          : "Check German"}
-      </button>
-
-      {result && (
-        <div className="speechResult">
-          {result}
-        </div>
-      )}
-
-      <br />
-      <br />
-
-      <Link to="/">⬅ Back Home</Link>
-    </div>
+    </AppLayout>
   );
 }
 

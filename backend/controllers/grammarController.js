@@ -44,7 +44,6 @@ export const getAllLevels = async (req, res) => {
   }
 };
 
-
 // =========================
 // GET TOPICS BY LEVEL
 // =========================

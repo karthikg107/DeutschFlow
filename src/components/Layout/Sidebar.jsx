@@ -44,7 +44,7 @@ function Sidebar({
 
     {
       name: "Speaking",
-      path: "/speak",
+      path: "/speaking",
       icon: <Mic size={20} />,
     },
 
