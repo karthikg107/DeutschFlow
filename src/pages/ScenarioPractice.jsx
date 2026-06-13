@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
+import { startSpeechRecognition } from "../utils/speechRecognition";
 
 function ScenarioPractice() {
   const { level } = useParams();
@@ -15,33 +16,6 @@ function ScenarioPractice() {
 
   const scenarios =
     speakingScenarios[level] || [];
-
-  function startRecording() {
-    const SpeechRecognition =
-      window.SpeechRecognition ||
-      window.webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-      alert(
-        "Speech recognition is not supported in your browser."
-      );
-      return;
-    }
-
-    const recognition =
-      new SpeechRecognition();
-
-    recognition.lang = "de-DE";
-
-    recognition.start();
-
-    recognition.onresult = (event) => {
-      const text =
-        event.results[0][0].transcript;
-
-      setTranscript(text);
-    };
-  }
 
   return (
     <div className="page">
@@ -113,7 +87,11 @@ function ScenarioPractice() {
 
           <button
             className="mic-btn"
-            onClick={startRecording}
+            onClick={() =>
+              startSpeechRecognition(
+                setTranscript
+              )
+            }
           >
             <Mic size={28} />
           </button>
@@ -121,9 +99,7 @@ function ScenarioPractice() {
           {transcript && (
 
             <div
-              style={{
-                marginTop: "24px"
-              }}
+              className="transcript-box"
             >
 
               <h3>

@@ -237,3 +237,19 @@
   transform: translateY(-3px);
   border-color: #3b82f6;
 }
+
+.transcript-box {
+  margin-top: 24px;
+
+  padding: 16px;
+
+  background: #0f172a;
+
+  border: 1px solid #1f2937;
+
+  border-radius: 12px;
+}
+
+.transcript-box h3 {
+  margin-bottom: 10px;
+}
