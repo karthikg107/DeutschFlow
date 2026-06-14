@@ -238,16 +238,32 @@
   border-color: #3b82f6;
 }
 
+
+.chat-box {
+  margin-top: 20px;
+}
+
+.mia-message,
+.user-message {
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.mia-message {
+  background: #1e293b;
+}
+
+.user-message {
+  background: #2563eb;
+}
+
 .transcript-box {
   margin-top: 24px;
-
   padding: 16px;
-
-  background: #0f172a;
-
-  border: 1px solid #1f2937;
-
   border-radius: 12px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
 }
 
 .transcript-box h3 {

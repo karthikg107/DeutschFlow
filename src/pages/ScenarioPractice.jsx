@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
-import { startSpeechRecognition } from "../utils/speechRecognition";
 
 function ScenarioPractice() {
+
   const { level } = useParams();
 
   const [selectedScenario, setSelectedScenario] =
@@ -17,7 +17,61 @@ function ScenarioPractice() {
   const scenarios =
     speakingScenarios[level] || [];
 
+  function startRecording() {
+
+  const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+    alert(
+      "Speech recognition is not supported."
+    );
+    return;
+  }
+
+  const recognition =
+    new SpeechRecognition();
+
+  recognition.lang = "en-US";
+
+  recognition.continuous = false;
+
+  recognition.interimResults = false;
+
+  recognition.onstart = () => {
+    console.log("started");
+  };
+
+  recognition.onresult = (event) => {
+
+    const text =
+      event.results[0][0].transcript;
+
+    console.log(
+      "RESULT:",
+      text
+    );
+
+    setTranscript(text);
+  };
+
+  recognition.onerror = (event) => {
+    console.log(
+      "ERROR:",
+      event.error
+    );
+  };
+
+  recognition.onend = () => {
+    console.log("ended");
+  };
+
+  recognition.start();
+}
+
   return (
+
     <div className="page">
 
       <h1>
@@ -48,7 +102,11 @@ function ScenarioPractice() {
             <button
               className="start-btn"
               onClick={() => {
-                setSelectedScenario(scenario);
+
+                setSelectedScenario(
+                  scenario
+                );
+
                 setTranscript("");
               }}
             >
@@ -87,11 +145,7 @@ function ScenarioPractice() {
 
           <button
             className="mic-btn"
-            onClick={() =>
-              startSpeechRecognition(
-                setTranscript
-              )
-            }
+            onClick={startRecording}
           >
             <Mic size={28} />
           </button>
@@ -119,6 +173,7 @@ function ScenarioPractice() {
       )}
 
     </div>
+
   );
 }
 
