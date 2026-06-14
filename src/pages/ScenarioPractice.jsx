@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
@@ -23,11 +23,19 @@ const [transcript, setTranscript] =
 const [messages, setMessages] =
   useState([]);
 
+const messagesEndRef = useRef(null);  
+
 const [conversationStep, setConversationStep] =
   useState(0);  
 
 const scenarios =
   speakingScenarios[level] || [];
+
+useEffect(() => {
+  messagesEndRef.current?.scrollIntoView({
+    behavior: "smooth",
+  });
+}, [messages]);  
 
   function speak(text) {
 
@@ -285,6 +293,8 @@ else {
 
               )
             )}
+
+            <div ref={messagesEndRef}></div>
 
           </div>
 
