@@ -6,18 +6,55 @@ import speakingScenarios from "../data/speakingScenarios";
 
 function ScenarioPractice() {
 
-  const { level } = useParams();
+  const [isRecording, setIsRecording] =
+  useState(false);
 
-  const [selectedScenario, setSelectedScenario] =
-    useState(null);
+  const [isMiaSpeaking, setIsMiaSpeaking] =
+  useState(false);
 
-  const [transcript, setTranscript] =
-    useState("");
+const { level } = useParams();
 
-  const scenarios =
-    speakingScenarios[level] || [];
+const [selectedScenario, setSelectedScenario] =
+  useState(null);
+
+const [transcript, setTranscript] =
+  useState("");
+
+const [messages, setMessages] =
+  useState([]);
+
+const [conversationStep, setConversationStep] =
+  useState(0);  
+
+const scenarios =
+  speakingScenarios[level] || [];
+
+  function speak(text) {
+
+  setIsMiaSpeaking(true);
+
+  const utterance =
+    new SpeechSynthesisUtterance(text);
+
+  utterance.lang = "de-DE";
+
+  utterance.onend = () => {
+    setIsMiaSpeaking(false);
+  };
+
+  speechSynthesis.speak(
+    utterance
+  );
+}
 
   function startRecording() {
+
+  if (
+    isRecording ||
+    isMiaSpeaking
+  ) {
+    return;
+  }
 
   const SpeechRecognition =
     window.SpeechRecognition ||
@@ -33,30 +70,92 @@ function ScenarioPractice() {
   const recognition =
     new SpeechRecognition();
 
-  recognition.lang = "en-US";
+  recognition.lang = "de-DE";
 
   recognition.continuous = false;
 
   recognition.interimResults = false;
 
   recognition.onstart = () => {
-    console.log("started");
+    setIsRecording(true);
   };
 
   recognition.onresult = (event) => {
 
     const text =
-      event.results[0][0].transcript;
-
-    console.log(
-      "RESULT:",
-      text
-    );
+      event.results[
+        event.results.length - 1
+      ][0].transcript;
 
     setTranscript(text);
+
+    let miaReply = "";
+
+if (
+  selectedScenario?.title ===
+  "Introduce Yourself"
+) {
+
+  if (
+    conversationStep === 0
+  ) {
+    miaReply =
+      "Wie alt bist du?";
+
+    setConversationStep(1);
+  }
+
+  else if (
+    conversationStep === 1
+  ) {
+    miaReply =
+      "Woher kommst du?";
+
+    setConversationStep(2);
+  }
+
+  else if (
+    conversationStep === 2
+  ) {
+    miaReply =
+      "Was sind deine Hobbys?";
+
+    setConversationStep(3);
+  }
+
+  else {
+    miaReply =
+      "Sehr gut! Das war eine tolle Vorstellung.";
+  }
+
+}
+
+else {
+
+  miaReply =
+    "Sehr gut! Lass uns weiter üben.";
+
+}
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        sender: "user",
+        text
+      },
+      {
+        sender: "mia",
+        text: miaReply
+      }
+    ]);
+
+    speak(miaReply);
   };
 
   recognition.onerror = (event) => {
+
+    setIsRecording(false);
+
     console.log(
       "ERROR:",
       event.error
@@ -64,7 +163,7 @@ function ScenarioPractice() {
   };
 
   recognition.onend = () => {
-    console.log("ended");
+    setIsRecording(false);
   };
 
   recognition.start();
@@ -108,6 +207,20 @@ function ScenarioPractice() {
                 );
 
                 setTranscript("");
+
+                setConversationStep(0);
+
+                const firstMessage =
+                  `Hallo! Ich bin Mia. ${scenario.prompt}`;
+
+                setMessages([
+                  {
+                    sender: "mia",
+                    text: firstMessage
+                  }
+                ]);
+
+                speak(firstMessage);
               }}
             >
               Start Practice
@@ -143,12 +256,72 @@ function ScenarioPractice() {
             {selectedScenario.example}
           </p>
 
+          <div className="chat-box">
+
+            {messages.map(
+              (message, index) => (
+
+                <div
+                  key={index}
+                  className={
+                    message.sender === "mia"
+                      ? "mia-message"
+                      : "user-message"
+                  }
+                >
+
+                  <strong>
+                    {message.sender === "mia"
+                      ? "Mia"
+                      : "You"}
+                    :
+                  </strong>
+
+                  <p>
+                    {message.text}
+                  </p>
+
+                </div>
+
+              )
+            )}
+
+          </div>
+
           <button
-            className="mic-btn"
-            onClick={startRecording}
-          >
-            <Mic size={28} />
-          </button>
+  className={`mic-btn ${
+    isRecording
+      ? "recording"
+      : ""
+  }`}
+  onClick={startRecording}
+  disabled={
+    isRecording ||
+    isMiaSpeaking
+  }
+>
+  <Mic size={28} />
+</button>
+
+{isRecording && (
+  <p
+    style={{
+      marginTop: "12px"
+    }}
+  >
+    🎤 Listening...
+  </p>
+)}
+
+{isMiaSpeaking && (
+  <p
+    style={{
+      marginTop: "12px"
+    }}
+  >
+    🔊 Mia is speaking...
+  </p>
+)}
 
           {transcript && (
 
