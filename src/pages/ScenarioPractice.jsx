@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
+import AppLayout from "../components/layout/AppLayout";
+
 
 function ScenarioPractice() {
 
@@ -203,6 +205,8 @@ if (
 }
 
   return (
+
+    <AppLayout>
 
     <div className="page">
 
@@ -541,6 +545,8 @@ if (
       )}
 
     </div>
+
+    </AppLayout>
 
   );
 }
