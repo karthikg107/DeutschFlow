@@ -384,3 +384,31 @@ max-height: 400px;
 
   color: #60a5fa;
 }
+
+.feedback-box {
+  margin-top: 20px;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+
+  text-align: left;
+}
+
+.feedback-box h4 {
+  margin-bottom: 12px;
+
+  color: #60a5fa;
+}
+
+.feedback-box ul {
+  padding-left: 20px;
+}
+
+.feedback-box li {
+  margin-bottom: 8px;
+}

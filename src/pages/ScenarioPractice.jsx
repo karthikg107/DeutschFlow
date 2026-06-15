@@ -122,7 +122,7 @@ if (nextStep < questions.length) {
     nextStep
   );
 
-  if (nextStep >= questions.length) {
+  if (nextStep >= questions.length - 1) {
   setIsCompleted(true);
 }
 
@@ -339,6 +339,34 @@ if (nextStep < questions.length) {
 </h4>
 
 <div className="answers-list">
+
+  <div className="feedback-box">
+
+  <h4>
+    Feedback
+  </h4>
+
+  <ul>
+
+    <li>
+      ✅ You completed the conversation.
+    </li>
+
+    <li>
+      ✅ You answered all questions.
+    </li>
+
+    <li>
+      ⚠️ Speech recognition may not always be accurate.
+    </li>
+
+    <li>
+      💡 Try using complete German sentences.
+    </li>
+
+  </ul>
+
+</div>
 
   {userAnswers.map(
     (answer, index) => (
