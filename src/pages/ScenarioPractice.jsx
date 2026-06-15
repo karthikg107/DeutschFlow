@@ -113,21 +113,26 @@ const nextStep =
 
 let miaReply = "";
 
-if (nextStep < questions.length) {
+if (
+  nextStep < questions.length
+) {
 
   miaReply =
-    questions[nextStep];
+    questions[nextStep]
+      .question;
 
   setConversationStep(
     nextStep
   );
 
-  if (nextStep >= questions.length - 1) {
-  setIsCompleted(true);
-}
-
 } else {
-  return;
+
+  miaReply =
+    selectedScenario
+      .completionMessage;
+
+  setIsCompleted(true);
+
 }
 
     setMessages((prev) => [
@@ -211,7 +216,7 @@ if (nextStep < questions.length) {
             setMessages([]);
 
             const firstMessage =
-              scenario.questions[0];
+              scenario.questions[0].question;
 
             setMessages([
               {
@@ -335,41 +340,13 @@ if (nextStep < questions.length) {
     </p>
 
     <h4>
-  Conversation Summary
+  Suggested Answers
 </h4>
 
 <div className="answers-list">
 
-  <div className="feedback-box">
-
-  <h4>
-    Feedback
-  </h4>
-
-  <ul>
-
-    <li>
-      ✅ You completed the conversation.
-    </li>
-
-    <li>
-      ✅ You answered all questions.
-    </li>
-
-    <li>
-      ⚠️ Speech recognition may not always be accurate.
-    </li>
-
-    <li>
-      💡 Try using complete German sentences.
-    </li>
-
-  </ul>
-
-</div>
-
-  {userAnswers.map(
-    (answer, index) => (
+  {selectedScenario.questions.map(
+    (item, index) => (
 
       <div
         key={index}
@@ -377,11 +354,30 @@ if (nextStep < questions.length) {
       >
 
         <strong>
-          Answer {index + 1}
+          Question
         </strong>
 
         <p>
-          {answer}
+          {item.question}
+        </p>
+
+        <strong>
+          Your Answer
+        </strong>
+
+        <p>
+          {
+            userAnswers[index] ||
+            "No answer"
+          }
+        </p>
+
+        <strong>
+          Suggested Answer
+        </strong>
+
+        <p>
+          {item.sampleAnswer}
         </p>
 
       </div>
@@ -409,7 +405,7 @@ if (nextStep < questions.length) {
           setMessages([]);
 
           const firstMessage =
-            selectedScenario.questions[0];
+            selectedScenario.questions[0].question;
 
           setMessages([
             {
