@@ -218,8 +218,22 @@ else {
 
                 setConversationStep(0);
 
-                const firstMessage =
-                  `Hallo! Ich bin Mia. ${scenario.prompt}`;
+                let firstMessage = "";
+
+if (scenario.title === "Introduce Yourself") {
+  firstMessage =
+    "Hallo! Ich bin Mia. Wie heißt du?";
+}
+
+else if (scenario.title === "Talking About Family") {
+  firstMessage =
+    "Hallo! Ich bin Mia. Erzähl mir etwas über deine Familie.";
+}
+
+else {
+  firstMessage =
+    `Hallo! Ich bin Mia. ${scenario.prompt}`;
+}
 
                 setMessages([
                   {
