@@ -97,51 +97,27 @@ useEffect(() => {
 
     setTranscript(text);
 
-    let miaReply = "";
+    const questions =
+  selectedScenario.questions;
 
-if (
-  selectedScenario?.title ===
-  "Introduce Yourself"
-) {
+const nextStep =
+  conversationStep + 1;
 
-  if (
-    conversationStep === 0
-  ) {
-    miaReply =
-      "Wie alt bist du?";
+let miaReply = "";
 
-    setConversationStep(1);
-  }
-
-  else if (
-    conversationStep === 1
-  ) {
-    miaReply =
-      "Woher kommst du?";
-
-    setConversationStep(2);
-  }
-
-  else if (
-    conversationStep === 2
-  ) {
-    miaReply =
-      "Was sind deine Hobbys?";
-
-    setConversationStep(3);
-  }
-
-  else {
-    miaReply =
-      "Sehr gut! Das war eine tolle Vorstellung.";
-  }
-
-}
-
-else {
+if (nextStep < questions.length) {
 
   miaReply =
-    "Sehr gut! Lass uns weiter üben.";
+    questions[nextStep];
+
+  setConversationStep(
+    nextStep
+  );
+
+} else {
+
+  miaReply =
+    "Vielen Dank für das Gespräch.";
 
 }
 
@@ -218,22 +194,8 @@ else {
 
                 setConversationStep(0);
 
-                let firstMessage = "";
-
-if (scenario.title === "Introduce Yourself") {
-  firstMessage =
-    "Hallo! Ich bin Mia. Wie heißt du?";
-}
-
-else if (scenario.title === "Talking About Family") {
-  firstMessage =
-    "Hallo! Ich bin Mia. Erzähl mir etwas über deine Familie.";
-}
-
-else {
-  firstMessage =
-    `Hallo! Ich bin Mia. ${scenario.prompt}`;
-}
+                const firstMessage =
+                  scenario.questions[0];
 
                 setMessages([
                   {
