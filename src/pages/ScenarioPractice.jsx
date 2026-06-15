@@ -30,7 +30,10 @@ const [conversationStep, setConversationStep] =
   useState(0);
 
 const [isCompleted, setIsCompleted] =
-  useState(false);  
+  useState(false);
+
+const [error, setError] =
+  useState("");  
 
 const scenarios =
   speakingScenarios[level] || [];
@@ -60,6 +63,8 @@ useEffect(() => {
 }
 
   function startRecording() {
+
+    setError("");
 
   if (
     isRecording ||
@@ -152,13 +157,43 @@ if (
 
   recognition.onerror = (event) => {
 
-    setIsRecording(false);
+  setIsRecording(false);
 
-    console.log(
-      "ERROR:",
-      event.error
+  if (
+    event.error === "no-speech"
+  ) {
+    setError(
+      "We couldn't hear anything. Please try again."
     );
-  };
+  }
+
+  else if (
+    event.error === "audio-capture"
+  ) {
+    setError(
+      "Microphone not detected."
+    );
+  }
+
+  else if (
+    event.error === "not-allowed"
+  ) {
+    setError(
+      "Microphone permission denied."
+    );
+  }
+
+  else {
+    setError(
+      "Speech recognition failed."
+    );
+  }
+
+  console.log(
+    "ERROR:",
+    event.error
+  );
+};
 
   recognition.onend = () => {
     setIsRecording(false);
@@ -448,6 +483,8 @@ if (
 
 )}
 
+{!isCompleted && (
+
 <button
   className={`mic-btn ${
     isRecording
@@ -457,12 +494,13 @@ if (
   onClick={startRecording}
   disabled={
     isRecording ||
-    isMiaSpeaking ||
-    isCompleted
+    isMiaSpeaking
   }
 >
   <Mic size={28} />
 </button>
+
+)}
 
 {isRecording && (
   <p
@@ -471,6 +509,18 @@ if (
     }}
   >
     🎤 Listening...
+  </p>
+)}
+
+{error && (
+  <p
+    style={{
+      marginTop: "12px",
+      color: "#ef4444",
+      fontWeight: "600"
+    }}
+  >
+    {error}
   </p>
 )}
 
