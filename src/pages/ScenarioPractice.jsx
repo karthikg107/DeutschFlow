@@ -17,11 +17,12 @@ const { level } = useParams();
 const [selectedScenario, setSelectedScenario] =
   useState(null);
 
-const [transcript, setTranscript] =
-  useState("");
 
 const [messages, setMessages] =
   useState([]);
+
+const [userAnswers, setUserAnswers] =
+  useState([]);  
 
 const messagesEndRef = useRef(null);  
 
@@ -98,7 +99,11 @@ useEffect(() => {
         event.results.length - 1
       ][0].transcript;
 
-    setTranscript(text);
+    setUserAnswers((prev) => [
+  ...prev,
+  text
+]);  
+
 
     const questions =
   selectedScenario.questions;
@@ -117,12 +122,9 @@ if (nextStep < questions.length) {
     nextStep
   );
 
-  if (
-    nextStep ===
-    questions.length - 1
-  ) {
-    setIsCompleted(true);
-  }
+  if (nextStep >= questions.length) {
+  setIsCompleted(true);
+}
 
 } else {
   return;
@@ -199,11 +201,12 @@ if (nextStep < questions.length) {
               scenario
             );
 
-            setTranscript("");
 
             setConversationStep(0);
 
             setIsCompleted(false);
+
+            setUserAnswers([]);
 
             setMessages([]);
 
@@ -252,7 +255,8 @@ if (nextStep < questions.length) {
 
     setIsCompleted(false);
 
-    setTranscript("");
+    setUserAnswers([]);
+
 
   }}
 
@@ -260,6 +264,7 @@ if (nextStep < questions.length) {
 >
   ← Back to Scenarios
 </button>
+
 
           <h2>
             {selectedScenario.title}
@@ -329,6 +334,35 @@ if (nextStep < questions.length) {
       {selectedScenario.title}
     </p>
 
+    <h4>
+  Conversation Summary
+</h4>
+
+<div className="answers-list">
+
+  {userAnswers.map(
+    (answer, index) => (
+
+      <div
+        key={index}
+        className="answer-item"
+      >
+
+        <strong>
+          Answer {index + 1}
+        </strong>
+
+        <p>
+          {answer}
+        </p>
+
+      </div>
+
+    )
+  )}
+
+</div>
+
     <div className="completion-actions">
 
       <button
@@ -339,7 +373,12 @@ if (nextStep < questions.length) {
 
           setIsCompleted(false);
 
-          setTranscript("");
+
+          speechSynthesis.cancel();
+
+          setUserAnswers([]);
+
+          setMessages([]);
 
           const firstMessage =
             selectedScenario.questions[0];
@@ -362,6 +401,8 @@ if (nextStep < questions.length) {
         className="completion-btn"
         onClick={() => {
 
+          speechSynthesis.cancel();
+
           setSelectedScenario(null);
 
           setMessages([]);
@@ -370,7 +411,7 @@ if (nextStep < questions.length) {
 
           setIsCompleted(false);
 
-          setTranscript("");
+          setUserAnswers([]);
 
         }}
       >
