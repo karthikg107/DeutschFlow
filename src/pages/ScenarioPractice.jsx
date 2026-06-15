@@ -26,7 +26,10 @@ const [messages, setMessages] =
 const messagesEndRef = useRef(null);  
 
 const [conversationStep, setConversationStep] =
-  useState(0);  
+  useState(0);
+
+const [isCompleted, setIsCompleted] =
+  useState(false);  
 
 const scenarios =
   speakingScenarios[level] || [];
@@ -114,11 +117,15 @@ if (nextStep < questions.length) {
     nextStep
   );
 
+  if (
+    nextStep ===
+    questions.length - 1
+  ) {
+    setIsCompleted(true);
+  }
+
 } else {
-
-  miaReply =
-    "Vielen Dank für das Gespräch.";
-
+  return;
 }
 
     setMessages((prev) => [
@@ -165,60 +172,94 @@ if (nextStep < questions.length) {
         Choose a scenario and start practicing.
       </p>
 
-      <div className="speaking-grid">
+      {!selectedScenario && (
 
-        {scenarios.map((scenario) => (
+  <div className="speaking-grid">
 
-          <div
-            key={scenario.id}
-            className="speaking-card"
-          >
+    {scenarios.map((scenario) => (
 
-            <h3>
-              {scenario.title}
-            </h3>
+      <div
+        key={scenario.id}
+        className="speaking-card"
+      >
 
-            <p>
-              {scenario.description}
-            </p>
+        <h3>
+          {scenario.title}
+        </h3>
 
-            <button
-              className="start-btn"
-              onClick={() => {
+        <p>
+          {scenario.description}
+        </p>
 
-                setSelectedScenario(
-                  scenario
-                );
+        <button
+          className="start-btn"
+          onClick={() => {
 
-                setTranscript("");
+            setSelectedScenario(
+              scenario
+            );
 
-                setConversationStep(0);
+            setTranscript("");
 
-                const firstMessage =
-                  scenario.questions[0];
+            setConversationStep(0);
 
-                setMessages([
-                  {
-                    sender: "mia",
-                    text: firstMessage
-                  }
-                ]);
+            setIsCompleted(false);
 
-                speak(firstMessage);
-              }}
-            >
-              Start Practice
-            </button>
+            setMessages([]);
 
-          </div>
+            const firstMessage =
+              scenario.questions[0];
 
-        ))}
+            setMessages([
+              {
+                sender: "mia",
+                text: firstMessage
+              }
+            ]);
+
+            speak(firstMessage);
+
+          }}
+        >
+          Start Practice
+        </button>
 
       </div>
+
+    ))}
+
+  </div>
+
+)}
+
+
 
       {selectedScenario && (
 
         <div className="selected-scenario">
+
+        <button
+  className="back-btn"
+  onClick={() => {
+    
+    speechSynthesis.cancel();
+
+    setSelectedScenario(null);
+
+    setMessages([]);
+
+    setConversationStep(0);
+
+    setIsCompleted(false);
+
+    setTranscript("");
+
+  }}
+
+  
+>
+  ← Back to Scenarios
+</button>
 
           <h2>
             {selectedScenario.title}
@@ -273,8 +314,76 @@ if (nextStep < questions.length) {
             <div ref={messagesEndRef}></div>
 
           </div>
+            
+          {isCompleted && (
 
-          <button
+  <div className="completion-box">
+
+    <h3>
+      ✅ Scenario Completed
+    </h3>
+
+    <p>
+      You completed:
+      {" "}
+      {selectedScenario.title}
+    </p>
+
+    <div className="completion-actions">
+
+      <button
+        className="completion-btn"
+        onClick={() => {
+
+          setConversationStep(0);
+
+          setIsCompleted(false);
+
+          setTranscript("");
+
+          const firstMessage =
+            selectedScenario.questions[0];
+
+          setMessages([
+            {
+              sender: "mia",
+              text: firstMessage
+            }
+          ]);
+
+          speak(firstMessage);
+
+        }}
+      >
+        Try Again
+      </button>
+
+      <button
+        className="completion-btn"
+        onClick={() => {
+
+          setSelectedScenario(null);
+
+          setMessages([]);
+
+          setConversationStep(0);
+
+          setIsCompleted(false);
+
+          setTranscript("");
+
+        }}
+      >
+        Choose Another Scenario
+      </button>
+
+    </div>
+
+  </div>
+
+)}
+
+<button
   className={`mic-btn ${
     isRecording
       ? "recording"
@@ -283,7 +392,8 @@ if (nextStep < questions.length) {
   onClick={startRecording}
   disabled={
     isRecording ||
-    isMiaSpeaking
+    isMiaSpeaking ||
+    isCompleted
   }
 >
   <Mic size={28} />
@@ -309,23 +419,7 @@ if (nextStep < questions.length) {
   </p>
 )}
 
-          {transcript && (
-
-            <div
-              className="transcript-box"
-            >
-
-              <h3>
-                Your Transcript
-              </h3>
-
-              <p>
-                {transcript}
-              </p>
-
-            </div>
-
-          )}
+          
 
         </div>
 
