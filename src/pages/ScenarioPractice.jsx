@@ -4,6 +4,7 @@ import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
 import AppLayout from "../components/layout/AppLayout";
+import { useNavigate } from "react-router-dom";
 
 
 function ScenarioPractice() {
@@ -14,10 +15,23 @@ function ScenarioPractice() {
   const [isMiaSpeaking, setIsMiaSpeaking] =
   useState(false);
 
-const { level } = useParams();
+const { level, id } = useParams();
 
-const [selectedScenario, setSelectedScenario] =
-  useState(null);
+const selectedScenario =
+  speakingScenarios[level]?.find(
+    (scenario) =>
+      scenario.id === Number(id)
+  );
+
+  if (!selectedScenario) {
+  return (
+    <AppLayout>
+      <div className="speaking-page">
+        <h1>Scenario not found</h1>
+      </div>
+    </AppLayout>
+  );
+}
 
 
 const [messages, setMessages] =
@@ -37,14 +51,32 @@ const [isCompleted, setIsCompleted] =
 const [error, setError] =
   useState("");  
 
-const scenarios =
-  speakingScenarios[level] || [];
+const navigate = useNavigate();  
+
 
 useEffect(() => {
   messagesEndRef.current?.scrollIntoView({
     behavior: "smooth",
   });
 }, [messages]);  
+
+useEffect(() => {
+
+  if (!selectedScenario) return;
+
+  const firstMessage =
+    selectedScenario.questions[0].question;
+
+  setMessages([
+    {
+      sender: "mia",
+      text: firstMessage
+    }
+  ]);
+
+  speak(firstMessage);
+
+}, [selectedScenario]);
 
   function speak(text) {
 
@@ -208,77 +240,15 @@ if (
 
     <AppLayout>
 
-    <div className="page">
+    <div className="speaking-page">
 
       <h1>
-        {level.toUpperCase()} Scenarios
-      </h1>
+  {selectedScenario?.title}
+</h1>
 
-      <p>
-        Choose a scenario and start practicing.
-      </p>
-
-      {!selectedScenario && (
-
-  <div className="speaking-grid">
-
-    {scenarios.map((scenario) => (
-
-      <div
-        key={scenario.id}
-        className="speaking-card"
-      >
-
-        <h3>
-          {scenario.title}
-        </h3>
-
-        <p>
-          {scenario.description}
-        </p>
-
-        <button
-          className="start-btn"
-          onClick={() => {
-
-            setSelectedScenario(
-              scenario
-            );
-
-
-            setConversationStep(0);
-
-            setIsCompleted(false);
-
-            setUserAnswers([]);
-
-            setMessages([]);
-
-            const firstMessage =
-              scenario.questions[0].question;
-
-            setMessages([
-              {
-                sender: "mia",
-                text: firstMessage
-              }
-            ]);
-
-            speak(firstMessage);
-
-          }}
-        >
-          Start Practice
-        </button>
-
-      </div>
-
-    ))}
-
-  </div>
-
-)}
-
+<p>
+  Complete the speaking conversation below.
+</p>
 
 
       {selectedScenario && (
@@ -288,21 +258,12 @@ if (
         <button
   className="back-btn"
   onClick={() => {
-    
-    speechSynthesis.cancel();
 
-    setSelectedScenario(null);
+  speechSynthesis.cancel();
 
-    setMessages([]);
+  navigate("/speaking/scenarios");
 
-    setConversationStep(0);
-
-    setIsCompleted(false);
-
-    setUserAnswers([]);
-
-
-  }}
+}}
 
   
 >
@@ -310,9 +271,6 @@ if (
 </button>
 
 
-          <h2>
-            {selectedScenario.title}
-          </h2>
 
           <p>
             <strong>Prompt:</strong>
@@ -464,19 +422,11 @@ if (
         className="completion-btn"
         onClick={() => {
 
-          speechSynthesis.cancel();
+  speechSynthesis.cancel();
 
-          setSelectedScenario(null);
+  navigate("/speaking/scenarios");
 
-          setMessages([]);
-
-          setConversationStep(0);
-
-          setIsCompleted(false);
-
-          setUserAnswers([]);
-
-        }}
+}}
       >
         Choose Another Scenario
       </button>
