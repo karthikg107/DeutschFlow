@@ -17,7 +17,7 @@ import ScenarioPractice from "./pages/ScenarioPractice";
 import PronunciationPractice from "./pages/PronunciationPractice";
 import PronunciationLevels from "./pages/PronunciationLevels";
 import ScenarioLevels from "./pages/ScenarioLevels";
-import ScenarioList from "./pages/ScenarioList";
+
 
 
 // 🔥 NEW IMPORT
@@ -162,14 +162,6 @@ function App() {
   }
 />
 
-<Route
-  path="/speaking/scenarios/:level"
-  element={
-    <ProtectedRoute>
-      <ScenarioList />
-    </ProtectedRoute>
-  }
-/>
 
 <Route
   path="/speaking/scenarios/:level/:id"
