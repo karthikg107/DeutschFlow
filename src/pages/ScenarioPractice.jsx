@@ -53,16 +53,16 @@ const [error, setError] =
 
 const navigate = useNavigate();  
 
+const initializedRef = useRef(false);
 
-useEffect(() => {
-  messagesEndRef.current?.scrollIntoView({
-    behavior: "smooth",
-  });
-}, [messages]);  
 
 useEffect(() => {
 
   if (!selectedScenario) return;
+
+  if (initializedRef.current) return;
+
+  initializedRef.current = true;
 
   const firstMessage =
     selectedScenario.questions[0].question;
