@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import speakingScenarios from "../data/speakingScenarios";
 
 function ScenarioLevels() {
+
+  const [selectedLevel, setSelectedLevel] =
+    useState("a1");
+
   return (
     <AppLayout>
+
       <div className="speaking-page">
 
         <Link
@@ -13,38 +20,112 @@ function ScenarioLevels() {
           ← Back to Speaking
         </Link>
 
-        <h1>Scenario Practice</h1>
+        <h1>
+          Scenario Practice
+        </h1>
 
         <p>
-          Select your level
+          Select your level and choose a scenario.
         </p>
+
+        {/* LEVELS */}
 
         <div className="speaking-grid">
 
-          <Link
-            to="/speaking/scenarios/a1"
+          <div
             className="speaking-card"
+            onClick={() =>
+              setSelectedLevel("a1")
+            }
           >
-            <h3>A1</h3>
-          </Link>
+            <h3>
+              A1 Beginner
+            </h3>
 
-          <Link
-            to="/speaking/scenarios/a2"
-            className="speaking-card"
-          >
-            <h3>A2</h3>
-          </Link>
+            <p>
+              Basic conversations and daily life situations.
+            </p>
+          </div>
 
-          <Link
-            to="/speaking/scenarios/b1"
+          <div
             className="speaking-card"
+            onClick={() =>
+              setSelectedLevel("a2")
+            }
           >
-            <h3>B1</h3>
-          </Link>
+            <h3>
+              A2 Elementary
+            </h3>
+
+            <p>
+              Travel, shopping and everyday communication.
+            </p>
+          </div>
+
+          <div
+            className="speaking-card"
+            onClick={() =>
+              setSelectedLevel("b1")
+            }
+          >
+            <h3>
+              B1 Intermediate
+            </h3>
+
+            <p>
+              Work, studies and real-world discussions.
+            </p>
+          </div>
+
+        </div>
+
+        {/* SCENARIOS */}
+
+        <h2
+          className="section-title"
+          style={{
+            marginTop: "40px"
+          }}
+        >
+          {selectedLevel.toUpperCase()} Scenarios
+        </h2>
+
+        <div className="speaking-grid">
+
+          {speakingScenarios[selectedLevel]
+            .map((scenario) => (
+
+              <div
+                key={scenario.id}
+                className="speaking-card"
+              >
+
+                <h3>
+                  {scenario.title}
+                </h3>
+
+                <p>
+                  {scenario.description}
+                </p>
+
+                <Link
+                  to={`/speaking/scenarios/${selectedLevel}/${scenario.id}`}
+                >
+                  <button
+                    className="activity-btn"
+                  >
+                    Start Practice
+                  </button>
+                </Link>
+
+              </div>
+
+          ))}
 
         </div>
 
       </div>
+
     </AppLayout>
   );
 }
