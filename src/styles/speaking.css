@@ -11,33 +11,80 @@
 
 /* Level Selection Cards (A1/A2/B1) */
 
-.speaking-level-card {
-  display: block;
-  width: 100%;
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  background: #0f172a;
-  border: 1px solid #1e293b;
+.level-header h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.level-header span {
+  background: rgba(37,99,235,.15);
+
+  color: #60a5fa;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.level-footer {
+  margin-top: 20px;
+
+  color: #60a5fa;
+
+  font-weight: 600;
+}
+
+.speaking-level-card {
+  background: linear-gradient(
+    135deg,
+    #111827,
+    #0f172a
+  );
+
+  border: 1px solid #1f2937;
 
   border-radius: 18px;
 
-  padding: 32px;
-  min-height: 180px;
+  padding: 24px;
+
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   text-decoration: none;
   color: white;
 
-  transition: all 0.2s ease;
-
-  cursor: pointer;
-}
-
-
-.speaking-level-card h2 {
-  margin-bottom: 10px;
+  transition: all 0.25s ease;
 }
 
 .speaking-level-card p {
   color: #94a3b8;
+  line-height: 1.6;
+}
+
+.speaking-level-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 15px 35px rgba(
+      59,
+      130,
+      246,
+      0.18
+    );
 }
 
 /* ======================================
@@ -128,11 +175,9 @@
   border-radius: 16px;
 
   padding: 20px;
-}
-
-.selected-scenario {
   text-align: center;
 }
+
 
 /* ======================================
    MOBILE
@@ -180,15 +225,6 @@
   color: #94a3b8;
 }
 
-
-.speaking-level-card:hover {
-  transform: translateY(-4px);
-
-  border-color: #3b82f6;
-
-  box-shadow:
-    0 12px 30px rgba(59,130,246,.12);
-}
 
 @media (max-width: 768px) {
 
@@ -339,16 +375,14 @@ max-height: 400px;
 
   background: #1e293b;
   color: white;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .back-btn:hover {
   background: #334155;
 }
 
-.back-btn {
-  display: inline-block;
-  text-decoration: none;
-}
 
 .completion-actions {
   margin-top: 16px;
@@ -534,38 +568,28 @@ max-height: 400px;
   flex-wrap: wrap;
 }
 
-.sheet-overlay {
-  position: fixed;
-  inset: 0;
-
-  background: rgba(0,0,0,.6);
-
-  z-index: 9998;
-}
-
-.pronunciation-sheet {
-  position: fixed;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-
+.meaning-box {
+  
   background: #111827;
 
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  border: 1px solid #1f2937;
 
-  padding: 24px;
+  border-radius: 16px;
 
-  border-top: 1px solid #1f2937;
+  padding: 20px;
 
-  z-index: 9999;
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto 0;
+}
 
-  min-height: 250px;
+.meaning-box h3 {
+  margin-bottom: 12px;
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.meaning-box p {
+  color: #cbd5e1;
+  font-size: 18px;
 }
 
 .recognized-section {
@@ -613,4 +637,10 @@ max-height: 400px;
 
   font-size: 18px;
   font-weight: 700;
+}
+
+.sentence-counter {
+  font-size: 18px;
+  color: #94a3b8;
+  font-weight: 500;
 }
