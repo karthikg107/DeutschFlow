@@ -18,6 +18,14 @@ function PronunciationPractice() {
   const currentSentence =
     sentences[currentIndex];
 
+  function changeSentence(newIndex) {
+
+  window.speechSynthesis.cancel();
+
+  setCurrentIndex(newIndex);
+
+}  
+
 
   if (!currentSentence) {
     return (
@@ -127,7 +135,7 @@ function PronunciationPractice() {
             className="completion-btn"
             disabled={currentIndex === 0}
             onClick={() =>
-              setCurrentIndex(
+              changeSentence(
                 currentIndex - 1
               )
             }
@@ -142,7 +150,7 @@ function PronunciationPractice() {
               sentences.length - 1
             }
             onClick={() =>
-              setCurrentIndex(
+              changeSentence(
                 currentIndex + 1
               )
             }
