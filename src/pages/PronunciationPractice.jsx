@@ -124,12 +124,39 @@ const normalizedUser =
     .replace(/[.,?!]/g, "")
     .trim();
 
+const targetWords =
+  normalizedTarget.split(" ");
+
+const userWords =
+  normalizedUser.split(" ");
+
+let matchedWords = 0;
+
+targetWords.forEach((word) => {
+
+  if (
+    userWords.includes(word)
+  ) {
+    matchedWords++;
+  }
+
+});
+
+const matchPercentage =
+  matchedWords /
+  targetWords.length;
+
 if (
-  normalizedUser ===
-  normalizedTarget
+  matchPercentage >= 0.9
 ) {
 
   setFeedback("Excellent");
+
+} else if (
+  matchPercentage >= 0.6
+) {
+
+  setFeedback("Good");
 
 } else {
 
