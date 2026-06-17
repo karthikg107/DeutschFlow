@@ -129,11 +129,130 @@ const pronunciationSentences = {
 
   a2: [
     {
-      id: 1,
-      german: "Ich möchte ein Ticket nach Berlin kaufen.",
-      english: "I would like to buy a ticket to Berlin."
-    }
-  ],
+  id: 1,
+  german: "Ich möchte ein Ticket nach Berlin kaufen.",
+  english: "I would like to buy a ticket to Berlin."
+},
+{
+  id: 2,
+  german: "Könnten Sie das bitte wiederholen?",
+  english: "Could you please repeat that?"
+},
+{
+  id: 3,
+  german: "Ich habe morgen einen Termin beim Arzt.",
+  english: "I have an appointment with the doctor tomorrow."
+},
+{
+  id: 4,
+  german: "Wie lange dauert die Fahrt?",
+  english: "How long does the trip take?"
+},
+{
+  id: 5,
+  german: "Ich suche eine Wohnung in Berlin.",
+  english: "I am looking for an apartment in Berlin."
+},
+{
+  id: 6,
+  german: "Wann beginnt der Deutschkurs?",
+  english: "When does the German course start?"
+},
+{
+  id: 7,
+  german: "Ich muss heute länger arbeiten.",
+  english: "I have to work longer today."
+},
+{
+  id: 8,
+  german: "Das Wetter ist heute besser als gestern.",
+  english: "The weather is better today than yesterday."
+},
+{
+  id: 9,
+  german: "Ich möchte meine Deutschkenntnisse verbessern.",
+  english: "I would like to improve my German skills."
+},
+{
+  id: 10,
+  german: "Wo kann ich ein Handy kaufen?",
+  english: "Where can I buy a phone?"
+},
+{
+  id: 11,
+  german: "Ich fahre am Wochenende nach Hamburg.",
+  english: "I am traveling to Hamburg this weekend."
+},
+{
+  id: 12,
+  german: "Hast du heute Abend Zeit?",
+  english: "Do you have time this evening?"
+},
+{
+  id: 13,
+  german: "Ich treffe mich mit meinen Freunden.",
+  english: "I am meeting my friends."
+},
+{
+  id: 14,
+  german: "Können wir einen Termin vereinbaren?",
+  english: "Can we arrange an appointment?"
+},
+{
+  id: 15,
+  german: "Ich habe meinen Schlüssel verloren.",
+  english: "I lost my key."
+},
+{
+  id: 16,
+  german: "Die Miete ist ziemlich teuer.",
+  english: "The rent is quite expensive."
+},
+{
+  id: 17,
+  german: "Ich gehe dreimal pro Woche ins Fitnessstudio.",
+  english: "I go to the gym three times a week."
+},
+{
+  id: 18,
+  german: "Welchen Beruf möchtest du später ausüben?",
+  english: "What profession would you like to have later?"
+},
+{
+  id: 19,
+  german: "Der Zug hat zehn Minuten Verspätung.",
+  english: "The train is ten minutes late."
+},
+{
+  id: 20,
+  german: "Kann ich mit Karte bezahlen?",
+  english: "Can I pay by card?"
+},
+{
+  id: 21,
+  german: "Ich brauche Hilfe bei meiner Bewerbung.",
+  english: "I need help with my job application."
+},
+{
+  id: 22,
+  german: "Heute habe ich viel zu tun.",
+  english: "I have a lot to do today."
+},
+{
+  id: 23,
+  german: "Was sind deine Pläne für das Wochenende?",
+  english: "What are your plans for the weekend?"
+},
+{
+  id: 24,
+  german: "Ich interessiere mich für Programmierung.",
+  english: "I am interested in programming."
+},
+{
+  id: 25,
+  german: "Der Unterricht war heute sehr interessant.",
+  english: "The class was very interesting today."
+}],
 
   b1: [
     {
