@@ -22,6 +22,9 @@ function PronunciationPractice() {
 const [recognizedText, setRecognizedText] =
   useState("");
 
+  const [feedback, setFeedback] =
+  useState("");
+
 const [error, setError] =
   useState("");  
 
@@ -33,6 +36,8 @@ const [error, setError] =
   window.speechSynthesis.cancel();
 
   setRecognizedText("");
+
+  setFeedback("");
 
   setError("");
 
@@ -106,6 +111,31 @@ function startRecording() {
       ][0].transcript;
 
     setRecognizedText(text);
+
+    const normalizedTarget =
+  currentSentence.german
+    .toLowerCase()
+    .replace(/[.,?!]/g, "")
+    .trim();
+
+const normalizedUser =
+  text
+    .toLowerCase()
+    .replace(/[.,?!]/g, "")
+    .trim();
+
+if (
+  normalizedUser ===
+  normalizedTarget
+) {
+
+  setFeedback("Excellent");
+
+} else {
+
+  setFeedback("Try Again");
+
+}
   };
 
   recognition.onerror = (event) => {
@@ -249,18 +279,30 @@ function startRecording() {
 
 {recognizedText && (
 
-  <div
-    style={{
-      marginTop: "24px"
-    }}
-  >
+  <div className="recognized-section">
 
     <h4>
       Recognized Speech
     </h4>
 
+    <div className="recognized-card">
+
+      <p>
+        {recognizedText}
+      </p>
+
+    </div>
+
+  </div>
+
+)}
+
+{feedback && (
+
+  <div className="feedback-box">
+
     <p>
-      {recognizedText}
+      {feedback}
     </p>
 
   </div>

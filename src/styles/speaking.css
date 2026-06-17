@@ -567,3 +567,41 @@ max-height: 400px;
   flex-direction: column;
   gap: 16px;
 }
+
+.recognized-section {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.recognized-card {
+  padding: 16px;
+
+  max-width: 600px;
+  margin: 12px auto 0;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.recognized-card p {
+  margin: 0;
+
+  font-size: 18px;
+
+  color: white;
+}
+
+.feedback-box {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.feedback-box p {
+  font-size: 20px;
+  font-weight: 700;
+}
