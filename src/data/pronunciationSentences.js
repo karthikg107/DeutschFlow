@@ -256,10 +256,130 @@ const pronunciationSentences = {
 
   b1: [
     {
-      id: 1,
-      german: "Meiner Meinung nach ist Deutsch sehr wichtig.",
-      english: "In my opinion, German is very important."
-    }
+  id: 1,
+  german: "Meiner Meinung nach ist Deutsch sehr wichtig.",
+  english: "In my opinion, German is very important."
+},
+{
+  id: 2,
+  german: "Ich habe mich entschieden, Informatik zu studieren.",
+  english: "I decided to study computer science."
+},
+{
+  id: 3,
+  german: "Wenn ich mehr Zeit hätte, würde ich öfter reisen.",
+  english: "If I had more time, I would travel more often."
+},
+{
+  id: 4,
+  german: "Die Technologie verändert unser Leben sehr schnell.",
+  english: "Technology is changing our lives very quickly."
+},
+{
+  id: 5,
+  german: "Viele Menschen arbeiten inzwischen von zu Hause aus.",
+  english: "Many people now work from home."
+},
+{
+  id: 6,
+  german: "Ich denke, dass regelmäßige Bewegung wichtig ist.",
+  english: "I think regular exercise is important."
+},
+{
+  id: 7,
+  german: "Welche Vorteile hat künstliche Intelligenz?",
+  english: "What advantages does artificial intelligence have?"
+},
+{
+  id: 8,
+  german: "Ich versuche jeden Tag etwas Neues zu lernen.",
+  english: "I try to learn something new every day."
+},
+{
+  id: 9,
+  german: "In Zukunft möchte ich als Softwareentwickler arbeiten.",
+  english: "In the future, I would like to work as a software developer."
+},
+{
+  id: 10,
+  german: "Das Leben in einer Großstadt kann stressig sein.",
+  english: "Life in a big city can be stressful."
+},
+{
+  id: 11,
+  german: "Viele Studenten arbeiten neben dem Studium.",
+  english: "Many students work alongside their studies."
+},
+{
+  id: 12,
+  german: "Ich glaube, dass praktische Erfahrung sehr wichtig ist.",
+  english: "I believe practical experience is very important."
+},
+{
+  id: 13,
+  german: "Das Internet macht unser Leben einfacher, aber auch komplizierter.",
+  english: "The internet makes our lives easier but also more complicated."
+},
+{
+  id: 14,
+  german: "Ich interessiere mich für neue Technologien.",
+  english: "I am interested in new technologies."
+},
+{
+  id: 15,
+  german: "Man sollte regelmäßig Pausen machen, um produktiv zu bleiben.",
+  english: "One should take regular breaks to remain productive."
+},
+{
+  id: 16,
+  german: "Welche Fähigkeiten sind für den Arbeitsmarkt wichtig?",
+  english: "Which skills are important for the job market?"
+},
+{
+  id: 17,
+  german: "Ich arbeite gerne in einem internationalen Team.",
+  english: "I like working in an international team."
+},
+{
+  id: 18,
+  german: "Umweltfreundliches Verhalten wird immer wichtiger.",
+  english: "Environmentally friendly behavior is becoming increasingly important."
+},
+{
+  id: 19,
+  german: "Viele Menschen verbringen zu viel Zeit am Smartphone.",
+  english: "Many people spend too much time on their smartphones."
+},
+{
+  id: 20,
+  german: "Ich möchte meine Kommunikationsfähigkeiten verbessern.",
+  english: "I want to improve my communication skills."
+},
+{
+  id: 21,
+  german: "Erfolg hängt oft von Disziplin und Ausdauer ab.",
+  english: "Success often depends on discipline and persistence."
+},
+{
+  id: 22,
+  german: "Das Erlernen einer Fremdsprache eröffnet viele Möglichkeiten.",
+  english: "Learning a foreign language opens many opportunities."
+},
+{
+  id: 23,
+  german: "Meiner Erfahrung nach lernt man am besten durch Praxis.",
+  english: "In my experience, people learn best through practice."
+},
+{
+  id: 24,
+  german: "Ich finde, dass lebenslanges Lernen sehr wichtig ist.",
+  english: "I think lifelong learning is very important."
+},
+{
+  id: 25,
+  german: "Welche Ziele möchtest du in den nächsten fünf Jahren erreichen?",
+  english: "What goals would you like to achieve in the next five years?"
+}
   ]
 };
 
