@@ -568,29 +568,6 @@ max-height: 400px;
   flex-wrap: wrap;
 }
 
-.meaning-box {
-  
-  background: #111827;
-
-  border: 1px solid #1f2937;
-
-  border-radius: 16px;
-
-  padding: 20px;
-
-  text-align: center;
-  max-width: 700px;
-  margin: 20px auto 0;
-}
-
-.meaning-box h3 {
-  margin-bottom: 12px;
-}
-
-.meaning-box p {
-  color: #cbd5e1;
-  font-size: 18px;
-}
 
 .recognized-section {
   margin-top: 24px;
@@ -643,4 +620,5 @@ max-height: 400px;
   font-size: 18px;
   color: #94a3b8;
   font-weight: 500;
+  letter-spacing: 0.5px;
 }

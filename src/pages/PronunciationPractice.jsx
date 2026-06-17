@@ -36,6 +36,8 @@ const [error, setError] =
 
   function changeSentence(newIndex) {
 
+  setShowMeaning(false);  
+
   window.speechSynthesis.cancel();
 
   setIsSpeaking(false);
@@ -51,6 +53,8 @@ const [error, setError] =
 }
 
 function resetAttempt() {
+
+  setShowMeaning(false);
 
   window.speechSynthesis.cancel();
 
@@ -262,42 +266,81 @@ setIsSpeaking(false);
 
         <div className="speaking-card pronunciation-card">
 
-          <p className="sentence-counter">
-  Sentence {currentIndex + 1} of {sentences.length}
-</p>
+  <p className="sentence-counter">
+    Sentence {currentIndex + 1} of {sentences.length}
+  </p>
 
-          <h2 className="german-sentence">
-            {currentSentence.german}
-          </h2>
+  {!showMeaning ? (
 
-          <div className="pronunciation-actions">
+    <>
 
-            <button
-  className="activity-btn"
-  onClick={() =>
-    speak(currentSentence.german)
-  }
-  disabled={
-    isRecording
-  }
->
-  Listen
-</button>
+      <h2 className="german-sentence">
+        {currentSentence.german}
+      </h2>
 
-            <button
-              className="activity-btn"
-              onClick={() =>
-  setShowMeaning(
-    !showMeaning
-  )
-}
-            >
-              Meaning
-            </button>
+      <div className="pronunciation-actions">
 
-          </div>
+        <button
+          className="activity-btn"
+          onClick={() =>
+            speak(currentSentence.german)
+          }
+          disabled={isRecording}
+        >
+          Listen
+        </button>
 
-        </div>
+        <button
+          className="activity-btn"
+          onClick={() => {
+
+  window.speechSynthesis.cancel();
+
+  setIsSpeaking(false);
+
+  setShowMeaning(true);
+
+}}
+        >
+          Meaning
+        </button>
+
+      </div>
+
+    </>
+
+  ) : (
+
+    <>
+
+      <h2 className="german-sentence">
+        {currentSentence.english}
+      </h2>
+
+      <div className="pronunciation-actions">
+
+        <button
+          className="activity-btn"
+          onClick={() => {
+
+  window.speechSynthesis.cancel();
+
+  setIsSpeaking(false);
+
+  setShowMeaning(false);
+
+}}
+        >
+          Original
+        </button>
+
+      </div>
+
+    </>
+
+  )}
+
+</div>
 
         <div className="selected-scenario">
 
@@ -417,28 +460,6 @@ setIsSpeaking(false);
 
         </div>
 
-        {showMeaning && (
-
-  <div className="meaning-box">
-
-    <h3>Meaning</h3>
-
-    <p>
-      {currentSentence.english}
-    </p>
-
-    <button
-      className="completion-btn"
-      onClick={() =>
-        setShowMeaning(false)
-      }
-    >
-      Close
-    </button>
-
-  </div>
-
-)}
 
       </div>
     </AppLayout>
