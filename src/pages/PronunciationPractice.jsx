@@ -45,6 +45,18 @@ const [error, setError] =
 
 }
 
+function resetAttempt() {
+
+  window.speechSynthesis.cancel();
+
+  setRecognizedText("");
+
+  setFeedback("");
+
+  setError("");
+
+}
+
 
 
   if (!currentSentence) {
@@ -351,6 +363,13 @@ if (
           >
             Previous
           </button>
+
+          <button
+  className="completion-btn"
+  onClick={resetAttempt}
+>
+  Try Again
+</button>
 
           <button
             className="completion-btn"
