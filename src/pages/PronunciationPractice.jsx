@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
 import pronunciationSentences from "../data/pronunciationSentences";
+import { Mic } from "lucide-react";
 
 function PronunciationPractice() {
   const { level } = useParams();
@@ -15,6 +16,15 @@ function PronunciationPractice() {
   const [showMeaning, setShowMeaning] =
     useState(false);
 
+  const [isRecording, setIsRecording] =
+  useState(false);
+
+const [recognizedText, setRecognizedText] =
+  useState("");
+
+const [error, setError] =
+  useState("");  
+
   const currentSentence =
     sentences[currentIndex];
 
@@ -22,9 +32,14 @@ function PronunciationPractice() {
 
   window.speechSynthesis.cancel();
 
+  setRecognizedText("");
+
+  setError("");
+
   setCurrentIndex(newIndex);
 
-}  
+}
+
 
 
   if (!currentSentence) {
@@ -51,6 +66,81 @@ function PronunciationPractice() {
     utterance
   );
 
+}
+
+function startRecording() {
+
+  setError("");
+
+  const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+
+    setError(
+      "Speech recognition is not supported in this browser."
+    );
+
+    return;
+  }
+
+  const recognition =
+    new SpeechRecognition();
+
+  recognition.lang = "de-DE";
+
+  recognition.continuous = false;
+
+  recognition.interimResults = false;
+
+  recognition.onstart = () => {
+    setIsRecording(true);
+  };
+
+  recognition.onresult = (event) => {
+
+    const text =
+      event.results[
+        event.results.length - 1
+      ][0].transcript;
+
+    setRecognizedText(text);
+  };
+
+  recognition.onerror = (event) => {
+
+    setIsRecording(false);
+
+    if (
+      event.error === "no-speech"
+    ) {
+
+      setError(
+        "We couldn't hear anything."
+      );
+
+    } else if (
+      event.error === "not-allowed"
+    ) {
+
+      setError(
+        "Microphone permission denied."
+      );
+
+    } else {
+
+      setError(
+        "Speech recognition failed."
+      );
+    }
+  };
+
+  recognition.onend = () => {
+    setIsRecording(false);
+  };
+
+  recognition.start();
 }
 
 
@@ -123,9 +213,59 @@ function PronunciationPractice() {
             the sentence.
           </p>
 
-          <button className="mic-btn">
-            Mic
-          </button>
+          <button
+  className={`mic-btn ${
+    isRecording
+      ? "recording"
+      : ""
+  }`}
+  onClick={startRecording}
+  disabled={isRecording}
+>
+  <Mic size={28} />
+</button>
+
+{isRecording && (
+  <p
+    style={{
+      marginTop: "12px"
+    }}
+  >
+    Listening...
+  </p>
+)}
+
+{error && (
+  <p
+    style={{
+      marginTop: "12px",
+      color: "#ef4444",
+      fontWeight: "600"
+    }}
+  >
+    {error}
+  </p>
+)}
+
+{recognizedText && (
+
+  <div
+    style={{
+      marginTop: "24px"
+    }}
+  >
+
+    <h4>
+      Recognized Speech
+    </h4>
+
+    <p>
+      {recognizedText}
+    </p>
+
+  </div>
+
+)}
 
         </div>
 
