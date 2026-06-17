@@ -596,12 +596,21 @@ max-height: 400px;
   color: white;
 }
 
-.feedback-box {
+.pronunciation-feedback {
   margin-top: 16px;
-  text-align: center;
 }
 
-.feedback-box p {
-  font-size: 20px;
+.pronunciation-feedback p {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  background: rgba(37,99,235,.15);
+
+  border: 1px solid rgba(37,99,235,.4);
+
+  font-size: 18px;
   font-weight: 700;
 }

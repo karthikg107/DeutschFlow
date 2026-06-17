@@ -338,7 +338,7 @@ if (
 
 {feedback && (
 
-  <div className="feedback-box">
+  <div className="pronunciation-feedback">
 
     <p>
       {feedback}
