@@ -130,6 +130,10 @@
   padding: 20px;
 }
 
+.selected-scenario {
+  text-align: center;
+}
+
 /* ======================================
    MOBILE
 ====================================== */
@@ -194,6 +198,13 @@
 
 }
 
+@media (max-width: 768px) {
+
+  .german-sentence {
+    font-size: 1.5rem;
+  }
+
+}
 
 .level-content {
   display: flex;
@@ -332,6 +343,11 @@ max-height: 400px;
 
 .back-btn:hover {
   background: #334155;
+}
+
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .completion-actions {
@@ -497,4 +513,51 @@ max-height: 400px;
 .activity-btn:hover {
   transform: translateY(-1px);
   background: #3b82f6;
+}
+
+.pronunciation-card {
+  text-align: center;
+}
+
+.german-sentence {
+  font-size: 2rem;
+  margin: 20px 0;
+
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.pronunciation-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,.6);
+
+  z-index: 999;
+}
+
+.pronunciation-sheet {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #111827;
+
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+
+  padding: 24px;
+
+  border-top: 1px solid #1f2937;
+
+  z-index: 1000;
 }
