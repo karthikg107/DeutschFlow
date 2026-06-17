@@ -1,21 +1,31 @@
 const pronunciationSentences = {
   a1: [
-    "Hallo, wie heißt du?",
-    "Mein Name ist Anna.",
-    "Ich komme aus Deutschland.",
-    "Ich lerne Deutsch."
+    {
+      id: 1,
+      german: "Hallo, wie heißt du?",
+      english: "Hello, what is your name?"
+    },
+    {
+      id: 2,
+      german: "Mein Name ist Anna.",
+      english: "My name is Anna."
+    }
   ],
 
   a2: [
-    "Ich möchte ein Ticket nach Berlin kaufen.",
-    "Können Sie mir helfen?",
-    "Wann fährt der nächste Zug?"
+    {
+      id: 1,
+      german: "Ich möchte ein Ticket nach Berlin kaufen.",
+      english: "I would like to buy a ticket to Berlin."
+    }
   ],
 
   b1: [
-    "Meiner Meinung nach ist Deutsch sehr wichtig.",
-    "Ich interessiere mich für Softwareentwicklung.",
-    "In Zukunft möchte ich in Deutschland arbeiten."
+    {
+      id: 1,
+      german: "Meiner Meinung nach ist Deutsch sehr wichtig.",
+      english: "In my opinion, German is very important."
+    }
   ]
 };
 

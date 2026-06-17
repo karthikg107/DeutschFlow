@@ -18,6 +18,7 @@ function PronunciationPractice() {
   const currentSentence =
     sentences[currentIndex];
 
+
   if (!currentSentence) {
     return (
       <AppLayout>
@@ -36,12 +37,14 @@ function PronunciationPractice() {
     new SpeechSynthesisUtterance(text);
 
   utterance.lang = "de-DE";
+  utterance.rate = 0.9;
 
   window.speechSynthesis.speak(
     utterance
   );
 
 }
+
 
 
   return (
@@ -84,8 +87,8 @@ function PronunciationPractice() {
             <button
   className="activity-btn"
   onClick={() =>
-    speak(currentSentence.german)
-  }
+  speak(currentSentence.german)
+}
 >
   Listen
 </button>
@@ -163,7 +166,7 @@ function PronunciationPractice() {
               <h3>Meaning</h3>
 
               <p>
-                {currentSentence.english}
+                {currentSentence.english} 
               </p>
 
               <button
