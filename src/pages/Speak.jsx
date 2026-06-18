@@ -93,7 +93,7 @@ function Speak() {
           {/* FREE CHAT */}
 
           <Link
-            to="/speaking/free-chat"
+            to="/speaking/talk-with-mia"
             className="speaking-level-card"
           >
             <div className="level-content">
@@ -101,18 +101,17 @@ function Speak() {
               <div>
 
                 <h2>
-                  Free Chat With AI
+                  Talk With Mia
                 </h2>
 
                 <p>
-                  Have open German conversations and receive
-                  feedback from your AI tutor.
+                  Talk naturally with Mia and build confidence speaking German.
                 </p>
 
               </div>
 
               <button className="activity-btn">
-  Start Chat
+  Start Conversation
 </button>
 
             </div>

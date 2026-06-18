@@ -17,7 +17,7 @@ import ScenarioPractice from "./pages/ScenarioPractice";
 import PronunciationPractice from "./pages/PronunciationPractice";
 import PronunciationLevels from "./pages/PronunciationLevels";
 import ScenarioLevels from "./pages/ScenarioLevels";
-
+import TalkWithMia from "./pages/TalkWithMia";
 
 
 // 🔥 NEW IMPORT
@@ -173,10 +173,10 @@ function App() {
 />
 
 <Route
-  path="/speaking/free-chat"
+  path="/speaking/talk-with-mia"
   element={
     <ProtectedRoute>
-      <AITutor />
+      <TalkWithMia />
     </ProtectedRoute>
   }
 />

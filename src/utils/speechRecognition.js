@@ -1,5 +1,6 @@
 export const startSpeechRecognition = (
-  onResult
+  onResult,
+  language = "de-DE"
 ) => {
 
   const SpeechRecognition =
@@ -7,50 +8,45 @@ export const startSpeechRecognition = (
     window.webkitSpeechRecognition;
 
   if (!SpeechRecognition) {
-    alert("Speech recognition is not supported.");
+
+    alert(
+      "Speech recognition is not supported in this browser."
+    );
+
     return;
   }
 
   const recognition =
     new SpeechRecognition();
 
-  recognition.lang = "en-US";
+  recognition.lang = language;
 
-  recognition.continuous = true;
+  recognition.continuous = false;
 
   recognition.interimResults = false;
 
-  recognition.maxAlternatives = 1;
-
-  recognition.onstart = () => {
-    console.log("Recognition started");
-  };
-
-  recognition.onresult = (event) => {
+  recognition.onresult = (
+    event
+  ) => {
 
     const transcript =
       event.results[0][0].transcript;
 
-    console.log(
-      "Transcript:",
-      transcript
-    );
-
     onResult(transcript);
+
   };
 
-  recognition.onerror = (event) => {
+  recognition.onerror = (
+    event
+  ) => {
+
     console.log(
-      "Recognition error:",
+      "Speech Error:",
       event.error
     );
-  };
 
-  recognition.onend = () => {
-    console.log("Recognition ended");
   };
 
   recognition.start();
 
-  return recognition;
 };

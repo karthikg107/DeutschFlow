@@ -622,3 +622,40 @@ max-height: 400px;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
+.mia-chat-message {
+  max-width: 75%;
+  margin-bottom: 48px;
+}
+
+.user-chat-message {
+  width: fit-content;
+
+  max-width: 65%;
+
+  margin-left: auto;
+  margin-bottom: 48px;
+
+  text-align: left;
+}
+
+.chat-speaker {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #a78bfa;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.talk-chat-box {
+  margin-top: 40px;
+
+  max-width: 900px;
+
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 0;
+}
