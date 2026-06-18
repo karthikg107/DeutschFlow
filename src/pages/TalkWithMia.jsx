@@ -43,7 +43,39 @@ function TalkWithMia() {
     behavior: "smooth"
   });
 
-}, [messages, isMiaTyping]);
+}, [
+  messages,
+  isMiaTyping,
+  isMiaSpeaking
+]);
+
+useEffect(() => {
+
+  return () => {
+    speechSynthesis.cancel();
+  };
+
+}, []);
+
+function speak(text) {
+
+  speechSynthesis.cancel();
+
+  const utterance =
+    new SpeechSynthesisUtterance(text);
+
+  utterance.lang = "de-DE";
+
+  utterance.onstart = () => {
+    setIsMiaSpeaking(true);
+  };
+
+  utterance.onend = () => {
+    setIsMiaSpeaking(false);
+  };
+
+  speechSynthesis.speak(utterance);
+}
 
   function handleMicClick() {
 
@@ -70,21 +102,26 @@ function TalkWithMia() {
 
       setTimeout(() => {
 
-        setIsMiaTyping(false);
+  const reply =
+    "Das klingt interessant!";
 
-        setMessages((prev) => [
+  setIsMiaTyping(false);
 
-          ...prev,
+  setMessages((prev) => [
 
-          {
-            id: Date.now() + 1,
-            sender: "mia",
-            text: "Das klingt interessant!"
-          }
+    ...prev,
 
-        ]);
+    {
+      id: Date.now() + 1,
+      sender: "mia",
+      text: reply
+    }
 
-      }, 1500);
+  ]);
+
+  speak(reply);
+
+}, 1500);
 
     }
   );
@@ -141,22 +178,29 @@ function TalkWithMia() {
 
           {isMiaTyping && (
 
-            <div className="mia-chat-message">
+  <div className="mia-chat-message">
 
-              <div className="chat-speaker">
-                Mia
-              </div>
+    <div className="chat-speaker">
+      Mia
+    </div>
 
-              <div className="typing-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+    <div className="typing-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-            </div>
-            
+  </div>
 
-          )}
+)}
+
+{isMiaSpeaking && (
+
+  <p className="mia-speaking">
+    Mia is speaking...
+  </p>
+
+)}
 
           <div ref={chatEndRef}></div>
 
