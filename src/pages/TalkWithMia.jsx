@@ -7,22 +7,12 @@ import { useState, useRef, useEffect } from "react";
 function TalkWithMia() {
 
   const [messages, setMessages] = useState([
-    {
-      id: 1,
-      sender: "mia",
-      text: "Hallo! Worüber möchtest du heute sprechen?"
-    },
-    {
-      id: 2,
-      sender: "user",
-      text: "Ich lerne Deutsch."
-    },
-    {
-      id: 3,
-      sender: "mia",
-      text: "Das ist großartig!"
-    }
-  ]);
+  {
+    id: 1,
+    sender: "mia",
+    text: "Hallo! Worüber möchtest du heute sprechen?"
+  }
+]);
 
   const [isRecording, setIsRecording] =
     useState(false);
@@ -76,6 +66,14 @@ function speak(text) {
 
   speechSynthesis.speak(utterance);
 }
+
+useEffect(() => {
+
+  speak(
+    "Hallo! Worüber möchtest du heute sprechen?"
+  );
+
+}, []);
 
   function handleMicClick() {
 
