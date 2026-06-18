@@ -80,9 +80,8 @@ function speak(text) {
   function handleMicClick() {
 
   startSpeechRecognition(
-    (transcript) => {
 
-      // USER MESSAGE
+    (transcript) => {
 
       setMessages((prev) => [
 
@@ -96,34 +95,43 @@ function speak(text) {
 
       ]);
 
-      // MIA TYPING
-
       setIsMiaTyping(true);
 
       setTimeout(() => {
 
-  const reply =
-    "Das klingt interessant!";
+        const reply =
+          "Das klingt interessant!";
 
-  setIsMiaTyping(false);
+        setIsMiaTyping(false);
 
-  setMessages((prev) => [
+        setMessages((prev) => [
 
-    ...prev,
+          ...prev,
 
-    {
-      id: Date.now() + 1,
-      sender: "mia",
-      text: reply
+          {
+            id: Date.now() + 1,
+            sender: "mia",
+            text: reply
+          }
+
+        ]);
+
+        speak(reply);
+
+      }, 1500);
+
+    },
+
+    "de-DE",
+
+    () => {
+      setIsRecording(true);
+    },
+
+    () => {
+      setIsRecording(false);
     }
 
-  ]);
-
-  speak(reply);
-
-}, 1500);
-
-    }
   );
 
 }
