@@ -3,6 +3,7 @@ import { Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { startSpeechRecognition } from "../utils/speechRecognition";
 import { useState, useRef, useEffect } from "react";
+import api from "../utils/api";
 
 function TalkWithMia() {
 
@@ -95,28 +96,57 @@ useEffect(() => {
 
       setIsMiaTyping(true);
 
-      setTimeout(() => {
+      setTimeout(async () => {
 
-        const reply =
-          "Das klingt interessant!";
+  try {
 
-        setIsMiaTyping(false);
+    const response = await api.post(
+  "/ai/chat",
+  {
+    mode: "talkWithMia",
+    message: transcript
+  }
+);
 
-        setMessages((prev) => [
+const reply = response.data.reply;
 
-          ...prev,
+    setIsMiaTyping(false);
 
-          {
-            id: Date.now() + 1,
-            sender: "mia",
-            text: reply
-          }
+    setMessages((prev) => [
 
-        ]);
+      ...prev,
 
-        speak(reply);
+      {
+        id: Date.now() + 1,
+        sender: "mia",
+        text: reply
+      }
 
-      }, 1500);
+    ]);
+
+    speak(reply);
+
+  } catch (error) {
+
+    console.error(error);
+
+    setIsMiaTyping(false);
+
+    setMessages((prev) => [
+
+      ...prev,
+
+      {
+        id: Date.now() + 1,
+        sender: "mia",
+        text: "Entschuldigung, ich habe gerade ein Problem."
+      }
+
+    ]);
+
+  }
+
+}, 1500);
 
     },
 

@@ -3,6 +3,7 @@ import { getOpenAI } from "./../utils/openaiClient.js";
 import { handleConversation } from "../services/ai/conversationService.js";
 import { handleTranslation } from "../services/ai/translationService.js";
 import { handleRoleplayTurn } from "../services/ai/roleplay/roleplayEngine.js";
+import { handleTalkWithMia } from "../services/ai/talkWithMiaService.js";
 
 import {
   getMemory,
@@ -24,6 +25,21 @@ export const handleMessage = async (req, res) => {
       const reply = await handleConversation(message, userId, level);
       return res.json({ reply });
     }
+
+    // 🗣️ Talk with Mia
+    if (mode === "talkWithMia") {
+
+  const reply =
+    await handleTalkWithMia(
+      message,
+      userId
+    );
+
+  return res.json({
+    reply
+  });
+
+}
 
     // 🔄 Translation
     if (mode === "translation") {
