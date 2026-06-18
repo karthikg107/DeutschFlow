@@ -1,8 +1,8 @@
-import { useState } from "react";
 import AppLayout from "../components/layout/AppLayout";
 import { Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { startSpeechRecognition } from "../utils/speechRecognition";
+import { useState, useRef, useEffect } from "react";
 
 function TalkWithMia() {
 
@@ -28,37 +28,74 @@ function TalkWithMia() {
     useState(false);
 
   const [isMiaTyping, setIsMiaTyping] =
-    useState(true); // TEMPORARY TEST
+    useState(false); // TEMPORARY TEST
 
   const [isMiaSpeaking, setIsMiaSpeaking] =
     useState(false);
 
   const navigate = useNavigate();
 
+  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+
+  chatEndRef.current?.scrollIntoView({
+    behavior: "smooth"
+  });
+
+}, [messages]);
+
   function handleMicClick() {
 
-    startSpeechRecognition(
-      (transcript) => {
+  startSpeechRecognition(
+    (transcript) => {
+
+      // USER MESSAGE
+
+      setMessages((prev) => [
+
+        ...prev,
+
+        {
+          id: Date.now(),
+          sender: "user",
+          text: transcript
+        }
+
+      ]);
+
+      // MIA TYPING
+
+      setIsMiaTyping(true);
+
+      setTimeout(() => {
+
+        setIsMiaTyping(false);
 
         setMessages((prev) => [
+
           ...prev,
+
           {
-            id: Date.now(),
-            sender: "user",
-            text: transcript
+            id: Date.now() + 1,
+            sender: "mia",
+            text: "Das klingt interessant!"
           }
+
         ]);
 
-      }
-    );
+      }, 1500);
 
-  }
+    }
+  );
+
+}
 
   return (
 
     <AppLayout>
 
-      <div className="speaking-page">
+      <div className="speaking-page talk-page">
 
         <button
           className="back-btn"
@@ -120,6 +157,8 @@ function TalkWithMia() {
 
           )}
 
+          <div ref={chatEndRef}></div>
+
         </div>
 
         <button
@@ -133,6 +172,7 @@ function TalkWithMia() {
         >
           <Mic size={28} />
         </button>
+
 
       </div>
 
