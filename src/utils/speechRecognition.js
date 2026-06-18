@@ -1,6 +1,8 @@
 export const startSpeechRecognition = (
   onResult,
-  language = "de-DE"
+  language = "de-DE",
+  onStart,
+  onEnd
 ) => {
 
   const SpeechRecognition =
@@ -25,9 +27,15 @@ export const startSpeechRecognition = (
 
   recognition.interimResults = false;
 
-  recognition.onresult = (
-    event
-  ) => {
+  recognition.onstart = () => {
+
+    if (onStart) {
+      onStart();
+    }
+
+  };
+
+  recognition.onresult = (event) => {
 
     const transcript =
       event.results[0][0].transcript;
@@ -36,14 +44,20 @@ export const startSpeechRecognition = (
 
   };
 
-  recognition.onerror = (
-    event
-  ) => {
+  recognition.onerror = (event) => {
 
     console.log(
       "Speech Error:",
       event.error
     );
+
+  };
+
+  recognition.onend = () => {
+
+    if (onEnd) {
+      onEnd();
+    }
 
   };
 
