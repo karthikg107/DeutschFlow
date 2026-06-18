@@ -28,7 +28,7 @@ function TalkWithMia() {
     useState(false);
 
   const [isMiaTyping, setIsMiaTyping] =
-    useState(false); // TEMPORARY TEST
+    useState(false); 
 
   const [isMiaSpeaking, setIsMiaSpeaking] =
     useState(false);
@@ -43,7 +43,7 @@ function TalkWithMia() {
     behavior: "smooth"
   });
 
-}, [messages]);
+}, [messages, isMiaTyping]);
 
   function handleMicClick() {
 
@@ -154,6 +154,7 @@ function TalkWithMia() {
               </div>
 
             </div>
+            
 
           )}
 
