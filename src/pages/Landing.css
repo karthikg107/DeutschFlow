@@ -113,6 +113,18 @@ background:linear-gradient(90deg,#60a5fa,#3b82f6,#93c5fd);
 color:transparent;
 }
 
+.logo-container{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-image{
+width:48px;
+height:48px;
+object-fit:contain;
+}
+
 .navbar nav{
 display:flex;
 align-items:center;
@@ -195,6 +207,19 @@ display:flex;
 gap:18px;
 margin-bottom:42px;
 flex-wrap:wrap;
+}
+
+.hero-logo{
+width:380px;
+max-width:100%;
+height:auto;
+object-fit:contain;
+filter:drop-shadow(0 0 30px rgba(59,130,246,.35));
+transition:.3s ease;
+}
+
+.hero-logo:hover{
+transform:scale(1.03);
 }
 
 /* BUTTONS */
@@ -389,6 +414,10 @@ margin:auto;
 .price-card{
 text-align:center;
 padding:42px;
+min-height:450px;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
 }
 
 .price-card h3{
@@ -414,6 +443,17 @@ color:#fff;
 font-weight:600;
 }
 
+.price-card ul{
+list-style:none;
+padding:0;
+margin-top:20px;
+}
+
+.price-card li{
+margin-bottom:12px;
+font-size:18px;
+}
+
 .premium{
 border:2px solid #3b82f6;
 box-shadow:0 0 35px rgba(59,130,246,.18);
@@ -436,6 +476,30 @@ margin:80px 0 120px;
 .cta .primary-btn,
 .cta .cta-btn{
 margin-top:10px;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:50px 20px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo{
+width:70px;
+height:auto;
+margin-bottom:12px;
+}
+
+.footer p{
+font-size:22px;
+font-weight:700;
+margin-bottom:8px;
+}
+
+.footer small{
+color:#94a3b8;
 }
 
 /* TABLET */
@@ -512,5 +576,6 @@ width:100%;
 .reviews{
 margin-bottom:100px;
 }
+
 
 }

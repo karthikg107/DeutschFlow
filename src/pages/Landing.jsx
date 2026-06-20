@@ -17,184 +17,231 @@ function Landing() {
     <div className="landing">
       {/* Navbar */}
       <header className="navbar">
-        <h2 className="logo">DeutschFlow</h2>
+  <div className="logo-container">
+    <img
+      src="/logo.png"
+      alt="DeutschFlow"
+      className="logo-image"
+    />
 
-        <nav>
-          <button onClick={() => scrollToSection("features")}>
-            Features
-          </button>
+    <h2 className="logo-text">
+      DeutschFlow
+    </h2>
+  </div>
 
-          <button onClick={() => scrollToSection("pricing")}>
-            Pricing
-          </button>
+  <nav>
+    <button onClick={() => scrollToSection("features")}>
+      Features
+    </button>
 
-          <button onClick={() => scrollToSection("reviews")}>
-            Reviews
-          </button>
+    <button onClick={() => scrollToSection("pricing")}>
+      Pricing
+    </button>
 
-          <Link to="/dashboard" className="nav-btn">
-            Open App
-          </Link>
-        </nav>
-      </header>
+    <Link to="/dashboard" className="nav-btn">
+      Open App
+    </Link>
+  </nav>
+</header>
 
       {/* Hero */}
       <section className="hero">
-        <div className="hero-left">
-          <span className="tag">🇩🇪 Learn German Faster</span>
+  <div className="hero-left">
 
-          <h1>
-            Speak German With <span>Confidence</span>
-          </h1>
+    <span className="tag">
+      🇩🇪 Learn German Smarter
+    </span>
 
-          <p>
-            AI speaking coach, smart flashcards, grammar mastery,
-            and real-life conversations that make fluency easier.
-          </p>
+    <h1>
+      Learn German Through
+      <span> Real Conversations</span>
+    </h1>
 
-          <div className="hero-buttons">
-            <Link to="/dashboard" className="cta-btn">
-              Start Free
-            </Link>
+    <p>
+      Practice speaking with AI, master grammar,
+      build vocabulary, and improve pronunciation
+      all in one place.
+    </p>
 
-            <button className="secondary-btn">
-              Watch Demo
-            </button>
-          </div>
+    <div className="hero-buttons">
+      <Link to="/dashboard" className="cta-btn">
+        Start Learning Free
+      </Link>
 
-          <div className="stats">
-            <div>
-              <h3>15K+</h3>
-              <p>Students</p>
-            </div>
+      <Link to="/dashboard" className="secondary-btn">
+        Open App
+      </Link>
+    </div>
 
-            <div>
-              <h3>4.9★</h3>
-              <p>Rating</p>
-            </div>
+    <div className="hero-highlights">
+      <span>✓ AI Tutor</span>
+      <span>✓ Speaking Practice</span>
+      <span>✓ Grammar</span>
+      <span>✓ Vocabulary</span>
+    </div>
 
-            <div>
-              <h3>94%</h3>
-              <p>Success Rate</p>
-            </div>
-          </div>
-        </div>
+  </div>
 
-        <div className="hero-right">
-          <div className="glass-card">
-            <h3>Today's Progress</h3>
-            <p>Vocabulary: 18 / 20</p>
-            <p>Speaking XP: +60</p>
-            <p>Grammar Quiz: Completed</p>
+  <div className="hero-right">
+    <img
+      src="/logo.png"
+      alt="DeutschFlow Logo"
+      className="hero-logo"
+    />
+  </div>
+</section>
 
-            <button>Continue Lesson</button>
-          </div>
-        </div>
-      </section>
-
-      {/* Logos */}
-      <section className="logos">
-        <p>Trusted by learners from</p>
-
-        <div className="logo-row">
-          <span>Berlin</span>
-          <span>Munich</span>
-          <span>Hamburg</span>
-          <span>Frankfurt</span>
-          <span>Stuttgart</span>
-        </div>
-      </section>
 
       {/* Features */}
       <section className="features" id="features">
-        <h2>Everything You Need</h2>
 
-        <div className="feature-grid">
-          <div className="card">
-            <h3>AI Speaking Coach</h3>
-            <p>Natural German conversations with instant corrections.</p>
-          </div>
+  <h2>Everything You Need To Learn German</h2>
 
-          <div className="card">
-            <h3>Smart Flashcards</h3>
-            <p>Learn faster using spaced repetition memory system.</p>
-          </div>
+  <div className="feature-grid">
 
-          <div className="card">
-            <h3>Grammar Builder</h3>
-            <p>Clear lessons with examples and real use cases.</p>
-          </div>
+    <div className="card">
+      <h3>AI Tutor</h3>
+      <p>
+        Chat, translate, and improve your German
+        with AI assistance.
+      </p>
+    </div>
 
-          <div className="card">
-            <h3>Daily Challenges</h3>
-            <p>Stay consistent and build long streaks daily.</p>
-          </div>
-        </div>
-      </section>
+    <div className="card">
+      <h3>Grammar Roadmap</h3>
+      <p>
+        Structured lessons with quizzes and guided
+        progression.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>Vocabulary Builder</h3>
+      <p>
+        Learn vocabulary through topics, search,
+        and saved word collections.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>Speaking Practice</h3>
+      <p>
+        Pronunciation training, scenarios, and
+        free conversation practice.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section className="speaking-showcase">
+
+  <h2>Practice Speaking With Confidence</h2>
+
+  <div className="feature-grid">
+
+    <div className="card">
+      <h3>Pronunciation Practice</h3>
+      <p>
+        Listen, repeat, and improve your
+        German pronunciation.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>Scenario Practice</h3>
+      <p>
+        Real-life conversations with guided
+        speaking feedback.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>Talk With Mia</h3>
+      <p>
+        Open German conversations powered
+        by AI.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
 
       {/* Pricing */}
       <section className="pricing" id="pricing">
-        <h2>Simple Pricing</h2>
 
-        <div className="price-grid">
-          <div className="price-card">
-            <h3>Free</h3>
-            <h1>€0</h1>
-            <p>Basic practice tools</p>
+  <h2>Choose Your Plan</h2>
 
-            <Link to="/dashboard" className="cta-btn">
-              Get Started
-            </Link>
-          </div>
+  <div className="price-grid">
 
-          <div className="price-card premium">
-            <h3>Pro</h3>
-            <h1>€9</h1>
-            <p>AI Coach + Full Access</p>
+    <div className="price-card">
 
-            <button>Go Premium</button>
-          </div>
-        </div>
-      </section>
+      <h3>Free</h3>
 
-      {/* Reviews */}
-      <section className="reviews" id="reviews">
-        <h2>Loved by Students</h2>
+      <ul>
+        <li>✓ Grammar Lessons</li>
+        <li>✓ Vocabulary Builder</li>
+        <li>✓ Basic Pronunciation Practice</li>
+      </ul>
 
-        <div className="review-grid">
-          <div className="review-card">
-            <p>
-              Best German learning app I used.
-              Speaking confidence improved fast.
-            </p>
-            <h4>Arjun</h4>
-          </div>
+    </div>
 
-          <div className="review-card">
-            <p>
-              Way better than boring grammar books.
-              Clean and fun.
-            </p>
-            <h4>Sophia</h4>
-          </div>
+    <div className="price-card premium">
 
-          <div className="review-card">
-            <p>
-              Helped me prepare for life in Germany quickly.
-            </p>
-            <h4>Rahul</h4>
-          </div>
-        </div>
-      </section>
+      <h3>Premium</h3>
+      <h1>€4.99/mo</h1>
+      <p>7-day free trial</p>
+
+      <ul>
+        <li>✓ AI Tutor</li>
+        <li>✓ Scenario Practice</li>
+        <li>✓ Talk With Mia</li>
+        <li>✓ Future AI Features</li>
+      </ul>
+
+    </div>
+
+
+  </div>
+
+</section>
+
 
       {/* CTA */}
       <section className="cta">
-        <h2>Ready to Become Fluent?</h2>
 
-        <Link to="/dashboard" className="primary-btn">
-          Start Learning Today
-        </Link>
-      </section>
+  <h2>Ready To Start Learning German?</h2>
+
+  <p>
+    Practice every day with AI-powered learning
+    tools designed for real conversations.
+  </p>
+
+  <Link to="/dashboard" className="primary-btn">
+    Start Learning Free
+  </Link>
+
+</section>
+
+<footer className="footer">
+  <img
+    src="/logo.png"
+    alt="DeutschFlow"
+    className="footer-logo"
+  />
+
+  <p>DeutschFlow</p>
+
+  <small>
+    Learn German through speaking, practice, and real conversations.
+  </small>
+</footer>
+
+
     </div>
   );
 }
