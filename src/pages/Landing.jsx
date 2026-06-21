@@ -58,9 +58,7 @@ function Landing() {
     </h1>
 
     <p>
-      Practice speaking with AI, master grammar,
-      build vocabulary, and improve pronunciation
-      all in one place.
+      Practice real German conversations with AI, improve pronunciation, master grammar, and build vocabulary naturally.
     </p>
 
     <div className="hero-buttons">

@@ -7,6 +7,7 @@ import api from "../utils/api";
 import "../styles/dashboard.css";
 
 import { useAuth } from "../context/AuthContext";
+import AppLayout from "../components/layout/AppLayout";
 
 function Dashboard() {
  
@@ -46,9 +47,11 @@ function Dashboard() {
   if (loading) {
 
     return (
+      <AppLayout>
       <div className="elite-dashboard">
         Loading dashboard...
       </div>
+      </AppLayout>
     );
   }
 
@@ -77,6 +80,7 @@ function Dashboard() {
   user?.name?.split(" ")[0] || "Learner";  
 
   return (
+    <AppLayout>
 
     <div className="elite-dashboard">
 
@@ -279,6 +283,7 @@ function Dashboard() {
       </section>
 
     </div>
+    </AppLayout>
   );
 }
 

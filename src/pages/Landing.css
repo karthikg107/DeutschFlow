@@ -383,7 +383,9 @@ transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
 .price-card:hover{
 transform:translateY(-8px);
 background:rgba(255,255,255,.07);
-box-shadow:0 18px 35px rgba(0,0,0,.18);
+box-shadow:
+0 18px 35px rgba(0,0,0,.18),
+0 0 25px rgba(59,130,246,.18);
 }
 
 .card h3{
@@ -414,10 +416,10 @@ margin:auto;
 .price-card{
 text-align:center;
 padding:42px;
-min-height:450px;
+min-height:500px;
 display:flex;
 flex-direction:column;
-justify-content:flex-start;
+justify-content:center;
 }
 
 .price-card h3{
@@ -447,6 +449,9 @@ font-weight:600;
 list-style:none;
 padding:0;
 margin-top:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .price-card li{
