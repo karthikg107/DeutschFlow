@@ -5,7 +5,6 @@ import {
   Bot,
   BookOpen,
   Mic,
-  Trophy,
   Settings,
   Languages,
   X,
@@ -48,11 +47,7 @@ function Sidebar({
       icon: <Mic size={20} />,
     },
 
-    {
-      name: "Leaderboard",
-      path: "/leaderboard",
-      icon: <Trophy size={20} />,
-    },
+  
 
     {
       name: "Settings",

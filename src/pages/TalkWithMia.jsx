@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { startSpeechRecognition } from "../utils/speechRecognition";
 import { useState, useRef, useEffect } from "react";
 import api from "../utils/api";
+import toast from "react-hot-toast";
 
 function TalkWithMia() {
 
@@ -26,7 +27,11 @@ function TalkWithMia() {
 
   const navigate = useNavigate();
 
+
   const chatEndRef = useRef(null);
+
+  const [miaCompleted, setMiaCompleted] =
+  useState(false);
 
   useEffect(() => {
 
@@ -76,23 +81,70 @@ useEffect(() => {
 
 }, []);
 
+const saveMiaProgress =
+  async () => {
+
+    try {
+
+      await api.post(
+        "/progress/save",
+        {
+          lessonSlug: "talk-with-mia",
+        }
+      );
+
+      toast.success(
+        "Conversation completed!"
+      );
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
+  };
+
   function handleMicClick() {
 
   startSpeechRecognition(
 
     (transcript) => {
 
-      setMessages((prev) => [
+      setMessages((prev) => {
 
-        ...prev,
+  const updated = [
 
-        {
-          id: Date.now(),
-          sender: "user",
-          text: transcript
-        }
+    ...prev,
 
-      ]);
+    {
+      id: Date.now(),
+      sender: "user",
+      text: transcript
+    }
+
+  ];
+
+  const userMessages =
+    updated.filter(
+      (m) =>
+        m.sender === "user"
+    ).length;
+
+  if (
+    userMessages === 5 &&
+    !miaCompleted
+  ) {
+
+    setMiaCompleted(true);
+
+    saveMiaProgress();
+
+  }
+
+  return updated;
+
+});
 
       setIsMiaTyping(true);
 
@@ -107,6 +159,7 @@ useEffect(() => {
     message: transcript
   }
 );
+
 
 const reply = response.data.reply;
 
