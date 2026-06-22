@@ -313,14 +313,7 @@ console.log("All Topics:", allTopics);
     topic.slug
   );
 
-                        const previousTopic =
-                          unitTopics[index - 1];
-
-                        const isLocked =
-  index > 0 &&
-  !completedLessons.includes(
-    previousTopic.slug
-  );
+                        const isLocked = false;
 
                         return (
 
