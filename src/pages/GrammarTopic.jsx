@@ -7,6 +7,7 @@ import AppLayout from "../components/layout/AppLayout";
 import api from "../utils/api";
 
 import "../styles/dashboard.css";
+import toast from "react-hot-toast";
 
 function GrammarTopic() {
 
@@ -97,6 +98,10 @@ const renderContent = (
         lessonSlug: slug,
       }
     );
+
+    toast.success(
+  "Lesson completed!"
+);
 
   } catch (error) {
 
