@@ -18,6 +18,11 @@ import PronunciationPractice from "./pages/PronunciationPractice";
 import PronunciationLevels from "./pages/PronunciationLevels";
 import ScenarioLevels from "./pages/ScenarioLevels";
 import TalkWithMia from "./pages/TalkWithMia";
+import Settings from "./pages/Settings";
+import Pricing from "./pages/Pricing";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Contact from "./pages/Contact";
 
 
 // 🔥 NEW IMPORT
@@ -180,6 +185,17 @@ function App() {
     </ProtectedRoute>
   }
 />
+
+<Route path="/settings" 
+       element={<Settings />} />
+
+<Route path="/pricing" element={<Pricing />} />
+
+<Route path="/privacy" element={<Privacy />} />
+
+<Route path="/terms" element={<Terms />} />
+
+<Route path="/contact" element={<Contact />} />
 
       </Routes>
 
