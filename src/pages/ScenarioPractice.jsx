@@ -5,7 +5,8 @@ import { Mic } from "lucide-react";
 import speakingScenarios from "../data/speakingScenarios";
 import AppLayout from "../components/layout/AppLayout";
 import { useNavigate } from "react-router-dom";
-
+import api from "../utils/api";
+import toast from "react-hot-toast";
 
 function ScenarioPractice() {
 
@@ -96,6 +97,31 @@ useEffect(() => {
   );
 }
 
+const saveScenarioProgress =
+  async () => {
+
+    try {
+
+      await api.post(
+        "/progress/save",
+        {
+          lessonSlug:
+            `scenario-${level}-${id}`,
+        }
+      );
+
+      toast.success(
+        "Scenario completed!"
+      );
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
+  };
+
   function startRecording() {
 
     setError("");
@@ -171,6 +197,8 @@ if (
       .completionMessage;
 
   setIsCompleted(true);
+
+  saveScenarioProgress();
 
 }
 
