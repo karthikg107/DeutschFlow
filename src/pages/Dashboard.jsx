@@ -56,19 +56,19 @@ function Dashboard() {
   }
 
   const xp =
-    dashboard.user.xp;
+  dashboard?.user?.xp || 0;
 
-  const streak =
-    dashboard.user.streak;
+const streak =
+  dashboard?.user?.streak || 0;
 
-  const completedLessons =
-    dashboard.stats.completedLessons;
+const completedLessons =
+  dashboard?.stats?.completedLessons || 0;
 
-  const progressPercentage =
-    dashboard.stats.progressPercentage;
+const progressPercentage =
+  dashboard?.stats?.progressPercentage || 0;
 
   const continueLearning =
-    dashboard.continueLearning;
+    dashboard?.continueLearning;
 
   const level =
     Math.floor(xp / 100) + 1;
@@ -103,37 +103,29 @@ function Dashboard() {
 
         <div className="hero-buttons">
 
-          {continueLearning ? (
+  {continueLearning ? (
 
-            <Link
-              to={`/grammar/${continueLearning.slug}`}
-            >
-              <button className="elite-btn">
-                Continue Learning
-              </button>
-            </Link>
+    <Link
+      to={`/grammar/${continueLearning.slug}`}
+    >
+      <button className="elite-btn">
+        Continue Learning
+      </button>
+    </Link>
 
-          ) : (
+  ) : (
 
-            <Link to="/grammar">
+    <Link to="/grammar">
 
-              <button className="elite-btn">
-                Start Learning
-              </button>
+      <button className="elite-btn">
+        Start Learning
+      </button>
 
-            </Link>
+    </Link>
 
-          )}
+  )}
 
-          <Link to="/challenge">
-
-            <button className="elite-btn">
-              Daily Challenge
-            </button>
-
-          </Link>
-
-        </div>
+</div>
 
       </section>
 
@@ -228,59 +220,7 @@ function Dashboard() {
 
       </section>
 
-      {/* QUICK ACTIONS */}
 
-      <section className="quick-grid">
-
-        <Link
-          to="/practice"
-          className="quick-card"
-        >
-          💬 Practice Chat
-        </Link>
-
-        <Link
-          to="/speak"
-          className="quick-card"
-        >
-          🎤 Speaking
-        </Link>
-
-        <Link
-          to="/vocabulary"
-          className="quick-card"
-        >
-          📚 Vocabulary
-        </Link>
-
-        <Link
-          to="/tutor"
-          className="quick-card"
-        >
-          🤖 AI Tutor
-        </Link>
-
-      </section>
-
-      {/* HEATMAP */}
-
-      <section className="heatmap-card">
-
-        <h2>
-          Weekly Activity
-        </h2>
-
-        <div className="heat-grid">
-
-          <div className="heat-box"></div>
-          <div className="heat-box"></div>
-          <div className="heat-box"></div>
-          <div className="heat-box"></div>
-          <div className="heat-box"></div>
-
-        </div>
-
-      </section>
 
     </div>
     </AppLayout>
