@@ -1,100 +1,104 @@
 import AppLayout from "../components/layout/AppLayout";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import "../styles/settings.css";
 
 export default function Settings() {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
 
   return (
-  <AppLayout>
-    <div className="max-w-5xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8">
-        Settings
-      </h1>
+    <AppLayout>
+      <div className="settings-page">
 
-      {/* Account */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6">
-        <h2 className="text-xl font-semibold mb-4">
-          Account
-        </h2>
+        <h1 className="settings-title">
+          Settings
+        </h1>
 
-        <div className="space-y-2">
-          <p className="text-lg font-medium">
-  {user?.name || "User"}
-</p>
+        {/* Account */}
+        <div className="settings-card">
 
-<p className="text-gray-400">
-  {user?.email || "No email available"}
-</p>
+          <h2>Account</h2>
+
+          <p className="settings-name">
+            {user?.name || "User"}
+          </p>
+
+          <p className="settings-email">
+            {user?.email || "No email available"}
+          </p>
+
         </div>
-      </div>
 
-      {/* Subscription */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-xl font-semibold mb-2">
-              Subscription
-            </h2>
+        {/* Subscription */}
+        <div className="settings-card">
 
-            <p className="text-gray-400">
-              Current Plan
-            </p>
+          <h2>Subscription</h2>
 
-            <p className="text-lg font-medium">
-              Free Plan
-            </p>
-          </div>
+          <p className="settings-email">
+            Current Plan
+          </p>
+
+          <p className="settings-name">
+            Free Plan
+          </p>
 
           <button
             onClick={() => navigate("/pricing")}
-            className="px-5 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 transition"
+            className="settings-btn"
           >
             View Plans
           </button>
+
         </div>
-      </div>
 
-      {/* Legal */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6">
-        <h2 className="text-xl font-semibold mb-4">
-          Legal
-        </h2>
+        {/* Legal */}
+        <div className="settings-card">
 
-        <div className="flex flex-wrap gap-4">
-          <button
-            onClick={() => navigate("/privacy")}
-            className="px-4 py-2 rounded-xl bg-white/5 border border-white/10"
-          >
-            Privacy Policy
-          </button>
+          <h2>Legal</h2>
 
-          <button
-            onClick={() => navigate("/terms")}
-            className="px-4 py-2 rounded-xl bg-white/5 border border-white/10"
-          >
-            Terms & Conditions
-          </button>
+          <div className="settings-buttons">
 
-          <button
-            onClick={() => navigate("/contact")}
-            className="px-4 py-2 rounded-xl bg-white/5 border border-white/10"
-          >
-            Contact Support
-          </button>
+            <button
+              onClick={() => navigate("/privacy")}
+              className="settings-btn"
+            >
+              Privacy Policy
+            </button>
+
+            <button
+              onClick={() => navigate("/terms")}
+              className="settings-btn"
+            >
+              Terms & Conditions
+            </button>
+
+            <button
+              onClick={() => navigate("/contact")}
+              className="settings-btn"
+            >
+              Contact Support
+            </button>
+
+          </div>
+
         </div>
+
+        {/* Account Actions */}
+<div className="settings-card">
+
+  <h2>Account Actions</h2>
+
+  <button
+    onClick={logout}
+    className="logout-btn"
+  >
+    Logout
+  </button>
+
+</div>
+
       </div>
-
-      {/* Logout */}
-      <button
-        onClick={logout}
-        className="px-5 py-3 rounded-xl border border-red-500 text-red-400 hover:bg-red-500/10 transition"
-      >
-        Logout
-      </button>
-    </div>
-  </AppLayout>
-
-);
+    </AppLayout>
+  );
 }

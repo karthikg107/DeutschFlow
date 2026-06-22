@@ -1,31 +1,40 @@
 import AppLayout from "../components/layout/AppLayout";
+import "../styles/settings.css";
 
 export default function Contact() {
   return (
     <AppLayout>
-      <div className="max-w-5xl mx-auto p-8">
-        <h1 className="text-4xl font-bold mb-8">
+      <div className="settings-page">
+
+        <h1 className="settings-title">
           Contact Support
         </h1>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <h2 className="text-2xl font-semibold mb-4">
-            DeutschFlow Support
-          </h2>
+        <div className="settings-card">
 
-          <p className="text-gray-300 mb-4">
-            Need help with your account, learning progress,
-            subscriptions, or reporting a bug?
-          </p>
+          <h2>DeutschFlow Support</h2>
 
-          <p className="text-lg font-medium">
+          <p className="settings-name">
             support@deutschflow.com
           </p>
 
-          <p className="text-gray-400 mt-4">
-            We typically respond within 48 hours.
+          <br />
+
+          <p>
+            Need help with your account,
+            learning progress, subscriptions,
+            or reporting a bug?
           </p>
+
+          <br />
+
+          <p className="settings-email">
+            Typical response time:
+            within 48 hours.
+          </p>
+
         </div>
+
       </div>
     </AppLayout>
   );
