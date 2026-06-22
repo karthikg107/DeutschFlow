@@ -23,6 +23,7 @@ import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
+import ForgotPassword from "./pages/ForgotPassword";
 
 
 // 🔥 NEW IMPORT
@@ -60,6 +61,11 @@ function App() {
         <Route
   path="/register"
   element={<Register />}
+/>
+
+<Route
+  path="/forgot-password"
+  element={<ForgotPassword />}
 />
 
         {/* DASHBOARD */}
