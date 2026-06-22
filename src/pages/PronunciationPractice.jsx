@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
 import pronunciationSentences from "../data/pronunciationSentences";
 import { Mic } from "lucide-react";
+import api from "../utils/api";
+import toast from "react-hot-toast";
 
 function PronunciationPractice() {
   const { level } = useParams();
@@ -24,6 +26,9 @@ const [recognizedText, setRecognizedText] =
 
   const [feedback, setFeedback] =
   useState("");
+
+  const [sessionCompleted, setSessionCompleted] =
+  useState(false);
 
 const [error, setError] =
   useState("");  
@@ -50,6 +55,8 @@ const [error, setError] =
 
   setCurrentIndex(newIndex);
 
+  setSessionCompleted(false);
+
 }
 
 function resetAttempt() {
@@ -65,6 +72,7 @@ function resetAttempt() {
   setFeedback("");
 
   setError("");
+
 
 }
 
@@ -104,6 +112,31 @@ function resetAttempt() {
     utterance
   );
 }
+
+const savePronunciationProgress =
+  async () => {
+
+    try {
+
+      await api.post(
+        "/progress/save",
+        {
+          lessonSlug:
+            `pronunciation-${level}`,
+        }
+      );
+
+      toast.success(
+        "Pronunciation completed!"
+      );
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
+  };
 
 function startRecording() {
 
@@ -187,11 +220,35 @@ if (
 
   setFeedback("Excellent");
 
+  if (
+  currentIndex ===
+    sentences.length - 1 &&
+  !sessionCompleted
+) {
+
+  setSessionCompleted(true);
+
+  savePronunciationProgress();
+
+}
+
 } else if (
   matchPercentage >= 0.6
 ) {
 
   setFeedback("Good");
+
+  if (
+  currentIndex ===
+    sentences.length - 1 &&
+  !sessionCompleted
+) {
+
+  setSessionCompleted(true);
+
+  savePronunciationProgress();
+
+}
 
 } else {
 
