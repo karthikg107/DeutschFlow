@@ -15,20 +15,36 @@ export default function Settings() {
           Settings
         </h1>
 
-        {/* Account */}
-        <div className="settings-card">
+        {/* Profile */}
+<div className="settings-card">
 
-          <h2>Account</h2>
+  <h2>Profile</h2>
 
-          <p className="settings-name">
-            {user?.name || "User"}
-          </p>
+  <p className="settings-email">
+    Name
+  </p>
 
-          <p className="settings-email">
-            {user?.email || "No email available"}
-          </p>
+  <p className="settings-name">
+    {user?.name || "User"}
+  </p>
 
-        </div>
+  <p className="settings-email">
+    Email
+  </p>
+
+  <p className="settings-name">
+    {user?.email || "No email available"}
+  </p>
+
+  <p className="settings-email">
+    Member Since
+  </p>
+
+  <p className="settings-name">
+    June 2026
+  </p>
+
+</div>
 
         {/* Subscription */}
         <div className="settings-card">
@@ -40,8 +56,8 @@ export default function Settings() {
           </p>
 
           <p className="settings-name">
-            Free Plan
-          </p>
+  {user?.plan || "FREE"}
+</p>
 
           <button
             onClick={() => navigate("/pricing")}
@@ -89,12 +105,23 @@ export default function Settings() {
 
   <h2>Account Actions</h2>
 
-  <button
-    onClick={logout}
-    className="logout-btn"
-  >
-    Logout
-  </button>
+  <div className="settings-buttons">
+
+    <button
+      onClick={() => navigate("/forgot-password")}
+      className="settings-btn"
+    >
+      Change Password
+    </button>
+
+    <button
+      onClick={logout}
+      className="logout-btn"
+    >
+      Logout
+    </button>
+
+  </div>
 
 </div>
 

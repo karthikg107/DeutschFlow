@@ -79,15 +79,26 @@ if (!verifiedOtp) {
       await bcrypt.hash(password, 10);
 
     const user =
-      await prisma.user.create({
+  await prisma.user.create({
 
-        data: {
-          name,
-          email,
-          password: hashedPassword,
+    data: {
+      name,
+      email,
+      password: hashedPassword,
+
+      subscription: {
+        create: {
+          plan: "FREE",
+          status: "ACTIVE",
         },
+      },
+    },
 
-      });
+    include: {
+      subscription: true,
+    },
+
+  });
 
     await prisma.oTP.deleteMany({
 

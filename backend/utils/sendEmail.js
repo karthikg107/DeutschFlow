@@ -9,10 +9,29 @@ export const sendEmail = async (
   subject,
   html
 ) => {
-  await resend.emails.send({
-    from: "DeutschFlow <onboarding@resend.dev>",
-    to,
-    subject,
-    html,
-  });
+
+  const response =
+    await resend.emails.send({
+
+      from:
+        "DeutschFlow <onboarding@resend.dev>",
+
+      to,
+
+      subject,
+
+      html,
+
+    });
+
+  if (response.error) {
+
+    throw new Error(
+      response.error.message
+    );
+
+  }
+
+  return response;
+
 };

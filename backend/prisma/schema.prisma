@@ -8,144 +8,146 @@ datasource db {
 }
 
 model Level {
-  id        Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  code      String   @unique
-  title     String
-  order     Int
+  code  String @unique
+  title String
+  order Int
 
-  topics    Topic[]
-  quizzes   Quiz[]
+  topics  Topic[]
+  quizzes Quiz[]
 
   createdAt DateTime @default(now())
 }
 
 model Topic {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  levelId     Int
+  levelId Int
 
   title       String
-  slug        String   @unique
+  slug        String  @unique
   description String?
 
-  order       Int
+  order Int
 
-  level        Level          @relation(fields: [levelId], references: [id])
+  level Level @relation(fields: [levelId], references: [id])
 
-  sections     TopicSection[]
-  exercises    Exercise[]
+  sections  TopicSection[]
+  exercises Exercise[]
 
-  createdAt    DateTime @default(now())
+  createdAt DateTime @default(now())
 }
 
 model TopicSection {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  topicId     Int
+  topicId Int
 
-  type        String
-  title       String?
-  content     String
+  type    String
+  title   String?
+  content String
 
-  order       Int
+  order Int
 
-  topic       Topic @relation(fields: [topicId], references: [id])
+  topic Topic @relation(fields: [topicId], references: [id])
 
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@unique([topicId, order])
 }
 
 model Exercise {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  topicId     Int
+  topicId Int
 
   type        String
   question    String
   explanation String?
 
-  topic       Topic @relation(fields: [topicId], references: [id])
+  topic Topic @relation(fields: [topicId], references: [id])
 
-  options     ExerciseOption[]
-  quizLinks   QuizQuestion[]
+  options   ExerciseOption[]
+  quizLinks QuizQuestion[]
 
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 }
 
 model ExerciseOption {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  exerciseId  Int
+  exerciseId Int
 
-  optionText  String
-  isCorrect   Boolean  @default(false)
+  optionText String
+  isCorrect  Boolean @default(false)
 
-  exercise    Exercise @relation(fields: [exerciseId], references: [id])
+  exercise Exercise @relation(fields: [exerciseId], references: [id])
 
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 }
 
 model Quiz {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  levelId     Int
+  levelId Int
 
-  title       String
+  title String
 
-  level        Level @relation(fields: [levelId], references: [id])
+  level Level @relation(fields: [levelId], references: [id])
 
-  questions    QuizQuestion[]
+  questions QuizQuestion[]
 
-  createdAt    DateTime @default(now())
+  createdAt DateTime @default(now())
 }
 
 model QuizQuestion {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  quizId      Int
-  exerciseId  Int
+  quizId     Int
+  exerciseId Int
 
-  quiz        Quiz @relation(fields: [quizId], references: [id])
+  quiz Quiz @relation(fields: [quizId], references: [id])
 
-  exercise    Exercise @relation(fields: [exerciseId], references: [id])
+  exercise Exercise @relation(fields: [exerciseId], references: [id])
 
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 }
 
 model User {
-  id             String   @id @default(cuid())
+  id String @id @default(cuid())
 
-  name           String?
+  name String?
 
-  email          String   @unique
-  password       String
+  email    String @unique
+  password String
 
-  xp             Int      @default(0)
+  xp Int @default(0)
 
-  streak         Int      @default(0)
+  streak Int @default(0)
 
   lastActiveDate DateTime?
 
-  createdAt      DateTime @default(now())
+  createdAt DateTime @default(now())
 
-  progress       LessonProgress[]
+  progress LessonProgress[]
 
   savedWords SavedWord[]
+
+  subscription Subscription?
 }
 
 model LessonProgress {
-  id          String   @id @default(cuid())
+  id String @id @default(cuid())
 
-  userId      String
-  lessonSlug  String
+  userId     String
+  lessonSlug String
 
-  completed   Boolean  @default(false)
+  completed Boolean @default(false)
 
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 
-  updatedAt   DateTime @updatedAt
+  updatedAt DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id])
 
@@ -153,38 +155,38 @@ model LessonProgress {
 }
 
 model VocabularyWord {
-  id              Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  levelCode       String
+  levelCode String
 
-  letter          String
+  letter String
 
-  topic           String?
+  topic String?
 
-  wordType        String?
+  wordType String?
 
-  article         String?
+  article String?
 
-  germanWord      String
+  germanWord String
 
-  extraForms      String?
+  extraForms String?
 
-  englishMeaning  String
+  englishMeaning String
 
   exampleSentence String?
 
-  createdAt       DateTime @default(now())
+  createdAt DateTime @default(now())
 
-  savedBy         SavedWord[]
+  savedBy SavedWord[]
 
   @@unique([germanWord, englishMeaning, levelCode])
 }
 
 model SavedWord {
-  id        Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  userId    String
-  wordId    Int
+  userId String
+  wordId Int
 
   createdAt DateTime @default(now())
 
@@ -193,14 +195,31 @@ model SavedWord {
   word VocabularyWord @relation(fields: [wordId], references: [id])
 
   @@unique([userId, wordId])
-
 }
 
 model OTP {
-  id         String   @id @default(cuid())
-  email      String
-  code       String
-  verified   Boolean  @default(false)
-  expiresAt  DateTime
-  createdAt  DateTime @default(now())
+  id        String   @id @default(cuid())
+  email     String
+  code      String
+  verified  Boolean  @default(false)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Subscription {
+  id String @id @default(cuid())
+
+  userId String @unique
+
+  plan String @default("FREE")
+
+  status String @default("ACTIVE")
+
+  startDate DateTime @default(now())
+
+  endDate DateTime?
+
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
 }
