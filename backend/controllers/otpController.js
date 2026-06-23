@@ -19,11 +19,17 @@ export const sendOtp = async (
 
     }
 
-    const code = generateOTP();
+    await prisma.oTP.deleteMany({
+  where: {
+    email,
+  },
+});
 
-    const expiresAt = new Date(
-      Date.now() + 10 * 60 * 1000
-    );
+const code = generateOTP();
+
+const expiresAt = new Date(
+  Date.now() + 10 * 60 * 1000
+);
 
     await prisma.oTP.create({
 
@@ -107,9 +113,18 @@ export const verifyOtp = async (
 
     }
 
-    res.json({
-      verified: true,
-    });
+    await prisma.oTP.update({
+  where: {
+    id: record.id,
+  },
+  data: {
+    verified: true,
+  },
+});
+
+res.json({
+  verified: true,
+});
 
   } catch (error) {
 

@@ -36,6 +36,28 @@ export const registerUser = async (req, res) => {
 
     }
 
+    const verifiedOtp =
+  await prisma.oTP.findFirst({
+
+    where: {
+      email,
+      verified: true,
+    },
+
+    orderBy: {
+      createdAt: "desc",
+    },
+
+  });
+
+if (!verifiedOtp) {
+
+  return res.status(400).json({
+    message: "Please verify your email first",
+  });
+
+}
+
     const existingUser =
       await prisma.user.findUnique({
 
@@ -66,6 +88,14 @@ export const registerUser = async (req, res) => {
         },
 
       });
+
+    await prisma.oTP.deleteMany({
+
+  where: {
+    email,
+  },
+
+});  
 
     res.status(201).json({
 

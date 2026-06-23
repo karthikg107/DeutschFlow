@@ -197,9 +197,10 @@ model SavedWord {
 }
 
 model OTP {
-  id        String   @id @default(cuid())
-  email     String
-  code      String
-  expiresAt DateTime
-  createdAt DateTime @default(now())
+  id         String   @id @default(cuid())
+  email      String
+  code       String
+  verified   Boolean  @default(false)
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "../context/AuthContext";
+import api from "../utils/api";
 
 function Register() {
 
@@ -19,11 +20,71 @@ function Register() {
   const [password, setPassword] =
     useState("");
 
+  const [otp, setOtp] = useState("");
+const [otpSent, setOtpSent] = useState(false);
+const [otpVerified, setOtpVerified] = useState(false);  
+
   const [loading, setLoading] =
     useState(false);
 
   const [error, setError] =
     useState("");
+
+  const handleSendOtp = async () => {
+
+  try {
+
+    await api.post(
+      "/otp/send-otp",
+      {
+        email,
+      }
+    );
+
+    setOtpSent(true);
+
+    alert("OTP sent to email");
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("Failed to send OTP");
+
+  }
+
+};  
+
+  const handleVerifyOtp = async () => {
+
+  try {
+
+    const { data } =
+      await api.post(
+        "/otp/verify-otp",
+        {
+          email,
+          otp,
+        }
+      );
+
+    if (data.verified) {
+
+      setOtpVerified(true);
+
+      alert("OTP verified");
+
+    }
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("Invalid OTP");
+
+  }
+
+};
 
   const handleSubmit = async (e) => {
 
@@ -179,6 +240,64 @@ function Register() {
           }}
         />
 
+        <button
+  type="button"
+  onClick={handleSendOtp}
+  style={{
+    width: "100%",
+    padding: "12px",
+    marginBottom: "16px",
+    border: "none",
+    borderRadius: "10px",
+    background: "#6d4aff",
+    color: "white",
+    cursor: "pointer",
+  }}
+>
+  Send OTP
+</button>
+
+      {otpSent && (
+
+  <input
+    type="text"
+    placeholder="Enter OTP"
+    value={otp}
+    onChange={(e) =>
+      setOtp(e.target.value)
+    }
+    style={{
+      width: "100%",
+      padding: "14px",
+      marginBottom: "16px",
+      borderRadius: "10px",
+      border: "none",
+    }}
+  />
+
+)}
+
+{otpSent && (
+
+  <button
+    type="button"
+    onClick={handleVerifyOtp}
+    style={{
+      width: "100%",
+      padding: "12px",
+      marginBottom: "16px",
+      border: "none",
+      borderRadius: "10px",
+      background: "#2563eb",
+      color: "white",
+      cursor: "pointer",
+    }}
+  >
+    Verify OTP
+  </button>
+
+)}
+
         <input
           type="password"
 
@@ -208,7 +327,9 @@ function Register() {
         <button
           type="submit"
 
-          disabled={loading}
+          disabled={
+             loading || !otpVerified
+         }
 
           style={{
             width: "100%",
@@ -230,7 +351,9 @@ function Register() {
         >
           {loading
             ? "Loading..."
-            : "Create Account"}
+    : otpVerified
+      ? "Create Account"
+      : "Verify OTP First"}
         </button>
 
       </form>
