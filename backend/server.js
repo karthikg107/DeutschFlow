@@ -8,6 +8,8 @@ import authRoutes from "./routes/authRoutes.js";
 import progressRoutes from "./routes/progressRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import vocabularyRoutes from "./routes/vocabularyRoutes.js";
+import otpRoutes from "./routes/otpRoutes.js";
+
 
 dotenv.config();
 
@@ -34,6 +36,11 @@ app.use("/api/progress", progressRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 
 app.use("/api/vocabulary", vocabularyRoutes);
+
+app.use(
+  "/api/otp",
+  otpRoutes
+);
 
 // SERVER
 const PORT = 5000;
