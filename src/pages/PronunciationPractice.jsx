@@ -41,12 +41,24 @@ function PronunciationPractice() {
   function speak(text) {
     if (isRecording) return;
     window.speechSynthesis.cancel();
-    setIsSpeaking(true);
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "de-DE";
-    utterance.rate = 0.9;
-    utterance.onend = () => setIsSpeaking(false);
-    window.speechSynthesis.speak(utterance);
+    const fire = () => {
+      const voices = window.speechSynthesis.getVoices();
+      const deVoice =
+        voices.find((v) => v.lang === "de-DE") ||
+        voices.find((v) => v.lang.startsWith("de"));
+      const utt = new SpeechSynthesisUtterance(text);
+      utt.lang = "de-DE";
+      utt.rate = 0.9;
+      if (deVoice) utt.voice = deVoice;
+      utt.onstart = () => setIsSpeaking(true);
+      utt.onend   = () => setIsSpeaking(false);
+      window.speechSynthesis.speak(utt);
+    };
+    if (window.speechSynthesis.getVoices().length > 0) {
+      fire();
+    } else {
+      window.speechSynthesis.addEventListener("voiceschanged", fire, { once: true });
+    }
   }
 
   const saveProgress = async () => {
@@ -83,24 +95,46 @@ function PronunciationPractice() {
       const text = event.results[event.results.length - 1][0].transcript;
       setRecognizedText(text);
 
-      const normalize = (s) =>
-        s.toLowerCase().replace(/[.,?!]/g, "").trim();
+      function normalize(str) {
+        return str
+          .toLowerCase()
+          .replace(/[.,!?;:'"()äöü]/g, (c) => {
+            const map = { ä: "ae", ö: "oe", ü: "ue" };
+            return map[c] || "";
+          })
+          .replace(/\s+/g, " ")
+          .trim();
+      }
 
-      const targetWords = normalize(currentSentence.german).split(" ");
-      const userWords   = normalize(text).split(" ");
-      const matched     = targetWords.filter((w) => userWords.includes(w)).length;
-      const ratio       = matched / targetWords.length;
+      function wordOverlap(a, b) {
+        const wa = normalize(a).split(" ");
+        const wb = normalize(b).split(" ");
+        const hits = wa.filter((w) => wb.includes(w)).length;
+        return hits / Math.max(wa.length, wb.length);
+      }
+
+      const score = wordOverlap(text, currentSentence.german);
+      let feedbackText, feedbackClass;
+      if (score >= 0.95) {
+        feedbackText  = "Excellent pronunciation";
+        feedbackClass = "feedback-excellent";
+      } else if (score >= 0.75) {
+        feedbackText  = "Good — minor differences";
+        feedbackClass = "feedback-good";
+      } else if (score >= 0.5) {
+        feedbackText  = "Keep practicing";
+        feedbackClass = "feedback-fair";
+      } else {
+        feedbackText  = "Try again";
+        feedbackClass = "feedback-poor";
+      }
 
       const isLast = currentIndex === sentences.length - 1;
+      setFeedback({ text: feedbackText, cls: feedbackClass });
 
-      if (ratio >= 0.9) {
-        setFeedback("Excellent");
-        if (isLast && !sessionCompleted) { setSessionCompleted(true); saveProgress(); }
-      } else if (ratio >= 0.6) {
-        setFeedback("Good");
-        if (isLast && !sessionCompleted) { setSessionCompleted(true); saveProgress(); }
-      } else {
-        setFeedback("Try Again");
+      if (score >= 0.75 && isLast && !sessionCompleted) {
+        setSessionCompleted(true);
+        saveProgress();
       }
     };
 
@@ -217,7 +251,7 @@ function PronunciationPractice() {
 
           {feedback && (
             <div className="pronunciation-feedback">
-              <p>{feedback}</p>
+              <p className={feedback.cls}>{feedback.text}</p>
             </div>
           )}
         </div>

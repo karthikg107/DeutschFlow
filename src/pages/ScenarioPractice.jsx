@@ -39,11 +39,25 @@ function ScenarioPractice() {
   }, [selectedScenario]);
 
   function speak(text) {
-    setIsMiaSpeaking(true);
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "de-DE";
-    utterance.onend = () => setIsMiaSpeaking(false);
-    speechSynthesis.speak(utterance);
+    window.speechSynthesis.cancel();
+    const fire = () => {
+      const voices = window.speechSynthesis.getVoices();
+      const deVoice =
+        voices.find((v) => v.lang === "de-DE") ||
+        voices.find((v) => v.lang.startsWith("de"));
+      const utt = new SpeechSynthesisUtterance(text);
+      utt.lang = "de-DE";
+      utt.rate = 0.9;
+      if (deVoice) utt.voice = deVoice;
+      utt.onstart = () => setIsMiaSpeaking(true);
+      utt.onend   = () => setIsMiaSpeaking(false);
+      window.speechSynthesis.speak(utt);
+    };
+    if (window.speechSynthesis.getVoices().length > 0) {
+      fire();
+    } else {
+      window.speechSynthesis.addEventListener("voiceschanged", fire, { once: true });
+    }
   }
 
   const saveProgress = async () => {
