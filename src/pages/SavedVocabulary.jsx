@@ -1,382 +1,116 @@
 import { useEffect, useState } from "react";
-
-import AppLayout from
-  "../components/Layout/AppLayout";
-
+import AppLayout from "../components/Layout/AppLayout";
 import api from "../utils/api";
-
 import { Bookmark } from "lucide-react";
-
 import toast from "react-hot-toast";
+import "../styles/vocabulary.css";
 
 function SavedVocabulary() {
-
-  const [savedWords, setSavedWords] =
-    useState([]);
-
-  const [loading, setLoading] =
-    useState(true);
-
-  const [search, setSearch] =
-    useState("");
+  const [savedWords, setSavedWords] = useState([]);
+  const [loading, setLoading]       = useState(true);
+  const [search, setSearch]         = useState("");
 
   useEffect(() => {
-
-    fetchSavedWords();
-
+    api.get("/vocabulary/saved")
+      .then((r) => setSavedWords(r.data))
+      .catch(console.error)
+      .finally(() => setLoading(false));
   }, []);
 
-  const fetchSavedWords =
-    async () => {
+  const removeWord = async (wordId) => {
+    try {
+      await api.delete(`/vocabulary/save/${wordId}`);
+      setSavedWords((prev) => prev.filter((item) => item.word.id !== wordId));
+      toast.success("Removed from saved vocabulary");
+    } catch {
+      toast.error("Something went wrong");
+    }
+  };
 
-      try {
+  const q = search.toLowerCase();
+  const filteredWords = savedWords.filter(
+    (item) =>
+      item.word.germanWord.toLowerCase().includes(q) ||
+      item.word.englishMeaning.toLowerCase().includes(q)
+  );
 
-        const response =
-          await api.get(
-            "/vocabulary/saved"
-          );
-
-        setSavedWords(
-          response.data
-        );
-
-      } catch (error) {
-
-        console.log(error);
-
-      } finally {
-
-        setLoading(false);
-
-      }
-
-    };
-
-    
-
-  const removeWord =
-    async (wordId) => {
-
-      try {
-
-        await api.delete(
-          `/vocabulary/save/${wordId}`
-        );
-
-        setSavedWords(
-          savedWords.filter(
-            (item) =>
-              item.word.id !== wordId
-          )
-        );
-
-        toast.success(
-          "Removed from saved vocabulary"
-        );
-
-      } catch (error) {
-
-        console.log(error);
-
-        toast.error(
-          "Something went wrong"
-        );
-
-      }
-
-    };
-
-  const filteredWords =
-  savedWords.filter((item) => {
-
-    const query =
-      search.toLowerCase();
-
-    return (
-
-      item.word.germanWord
-        .toLowerCase()
-        .includes(query)
-
-      ||
-
-      item.word.englishMeaning
-        .toLowerCase()
-        .includes(query)
-
-    );
-
+  const groupedLevels = { A1: [], A2: [], B1: [] };
+  filteredWords.forEach((item) => {
+    const lv = item.word.levelCode;
+    if (groupedLevels[lv]) groupedLevels[lv].push(item);
   });
-
-const groupedLevels = {
-  A1: [],
-  A2: [],
-  B1: []
-};
-
-filteredWords.forEach((item) => {
-
-  const level =
-    item.word.levelCode;
-
-  if (groupedLevels[level]) {
-
-    groupedLevels[level]
-      .push(item);
-
-  }
-
-});
-
-Object.keys(groupedLevels)
-  .forEach((level) => {
-
-    groupedLevels[level]
-      .sort((a, b) =>
-
-        a.word.germanWord
-          .localeCompare(
-            b.word.germanWord,
-            "de"
-          )
-
-      );
-
-});
+  Object.values(groupedLevels).forEach((arr) =>
+    arr.sort((a, b) =>
+      a.word.germanWord.localeCompare(b.word.germanWord, "de")
+    )
+  );
 
   if (loading) {
-
     return (
-
       <AppLayout>
-
-        <div
-          style={{
-            padding: "40px",
-            color: "white"
-          }}
-        >
-          Loading...
-        </div>
-
+        <div className="vocab-saved-page">Loading…</div>
       </AppLayout>
-
     );
-
   }
 
   return (
-
     <AppLayout>
-
-      <div
-        style={{
-          padding: "40px",
-          color: "white",
-          maxWidth: "1100px"
-        }}
-      >
-
-        <h1
-          style={{
-            fontSize: "48px",
-            fontWeight: "700",
-            marginBottom: "12px"
-          }}
-        >
-          Saved Vocabulary
-        </h1>
-
-        <p
-          style={{
-            color: "#94a3b8",
-            marginBottom: "30px"
-          }}
-        >
-          {savedWords.length}
-          {" "}
-          saved words
-        </p>
+      <div className="vocab-saved-page">
+        <h1 className="vocab-saved-page-title">Saved Vocabulary</h1>
+        <p className="vocab-saved-page-count">{savedWords.length} saved words</p>
 
         <input
-
           type="text"
-
-          placeholder="Search saved words..."
-
+          className="vocab-search"
+          placeholder="Search saved words…"
           value={search}
-
-          onChange={(e) =>
-            setSearch(
-              e.target.value
-            )
-          }
-
-          style={{
-
-            width: "100%",
-
-            maxWidth: "500px",
-
-            padding: "16px",
-
-            borderRadius: "14px",
-
-            border:
-              "1px solid rgba(255,255,255,.08)",
-
-            background:
-              "rgba(255,255,255,.05)",
-
-            color: "white",
-
-            marginBottom: "40px"
-
-          }}
-
+          onChange={(e) => setSearch(e.target.value)}
         />
 
         {filteredWords.length === 0 ? (
-
-          <div
-            style={{
-              color: "#94a3b8",
-              marginTop: "40px"
-            }}
-          >
-            No saved words found.
-          </div>
-
+          <p className="vocab-saved-empty">No saved words found.</p>
         ) : (
-
           Object.entries(groupedLevels)
-  .filter(
-    ([, words]) =>
-      words.length > 0
-  )
-  .map(([level, words]) => (
-
-    <div
-      key={level}
-      style={{
-        marginBottom: "60px"
-      }}
-    >
-
-      <h2
-  style={{
-    fontSize: "32px",
-    fontWeight: "700",
-    marginBottom: "24px",
-    paddingBottom: "12px",
-    borderBottom:
-      "1px solid rgba(255,255,255,.08)",
-    color: "#818cf8"
-  }}
->
-        {level} Vocabulary
-        {" "}
-        ({words.length})
-      </h2>
-
-      {words.map((item) => {
-
-        const word =
-          item.word;
-
-        return (
-
-          <div
-            key={item.id}
-            style={{
-              marginBottom: "32px",
-              lineHeight: "1.7"
-            }}
-          >
-
-            <div
-              style={{
-                display: "flex",
-                justifyContent:
-                  "space-between",
-                alignItems:
-                  "center"
-              }}
-            >
-
-              <div
-                style={{
-                  fontSize: "24px",
-                  fontWeight: "600"
-                }}
-              >
-
-                {word.article &&
-                  `${word.article} `}
-
-                {word.germanWord}
-
-                {word.extraForms &&
-                  `, ${word.extraForms}`}
-
+            .filter(([, words]) => words.length > 0)
+            .map(([lv, words]) => (
+              <div key={lv} className="vocab-saved-group">
+                <h2 className="vocab-saved-level-title">
+                  {lv} Vocabulary ({words.length})
+                </h2>
+                <div className="vocab-words">
+                  {words.map((item) => {
+                    const word = item.word;
+                    return (
+                      <div key={item.id} className="vocab-word-row">
+                        <div className="vocab-word-left">
+                          <p className="vocab-word-german">
+                            {word.article ? `${word.article} ` : ""}
+                            {word.germanWord}
+                            {word.extraForms ? `, ${word.extraForms}` : ""}
+                          </p>
+                          <p className="vocab-word-english">eng — {word.englishMeaning}</p>
+                          {word.exampleSentence && (
+                            <p className="vocab-word-sentence">{word.exampleSentence}</p>
+                          )}
+                        </div>
+                        <div
+                          className="vocab-bookmark"
+                          role="button"
+                          aria-label="Remove from saved"
+                          onClick={() => removeWord(word.id)}
+                        >
+                          <Bookmark size={20} fill="#8b5cf6" color="#8b5cf6" />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-
-              <Bookmark
-                size={22}
-                fill="#8b5cf6"
-                color="#8b5cf6"
-                onClick={() =>
-                  removeWord(
-                    word.id
-                  )
-                }
-                style={{
-                  cursor:
-                    "pointer"
-                }}
-              />
-
-            </div>
-
-            <div
-              style={{
-                color: "#cbd5e1",
-                fontSize: "18px"
-              }}
-            >
-              eng — {
-                word.englishMeaning
-              }
-            </div>
-
-            <div
-              style={{
-                color: "#94a3b8",
-                fontSize: "17px"
-              }}
-            >
-              {
-                word.exampleSentence
-              }
-            </div>
-
-          </div>
-
-        );
-
-      })}
-
-    </div>
-
-))
+            ))
         )}
-
       </div>
-
     </AppLayout>
-
   );
-
 }
 
 export default SavedVocabulary;

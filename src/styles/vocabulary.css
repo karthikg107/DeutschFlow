@@ -1,0 +1,347 @@
+/* =========================
+   VOCABULARY HUB
+========================= */
+
+.vocab-page {
+  padding: 24px;
+  color: white;
+}
+
+.vocab-title {
+  font-size: 2.4rem;
+  font-weight: var(--fw-bold);
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+}
+
+.vocab-subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0 0 32px;
+}
+
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  align-items: start;
+}
+
+.vocab-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vocab-level-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  min-height: 120px;
+}
+
+.vocab-level-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(129, 140, 248, 0.3);
+}
+
+.vocab-level-code {
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-indigo-soft);
+  margin: 0 0 4px;
+}
+
+.vocab-level-name {
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+  color: white;
+  margin: 0 0 7px;
+}
+
+.vocab-level-desc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.vocab-level-cta {
+  color: white;
+  font-weight: var(--fw-semibold);
+  font-size: 13px;
+}
+
+/* Saved collection card */
+.vocab-saved-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #312e81, #4338ca);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 28px;
+  text-decoration: none;
+  color: white;
+  min-height: 190px;
+  transition: transform 0.2s ease;
+}
+
+.vocab-saved-card:hover {
+  transform: translateY(-3px);
+}
+
+.vocab-saved-title {
+  font-size: 1.35rem;
+  font-weight: var(--fw-bold);
+  margin: 0 0 10px;
+}
+
+.vocab-saved-desc {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.vocab-saved-count {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.vocab-saved-cta {
+  font-size: 15px;
+  font-weight: var(--fw-semibold);
+  margin-top: 16px;
+}
+
+/* =========================
+   VOCABULARY LEVEL PAGE
+========================= */
+
+.vocab-level-page {
+  padding: 24px;
+  color: white;
+}
+
+.vocab-search {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 16px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  display: block;
+}
+
+.vocab-search::placeholder {
+  color: var(--text-muted);
+}
+
+.vocab-search:focus {
+  border-color: rgba(129, 140, 248, 0.35);
+}
+
+/* Topics section */
+.vocab-topics {
+  margin-bottom: 48px;
+}
+
+.vocab-topics-title {
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  margin: 0 0 18px;
+}
+
+.vocab-topic-group {
+  margin-bottom: 26px;
+}
+
+.vocab-topic-name {
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-violet-soft);
+  margin: 0 0 10px;
+}
+
+.vocab-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vocab-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.vocab-chip strong {
+  color: white;
+}
+
+/* Alphabetical section */
+.vocab-letter-section {
+  margin-bottom: 44px;
+}
+
+.vocab-letter {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-indigo-soft);
+  margin: 0 0 20px;
+}
+
+.vocab-words {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.vocab-word-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.vocab-word-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.vocab-word-german {
+  font-size: 1.2rem;
+  font-weight: var(--fw-semibold);
+  color: white;
+  margin: 0 0 3px;
+  line-height: 1.4;
+}
+
+.vocab-word-english {
+  color: var(--text-primary);
+  font-size: 15px;
+  margin: 0 0 2px;
+}
+
+.vocab-word-sentence {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.vocab-bookmark {
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s;
+}
+
+.vocab-bookmark:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   SAVED VOCABULARY PAGE
+========================= */
+
+.vocab-saved-page {
+  padding: 24px;
+  color: white;
+}
+
+.vocab-saved-page-title {
+  font-size: 2.2rem;
+  font-weight: var(--fw-bold);
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.vocab-saved-page-count {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.vocab-saved-empty {
+  color: var(--text-muted);
+  margin-top: 40px;
+}
+
+.vocab-saved-group {
+  margin-bottom: 48px;
+}
+
+.vocab-saved-level-title {
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-indigo-soft);
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .vocab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vocab-saved-card {
+    min-height: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vocab-page {
+    padding: 16px;
+  }
+
+  .vocab-title {
+    font-size: 1.85rem;
+  }
+
+  .vocab-level-page {
+    padding: 16px;
+  }
+
+  .vocab-letter {
+    font-size: 1.5rem;
+  }
+
+  .vocab-word-german {
+    font-size: 1.05rem;
+  }
+
+  .vocab-saved-page {
+    padding: 16px;
+  }
+
+  .vocab-saved-page-title {
+    font-size: 1.85rem;
+  }
+}
