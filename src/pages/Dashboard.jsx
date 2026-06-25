@@ -1,228 +1,160 @@
-import { useEffect, useState } from "react";
-
+import { Component, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import api from "../utils/api";
-
 import "../styles/dashboard.css";
-
 import { useAuth } from "../context/AuthContext";
 import AppLayout from "../components/Layout/AppLayout";
 
-function Dashboard() {
- 
-  const { user } = useAuth();
+// ── Error Boundary ──────────────────────────────────────────
+class DashboardErrorBoundary extends Component {
+  state = { hasError: false };
 
-  const [dashboard, setDashboard] =
-    useState(null);
-
-  const [loading, setLoading] =
-    useState(true);
-
-  useEffect(() => {
-
-    const fetchDashboard = async () => {
-
-      try {
-
-        const { data } =
-          await api.get("/dashboard");
-
-        setDashboard(data);
-
-      } catch (error) {
-
-        console.error(error);
-
-      } finally {
-
-        setLoading(false);
-      }
-    };
-
-    fetchDashboard();
-
-  }, []);
-
-  if (loading) {
-
-    return (
-      <AppLayout>
-      <div className="elite-dashboard">
-        Loading dashboard...
-      </div>
-      </AppLayout>
-    );
+  static getDerivedStateFromError() {
+    return { hasError: true };
   }
 
-  const xp =
-  dashboard?.user?.xp || 0;
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="dash-error-wrap">
+          <p className="dash-error-emoji">⚠️</p>
+          <h2 className="dash-error-title">Something went wrong</h2>
+          <p className="dash-error-sub">We couldn't load your dashboard.</p>
+          <button
+            className="dash-error-btn"
+            onClick={() => window.location.reload()}
+          >
+            Refresh page
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
-const streak =
-  dashboard?.user?.streak || 0;
+// ── Skeleton ────────────────────────────────────────────────
+function DashboardSkeleton() {
+  return (
+    <div className="elite-dashboard">
+      <div className="dash-skel dash-skel-hero" />
+      <div className="stats-grid">
+        <div className="dash-skel dash-skel-stat" />
+        <div className="dash-skel dash-skel-stat" />
+        <div className="dash-skel dash-skel-stat" />
+        <div className="dash-skel dash-skel-stat" />
+      </div>
+      <div className="dash-skel dash-skel-section" />
+    </div>
+  );
+}
 
-const completedLessons =
-  dashboard?.stats?.completedLessons || 0;
+// ── Main dashboard content ───────────────────────────────────
+function DashboardInner() {
+  const { user } = useAuth();
+  const [dashboard, setDashboard] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState("");
 
-const progressPercentage =
-  dashboard?.stats?.progressPercentage || 0;
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await api.get("/dashboard");
+        setDashboard(data);
+      } catch {
+        setFetchError("Couldn't load your stats. Check your connection.");
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
 
-  const continueLearning =
-    dashboard?.continueLearning;
+  if (loading) return <DashboardSkeleton />;
 
-  const level =
-    Math.floor(xp / 100) + 1;
+  const xp = dashboard?.user?.xp || 0;
+  const streak = dashboard?.user?.streak || 0;
+  const completedLessons = dashboard?.stats?.completedLessons || 0;
+  const progressPercentage = dashboard?.stats?.progressPercentage || 0;
+  const continueLearning = dashboard?.continueLearning;
+  const level = Math.floor(xp / 100) + 1;
+  const levelProgress = xp % 100;
+  const firstName = user?.name?.split(" ")[0] || "Learner";
 
-  const progress =
-    xp % 100;
-
-  const firstName =
-  user?.name?.split(" ")[0] || "Learner";  
+  const stats = [
+    { icon: "🏆", value: xp,                    label: "Total XP" },
+    { icon: "🔥", value: streak,                 label: "Day Streak" },
+    { icon: "📚", value: completedLessons,       label: "Lessons Done" },
+    { icon: "📈", value: `${progressPercentage}%`, label: "Progress" },
+  ];
 
   return (
-    <AppLayout>
-
     <div className="elite-dashboard">
+      {fetchError && (
+        <div className="dash-fetch-error">{fetchError}</div>
+      )}
 
-      {/* HERO */}
-
+      {/* Hero */}
       <section className="hero-card">
-
-        <p className="miniText">
-          AI German Coach
-        </p>
-
-        <h1>
-  Hallo, {firstName} 👋
-</h1>
-
-        <p>
-          Continue learning German
-          with smart daily practice.
+        <p className="dash-eyebrow">AI German Coach</p>
+        <h1 className="dash-greeting">Hallo, {firstName} 👋</h1>
+        <p className="dash-sub">
+          Continue learning German with smart daily practice.
         </p>
 
         <div className="hero-buttons">
-
-  {continueLearning ? (
-
-    <Link
-      to={`/grammar/${continueLearning.slug}`}
-    >
-      <button className="elite-btn">
-        Continue Learning
-      </button>
-    </Link>
-
-  ) : (
-
-    <Link to="/grammar">
-
-      <button className="elite-btn">
-        Start Learning
-      </button>
-
-    </Link>
-
-  )}
-
-</div>
-
+          {continueLearning ? (
+            <Link
+              to={`/grammar/${continueLearning.slug}`}
+              className="elite-btn"
+            >
+              Continue Learning →
+            </Link>
+          ) : (
+            <Link to="/grammar" className="elite-btn">
+              Start Learning →
+            </Link>
+          )}
+        </div>
       </section>
 
-      {/* STATS */}
-
-      <section className="stats-grid">
-
-        <div className="stats-card">
-
-          <div className="stats-icon">
-            🏆
+      {/* Stats */}
+      <div className="stats-grid">
+        {stats.map((s) => (
+          <div key={s.label} className="stats-card">
+            <div className="stats-icon">{s.icon}</div>
+            <strong className="stats-value">{s.value}</strong>
+            <p className="stats-label">{s.label}</p>
           </div>
+        ))}
+      </div>
 
-          <h3>{xp}</h3>
-
-          <p>Total XP</p>
-
-        </div>
-
-        <div className="stats-card">
-
-          <div className="stats-icon">
-            🔥
-          </div>
-
-          <h3>{streak}</h3>
-
-          <p>Day Streak</p>
-
-        </div>
-
-        <div className="stats-card">
-
-          <div className="stats-icon">
-            📚
-          </div>
-
-          <h3>{completedLessons}</h3>
-
-          <p>Lessons Done</p>
-
-        </div>
-
-        <div className="stats-card">
-
-          <div className="stats-icon">
-            📈
-          </div>
-
-          <h3>{progressPercentage}%</h3>
-
-          <p>Progress</p>
-
-        </div>
-
-      </section>
-
-      {/* PROGRESS */}
-
+      {/* Level progress */}
       <section className="section-card">
-
-        <h2>
-          Level Progress
-        </h2>
-
-        <div className="progress-box">
-
-          <div className="progress-top">
-
-            <span>
-              Level {level}
-            </span>
-
-            <span>
-              {progress}%
-            </span>
-
-          </div>
-
-          <div className="progress-track">
-
-            <div
-              className="progress-fill"
-              style={{
-                width: `${progress}%`
-              }}
-            />
-
-          </div>
-
+        <div className="progress-top">
+          <span className="progress-level-label">Level {level}</span>
+          <span className="progress-xp-label">{levelProgress} / 100 XP</span>
         </div>
-
+        <div className="progress-track">
+          <div
+            className="progress-fill"
+            style={{ width: `${levelProgress}%` }}
+          />
+        </div>
+        <p className="progress-hint">
+          {100 - levelProgress} XP to reach Level {level + 1}
+        </p>
       </section>
-
-
-
     </div>
+  );
+}
+
+// ── Export ──────────────────────────────────────────────────
+function Dashboard() {
+  return (
+    <AppLayout>
+      <DashboardErrorBoundary>
+        <DashboardInner />
+      </DashboardErrorBoundary>
     </AppLayout>
   );
 }

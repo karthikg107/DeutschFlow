@@ -8,6 +8,153 @@ overflow-x:hidden;
 }
 
 /* =========================
+   SKELETON LOADING
+========================= */
+
+@keyframes dash-shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.dash-skel {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.04) 25%,
+    rgba(255,255,255,.09) 50%,
+    rgba(255,255,255,.04) 75%
+  );
+  background-size: 1200px 100%;
+  animation: dash-shimmer 1.6s infinite linear;
+  border-radius: 22px;
+  margin-bottom: 18px;
+}
+
+.dash-skel-hero    { height: 200px; }
+.dash-skel-stat    { height: 110px; border-radius: 18px; }
+.dash-skel-section { height: 96px; }
+
+/* =========================
+   ERROR STATES
+========================= */
+
+.dash-error-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 24px;
+  text-align: center;
+  min-height: 60dvh;
+}
+
+.dash-error-emoji  { font-size: 40px; margin: 0; }
+.dash-error-title  { font-size: 20px; font-weight: 600; color: white; margin: 0; }
+.dash-error-sub    { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+.dash-error-btn {
+  margin-top: 8px;
+  padding: 10px 22px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.dash-error-btn:hover { background: rgba(255,255,255,.1); }
+
+.dash-fetch-error {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: rgba(239,68,68,.12);
+  border: 1px solid rgba(239,68,68,.2);
+  color: var(--color-red-light);
+  font-size: 14px;
+}
+
+/* =========================
+   HERO CARD CONTENT
+========================= */
+
+.dash-eyebrow {
+  font-size: 12px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-indigo-soft);
+  margin: 0 0 10px;
+}
+
+.dash-greeting {
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  color: white;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.dash-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =========================
+   STATS CARD CONTENT
+========================= */
+
+.stats-value {
+  display: block;
+  font-size: 30px;
+  font-weight: var(--fw-bold);
+  color: white;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.stats-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =========================
+   PROGRESS CARD CONTENT
+========================= */
+
+.progress-level-label {
+  font-size: 15px;
+  font-weight: var(--fw-semibold);
+  color: white;
+}
+
+.progress-xp-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.progress-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 10px 0 0;
+}
+
+/* =========================
+   ELITE-BTN AS LINK
+========================= */
+
+a.elite-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+/* =========================
    CARDS
 ========================= */
 
@@ -731,10 +878,10 @@ gap:8px;
 height:28px;
 }
 
-/* stats */
+/* stats — 2-column on mobile */
 
 .stats-grid{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,1fr);
 }
 
 .quick-grid{
