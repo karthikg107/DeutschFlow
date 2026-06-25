@@ -15,7 +15,7 @@ export const handleMessage = async (req, res) => {
   try {
     const { message, mode, level } = req.body;
 
-    const userId = "default-user";
+    const userId = req.user.id;
 
     // Reset memory when mode/level changes
     resetMemoryIfNeeded(userId, mode, level);
