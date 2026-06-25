@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import api from "../utils/api";
 import { Bookmark } from "lucide-react";
 import toast from "react-hot-toast";
@@ -80,7 +81,12 @@ function VocabularyLevel() {
   return (
     <AppLayout>
       <div className="vocab-level-page">
-        <h1 className="vocab-title">{level} Vocabulary</h1>
+        <PageHeader
+          backTo="/vocabulary"
+          backLabel="Vocabulary"
+          title={`${level} Vocabulary`}
+          subtitle="Browse and save words to your collection."
+        />
 
         <input
           type="text"

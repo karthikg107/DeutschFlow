@@ -1,4 +1,5 @@
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import { Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { startSpeechRecognition } from "../utils/speechRecognition";
@@ -97,12 +98,12 @@ function TalkWithMia() {
   return (
     <AppLayout>
       <div className="speaking-page talk-page">
-        <button className="back-btn" onClick={() => navigate("/speaking")}>
-          ← Back
-        </button>
-
-        <h1>Talk With Mia</h1>
-        <p>Talk naturally with Mia and build confidence speaking German.</p>
+        <PageHeader
+          backTo="/speaking"
+          backLabel="Speaking"
+          title="Talk with Mia"
+          subtitle="Open conversation in German. Speak naturally."
+        />
 
         <div className="talk-chat-box">
           {messages.map((msg) => (

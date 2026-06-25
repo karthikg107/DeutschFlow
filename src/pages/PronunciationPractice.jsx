@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import pronunciationSentences from "../data/pronunciationSentences";
 import { Mic } from "lucide-react";
 import api from "../utils/api";
@@ -128,12 +129,12 @@ function PronunciationPractice() {
   return (
     <AppLayout>
       <div className="speaking-page">
-        <Link to="/speaking/pronunciation" className="back-btn">← Back</Link>
-
-        <div className="speaking-hero">
-          <h1>{level.toUpperCase()} Pronunciation Practice</h1>
-          <p>Listen to German sentences and practice speaking them aloud.</p>
-        </div>
+        <PageHeader
+          backTo="/speaking/pronunciation"
+          backLabel="Pronunciation"
+          title={`${level.toUpperCase()} Pronunciation`}
+          subtitle="Listen, then speak the sentence aloud."
+        />
 
         {/* Sentence card */}
         <div className="speaking-card pronunciation-card">

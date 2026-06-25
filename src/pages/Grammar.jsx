@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import api from "../utils/api";
 import "../styles/dashboard.css";
 import "../styles/grammar.css";
@@ -58,10 +59,10 @@ function Grammar() {
     <AppLayout>
       <div className="elite-dashboard grammar-page">
 
-        <div className="hero-card">
-          <h1>📘 German Grammar Roadmap</h1>
-          <p>Follow a structured A1 learning path step by step.</p>
-        </div>
+        <PageHeader
+          title="Grammar"
+          subtitle="Structured lessons from A1 through B2."
+        />
 
         {nextLesson && (
           <div className="grammar-continue">

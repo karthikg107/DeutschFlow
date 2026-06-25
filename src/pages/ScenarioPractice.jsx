@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Mic } from "lucide-react";
 import speakingScenarios from "../data/speakingScenarios";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import api from "../utils/api";
 import toast from "react-hot-toast";
 import "../styles/speaking.css";
@@ -139,19 +140,14 @@ function ScenarioPractice() {
   return (
     <AppLayout>
       <div className="speaking-page">
-        <h1>{selectedScenario.title}</h1>
-        <p>Complete the speaking conversation below.</p>
+        <PageHeader
+          backTo="/speaking/scenarios"
+          backLabel="Scenarios"
+          title={selectedScenario?.title || "Scenario"}
+          subtitle={selectedScenario?.description || ""}
+        />
 
         <div className="selected-scenario">
-          <button
-            className="back-btn"
-            onClick={() => {
-              speechSynthesis.cancel();
-              navigate("/speaking/scenarios");
-            }}
-          >
-            ← Back to Scenarios
-          </button>
 
           <p><strong>Prompt:</strong></p>
           <p>{selectedScenario.prompt}</p>

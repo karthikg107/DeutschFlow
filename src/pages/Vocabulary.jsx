@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import { useEffect, useState } from "react";
 import api from "../utils/api";
 import "../styles/vocabulary.css";
@@ -34,8 +35,10 @@ function Vocabulary() {
   return (
     <AppLayout>
       <div className="vocab-page">
-        <h1 className="vocab-title">Vocabulary</h1>
-        <p className="vocab-subtitle">Build your German vocabulary by level.</p>
+        <PageHeader
+          title="Vocabulary"
+          subtitle="Build your German word bank by level."
+        />
 
         <div className="vocab-grid">
           {/* Level cards */}

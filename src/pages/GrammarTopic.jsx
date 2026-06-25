@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import api from "../utils/api";
 import toast from "react-hot-toast";
 import "../styles/dashboard.css";
@@ -169,10 +170,12 @@ function GrammarTopic() {
   return (
     <AppLayout>
       <div className="elite-dashboard lesson-page">
-        <div className="hero-card">
-          <h1>{topic.title}</h1>
-          <p>{topic.description}</p>
-        </div>
+        <PageHeader
+          backTo="/grammar"
+          backLabel="Grammar"
+          title={topic.title}
+          subtitle={topic.description}
+        />
 
         <div className="lesson-content">
           {topic.sections.map((section) => (

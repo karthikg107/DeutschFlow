@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import "../styles/dashboard.css";
 import "../styles/ai.css";
 import api from "../utils/api";
@@ -76,12 +77,15 @@ function AITutor() {
   return (
     <AppLayout>
       <div className="elite-dashboard ai-page">
+        <PageHeader
+          title="AI Tutor"
+          subtitle="Chat, translate, and get corrections in German."
+        />
+
         <div className="section-card ai-tutor-card">
 
           {/* ── Header ── */}
           <div className="ai-header">
-            <h2 className="ai-title">🧠 AI German Tutor</h2>
-
             <div className="ai-controls">
               {/* Mode pill tabs */}
               <div className="ai-tabs" role="tablist">

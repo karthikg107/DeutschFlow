@@ -1,31 +1,18 @@
 import { Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 
 function PronunciationLevels() {
   return (
     <AppLayout>
       <div className="speaking-page">
 
-        <Link
-          to="/speaking"
-          className="back-btn"
-        >
-          ← Back to Speaking
-        </Link>
-
-        <div className="speaking-hero">
-
-          <h1>
-            Pronunciation Practice
-          </h1>
-
-          <p>
-            Improve your German pronunciation by
-            listening, repeating, and speaking real
-            German sentences aloud.
-          </p>
-
-        </div>
+        <PageHeader
+          backTo="/speaking"
+          backLabel="Speaking"
+          title="Pronunciation Practice"
+          subtitle="Choose your level to begin."
+        />
 
         <div className="speaking-grid">
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import api from "../utils/api";
 import { Bookmark } from "lucide-react";
 import toast from "react-hot-toast";
@@ -56,8 +57,12 @@ function SavedVocabulary() {
   return (
     <AppLayout>
       <div className="vocab-saved-page">
-        <h1 className="vocab-saved-page-title">Saved Vocabulary</h1>
-        <p className="vocab-saved-page-count">{savedWords.length} saved words</p>
+        <PageHeader
+          backTo="/vocabulary"
+          backLabel="Vocabulary"
+          title="Saved Words"
+          subtitle="Your personal vocabulary collection."
+        />
 
         <input
           type="text"

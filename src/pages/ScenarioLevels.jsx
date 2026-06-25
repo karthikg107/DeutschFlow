@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import speakingScenarios from "../data/speakingScenarios";
 
 function ScenarioLevels() {
@@ -13,20 +14,12 @@ function ScenarioLevels() {
 
       <div className="speaking-page">
 
-        <Link
-          to="/speaking"
-          className="back-link"
-        >
-          ← Back to Speaking
-        </Link>
-
-        <h1>
-          Scenario Practice
-        </h1>
-
-        <p>
-          Select your level and choose a scenario.
-        </p>
+        <PageHeader
+          backTo="/speaking"
+          backLabel="Speaking"
+          title="Scenario Practice"
+          subtitle="Choose a level to start a real-life conversation."
+        />
 
         {/* LEVELS */}
 

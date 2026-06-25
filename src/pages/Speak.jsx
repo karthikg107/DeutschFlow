@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AppLayout from "../components/Layout/AppLayout";
+import PageHeader from "../components/Layout/PageHeader";
 import "../styles/speaking.css";
 
 const ACTIVITIES = [
@@ -30,13 +31,10 @@ function Speak() {
   return (
     <AppLayout>
       <div className="speaking-page">
-        <div className="speaking-hero">
-          <h1>German Speaking</h1>
-          <p>
-            Improve your German speaking confidence through pronunciation practice,
-            real-life scenarios and AI conversations.
-          </p>
-        </div>
+        <PageHeader
+          title="Speaking Practice"
+          subtitle="Three ways to build your spoken German."
+        />
 
         <h2 className="section-title">Speaking Activities</h2>
 
