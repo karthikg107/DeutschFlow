@@ -44,6 +44,11 @@ export const saveProgress = async (
     // only reward XP if lesson completed first time
     if (!existingProgress) {
 
+      const xpReward =
+        lessonSlug.startsWith("pronunciation-") ? 8  :
+        lessonSlug.startsWith("scenario-")      ? 12 :
+        lessonSlug.startsWith("talk-with-mia")  ? 15 : 10;
+
       const user =
         await prisma.user.findUnique({
           where: {
@@ -103,7 +108,7 @@ export const saveProgress = async (
 
         data: {
           xp: {
-            increment: 10,
+            increment: xpReward,
           },
 
           streak,

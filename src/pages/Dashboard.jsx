@@ -77,8 +77,21 @@ function DashboardInner() {
   const completedLessons = dashboard?.stats?.completedLessons || 0;
   const progressPercentage = dashboard?.stats?.progressPercentage || 0;
   const continueLearning = dashboard?.continueLearning;
-  const level = Math.floor(xp / 100) + 1;
-  const levelProgress = xp % 100;
+  function getLevelInfo(xp) {
+    let level = 1, xpForNext = 100, spent = 0;
+    while (xp >= spent + xpForNext) {
+      spent += xpForNext;
+      level++;
+      xpForNext = Math.floor(xpForNext * 1.4);
+    }
+    const xpIntoLevel = xp - spent;
+    const progress = Math.round((xpIntoLevel / xpForNext) * 100);
+    return { level, xpIntoLevel, xpForNext, progress };
+  }
+  const {
+    level, xpIntoLevel, xpForNext, progress: levelProgress
+  } = getLevelInfo(xp);
+
   const firstName = user?.name?.split(" ")[0] || "Learner";
 
   const stats = [
@@ -133,7 +146,7 @@ function DashboardInner() {
       <section className="section-card">
         <div className="progress-top">
           <span className="progress-level-label">Level {level}</span>
-          <span className="progress-xp-label">{levelProgress} / 100 XP</span>
+          <span className="progress-xp-label">{xpIntoLevel} / {xpForNext} XP</span>
         </div>
         <div className="progress-track">
           <div
@@ -142,7 +155,7 @@ function DashboardInner() {
           />
         </div>
         <p className="progress-hint">
-          {100 - levelProgress} XP to reach Level {level + 1}
+          {xpForNext - xpIntoLevel} XP to Level {level + 1}
         </p>
       </section>
     </div>
