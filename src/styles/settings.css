@@ -122,8 +122,22 @@
 
   color:var(--text-muted-alt);
 
-  margin-bottom:30px;
+  margin-bottom:12px;
 
+}
+
+.plan-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(37,99,235,.15);
+  color: var(--color-blue-bright);
+  border: 1px solid rgba(37,99,235,.3);
+  margin-bottom: 24px;
 }
 
 .profile-info{

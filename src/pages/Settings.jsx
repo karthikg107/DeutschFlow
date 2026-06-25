@@ -35,6 +35,10 @@ export default function Settings() {
     {user?.email || "No email available"}
   </p>
 
+  <span className="plan-badge">
+    {user?.plan || "FREE"}
+  </span>
+
   <div className="profile-info">
 
     <div>

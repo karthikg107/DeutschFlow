@@ -1,5 +1,6 @@
 import AppLayout from "../components/Layout/AppLayout";
 import { useAuth } from "../context/AuthContext";
+import toast from "react-hot-toast";
 import "../styles/pricing.css";
 
 export default function Pricing() {
@@ -99,7 +100,13 @@ export default function Pricing() {
 
             </div>
 
-            <button className="plan-btn premium-btn">
+            <button
+              className="plan-btn premium-btn"
+              onClick={() =>
+                currentPlan !== "PREMIUM" &&
+                toast("Premium coming soon!", { icon: "🚀" })
+              }
+            >
               {currentPlan === "PREMIUM"
                 ? "Current Plan"
                 : "Upgrade Soon"}
