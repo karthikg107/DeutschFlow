@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary";
+import NotFound from "./pages/NotFound";
 
 import Landing from "./pages/Landing";
 import Dashboard from "./pages/Dashboard";
@@ -31,6 +33,7 @@ import Grammar from "./pages/Grammar";
 
 function App() {
   return (
+    <ErrorBoundary>
     <BrowserRouter>
 
       <Toaster
@@ -203,9 +206,12 @@ function App() {
 
 <Route path="/contact" element={<Contact />} />
 
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
 
     </BrowserRouter>
+    </ErrorBoundary>
   );
 }
 

@@ -104,7 +104,7 @@ export default function Pricing() {
               className="plan-btn premium-btn"
               onClick={() =>
                 currentPlan !== "PREMIUM" &&
-                toast("Premium coming soon!", { icon: "🚀" })
+                toast("Premium coming soon! We'll notify you.", { icon: "🚀" })
               }
             >
               {currentPlan === "PREMIUM"

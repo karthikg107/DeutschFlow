@@ -58,6 +58,11 @@ app.use(
   passwordRoutes
 );
 
+// HEALTH
+app.get("/api/health", (_req, res) => {
+  res.json({ status: "ok", timestamp: new Date() });
+});
+
 // SERVER
 const PORT = process.env.PORT || 5000;
 

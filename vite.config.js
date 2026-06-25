@@ -1,17 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
-  plugins: [react],
+export default defineConfig(({ command }) => ({
+  base: "/",
 
-  server: {
-    host: true,
+  plugins: [react()],
 
-    proxy: {
-      "/api": {
-        target: "http://localhost:5000",
-        changeOrigin: true,
-      },
-    },
-  },
-});
+  server: command === "serve"
+    ? {
+        host: true,
+        proxy: {
+          "/api": {
+            target: "http://localhost:5000",
+            changeOrigin: true,
+          },
+        },
+      }
+    : { host: true },
+}));
