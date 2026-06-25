@@ -1,531 +1,241 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { Mic } from "lucide-react";
-
 import speakingScenarios from "../data/speakingScenarios";
 import AppLayout from "../components/Layout/AppLayout";
-import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
 import toast from "react-hot-toast";
+import "../styles/speaking.css";
 
 function ScenarioPractice() {
+  const { level, id }    = useParams();
+  const navigate         = useNavigate();
+  const messagesEndRef   = useRef(null);
+  const initializedRef   = useRef(false);
 
-  const [isRecording, setIsRecording] =
-  useState(false);
-
-  const [isMiaSpeaking, setIsMiaSpeaking] =
-  useState(false);
-
-const { level, id } = useParams();
-
-const selectedScenario =
-  speakingScenarios[level]?.find(
-    (scenario) =>
-      scenario.id === Number(id)
+  const selectedScenario = speakingScenarios[level]?.find(
+    (s) => s.id === Number(id)
   );
 
-  if (!selectedScenario) {
-  return (
-    <AppLayout>
-      <div className="speaking-page">
-        <h1>Scenario not found</h1>
-      </div>
-    </AppLayout>
-  );
-}
+  const [messages, setMessages]               = useState([]);
+  const [userAnswers, setUserAnswers]         = useState([]);
+  const [conversationStep, setConversationStep] = useState(0);
+  const [isCompleted, setIsCompleted]         = useState(false);
+  const [isRecording, setIsRecording]         = useState(false);
+  const [isMiaSpeaking, setIsMiaSpeaking]     = useState(false);
+  const [error, setError]                     = useState("");
 
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
-const [messages, setMessages] =
-  useState([]);
-
-const [userAnswers, setUserAnswers] =
-  useState([]);  
-
-const messagesEndRef = useRef(null);  
-
-const [conversationStep, setConversationStep] =
-  useState(0);
-
-const [isCompleted, setIsCompleted] =
-  useState(false);
-
-const [error, setError] =
-  useState("");  
-
-const navigate = useNavigate();  
-
-const initializedRef = useRef(false);
-
-
-useEffect(() => {
-
-  if (!selectedScenario) return;
-
-  if (initializedRef.current) return;
-
-  initializedRef.current = true;
-
-  const firstMessage =
-    selectedScenario.questions[0].question;
-
-  setMessages([
-    {
-      sender: "mia",
-      text: firstMessage
-    }
-  ]);
-
-  speak(firstMessage);
-
-}, [selectedScenario]);
+  useEffect(() => {
+    if (!selectedScenario || initializedRef.current) return;
+    initializedRef.current = true;
+    const firstMsg = selectedScenario.questions[0].question;
+    setMessages([{ sender: "mia", text: firstMsg }]);
+    speak(firstMsg);
+  }, [selectedScenario]);
 
   function speak(text) {
+    setIsMiaSpeaking(true);
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "de-DE";
+    utterance.onend = () => setIsMiaSpeaking(false);
+    speechSynthesis.speak(utterance);
+  }
 
-  setIsMiaSpeaking(true);
-
-  const utterance =
-    new SpeechSynthesisUtterance(text);
-
-  utterance.lang = "de-DE";
-
-  utterance.onend = () => {
-    setIsMiaSpeaking(false);
-  };
-
-  speechSynthesis.speak(
-    utterance
-  );
-}
-
-const saveScenarioProgress =
-  async () => {
-
+  const saveProgress = async () => {
     try {
-
-      await api.post(
-        "/progress/save",
-        {
-          lessonSlug:
-            `scenario-${level}-${id}`,
-        }
-      );
-
-      toast.success(
-        "Scenario completed!"
-      );
-
-    } catch (error) {
-
-      console.error(error);
-
+      await api.post("/progress/save", {
+        lessonSlug: `scenario-${level}-${id}`,
+      });
+      toast.success("Scenario completed!");
+    } catch (err) {
+      console.error(err);
     }
-
   };
 
   function startRecording() {
-
     setError("");
+    if (isRecording || isMiaSpeaking) return;
 
-  if (
-    isRecording ||
-    isMiaSpeaking
-  ) {
-    return;
-  }
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
 
-  const SpeechRecognition =
-    window.SpeechRecognition ||
-    window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      setError("Speech recognition is not supported in this browser.");
+      return;
+    }
 
-  if (!SpeechRecognition) {
-    alert(
-      "Speech recognition is not supported."
-    );
-    return;
-  }
+    const recognition = new SpeechRecognition();
+    recognition.lang = "de-DE";
+    recognition.continuous = false;
+    recognition.interimResults = false;
 
-  const recognition =
-    new SpeechRecognition();
+    recognition.onstart = () => setIsRecording(true);
+    recognition.onend   = () => setIsRecording(false);
 
-  recognition.lang = "de-DE";
+    recognition.onresult = (event) => {
+      const text = event.results[event.results.length - 1][0].transcript;
+      setUserAnswers((prev) => [...prev, text]);
 
-  recognition.continuous = false;
+      const questions = selectedScenario.questions;
+      const nextStep  = conversationStep + 1;
+      let miaReply;
 
-  recognition.interimResults = false;
-
-  recognition.onstart = () => {
-    setIsRecording(true);
-  };
-
-  recognition.onresult = (event) => {
-
-    const text =
-      event.results[
-        event.results.length - 1
-      ][0].transcript;
-
-    setUserAnswers((prev) => [
-  ...prev,
-  text
-]);  
-
-
-    const questions =
-  selectedScenario.questions;
-
-const nextStep =
-  conversationStep + 1;
-
-let miaReply = "";
-
-if (
-  nextStep < questions.length
-) {
-
-  miaReply =
-    questions[nextStep]
-      .question;
-
-  setConversationStep(
-    nextStep
-  );
-
-} else {
-
-  miaReply =
-    selectedScenario
-      .completionMessage;
-
-  setIsCompleted(true);
-
-  saveScenarioProgress();
-
-}
-
-    setMessages((prev) => [
-      ...prev,
-      {
-        sender: "user",
-        text
-      },
-      {
-        sender: "mia",
-        text: miaReply
+      if (nextStep < questions.length) {
+        miaReply = questions[nextStep].question;
+        setConversationStep(nextStep);
+      } else {
+        miaReply = selectedScenario.completionMessage;
+        setIsCompleted(true);
+        saveProgress();
       }
-    ]);
 
-    speak(miaReply);
-  };
+      setMessages((prev) => [
+        ...prev,
+        { sender: "user", text },
+        { sender: "mia", text: miaReply },
+      ]);
+      speak(miaReply);
+    };
 
-  recognition.onerror = (event) => {
+    recognition.onerror = (event) => {
+      setIsRecording(false);
+      if (event.error === "no-speech")
+        setError("We couldn't hear anything. Please try again.");
+      else if (event.error === "audio-capture")
+        setError("Microphone not detected.");
+      else if (event.error === "not-allowed")
+        setError("Microphone permission denied.");
+      else
+        setError("Speech recognition failed.");
+    };
 
-  setIsRecording(false);
-
-  if (
-    event.error === "no-speech"
-  ) {
-    setError(
-      "We couldn't hear anything. Please try again."
-    );
+    recognition.start();
   }
 
-  else if (
-    event.error === "audio-capture"
-  ) {
-    setError(
-      "Microphone not detected."
-    );
+  function handleTryAgain() {
+    setConversationStep(0);
+    setIsCompleted(false);
+    setUserAnswers([]);
+    speechSynthesis.cancel();
+    const firstMsg = selectedScenario.questions[0].question;
+    setMessages([{ sender: "mia", text: firstMsg }]);
+    speak(firstMsg);
   }
 
-  else if (
-    event.error === "not-allowed"
-  ) {
-    setError(
-      "Microphone permission denied."
+  if (!selectedScenario) {
+    return (
+      <AppLayout>
+        <div className="speaking-page">
+          <h1>Scenario not found</h1>
+        </div>
+      </AppLayout>
     );
   }
-
-  else {
-    setError(
-      "Speech recognition failed."
-    );
-  }
-
-  console.log(
-    "ERROR:",
-    event.error
-  );
-};
-
-  recognition.onend = () => {
-    setIsRecording(false);
-  };
-
-  recognition.start();
-}
 
   return (
-
     <AppLayout>
-
-    <div className="speaking-page">
-
-      <h1>
-  {selectedScenario?.title}
-</h1>
-
-<p>
-  Complete the speaking conversation below.
-</p>
-
-
-      {selectedScenario && (
+      <div className="speaking-page">
+        <h1>{selectedScenario.title}</h1>
+        <p>Complete the speaking conversation below.</p>
 
         <div className="selected-scenario">
+          <button
+            className="back-btn"
+            onClick={() => {
+              speechSynthesis.cancel();
+              navigate("/speaking/scenarios");
+            }}
+          >
+            ← Back to Scenarios
+          </button>
 
-        <button
-  className="back-btn"
-  onClick={() => {
+          <p><strong>Prompt:</strong></p>
+          <p>{selectedScenario.prompt}</p>
 
-  speechSynthesis.cancel();
+          <h3>Example Answer</h3>
+          <p>{selectedScenario.example}</p>
 
-  navigate("/speaking/scenarios");
-
-}}
-
-  
->
-  ← Back to Scenarios
-</button>
-
-
-
-          <p>
-            <strong>Prompt:</strong>
-          </p>
-
-          <p>
-            {selectedScenario.prompt}
-          </p>
-
-          <h3>
-            Example Answer
-          </h3>
-
-          <p>
-            {selectedScenario.example}
-          </p>
-
+          {/* Chat history */}
           <div className="chat-box">
-
-            {messages.map(
-              (message, index) => (
-
-                <div
-                  key={index}
-                  className={
-                    message.sender === "mia"
-                      ? "mia-message"
-                      : "user-message"
-                  }
-                >
-
-                  <strong>
-                    {message.sender === "mia"
-                      ? "Mia"
-                      : "You"}
-                    :
-                  </strong>
-
-                  <p>
-                    {message.text}
-                  </p>
-
-                </div>
-
-              )
-            )}
-
-            <div ref={messagesEndRef}></div>
-
+            {messages.map((msg, i) => (
+              <div
+                key={i}
+                className={msg.sender === "mia" ? "mia-message" : "user-message"}
+              >
+                <strong>{msg.sender === "mia" ? "Mia" : "You"}:</strong>
+                <p>{msg.text}</p>
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
           </div>
-            
+
+          {/* Completed state */}
           {isCompleted && (
+            <div className="completion-box">
+              <h3>✅ Scenario Completed</h3>
+              <p>You completed: {selectedScenario.title}</p>
 
-  <div className="completion-box">
+              <h4>Suggested Answers</h4>
+              <div className="answers-list">
+                {selectedScenario.questions.map((item, i) => (
+                  <div key={i} className="answer-item">
+                    <strong>Question</strong>
+                    <p>{item.question}</p>
+                    <strong>Your Answer</strong>
+                    <p>{userAnswers[i] || "No answer"}</p>
+                    <strong>Suggested Answer</strong>
+                    <p>{item.sampleAnswer}</p>
+                  </div>
+                ))}
+              </div>
 
-    <h3>
-      ✅ Scenario Completed
-    </h3>
+              <div className="completion-actions">
+                <button className="completion-btn" onClick={handleTryAgain}>
+                  Try Again
+                </button>
+                <button
+                  className="completion-btn"
+                  onClick={() => {
+                    speechSynthesis.cancel();
+                    navigate("/speaking/scenarios");
+                  }}
+                >
+                  Choose Another Scenario
+                </button>
+              </div>
+            </div>
+          )}
 
-    <p>
-      You completed:
-      {" "}
-      {selectedScenario.title}
-    </p>
+          {/* Mic */}
+          {!isCompleted && (
+            <button
+              className={`mic-btn${isRecording ? " recording" : ""}`}
+              onClick={startRecording}
+              disabled={isRecording || isMiaSpeaking}
+              aria-label="Speak your answer"
+            >
+              <Mic size={28} />
+            </button>
+          )}
 
-    <h4>
-  Suggested Answers
-</h4>
+          {isRecording && <p style={{ marginTop: 12 }}>🎤 Listening…</p>}
 
-<div className="answers-list">
+          {error && (
+            <p style={{ marginTop: 12, color: "var(--color-red-light)", fontWeight: 600 }}>
+              {error}
+            </p>
+          )}
 
-  {selectedScenario.questions.map(
-    (item, index) => (
-
-      <div
-        key={index}
-        className="answer-item"
-      >
-
-        <strong>
-          Question
-        </strong>
-
-        <p>
-          {item.question}
-        </p>
-
-        <strong>
-          Your Answer
-        </strong>
-
-        <p>
-          {
-            userAnswers[index] ||
-            "No answer"
-          }
-        </p>
-
-        <strong>
-          Suggested Answer
-        </strong>
-
-        <p>
-          {item.sampleAnswer}
-        </p>
-
-      </div>
-
-    )
-  )}
-
-</div>
-
-    <div className="completion-actions">
-
-      <button
-        className="completion-btn"
-        onClick={() => {
-
-          setConversationStep(0);
-
-          setIsCompleted(false);
-
-
-          speechSynthesis.cancel();
-
-          setUserAnswers([]);
-
-          setMessages([]);
-
-          const firstMessage =
-            selectedScenario.questions[0].question;
-
-          setMessages([
-            {
-              sender: "mia",
-              text: firstMessage
-            }
-          ]);
-
-          speak(firstMessage);
-
-        }}
-      >
-        Try Again
-      </button>
-
-      <button
-        className="completion-btn"
-        onClick={() => {
-
-  speechSynthesis.cancel();
-
-  navigate("/speaking/scenarios");
-
-}}
-      >
-        Choose Another Scenario
-      </button>
-
-    </div>
-
-  </div>
-
-)}
-
-{!isCompleted && (
-
-<button
-  className={`mic-btn ${
-    isRecording
-      ? "recording"
-      : ""
-  }`}
-  onClick={startRecording}
-  disabled={
-    isRecording ||
-    isMiaSpeaking
-  }
->
-  <Mic size={28} />
-</button>
-
-)}
-
-{isRecording && (
-  <p
-    style={{
-      marginTop: "12px"
-    }}
-  >
-    🎤 Listening...
-  </p>
-)}
-
-{error && (
-  <p
-    style={{
-      marginTop: "12px",
-      color: "#ef4444",
-      fontWeight: "600"
-    }}
-  >
-    {error}
-  </p>
-)}
-
-{isMiaSpeaking && (
-  <p
-    style={{
-      marginTop: "12px"
-    }}
-  >
-    🔊 Mia is speaking...
-  </p>
-)}
-
-          
-
+          {isMiaSpeaking && (
+            <p style={{ marginTop: 12 }}>🔊 Mia is speaking…</p>
+          )}
         </div>
-
-      )}
-
-    </div>
-
+      </div>
     </AppLayout>
-
   );
 }
 

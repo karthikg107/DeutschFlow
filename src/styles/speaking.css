@@ -755,6 +755,66 @@ max-height: 400px;
 }
 
 .talk-page {
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .talk-page {
+    height: calc(100dvh - 60px);
+  }
+}
+
+/* ======================================
+   SPEAKING HUB — ACTIVITY CARDS
+====================================== */
+
+.speak-act-icon {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+/* ======================================
+   MIC AREA (TalkWithMia)
+====================================== */
+
+.mic-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.mic-hint {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+/* ======================================
+   MIA SPEAKING INDICATOR
+====================================== */
+
+.mia-speaking {
+  font-size: 13px;
+  color: var(--color-violet-soft);
+  padding: 6px 12px;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 999px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* ======================================
+   MIC BUTTON — DISABLED STATE
+====================================== */
+
+.mic-btn.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
 }

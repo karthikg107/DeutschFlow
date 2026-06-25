@@ -5,313 +5,153 @@ import { startSpeechRecognition } from "../utils/speechRecognition";
 import { useState, useRef, useEffect } from "react";
 import api from "../utils/api";
 import toast from "react-hot-toast";
+import "../styles/speaking.css";
 
 function TalkWithMia() {
-
   const [messages, setMessages] = useState([
-  {
-    id: 1,
-    sender: "mia",
-    text: "Hallo! Worüber möchtest du heute sprechen?"
-  }
-]);
-
-  const [isRecording, setIsRecording] =
-    useState(false);
-
-  const [isMiaTyping, setIsMiaTyping] =
-    useState(false); 
-
-  const [isMiaSpeaking, setIsMiaSpeaking] =
-    useState(false);
-
-  const navigate = useNavigate();
-
+    { id: 1, sender: "mia", text: "Hallo! Worüber möchtest du heute sprechen?" },
+  ]);
+  const [isRecording, setIsRecording]   = useState(false);
+  const [isMiaTyping, setIsMiaTyping]   = useState(false);
+  const [isMiaSpeaking, setIsMiaSpeaking] = useState(false);
+  const [miaCompleted, setMiaCompleted] = useState(false);
 
   const chatEndRef = useRef(null);
-
-  const [miaCompleted, setMiaCompleted] =
-  useState(false);
+  const navigate   = useNavigate();
 
   useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, isMiaTyping, isMiaSpeaking]);
 
-  chatEndRef.current?.scrollIntoView({
-    behavior: "smooth"
-  });
+  useEffect(() => {
+    speak("Hallo! Worüber möchtest du heute sprechen?");
+    return () => speechSynthesis.cancel();
+  }, []);
 
-}, [
-  messages,
-  isMiaTyping,
-  isMiaSpeaking
-]);
-
-useEffect(() => {
-
-  return () => {
+  function speak(text) {
     speechSynthesis.cancel();
-  };
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "de-DE";
+    utterance.onstart = () => setIsMiaSpeaking(true);
+    utterance.onend   = () => setIsMiaSpeaking(false);
+    speechSynthesis.speak(utterance);
+  }
 
-}, []);
-
-function speak(text) {
-
-  speechSynthesis.cancel();
-
-  const utterance =
-    new SpeechSynthesisUtterance(text);
-
-  utterance.lang = "de-DE";
-
-  utterance.onstart = () => {
-    setIsMiaSpeaking(true);
-  };
-
-  utterance.onend = () => {
-    setIsMiaSpeaking(false);
-  };
-
-  speechSynthesis.speak(utterance);
-}
-
-useEffect(() => {
-
-  speak(
-    "Hallo! Worüber möchtest du heute sprechen?"
-  );
-
-}, []);
-
-const saveMiaProgress =
-  async () => {
-
+  const saveMiaProgress = async () => {
     try {
-
-      await api.post(
-        "/progress/save",
-        {
-          lessonSlug: "talk-with-mia",
-        }
-      );
-
-      toast.success(
-        "Conversation completed!"
-      );
-
-    } catch (error) {
-
-      console.error(error);
-
+      await api.post("/progress/save", { lessonSlug: "talk-with-mia" });
+      toast.success("Conversation completed!");
+    } catch (err) {
+      console.error(err);
     }
-
   };
 
   function handleMicClick() {
+    startSpeechRecognition(
+      (transcript) => {
+        setMessages((prev) => {
+          const updated = [...prev, { id: Date.now(), sender: "user", text: transcript }];
+          const userCount = updated.filter((m) => m.sender === "user").length;
+          if (userCount === 5 && !miaCompleted) {
+            setMiaCompleted(true);
+            saveMiaProgress();
+          }
+          return updated;
+        });
 
-  startSpeechRecognition(
+        setIsMiaTyping(true);
 
-    (transcript) => {
-
-      setMessages((prev) => {
-
-  const updated = [
-
-    ...prev,
-
-    {
-      id: Date.now(),
-      sender: "user",
-      text: transcript
-    }
-
-  ];
-
-  const userMessages =
-    updated.filter(
-      (m) =>
-        m.sender === "user"
-    ).length;
-
-  if (
-    userMessages === 5 &&
-    !miaCompleted
-  ) {
-
-    setMiaCompleted(true);
-
-    saveMiaProgress();
-
+        setTimeout(async () => {
+          try {
+            const { data } = await api.post("/ai/chat", {
+              mode: "talkWithMia",
+              message: transcript,
+            });
+            setIsMiaTyping(false);
+            setMessages((prev) => [
+              ...prev,
+              { id: Date.now() + 1, sender: "mia", text: data.reply },
+            ]);
+            speak(data.reply);
+          } catch {
+            setIsMiaTyping(false);
+            setMessages((prev) => [
+              ...prev,
+              {
+                id: Date.now() + 1,
+                sender: "mia",
+                text: "Entschuldigung, ich habe gerade ein Problem.",
+              },
+            ]);
+          }
+        }, 1500);
+      },
+      "de-DE",
+      () => setIsRecording(true),
+      () => setIsRecording(false)
+    );
   }
 
-  return updated;
-
-});
-
-      setIsMiaTyping(true);
-
-      setTimeout(async () => {
-
-  try {
-
-    const response = await api.post(
-  "/ai/chat",
-  {
-    mode: "talkWithMia",
-    message: transcript
-  }
-);
-
-
-const reply = response.data.reply;
-
-    setIsMiaTyping(false);
-
-    setMessages((prev) => [
-
-      ...prev,
-
-      {
-        id: Date.now() + 1,
-        sender: "mia",
-        text: reply
-      }
-
-    ]);
-
-    speak(reply);
-
-  } catch (error) {
-
-    console.error(error);
-
-    setIsMiaTyping(false);
-
-    setMessages((prev) => [
-
-      ...prev,
-
-      {
-        id: Date.now() + 1,
-        sender: "mia",
-        text: "Entschuldigung, ich habe gerade ein Problem."
-      }
-
-    ]);
-
-  }
-
-}, 1500);
-
-    },
-
-    "de-DE",
-
-    () => {
-      setIsRecording(true);
-    },
-
-    () => {
-      setIsRecording(false);
-    }
-
-  );
-
-}
+  const micDisabled = isRecording || isMiaTyping || isMiaSpeaking;
 
   return (
-
     <AppLayout>
-
       <div className="speaking-page talk-page">
-
-        <button
-          className="back-btn"
-          onClick={() => navigate("/speaking")}
-        >
+        <button className="back-btn" onClick={() => navigate("/speaking")}>
           ← Back
         </button>
 
-        <h1>
-          Talk With Mia
-        </h1>
-
-        <p>
-          Talk naturally with Mia and build confidence speaking German.
-        </p>
+        <h1>Talk With Mia</h1>
+        <p>Talk naturally with Mia and build confidence speaking German.</p>
 
         <div className="talk-chat-box">
-
-          {messages.map((message) => (
-
+          {messages.map((msg) => (
             <div
-              key={message.id}
-              className={
-                message.sender === "mia"
-                  ? "mia-chat-message"
-                  : "user-chat-message"
-              }
+              key={msg.id}
+              className={msg.sender === "mia" ? "mia-chat-message" : "user-chat-message"}
             >
-
-              {message.sender === "mia" && (
-                <div className="chat-speaker">
-                  Mia
-                </div>
+              {msg.sender === "mia" && (
+                <div className="chat-speaker">Mia</div>
               )}
-
-              <p>
-                {message.text}
-              </p>
-
+              <p>{msg.text}</p>
             </div>
-
           ))}
 
           {isMiaTyping && (
+            <div className="mia-chat-message">
+              <div className="chat-speaker">Mia</div>
+              <div className="typing-dots">
+                <span /><span /><span />
+              </div>
+            </div>
+          )}
 
-  <div className="mia-chat-message">
+          {isMiaSpeaking && (
+            <p className="mia-speaking">🔊 Mia is speaking…</p>
+          )}
 
-    <div className="chat-speaker">
-      Mia
-    </div>
-
-    <div className="typing-dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-  </div>
-
-)}
-
-{isMiaSpeaking && (
-
-  <p className="mia-speaking">
-    Mia is speaking...
-  </p>
-
-)}
-
-          <div ref={chatEndRef}></div>
-
+          <div ref={chatEndRef} />
         </div>
 
-        <button
-          className="mic-btn"
-          onClick={handleMicClick}
-          disabled={
-            isRecording ||
-            isMiaTyping ||
-            isMiaSpeaking
-          }
-        >
-          <Mic size={28} />
-        </button>
-
-
+        <div className="mic-area">
+          <button
+            className={`mic-btn${isRecording ? " recording" : ""}${micDisabled ? " disabled" : ""}`}
+            onClick={handleMicClick}
+            disabled={micDisabled}
+            aria-label={isRecording ? "Recording…" : "Speak to Mia"}
+          >
+            <Mic size={28} />
+          </button>
+          <p className="mic-hint">
+            {isRecording
+              ? "Listening…"
+              : micDisabled
+              ? "Wait for Mia…"
+              : "Tap to speak"}
+          </p>
+        </div>
       </div>
-
     </AppLayout>
-
   );
 }
 
