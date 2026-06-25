@@ -1,5 +1,6 @@
 import { Component, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Trophy, Flame, BookOpen, TrendingUp, AlertTriangle } from "lucide-react";
 import api from "../utils/api";
 import "../styles/dashboard.css";
 import { useAuth } from "../context/AuthContext";
@@ -17,7 +18,7 @@ class DashboardErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <div className="dash-error-wrap">
-          <p className="dash-error-emoji">⚠️</p>
+          <AlertTriangle size={36} strokeWidth={1.5} className="dash-error-emoji" />
           <h2 className="dash-error-title">Something went wrong</h2>
           <p className="dash-error-sub">We couldn't load your dashboard.</p>
           <button
@@ -81,10 +82,10 @@ function DashboardInner() {
   const firstName = user?.name?.split(" ")[0] || "Learner";
 
   const stats = [
-    { icon: "🏆", value: xp,                    label: "Total XP" },
-    { icon: "🔥", value: streak,                 label: "Day Streak" },
-    { icon: "📚", value: completedLessons,       label: "Lessons Done" },
-    { icon: "📈", value: `${progressPercentage}%`, label: "Progress" },
+    { icon: <Trophy size={18} />,     value: xp,                      label: "Total XP" },
+    { icon: <Flame size={18} />,      value: streak,                   label: "Day Streak" },
+    { icon: <BookOpen size={18} />,   value: completedLessons,         label: "Lessons Done" },
+    { icon: <TrendingUp size={18} />, value: `${progressPercentage}%`, label: "Progress" },
   ];
 
   return (
@@ -96,7 +97,7 @@ function DashboardInner() {
       {/* Hero */}
       <section className="hero-card">
         <p className="dash-eyebrow">AI German Coach</p>
-        <h1 className="dash-greeting">Hallo, {firstName} 👋</h1>
+        <h1 className="dash-greeting">Hallo, {firstName}</h1>
         <p className="dash-sub">
           Continue learning German with smart daily practice.
         </p>
@@ -121,7 +122,7 @@ function DashboardInner() {
       <div className="stats-grid">
         {stats.map((s) => (
           <div key={s.label} className="stats-card">
-            <div className="stats-icon">{s.icon}</div>
+            <div className="stats-icon stats-icon-svg">{s.icon}</div>
             <strong className="stats-value">{s.value}</strong>
             <p className="stats-label">{s.label}</p>
           </div>

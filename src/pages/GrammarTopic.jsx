@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { CheckCircle, XCircle } from "lucide-react";
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
 import api from "../utils/api";
@@ -44,9 +45,15 @@ function ExerciseCard({ question, options, answer, explanation, onComplete }) {
       {showResult && (
         <div className="exercise-result">
           {selected === answer ? (
-            <div>✅ Correct!</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <CheckCircle size={15} color="#4ade80" />
+              Correct!
+            </div>
           ) : (
-            <div>❌ Correct answer: {answer}</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <XCircle size={15} color="#f87171" />
+              Correct answer: {answer}
+            </div>
           )}
           <p className="exercise-explanation">{explanation}</p>
         </div>

@@ -48,7 +48,7 @@ overflow-x:hidden;
   min-height: 60dvh;
 }
 
-.dash-error-emoji  { font-size: 40px; margin: 0; }
+.dash-error-emoji  { color: #fbbf24; margin: 0 auto 4px; display: block; }
 .dash-error-title  { font-size: 20px; font-weight: 600; color: white; margin: 0; }
 .dash-error-sub    { font-size: 14px; color: var(--text-muted); margin: 0; }
 
@@ -281,6 +281,13 @@ text-align:center;
 .stats-icon{
 font-size:30px;
 margin-bottom:10px;
+}
+
+.stats-icon-svg {
+  color: var(--color-blue-bright, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stats-card h3{

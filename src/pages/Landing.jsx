@@ -275,7 +275,7 @@ function Landing() {
           <Link to="/contact" className="footer-link">Contact</Link>
         </div>
 
-        <p className="footer-copy">© 2025 DeutschFlow. All rights reserved.</p>
+        <p className="footer-copy">© 2026 DeutschFlow. All rights reserved.</p>
       </footer>
 
     </div>
