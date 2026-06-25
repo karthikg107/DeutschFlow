@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import rateLimit from "express-rate-limit";
 
 import aiRoutes from "./routes/aiRoutes.js";
 import grammarRoutes from "./routes/grammarRoutes.js";
@@ -24,12 +25,24 @@ app.use(
 
 app.use(express.json());
 
+const otpLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 10,
+  message: { error: "Too many OTP requests, please try again later." },
+});
+
+const loginLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  message: { error: "Too many login attempts, please try again later." },
+});
 
 // ROUTES
 app.use("/api/ai", aiRoutes);
 
 app.use("/api/grammar", grammarRoutes);
 
+app.use("/api/auth/login", loginLimiter);
 app.use("/api/auth", authRoutes);
 
 app.use("/api/progress", progressRoutes);
@@ -38,10 +51,7 @@ app.use("/api/dashboard", dashboardRoutes);
 
 app.use("/api/vocabulary", vocabularyRoutes);
 
-app.use(
-  "/api/otp",
-  otpRoutes
-);
+app.use("/api/otp", otpLimiter, otpRoutes);
 
 app.use(
   "/api/auth",
