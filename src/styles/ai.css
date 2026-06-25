@@ -1,0 +1,133 @@
+/* =========================
+   AI TUTOR PAGE
+========================= */
+
+/* Header row */
+.ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.ai-title {
+  font-size: 17px;
+  font-weight: var(--fw-semibold);
+  color: white;
+  margin: 0;
+}
+
+.ai-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ── Pill tab bar ── */
+.ai-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 2px;
+}
+
+.ai-tab {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.ai-tab.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.ai-tab:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+/* ── Level select ── */
+.ai-level-select {
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  min-width: 64px;
+}
+
+.ai-level-select option {
+  background: var(--bg-midnight);
+  color: white;
+}
+
+/* ── Typing indicator (3 bouncing dots) ── */
+@keyframes ai-dot-bounce {
+  0%, 80%, 100% {
+    transform: scale(0.55);
+    opacity: 0.35;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ai-typing {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.ai-typing span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  animation: ai-dot-bounce 1.2s infinite ease-in-out;
+}
+
+.ai-typing span:nth-child(2) { animation-delay: 0.2s; }
+.ai-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .ai-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ai-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ai-tabs {
+    flex: 1;
+  }
+
+  .ai-tab {
+    flex: 1;
+    padding: 7px 6px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
