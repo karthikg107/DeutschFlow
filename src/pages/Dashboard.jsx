@@ -7,7 +7,7 @@ import api from "../utils/api";
 import "../styles/dashboard.css";
 
 import { useAuth } from "../context/AuthContext";
-import AppLayout from "../components/layout/AppLayout";
+import AppLayout from "../components/Layout/AppLayout";
 
 function Dashboard() {
  

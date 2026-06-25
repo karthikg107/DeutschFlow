@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Mic } from "lucide-react";
 
 import speakingScenarios from "../data/speakingScenarios";
-import AppLayout from "../components/layout/AppLayout";
+import AppLayout from "../components/Layout/AppLayout";
 import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
 import toast from "react-hot-toast";

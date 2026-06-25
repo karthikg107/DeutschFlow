@@ -1,4 +1,4 @@
-import AppLayout from "../components/layout/AppLayout";
+import AppLayout from "../components/Layout/AppLayout";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "../styles/settings.css";

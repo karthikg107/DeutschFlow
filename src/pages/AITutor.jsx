@@ -4,7 +4,7 @@ import {
   useRef,
 } from "react";
 
-import AppLayout from "../components/layout/AppLayout";
+import AppLayout from "../components/Layout/AppLayout";
 
 import "../styles/dashboard.css";
 

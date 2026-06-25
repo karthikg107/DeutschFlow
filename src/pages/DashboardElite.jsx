@@ -1,4 +1,4 @@
-import AppLayout from "../components/layout/AppLayout";
+import AppLayout from "../components/Layout/AppLayout";
 
 import StatsCard from "../components/dashboard/StatsCard";
 import ProgressBar from "../components/dashboard/ProgressBar";
