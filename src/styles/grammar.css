@@ -310,6 +310,59 @@
   color: var(--text-muted);
 }
 
+/* Lesson completion bar */
+.lesson-complete-bar {
+  margin-top: 32px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mark-complete-btn {
+  padding: 11px 22px;
+  background: var(--color-primary, #2563eb);
+  border: none;
+  border-radius: var(--radius-md, 10px);
+  color: white;
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: inherit;
+}
+
+.mark-complete-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.lesson-done-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-green, #4ade80);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+}
+
+.next-lesson-btn {
+  margin-left: 12px;
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md, 10px);
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.next-lesson-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
 /* =========================
    RESPONSIVE
 ========================= */

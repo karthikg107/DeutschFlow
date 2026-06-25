@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { CheckCircle, XCircle } from "lucide-react";
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
@@ -9,7 +9,7 @@ import "../styles/dashboard.css";
 import "../styles/grammar.css";
 
 // ── ExerciseCard lives outside GrammarTopic to avoid re-creation every render ──
-function ExerciseCard({ question, options, answer, explanation, onComplete }) {
+function ExerciseCard({ question, options, answer, explanation, onComplete, onAnswered }) {
   const [selected, setSelected]       = useState(null);
   const [showResult, setShowResult]   = useState(false);
 
@@ -31,6 +31,7 @@ function ExerciseCard({ question, options, answer, explanation, onComplete }) {
               }`}
               onClick={() => {
                 if (selected) return;
+                onAnswered?.();
                 setSelected(option);
                 setShowResult(true);
                 if (option === answer) onComplete();
@@ -65,8 +66,11 @@ function ExerciseCard({ question, options, answer, explanation, onComplete }) {
 // ── Main topic page ──────────────────────────────────────────────────────────
 function GrammarTopic() {
   const { slug } = useParams();
-  const [topic, setTopic]   = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [topic, setTopic]                     = useState(null);
+  const [loading, setLoading]                 = useState(true);
+  const [lessonDone, setLessonDone]           = useState(false);
+  const [saving, setSaving]                   = useState(false);
+  const [exerciseAnswered, setExerciseAnswered] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -82,11 +86,16 @@ function GrammarTopic() {
   }, [slug]);
 
   const saveProgress = async () => {
+    if (lessonDone) return;
+    setSaving(true);
     try {
       await api.post("/progress/save", { lessonSlug: slug });
-      toast.success("Lesson completed!");
-    } catch (err) {
-      console.error("Failed to save progress", err);
+      setLessonDone(true);
+      toast.success("Lesson complete");
+    } catch {
+      toast.error("Could not save progress.");
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -102,6 +111,7 @@ function GrammarTopic() {
             options={parsed.options}
             answer={parsed.answer}
             explanation={parsed.explanation}
+            onAnswered={() => setExerciseAnswered(true)}
             onComplete={saveProgress}
           />
         );
@@ -193,6 +203,33 @@ function GrammarTopic() {
               {renderContent(section.content, section.type)}
             </div>
           ))}
+
+          {(() => {
+            const hasExercises = topic.sections.some((s) => s.type === "exercise");
+            const canComplete  = !hasExercises || exerciseAnswered;
+            return (
+              <div className="lesson-complete-bar">
+                {lessonDone ? (
+                  <div className="lesson-done-state">
+                    <CheckCircle size={16} />
+                    <span>Lesson complete</span>
+                    <Link to="/grammar" className="next-lesson-btn">
+                      Back to grammar
+                    </Link>
+                  </div>
+                ) : (
+                  <button
+                    className="mark-complete-btn"
+                    onClick={saveProgress}
+                    disabled={saving || !canComplete}
+                    title={!canComplete ? "Answer an exercise first" : ""}
+                  >
+                    {saving ? "Saving…" : "Mark complete"}
+                  </button>
+                )}
+              </div>
+            );
+          })()}
         </div>
       </div>
     </AppLayout>
