@@ -1,127 +1,69 @@
 import { Link, useLocation } from "react-router-dom";
-
 import {
   LayoutDashboard,
   Bot,
   BookOpen,
+  Languages,
   Mic,
   Settings,
-  Languages,
-  X,
 } from "lucide-react";
 
-function Sidebar({
-  mobileOpen,
-  setMobileOpen,
-}) {
+const menu = [
+  { name: "Dashboard",  path: "/dashboard", icon: <LayoutDashboard size={20} /> },
+  { name: "AI Tutor",   path: "/ai",         icon: <Bot size={20} /> },
+  { name: "Grammar",    path: "/grammar",    icon: <BookOpen size={20} /> },
+  { name: "Vocabulary", path: "/vocabulary", icon: <Languages size={20} /> },
+  { name: "Speaking",   path: "/speaking",   icon: <Mic size={20} /> },
+  { name: "Settings",   path: "/settings",   icon: <Settings size={20} /> },
+];
+
+// Bottom nav shows first 5 (Settings excluded on mobile)
+const bottomMenu = menu.slice(0, 5);
+
+function Sidebar() {
   const location = useLocation();
 
-  const menu = [
-    {
-      name: "Dashboard",
-      path: "/dashboard",
-      icon: <LayoutDashboard size={20} />,
-    },
-
-    {
-      name: "AI Tutor",
-      path: "/ai",
-      icon: <Bot size={20} />,
-    },
-
-    {
-      name: "Grammar",
-      path: "/grammar",
-      icon: <BookOpen size={20} />,
-    },
-
-    {
-      name: "Vocabulary",
-      path: "/vocabulary",
-      icon: <Languages size={20} />,
-    },
-
-    {
-      name: "Speaking",
-      path: "/speaking",
-      icon: <Mic size={20} />,
-    },
-
-  
-
-    {
-      name: "Settings",
-      path: "/settings",
-      icon: <Settings size={20} />,
-    },
-  ];
+  const isActive = (path) =>
+    path === "/dashboard"
+      ? location.pathname === "/dashboard"
+      : location.pathname.startsWith(path);
 
   return (
     <>
-      {/* OVERLAY */}
-      {mobileOpen && (
-        <div
-          className="sidebar-overlay"
-          onClick={() =>
-            setMobileOpen(false)
-          }
-        />
-      )}
-
-      {/* SIDEBAR */}
-      <aside
-        className={`sidebar ${
-          mobileOpen
-            ? "mobile-open"
-            : ""
-        }`}
-      >
-        {/* TOP */}
-        <div className="sidebar-top">
-
-          <h2 className="sidebar-logo">
-            DeutschFlow
-          </h2>
-
-          {/* MOBILE CLOSE */}
-          <button
-            className="menu-btn mobile-close"
-            onClick={() =>
-              setMobileOpen(false)
-            }
-          >
-            <X size={24} />
-          </button>
-
+      {/* Desktop fixed sidebar */}
+      <aside className="app-sidebar">
+        <div className="sidebar-brand">
+          <img src="/logo.png" alt="" className="sidebar-brand-img" />
+          <span className="sidebar-brand-text">DeutschFlow</span>
         </div>
 
-        {/* MENU */}
-        <div className="sidebar-menu">
-
-          {menu.map((item, index) => (
+        <nav className="sidebar-nav">
+          {menu.map((item) => (
             <Link
-              key={index}
+              key={item.path}
               to={item.path}
-              className={`sidebar-item ${
-                location.pathname ===
-                item.path
-                  ? "active"
-                  : ""
-              }`}
-              onClick={() =>
-                setMobileOpen(false)
-              }
+              className={`sidebar-link${isActive(item.path) ? " active" : ""}`}
             >
-              {item.icon}
-
-              <span>
-                {item.name}
-              </span>
+              <span className="sidebar-link-icon">{item.icon}</span>
+              <span className="sidebar-link-label">{item.name}</span>
             </Link>
           ))}
-
-        </div>
+        </nav>
       </aside>
+
+      {/* Mobile bottom nav — 5 items, icons only */}
+      <nav className="bottom-nav" aria-label="Main navigation">
+        {bottomMenu.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`bottom-nav-item${isActive(item.path) ? " active" : ""}`}
+            aria-label={item.name}
+          >
+            {item.icon}
+          </Link>
+        ))}
+      </nav>
     </>
   );
 }
