@@ -1,0 +1,282 @@
+/* ================================================
+   auth.css — shared styles for Login, Register,
+   ForgotPassword
+   Tokens come from tokens.css via index.css
+   ================================================ */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: var(--bg-root);
+}
+
+/* ── Card ── */
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-3xl);
+  padding: 36px 32px;
+}
+
+/* ── Logo ── */
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 28px;
+}
+.auth-logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.auth-logo-text {
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+}
+
+/* ── Headings ── */
+.auth-title {
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.4px;
+  color: white;
+  margin-bottom: 6px;
+}
+.auth-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* ── Alerts ── */
+.auth-alert {
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.auth-alert.error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--color-red-light);
+}
+.auth-alert.success {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: var(--color-green-light);
+}
+
+/* ── Fields ── */
+.auth-field {
+  margin-bottom: 14px;
+}
+.auth-label {
+  display: block;
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+.auth-input {
+  width: 100%;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, background 0.2s;
+  font-family: inherit;
+}
+.auth-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.auth-input:focus {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+}
+.auth-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Password wrapper ── */
+.auth-input-wrap {
+  position: relative;
+}
+.auth-input-wrap .auth-input {
+  padding-right: 44px;
+}
+.auth-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.auth-eye:hover {
+  color: white;
+}
+
+/* ── Buttons ── */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+.auth-btn.primary {
+  background: white;
+  color: var(--bg-root);
+}
+.auth-btn.primary:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.auth-btn.primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+.auth-btn.secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+.auth-btn.secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+.auth-btn.secondary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Inline link (e.g. "Forgot password?") ── */
+.auth-forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-top: -6px;
+  margin-bottom: 14px;
+  transition: color 0.2s;
+}
+.auth-forgot:hover {
+  color: white;
+}
+
+/* ── Divider ── */
+.auth-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 20px 0;
+}
+
+/* ── Footer row ── */
+.auth-footer {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.auth-footer a {
+  color: white;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+}
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── OTP progress bar ── */
+.otp-steps {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+.otp-step {
+  flex: 1;
+  height: 3px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+.otp-step.active {
+  background: var(--color-blue-bright);
+}
+.otp-step.done {
+  background: var(--color-green);
+}
+
+/* ── Password rules box ── */
+.pw-rules {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.pw-rules p {
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pw-rules ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.pw-rules li {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 20px;
+    border-radius: var(--radius-xl);
+    border: none;
+    background: transparent;
+  }
+  .auth-input {
+    font-size: 16px; /* prevents iOS zoom */
+  }
+}
