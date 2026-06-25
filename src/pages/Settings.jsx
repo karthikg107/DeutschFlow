@@ -16,33 +16,48 @@ export default function Settings() {
         </h1>
 
         {/* Profile */}
-<div className="settings-card">
 
-  <h2>Profile</h2>
+<div className="settings-card profile-card">
 
-  <p className="settings-email">
-    Name
-  </p>
+  <div className="profile-avatar">
 
-  <p className="settings-name">
+    {user?.name
+      ? user.name.charAt(0).toUpperCase()
+      : "U"}
+
+  </div>
+
+  <h2 className="profile-name">
     {user?.name || "User"}
-  </p>
+  </h2>
 
-  <p className="settings-email">
-    Email
-  </p>
-
-  <p className="settings-name">
+  <p className="profile-email">
     {user?.email || "No email available"}
   </p>
 
-  <p className="settings-email">
-    Member Since
-  </p>
+  <div className="profile-info">
 
-  <p className="settings-name">
-    June 2026
-  </p>
+    <div>
+
+      <span>Member Since</span>
+
+      <strong>
+        June 2026
+      </strong>
+
+    </div>
+
+    <div>
+
+      <span>Current Plan</span>
+
+      <strong>
+        {user?.plan || "FREE"}
+      </strong>
+
+    </div>
+
+  </div>
 
 </div>
 
