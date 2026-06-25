@@ -5,7 +5,7 @@
 .dashboard-layout{
   display:flex;
   min-height:100dvh;
-  background:#040714;
+  background:var(--bg-root);
   overflow:hidden;
 }
 
@@ -19,9 +19,9 @@
 
   background:linear-gradient(
     180deg,
-    #020617,
-    #020617 60%,
-    #040714
+    var(--bg-midnight),
+    var(--bg-midnight) 60%,
+    var(--bg-root)
   );
 
   border-right:
@@ -50,7 +50,7 @@
 .sidebar-logo{
   font-size:24px;
   font-weight:700;
-  color:#818cf8;
+  color:var(--color-indigo-soft);
 
   margin-bottom:34px;
 }
@@ -70,7 +70,7 @@
 
   border-radius:16px;
 
-  color:#cbd5e1;
+  color:var(--text-primary);
 
   transition:
     all .25s ease;
@@ -93,8 +93,8 @@
 .sidebar-item.active{
   background:linear-gradient(
     135deg,
-    #6366f1,
-    #8b5cf6
+    var(--color-primary-light),
+    var(--color-secondary-light)
   );
 
   color:white;
