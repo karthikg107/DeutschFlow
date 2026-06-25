@@ -8,6 +8,8 @@ import api from "../utils/api";
 import toast from "react-hot-toast";
 import "../styles/speaking.css";
 
+const MIA_TARGET = 5;
+
 function TalkWithMia() {
   const [messages, setMessages] = useState([
     { id: 1, sender: "mia", text: "Hallo! Worüber möchtest du heute sprechen?" },
@@ -30,12 +32,25 @@ function TalkWithMia() {
   }, []);
 
   function speak(text) {
-    speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "de-DE";
-    utterance.onstart = () => setIsMiaSpeaking(true);
-    utterance.onend   = () => setIsMiaSpeaking(false);
-    speechSynthesis.speak(utterance);
+    window.speechSynthesis.cancel();
+    const fire = () => {
+      const voices = window.speechSynthesis.getVoices();
+      const deVoice =
+        voices.find((v) => v.lang === "de-DE") ||
+        voices.find((v) => v.lang.startsWith("de"));
+      const utt = new SpeechSynthesisUtterance(text);
+      utt.lang = "de-DE";
+      utt.rate = 0.9;
+      if (deVoice) utt.voice = deVoice;
+      utt.onstart = () => setIsMiaSpeaking(true);
+      utt.onend   = () => setIsMiaSpeaking(false);
+      window.speechSynthesis.speak(utt);
+    };
+    if (window.speechSynthesis.getVoices().length > 0) {
+      fire();
+    } else {
+      window.speechSynthesis.addEventListener("voiceschanged", fire, { once: true });
+    }
   }
 
   const saveMiaProgress = async () => {
@@ -53,7 +68,7 @@ function TalkWithMia() {
         setMessages((prev) => {
           const updated = [...prev, { id: Date.now(), sender: "user", text: transcript }];
           const userCount = updated.filter((m) => m.sender === "user").length;
-          if (userCount === 5 && !miaCompleted) {
+          if (userCount >= MIA_TARGET && !miaCompleted) {
             setMiaCompleted(true);
             saveMiaProgress();
           }
@@ -95,6 +110,9 @@ function TalkWithMia() {
 
   const micDisabled = isRecording || isMiaTyping || isMiaSpeaking;
 
+  const userCount = messages.filter((m) => m.sender === "user").length;
+  const miaPct = Math.min(Math.round((userCount / MIA_TARGET) * 100), 100);
+
   return (
     <AppLayout>
       <div className="speaking-page talk-page">
@@ -104,6 +122,23 @@ function TalkWithMia() {
           title="Talk with Mia"
           subtitle="Open conversation in German. Speak naturally."
         />
+
+        <div className="mia-progress-wrap">
+          <div className="mia-progress-header">
+            <span className="mia-progress-label">
+              {userCount < MIA_TARGET
+                ? `${userCount} of ${MIA_TARGET} exchanges`
+                : "Session complete"}
+            </span>
+            <span className="mia-progress-pct">{miaPct}%</span>
+          </div>
+          <div className="mia-progress-track">
+            <div
+              className="mia-progress-fill"
+              style={{ width: `${miaPct}%` }}
+            />
+          </div>
+        </div>
 
         <div className="talk-chat-box">
           {messages.map((msg) => (

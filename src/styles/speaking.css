@@ -818,3 +818,44 @@ max-height: 400px;
   cursor: not-allowed;
   transform: none;
 }
+
+/* ======================================
+   MIA SESSION PROGRESS
+====================================== */
+
+.mia-progress-wrap { margin-bottom: 14px; padding: 0 24px; }
+
+.mia-progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.mia-progress-label,
+.mia-progress-pct {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.mia-progress-track {
+  height: 3px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.mia-progress-fill {
+  height: 100%;
+  background: var(--color-primary-light, #60a5fa);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+/* ======================================
+   PRONUNCIATION FEEDBACK CLASSES
+====================================== */
+
+.feedback-excellent { color: var(--color-green, #4ade80); }
+.feedback-good      { color: var(--color-blue-bright, #60a5fa); }
+.feedback-fair      { color: #f59e0b; }
+.feedback-poor      { color: var(--color-red-light, #f87171); }
