@@ -109,15 +109,15 @@ overflow-x:hidden;
 
 .stats-value {
   display: block;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: var(--fw-bold);
   color: white;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   line-height: 1;
 }
 
 .stats-label {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
   margin: 0;
 }
@@ -276,11 +276,14 @@ margin-bottom:22px;
 
 .stats-card{
 text-align:center;
+padding: 16px 12px;
 }
 
 .stats-icon{
-font-size:30px;
-margin-bottom:10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-blue-bright, #60a5fa);
 }
 
 .stats-icon-svg {
@@ -914,6 +917,15 @@ height:28px;
 
 .stats-grid{
 grid-template-columns:repeat(2,1fr);
+gap: 10px;
+}
+
+.stats-card {
+padding: 14px 10px;
+}
+
+.stats-value {
+font-size: 22px;
 }
 
 .quick-grid{
