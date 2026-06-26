@@ -34,14 +34,19 @@
 
 @media (max-width: 768px) {
   .ai-page {
-    height: calc(100dvh - 116px);
+    position: fixed;
+    top: 56px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    height: auto;
+    overflow: hidden;
   }
 
   .ai-tutor-card {
-    margin: 0 8px 0;
+    margin: 0 8px;
     border-radius: 12px 12px 0 0;
     border-bottom: none;
-    height: 100%;
   }
 
   .chat-box {
