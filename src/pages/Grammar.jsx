@@ -113,7 +113,7 @@ function Grammar() {
                                 <span>Grammar</span>
                               </div>
                             </div>
-                            <span className={`topic-card-btn${isCompleted ? " completed" : ""}`}>
+                            <span className={isCompleted ? "lesson-done-btn" : "lesson-open-btn"}>
                               {isCompleted ? "✓ Done" : "Open →"}
                             </span>
                           </Link>
