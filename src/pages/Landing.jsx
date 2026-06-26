@@ -233,7 +233,7 @@ function Landing() {
             <span className="plan-badge">Most popular</span>
             <p className="plan-name">Premium</p>
             <p className="plan-price">
-              €4<span>.99/mo</span>
+              €2<span>.99/mo</span>
             </p>
             <p className="plan-period">7-day free trial included</p>
             <ul className="plan-features">
