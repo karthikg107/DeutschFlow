@@ -41,19 +41,22 @@ const expiresAt = new Date(
 
     });
 
-    await sendEmail(
-
-      email,
-
-      "DeutschFlow Verification Code",
-
-      `
-        <h2>Your OTP Code</h2>
-        <h1>${code}</h1>
-        <p>Valid for 10 minutes.</p>
-      `
-
-    );
+    try {
+      await sendEmail(
+        email,
+        "DeutschFlow Verification Code",
+        `
+          <h2>Your OTP Code</h2>
+          <h1>${code}</h1>
+          <p>Valid for 10 minutes.</p>
+        `
+      );
+    } catch (emailError) {
+      console.error("[sendEmail] Resend error:", emailError?.message ?? emailError);
+      return res.status(500).json({
+        message: "Failed to send verification email: " + (emailError?.message ?? "unknown error"),
+      });
+    }
 
     res.json({
       message: "OTP sent",
@@ -61,7 +64,7 @@ const expiresAt = new Date(
 
   } catch (error) {
 
-    console.log(error);
+    console.error("[sendOtp] unexpected error:", error);
 
     res.status(500).json({
       message: "Failed to send OTP",
