@@ -1497,3 +1497,24 @@ max-height: 400px;
   color: var(--color-indigo-soft, #a5b4fc);
   font-style: italic;
 }
+
+/* ======================================
+   SPEAKING CARDS — FORCE WHITE TEXT
+====================================== */
+
+.speaking-card h3,
+.speaking-card .speaking-card-title {
+  color: white !important;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.speaking-card p,
+.speaking-card .speaking-card-desc {
+  color: rgba(148, 163, 184, 0.9) !important;
+}
+
+.section-title,
+h2.section-title {
+  color: white !important;
+}
