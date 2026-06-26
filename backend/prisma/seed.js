@@ -1,4 +1,10 @@
+import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
 import pkg from "@prisma/client";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
 const { PrismaClient } = pkg;
 

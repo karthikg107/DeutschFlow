@@ -195,6 +195,11 @@ function GrammarTopic() {
         />
 
         <div className="lesson-content">
+          {topic.sections.length === 0 && (
+            <div className="lesson-state" style={{ marginBottom: 24 }}>
+              Lesson content is being prepared — check back soon.
+            </div>
+          )}
           {topic.sections.map((section) => (
             <div key={section.id} className="lesson-section">
               {section.title && (
