@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bot, BookOpen, Mic, GraduationCap, MessageSquare, Volume2, MapPin } from "lucide-react";
 import "./Landing.css";
 
 function Landing() {
@@ -113,10 +113,10 @@ function Landing() {
         </div>
 
         <div className="trust-badges">
-          <span className="trust-badge">🤖 AI Tutor</span>
-          <span className="trust-badge">📖 Grammar</span>
-          <span className="trust-badge">📚 Vocabulary</span>
-          <span className="trust-badge">🎤 Speaking</span>
+          <span className="trust-badge"><Bot size={14} /> AI Tutor</span>
+          <span className="trust-badge"><GraduationCap size={14} /> Grammar</span>
+          <span className="trust-badge"><BookOpen size={14} /> Vocabulary</span>
+          <span className="trust-badge"><Mic size={14} /> Speaking</span>
         </div>
       </section>
 
@@ -130,7 +130,7 @@ function Landing() {
 
         <div className="feature-grid">
           <div className="feature-card">
-            <span className="feature-icon">🤖</span>
+            <span className="feature-icon"><Bot size={22} /></span>
             <h3>AI Tutor</h3>
             <p>
               Chat, translate, and get real-time corrections from an AI tutor
@@ -139,7 +139,7 @@ function Landing() {
           </div>
 
           <div className="feature-card">
-            <span className="feature-icon">📖</span>
+            <span className="feature-icon"><GraduationCap size={22} /></span>
             <h3>Grammar Roadmap</h3>
             <p>
               Structured lessons with quizzes and guided progression from A1
@@ -148,7 +148,7 @@ function Landing() {
           </div>
 
           <div className="feature-card">
-            <span className="feature-icon">📚</span>
+            <span className="feature-icon"><BookOpen size={22} /></span>
             <h3>Vocabulary Builder</h3>
             <p>
               Topic-based word sets, vocabulary quizzes, and a personal saved
@@ -157,7 +157,7 @@ function Landing() {
           </div>
 
           <div className="feature-card">
-            <span className="feature-icon">🎤</span>
+            <span className="feature-icon"><Mic size={22} /></span>
             <h3>Speaking Practice</h3>
             <p>
               Pronunciation drills, real-life scenario dialogues, and open
@@ -178,7 +178,7 @@ function Landing() {
 
         <div className="feature-grid">
           <div className="feature-card">
-            <span className="feature-icon">🗣️</span>
+            <span className="feature-icon"><MessageSquare size={22} /></span>
             <h3>Pronunciation Practice</h3>
             <p>
               Listen to native sentences, repeat aloud, and get instant
@@ -187,7 +187,7 @@ function Landing() {
           </div>
 
           <div className="feature-card">
-            <span className="feature-icon">🏪</span>
+            <span className="feature-icon"><MapPin size={22} /></span>
             <h3>Scenario Practice</h3>
             <p>
               Practice real-life dialogues — at the café, train station, job
@@ -196,7 +196,7 @@ function Landing() {
           </div>
 
           <div className="feature-card">
-            <span className="feature-icon">💬</span>
+            <span className="feature-icon"><Volume2 size={22} /></span>
             <h3>Talk With Mia</h3>
             <p>
               Open-ended German conversation powered by AI. Talk about anything,
