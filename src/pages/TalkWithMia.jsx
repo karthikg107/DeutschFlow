@@ -19,33 +19,55 @@ function TalkWithMia() {
   const [isMiaSpeaking, setIsMiaSpeaking] = useState(false);
   const [miaCompleted, setMiaCompleted] = useState(false);
 
-  const chatEndRef = useRef(null);
-  const navigate   = useNavigate();
+  const chatEndRef   = useRef(null);
+  const isMountedRef = useRef(false);
+  const navigate     = useNavigate();
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isMiaTyping, isMiaSpeaking]);
 
   useEffect(() => {
-    speak("Hallo! Worüber möchtest du heute sprechen?");
-    return () => speechSynthesis.cancel();
+    isMountedRef.current = true;
+    window.speechSynthesis.cancel();
+
+    const timer = setTimeout(() => {
+      if (isMountedRef.current) {
+        speak("Hallo! Worüber möchtest du heute sprechen?");
+      }
+    }, 300);
+
+    return () => {
+      isMountedRef.current = false;
+      clearTimeout(timer);
+      window.speechSynthesis.cancel();
+    };
   }, []);
 
   function speak(text) {
+    if (!isMountedRef.current) return;
     window.speechSynthesis.cancel();
+
+    let hasFired = false;
+
     const fire = () => {
+      if (hasFired || !isMountedRef.current) return;
+      hasFired = true;
+
       const voices = window.speechSynthesis.getVoices();
       const deVoice =
         voices.find((v) => v.lang === "de-DE") ||
         voices.find((v) => v.lang.startsWith("de"));
+
       const utt = new SpeechSynthesisUtterance(text);
       utt.lang = "de-DE";
       utt.rate = 0.9;
       if (deVoice) utt.voice = deVoice;
-      utt.onstart = () => setIsMiaSpeaking(true);
-      utt.onend   = () => setIsMiaSpeaking(false);
+      utt.onstart = () => { if (isMountedRef.current) setIsMiaSpeaking(true); };
+      utt.onend   = () => { if (isMountedRef.current) setIsMiaSpeaking(false); };
       window.speechSynthesis.speak(utt);
     };
+
     if (window.speechSynthesis.getVoices().length > 0) {
       fire();
     } else {
@@ -163,7 +185,7 @@ function TalkWithMia() {
           )}
 
           {isMiaSpeaking && (
-            <p className="mia-speaking">🔊 Mia is speaking…</p>
+            <p className="mia-speaking">Mia is speaking…</p>
           )}
 
           <div ref={chatEndRef} />
