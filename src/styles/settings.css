@@ -170,6 +170,7 @@
 
 @media (min-width: 900px) {
   .settings-page {
+    max-width: 960px;
     padding: 40px 32px 80px;
   }
   .settings-profile {
@@ -183,5 +184,11 @@
   }
   .settings-profile-name {
     font-size: 18px;
+  }
+  .settings-sections-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
   }
 }

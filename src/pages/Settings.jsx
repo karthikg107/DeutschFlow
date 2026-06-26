@@ -43,73 +43,75 @@ export default function Settings() {
           </span>
         </div>
 
-        {/* Account section */}
-        <div className="settings-section">
-          <p className="settings-section-label">Account</p>
-          <div className="settings-list">
-            <div className="settings-row">
-              <div className="settings-row-left">
-                <User size={16} className="settings-row-icon" />
-                <span className="settings-row-label">Full name</span>
-              </div>
-              <span className="settings-row-value">
-                {user?.name || "—"}
-              </span>
-            </div>
-            <div className="settings-row">
-              <div className="settings-row-left">
-                <Mail size={16} className="settings-row-icon" />
-                <span className="settings-row-label">Email</span>
-              </div>
-              <span className="settings-row-value">
-                {user?.email || "—"}
-              </span>
-            </div>
-            <div className="settings-row">
-              <div className="settings-row-left">
-                <User size={16} className="settings-row-icon" />
-                <span className="settings-row-label">Member since</span>
-              </div>
-              <span className="settings-row-value">{joinDate}</span>
-            </div>
-            <button
-              className="settings-row settings-row-btn"
-              onClick={() => navigate("/forgot-password")}
-            >
-              <div className="settings-row-left">
-                <Lock size={16} className="settings-row-icon" />
-                <span className="settings-row-label">Change password</span>
-              </div>
-              <ChevronRight size={15} className="settings-row-chevron" />
-            </button>
-          </div>
-        </div>
-
-        {/* Subscription section */}
-        <div className="settings-section">
-          <p className="settings-section-label">Subscription</p>
-          <div className="settings-list">
-            <div className="settings-row">
-              <div className="settings-row-left">
-                <CreditCard size={16} className="settings-row-icon" />
-                <span className="settings-row-label">Current plan</span>
-              </div>
-              <span className="settings-row-value">
-                {user?.plan || "Free"}
-              </span>
-            </div>
-            <button
-              className="settings-row settings-row-btn"
-              onClick={() => navigate("/pricing")}
-            >
-              <div className="settings-row-left">
-                <Crown size={16} className="settings-row-icon" />
-                <span className="settings-row-label">
-                  Upgrade to Premium
+        <div className="settings-sections-grid">
+          {/* Account section */}
+          <div className="settings-section">
+            <p className="settings-section-label">Account</p>
+            <div className="settings-list">
+              <div className="settings-row">
+                <div className="settings-row-left">
+                  <User size={16} className="settings-row-icon" />
+                  <span className="settings-row-label">Full name</span>
+                </div>
+                <span className="settings-row-value">
+                  {user?.name || "—"}
                 </span>
               </div>
-              <ChevronRight size={15} className="settings-row-chevron" />
-            </button>
+              <div className="settings-row">
+                <div className="settings-row-left">
+                  <Mail size={16} className="settings-row-icon" />
+                  <span className="settings-row-label">Email</span>
+                </div>
+                <span className="settings-row-value">
+                  {user?.email || "—"}
+                </span>
+              </div>
+              <div className="settings-row">
+                <div className="settings-row-left">
+                  <User size={16} className="settings-row-icon" />
+                  <span className="settings-row-label">Member since</span>
+                </div>
+                <span className="settings-row-value">{joinDate}</span>
+              </div>
+              <button
+                className="settings-row settings-row-btn"
+                onClick={() => navigate("/forgot-password")}
+              >
+                <div className="settings-row-left">
+                  <Lock size={16} className="settings-row-icon" />
+                  <span className="settings-row-label">Change password</span>
+                </div>
+                <ChevronRight size={15} className="settings-row-chevron" />
+              </button>
+            </div>
+          </div>
+
+          {/* Subscription section */}
+          <div className="settings-section">
+            <p className="settings-section-label">Subscription</p>
+            <div className="settings-list">
+              <div className="settings-row">
+                <div className="settings-row-left">
+                  <CreditCard size={16} className="settings-row-icon" />
+                  <span className="settings-row-label">Current plan</span>
+                </div>
+                <span className="settings-row-value">
+                  {user?.plan || "Free"}
+                </span>
+              </div>
+              <button
+                className="settings-row settings-row-btn"
+                onClick={() => navigate("/pricing")}
+              >
+                <div className="settings-row-left">
+                  <Crown size={16} className="settings-row-icon" />
+                  <span className="settings-row-label">
+                    Upgrade to Premium
+                  </span>
+                </div>
+                <ChevronRight size={15} className="settings-row-chevron" />
+              </button>
+            </div>
           </div>
         </div>
 

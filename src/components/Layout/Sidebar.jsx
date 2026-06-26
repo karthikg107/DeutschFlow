@@ -17,8 +17,7 @@ const menu = [
   { name: "Settings",   path: "/settings",   icon: <Settings size={20} /> },
 ];
 
-// Bottom nav shows first 5 (Settings excluded on mobile)
-const bottomMenu = menu.slice(0, 5);
+const bottomMenu = menu;
 
 function Sidebar() {
   const location = useLocation();
