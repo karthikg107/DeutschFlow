@@ -849,6 +849,117 @@ max-height: 400px;
 }
 
 /* ======================================
+   SCENARIO LEVELS — TABS + LIST
+====================================== */
+
+.scenario-level-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 0 0 20px;
+  flex-wrap: wrap;
+}
+
+.scenario-level-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+  min-width: 90px;
+}
+
+.scenario-level-tab:hover {
+  border-color: rgba(99,102,241,0.3);
+  color: white;
+}
+
+.scenario-level-tab.active {
+  background: rgba(99,102,241,0.12);
+  border-color: rgba(99,102,241,0.4);
+  color: white;
+}
+
+.tab-level {
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+.tab-sub {
+  font-size: 11px;
+  margin-top: 3px;
+  font-weight: var(--fw-medium);
+}
+
+.scenario-section-label {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 0 12px;
+  margin: 0;
+}
+
+.scenario-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 0 24px;
+}
+
+.scenario-list-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.scenario-list-card:hover {
+  background: rgba(255,255,255,0.055);
+  border-color: rgba(99,102,241,0.25);
+}
+
+.scenario-list-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.scenario-list-title {
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  color: white;
+  margin: 0 0 3px;
+}
+
+.scenario-list-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scenario-list-arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+/* ======================================
    MIC AREA (TalkWithMia)
 ====================================== */
 

@@ -1,19 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
 import speakingScenarios from "../data/speakingScenarios";
+import "../styles/speaking.css";
 
 function ScenarioLevels() {
-
-  const [selectedLevel, setSelectedLevel] =
-    useState("a1");
+  const [selectedLevel, setSelectedLevel] = useState("a1");
 
   return (
     <AppLayout>
-
       <div className="speaking-page">
-
         <PageHeader
           backTo="/speaking"
           backLabel="Speaking"
@@ -21,104 +19,49 @@ function ScenarioLevels() {
           subtitle="Choose a level to start a real-life conversation."
         />
 
-        {/* LEVELS */}
-
-        <div className="speaking-grid">
-
-          <div
-            className="speaking-card"
-            onClick={() =>
-              setSelectedLevel("a1")
-            }
-          >
-            <h3>
-              A1 Beginner
-            </h3>
-
-            <p>
-              Basic conversations and daily life situations.
-            </p>
-          </div>
-
-          <div
-            className="speaking-card"
-            onClick={() =>
-              setSelectedLevel("a2")
-            }
-          >
-            <h3>
-              A2 Elementary
-            </h3>
-
-            <p>
-              Travel, shopping and everyday communication.
-            </p>
-          </div>
-
-          <div
-            className="speaking-card"
-            onClick={() =>
-              setSelectedLevel("b1")
-            }
-          >
-            <h3>
-              B1 Intermediate
-            </h3>
-
-            <p>
-              Work, studies and real-world discussions.
-            </p>
-          </div>
-
-        </div>
-
-        {/* SCENARIOS */}
-
-        <h2
-          className="section-title"
-          style={{
-            marginTop: "40px"
-          }}
-        >
-          {selectedLevel.toUpperCase()} Scenarios
-        </h2>
-
-        <div className="speaking-grid">
-
-          {speakingScenarios[selectedLevel]
-            .map((scenario) => (
-
-              <div
-                key={scenario.id}
-                className="speaking-card"
-              >
-
-                <h3>
-                  {scenario.title}
-                </h3>
-
-                <p>
-                  {scenario.description}
-                </p>
-
-                <Link
-                  to={`/speaking/scenarios/${selectedLevel}/${scenario.id}`}
-                >
-                  <button
-                    className="activity-btn"
-                  >
-                    Start Practice
-                  </button>
-                </Link>
-
-              </div>
-
+        <div className="scenario-level-tabs">
+          {[
+            { key: "a1", label: "A1", sub: "Beginner" },
+            { key: "a2", label: "A2", sub: "Elementary" },
+            { key: "b1", label: "B1", sub: "Intermediate" },
+          ].map((lv) => (
+            <button
+              key={lv.key}
+              className={`scenario-level-tab${selectedLevel === lv.key ? " active" : ""}`}
+              onClick={() => setSelectedLevel(lv.key)}
+            >
+              <span className="tab-level">{lv.label}</span>
+              <span className="tab-sub">{lv.sub}</span>
+            </button>
           ))}
-
         </div>
 
-      </div>
+        <p className="scenario-section-label">
+          {selectedLevel.toUpperCase()} —{" "}
+          {selectedLevel === "a1"
+            ? "Beginner"
+            : selectedLevel === "a2"
+            ? "Elementary"
+            : "Intermediate"}{" "}
+          Scenarios
+        </p>
 
+        <div className="scenario-card-grid">
+          {speakingScenarios[selectedLevel].map((scenario) => (
+            <Link
+              key={scenario.id}
+              to={`/speaking/scenarios/${selectedLevel}/${scenario.id}`}
+              className="scenario-list-card"
+            >
+              <div className="scenario-list-info">
+                <p className="scenario-list-title">{scenario.title}</p>
+                <p className="scenario-list-desc">{scenario.description}</p>
+              </div>
+              <ChevronRight size={16} className="scenario-list-arrow" />
+            </Link>
+          ))}
+        </div>
+      </div>
     </AppLayout>
   );
 }
