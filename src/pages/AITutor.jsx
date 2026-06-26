@@ -27,12 +27,6 @@ function AITutor() {
   const chatEndRef            = useRef(null);
 
   useEffect(() => {
-    const el = document.querySelector(".dashboard-content");
-    el?.classList.add("chat-page-active");
-    return () => el?.classList.remove("chat-page-active");
-  }, []);
-
-  useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }, [messages, loading]);
 
@@ -80,7 +74,7 @@ function AITutor() {
   };
 
   return (
-    <AppLayout>
+    <AppLayout fixedHeight>
       <div className="ai-page">
         <div className="ai-page-header">
           <PageHeader

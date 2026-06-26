@@ -1468,7 +1468,7 @@ max-height: 400px;
     flex-direction: column;
     overflow: hidden;
     padding: 0 16px;
-    flex: 1;
+    height: 100%;
     min-height: 0;
   }
 

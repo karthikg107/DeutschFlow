@@ -19,7 +19,7 @@ function getPageTitle(pathname) {
   return "DeutschFlow";
 }
 
-function AppLayout({ children }) {
+function AppLayout({ children, fixedHeight = false }) {
   const location = useLocation();
   const pageTitle = getPageTitle(location.pathname);
 
@@ -27,7 +27,7 @@ function AppLayout({ children }) {
     <div className="dashboard-layout">
       <Sidebar />
 
-      <div className="dashboard-content">
+      <div className={`dashboard-content${fixedHeight ? " content-fixed" : ""}`}>
         {/* Shown only on mobile (≤ 768px) */}
         <header className="mobile-header">
           <Link to="/" className="mobile-header-brand">

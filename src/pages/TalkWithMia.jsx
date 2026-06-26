@@ -23,12 +23,6 @@ function TalkWithMia() {
   const navigate   = useNavigate();
 
   useEffect(() => {
-    const el = document.querySelector(".dashboard-content");
-    el?.classList.add("chat-page-active");
-    return () => el?.classList.remove("chat-page-active");
-  }, []);
-
-  useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isMiaTyping, isMiaSpeaking]);
 
@@ -120,7 +114,7 @@ function TalkWithMia() {
   const miaPct = Math.min(Math.round((userCount / MIA_TARGET) * 100), 100);
 
   return (
-    <AppLayout>
+    <AppLayout fixedHeight>
       <div className="speaking-page talk-page">
         <PageHeader
           backTo="/speaking"

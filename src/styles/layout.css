@@ -114,8 +114,7 @@
   padding-bottom: 0;
 }
 
-/* Locked by JS on AI Tutor + TalkWithMia pages */
-.dashboard-content.chat-page-active {
+.content-fixed {
   overflow: hidden !important;
   height: 100dvh !important;
   min-height: 0 !important;
@@ -123,8 +122,10 @@
 }
 
 @media (max-width: 768px) {
-  .dashboard-content.chat-page-active {
+  .content-fixed {
     height: calc(100dvh - 60px) !important;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 
