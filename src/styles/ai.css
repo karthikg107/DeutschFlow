@@ -5,7 +5,8 @@
 .ai-page {
   display: flex;
   flex-direction: column;
-  height: calc(100dvh - 56px);
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -26,23 +27,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 769px) {
-  .ai-page {
-    height: 100dvh;
-  }
-}
-
 @media (max-width: 768px) {
-  .ai-page {
-    position: fixed;
-    top: 56px;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-    height: auto;
-    overflow: hidden;
-  }
-
   .ai-tutor-card {
     margin: 0 8px;
     border-radius: 12px 12px 0 0;

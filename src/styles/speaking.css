@@ -1464,16 +1464,12 @@ max-height: 400px;
 
 @media (max-width: 768px) {
   .talk-page {
-    position: fixed;
-    top: 56px;
-    bottom: 60px;
-    left: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     padding: 0 16px;
-    margin: 0;
+    flex: 1;
+    min-height: 0;
   }
 
   .talk-page .page-header {

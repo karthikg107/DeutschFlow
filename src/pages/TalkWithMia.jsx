@@ -23,8 +23,9 @@ function TalkWithMia() {
   const navigate   = useNavigate();
 
   useEffect(() => {
-    document.body.classList.add("page-scroll-lock");
-    return () => document.body.classList.remove("page-scroll-lock");
+    const el = document.querySelector(".dashboard-content");
+    el?.classList.add("chat-page-active");
+    return () => el?.classList.remove("chat-page-active");
   }, []);
 
   useEffect(() => {
