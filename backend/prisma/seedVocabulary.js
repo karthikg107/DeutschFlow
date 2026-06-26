@@ -1,15 +1,15 @@
 import fs from "fs";
-
 import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+// Load .env from backend root regardless of where script is run from
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
 import prisma from "./prismaClient.js";
 
-const vocabularyPath =
-  path.join(
-    process.cwd(),
-    "data",
-    "vocabulary"
-  );
+const vocabularyPath = path.join(__dirname, "..", "data", "vocabulary");
 
 async function main() {
 
