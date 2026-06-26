@@ -123,6 +123,7 @@
 
 @media (max-width: 768px) {
   .content-fixed {
+    overflow: hidden !important;
     height: calc(100dvh - 60px) !important;
     min-height: 0 !important;
     padding-bottom: 0 !important;
