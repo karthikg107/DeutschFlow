@@ -158,6 +158,24 @@ function DashboardInner() {
           {xpForNext - xpIntoLevel} XP to Level {level + 1}
         </p>
       </section>
+
+      {/* Quick Actions */}
+      <section className="section-card">
+        <h2 className="dash-section-title">Continue Learning</h2>
+        <div className="dash-quick-grid">
+          {[
+            { label: "Grammar",    to: "/grammar",    desc: "Structured lessons" },
+            { label: "Vocabulary", to: "/vocabulary", desc: "Build your word bank" },
+            { label: "AI Tutor",   to: "/ai",         desc: "Chat in German" },
+            { label: "Speaking",   to: "/speaking",   desc: "Practice out loud" },
+          ].map((item) => (
+            <Link key={item.to} to={item.to} className="dash-quick-card">
+              <p className="dash-quick-label">{item.label}</p>
+              <p className="dash-quick-desc">{item.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
