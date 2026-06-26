@@ -24,6 +24,14 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.page-scroll-lock,
+body.page-scroll-lock #root,
+body.page-scroll-lock .dashboard-content {
+  overflow: hidden !important;
+  height: 100dvh;
+  touch-action: none;
+}
+
 a{
   text-decoration:none;
   color:inherit;
