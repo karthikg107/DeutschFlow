@@ -1,0 +1,103 @@
+.legal-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+  color: white;
+}
+
+.legal-title {
+  font-size: 26px;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.4px;
+  color: white;
+  margin: 0 0 32px;
+  line-height: 1.2;
+}
+
+.legal-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+}
+
+.legal-section-title {
+  font-size: 15px;
+  font-weight: var(--fw-semibold);
+  color: white;
+  margin: 0 0 10px;
+  letter-spacing: -0.2px;
+}
+
+.legal-section-body {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.legal-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-section-list li {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.legal-section-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.contact-card-label {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 6px;
+}
+
+.contact-card-value {
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  color: white;
+  margin: 0;
+}
+
+.contact-card-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+}
+
+@media (max-width: 600px) {
+  .legal-page { padding: 20px 16px 80px; }
+  .legal-title { font-size: 22px; }
+}
