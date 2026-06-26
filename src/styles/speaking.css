@@ -214,7 +214,13 @@
 .speaking-page {
   width: 100%;
   padding: 24px;
+  color: white;
 }
+
+.speaking-page h1,
+.speaking-page h2,
+.speaking-page h3,
+.speaking-page h4 { color: white; }
 
 .speaking-page h1 {
   margin-bottom: 10px;
@@ -224,6 +230,13 @@
   margin-bottom: 30px;
   color: var(--text-muted);
 }
+
+.section-title { color: white; }
+.speaking-card h3 { color: white; }
+.speaking-card p { color: var(--text-muted); }
+.speaking-level-card h2 { color: white; }
+.pronunciation-card h2,
+.german-sentence { color: white !important; }
 
 
 @media (max-width: 768px) {

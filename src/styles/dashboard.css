@@ -758,6 +758,13 @@ color:var(--color-green-light);
 min-height:0;
 }
 
+.section-card h1,
+.section-card h2,
+.section-card h3,
+.section-card h4 {
+  color: white;
+}
+
 /* =========================
    MOBILE
 ========================= */

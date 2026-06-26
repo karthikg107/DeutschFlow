@@ -4,7 +4,13 @@
 
 .grammar-page {
   padding: 20px;
+  color: white;
 }
+
+.grammar-page h1,
+.grammar-page h2,
+.grammar-page h3,
+.grammar-page h4 { color: white; }
 
 /* Continue Learning */
 .grammar-continue {
