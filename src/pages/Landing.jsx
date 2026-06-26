@@ -297,6 +297,20 @@ function Landing() {
               <li><Check size={14} /> Paste sentences and get corrections</li>
               <li><Check size={14} /> Instant English ↔ German translation</li>
             </ul>
+            <div className="showcase-levels">
+              <div className="showcase-level">
+                <span className="level-dot a1" />
+                <span><strong>A1</strong> — Simple German + English conversations with grammar corrections</span>
+              </div>
+              <div className="showcase-level">
+                <span className="level-dot a2" />
+                <span><strong>A2</strong> — German + English mix with error corrections and explanations</span>
+              </div>
+              <div className="showcase-level">
+                <span className="level-dot b1" />
+                <span><strong>B1</strong> — Full German-only natural conversations, no corrections</span>
+              </div>
+            </div>
           </div>
           <div className="showcase-visual">
             <div className="mock-card mock-chat">

@@ -805,6 +805,34 @@
   flex-shrink: 0;
 }
 
+.showcase-levels {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.showcase-level {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.showcase-level strong {
+  color: white;
+}
+.level-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.level-dot.a1 { background: #4ade80; }
+.level-dot.a2 { background: #facc15; }
+.level-dot.b1 { background: #f87171; }
+
 /* ── Mock UI panels ── */
 .mock-card {
   background: rgba(255,255,255,0.028);
