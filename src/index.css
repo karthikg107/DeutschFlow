@@ -29,7 +29,6 @@ body.page-scroll-lock #root,
 body.page-scroll-lock .dashboard-content {
   overflow: hidden !important;
   height: 100dvh;
-  touch-action: none;
 }
 
 a{
