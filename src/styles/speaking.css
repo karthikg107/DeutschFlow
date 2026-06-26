@@ -960,6 +960,191 @@ max-height: 400px;
 }
 
 /* ======================================
+   PRONUNCIATION PRACTICE — UNIFIED CARD
+====================================== */
+
+.pronun-card {
+  margin: 0 0 24px;
+  padding: 32px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pronun-counter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.pronun-progress-track {
+  height: 3px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.pronun-progress-fill {
+  height: 100%;
+  background: var(--color-primary-light, #818cf8);
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
+
+.pronun-sentence {
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  color: white;
+  text-align: center;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.pronun-meaning {
+  font-size: 15px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+.pronun-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pronun-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s;
+  border: none;
+}
+
+.pronun-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pronun-btn.primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.pronun-btn.secondary {
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.25);
+  color: var(--color-indigo-soft);
+}
+
+.pronun-btn.ghost {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text-muted);
+}
+
+.pronun-btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.pronun-mic-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.pronun-mic {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 16px rgba(79,70,229,0.4);
+}
+
+.pronun-mic:hover:not(:disabled) {
+  transform: scale(1.06);
+}
+
+.pronun-mic:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pronun-mic.recording {
+  background: #dc2626;
+  box-shadow: 0 4px 16px rgba(220,38,38,0.4);
+  animation: pulse 1.2s infinite;
+}
+
+.pronun-mic-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pronun-result {
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pronun-result-text {
+  font-size: 15px;
+  color: white;
+  margin: 0 0 8px;
+  font-style: italic;
+}
+
+.pronun-feedback {
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+.pronun-error {
+  font-size: 13px;
+  color: var(--color-red-light, #f87171);
+  text-align: center;
+  margin: 0;
+}
+
+.pronun-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width: 600px) {
+  .pronun-card { margin: 0 0 24px; padding: 20px; }
+  .pronun-sentence { font-size: 22px; }
+}
+
+/* ======================================
    MIC AREA (TalkWithMia)
 ====================================== */
 

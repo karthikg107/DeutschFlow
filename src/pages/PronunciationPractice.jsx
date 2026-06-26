@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { Mic, Volume2 } from "lucide-react";
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
 import pronunciationSentences from "../data/pronunciationSentences";
-import { Mic } from "lucide-react";
 import api from "../utils/api";
 import toast from "react-hot-toast";
 import "../styles/speaking.css";
@@ -17,7 +17,7 @@ function PronunciationPractice() {
   const [isRecording, setIsRecording]           = useState(false);
   const [isSpeaking, setIsSpeaking]             = useState(false);
   const [recognizedText, setRecognizedText]     = useState("");
-  const [feedback, setFeedback]                 = useState("");
+  const [feedback, setFeedback]                 = useState(null);
   const [sessionCompleted, setSessionCompleted] = useState(false);
   const [error, setError]                       = useState("");
 
@@ -28,7 +28,7 @@ function PronunciationPractice() {
     window.speechSynthesis.cancel();
     setIsSpeaking(false);
     setRecognizedText("");
-    setFeedback("");
+    setFeedback(null);
     setError("");
   }
 
@@ -73,7 +73,7 @@ function PronunciationPractice() {
   function startRecording() {
     setError("");
     setRecognizedText("");
-    setFeedback("");
+    setFeedback(null);
 
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -129,9 +129,9 @@ function PronunciationPractice() {
         feedbackClass = "feedback-poor";
       }
 
-      const isLast = currentIndex === sentences.length - 1;
       setFeedback({ text: feedbackText, cls: feedbackClass });
 
+      const isLast = currentIndex === sentences.length - 1;
       if (score >= 0.75 && isLast && !sessionCompleted) {
         setSessionCompleted(true);
         saveProgress();
@@ -149,6 +149,9 @@ function PronunciationPractice() {
     setIsSpeaking(false);
     recognition.start();
   }
+
+  const feedbackText  = feedback?.text || "";
+  const feedbackClass = feedback?.cls || "";
 
   if (!currentSentence) {
     return (
@@ -170,111 +173,99 @@ function PronunciationPractice() {
           subtitle="Listen, then speak the sentence aloud."
         />
 
-        {/* Sentence card */}
-        <div className="speaking-card pronunciation-card">
-          <p className="sentence-counter">
-            Sentence {currentIndex + 1} of {sentences.length}
-          </p>
+        <div className="pronun-card">
 
-          {!showMeaning ? (
-            <>
-              <h2 className="german-sentence">{currentSentence.german}</h2>
-              <div className="pronunciation-actions">
-                <button
-                  className="activity-btn"
-                  onClick={() => speak(currentSentence.german)}
-                  disabled={isRecording}
-                >
-                  🔊 Listen
-                </button>
-                <button
-                  className="activity-btn"
-                  onClick={() => {
-                    window.speechSynthesis.cancel();
-                    setIsSpeaking(false);
-                    setShowMeaning(true);
-                  }}
-                >
-                  Meaning
-                </button>
-              </div>
-            </>
-          ) : (
-            <>
-              <h2 className="german-sentence">{currentSentence.english}</h2>
-              <div className="pronunciation-actions">
-                <button
-                  className="activity-btn"
-                  onClick={() => {
-                    window.speechSynthesis.cancel();
-                    setIsSpeaking(false);
-                    setShowMeaning(false);
-                  }}
-                >
-                  Original
-                </button>
-              </div>
-            </>
+          {/* Counter */}
+          <div className="pronun-counter">
+            <span>Sentence {currentIndex + 1}</span>
+            <span>of {sentences.length}</span>
+          </div>
+
+          {/* Progress bar */}
+          <div className="pronun-progress-track">
+            <div
+              className="pronun-progress-fill"
+              style={{ width: `${((currentIndex + 1) / sentences.length) * 100}%` }}
+            />
+          </div>
+
+          {/* Sentence */}
+          <p className="pronun-sentence">{currentSentence.german}</p>
+
+          {/* Meaning (toggle) */}
+          {showMeaning && (
+            <p className="pronun-meaning">{currentSentence.english}</p>
           )}
-        </div>
 
-        {/* Practice section */}
-        <div className="selected-scenario">
-          <h3>Practice Speaking</h3>
-          <p>Press the microphone and repeat the sentence.</p>
+          {/* Actions row */}
+          <div className="pronun-actions">
+            <button
+              className="pronun-btn secondary"
+              onClick={() => speak(currentSentence.german)}
+              disabled={isRecording || isSpeaking}
+            >
+              <Volume2 size={16} />
+              {isSpeaking ? "Playing…" : "Listen"}
+            </button>
+            <button
+              className="pronun-btn ghost"
+              onClick={() => setShowMeaning(!showMeaning)}
+            >
+              {showMeaning ? "Hide meaning" : "Show meaning"}
+            </button>
+          </div>
 
-          <button
-            className={`mic-btn${isRecording ? " recording" : ""}`}
-            onClick={startRecording}
-            disabled={isRecording || isSpeaking}
-            aria-label="Record pronunciation"
-          >
-            <Mic size={28} />
-          </button>
-
-          {isRecording && <p style={{ marginTop: 12 }}>🎤 Listening…</p>}
-
-          {error && (
-            <p style={{ marginTop: 12, color: "var(--color-red-light)", fontWeight: 600 }}>
-              {error}
+          {/* Mic area */}
+          <div className="pronun-mic-area">
+            <button
+              className={`pronun-mic${isRecording ? " recording" : ""}`}
+              onClick={startRecording}
+              disabled={isRecording || isSpeaking}
+              aria-label="Record your pronunciation"
+            >
+              <Mic size={22} />
+            </button>
+            <p className="pronun-mic-hint">
+              {isRecording ? "Listening…" : "Tap to speak"}
             </p>
-          )}
+          </div>
 
+          {/* Feedback */}
           {recognizedText && (
-            <div className="recognized-section">
-              <h4>Recognized Speech</h4>
-              <div className="recognized-card">
-                <p>{recognizedText}</p>
-              </div>
+            <div className="pronun-result">
+              <p className="pronun-result-text">"{recognizedText}"</p>
+              {feedback && (
+                <p className={`pronun-feedback ${feedbackClass}`}>{feedbackText}</p>
+              )}
             </div>
           )}
 
-          {feedback && (
-            <div className="pronunciation-feedback">
-              <p className={feedback.cls}>{feedback.text}</p>
-            </div>
-          )}
-        </div>
+          {error && <p className="pronun-error">{error}</p>}
 
-        {/* Navigation */}
-        <div className="completion-actions">
-          <button
-            className="completion-btn"
-            disabled={currentIndex === 0}
-            onClick={() => changeSentence(currentIndex - 1)}
-          >
-            Previous
-          </button>
-          <button className="completion-btn" onClick={resetAttempt}>
-            Try Again
-          </button>
-          <button
-            className="completion-btn"
-            disabled={currentIndex === sentences.length - 1}
-            onClick={() => changeSentence(currentIndex + 1)}
-          >
-            Next
-          </button>
+          {/* Navigation */}
+          <div className="pronun-nav">
+            <button
+              className="pronun-btn secondary"
+              onClick={() => changeSentence(Math.max(0, currentIndex - 1))}
+              disabled={currentIndex === 0}
+            >
+              Previous
+            </button>
+            <button
+              className="pronun-btn ghost"
+              onClick={() => resetAttempt()}
+            >
+              Try again
+            </button>
+            <button
+              className="pronun-btn primary"
+              onClick={() => changeSentence(Math.min(sentences.length - 1, currentIndex + 1))}
+              disabled={currentIndex === sentences.length - 1}
+            >
+              Next
+            </button>
+          </div>
+
         </div>
       </div>
     </AppLayout>
