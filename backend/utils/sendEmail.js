@@ -13,9 +13,8 @@ export const sendEmail = async (
   const response =
     await resend.emails.send({
 
-      // TODO: Replace with verified domain before full launch. Add DNS records for your domain
-      // in Resend dashboard, then change to: "DeutschFlow <noreply@yourdomain.com>"
-      from: "DeutschFlow <onboarding@resend.dev>",
+      // TODO: replace with verified domain once DNS is configured (e.g. noreply@deutschflow.com)
+      from: 'noreply@deutschflow.xyz',
 
       to,
 
