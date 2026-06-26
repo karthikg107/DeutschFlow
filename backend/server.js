@@ -20,10 +20,10 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:4173",
-  process.env.FRONTEND_URL,
-  // always allow both www and non-www regardless of what FRONTEND_URL is set to
+  "https://deutsch-flow-gilt.vercel.app",
   "https://deutschflow.xyz",
   "https://www.deutschflow.xyz",
+  process.env.FRONTEND_URL,
 ].filter(Boolean);
 
 app.use(
