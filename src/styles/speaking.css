@@ -1480,3 +1480,20 @@ max-height: 400px;
     max-width: 85%;
   }
 }
+
+/* ======================================
+   SCENARIO — EXPLICIT TEXT COLORS
+====================================== */
+
+.scenario-bubble {
+  color: white;
+}
+
+.scenario-context-prompt {
+  color: var(--text-primary, #e2e8f0);
+}
+
+.scenario-context-example {
+  color: var(--color-indigo-soft, #a5b4fc);
+  font-style: italic;
+}
