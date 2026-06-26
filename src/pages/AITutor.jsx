@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
-import "../styles/dashboard.css";
 import "../styles/ai.css";
 import api from "../utils/api";
 
@@ -12,14 +11,14 @@ const MODES = [
 ];
 
 const MODE_INTROS = {
-  conversation: "🗣️ Conversation mode: Let's chat in German!",
-  correction:   "✍️ Correction mode: Send a German sentence to fix.",
-  translation:  "🔄 Translation mode: Translate English to German.",
+  conversation: "Conversation mode — let's chat in German.",
+  correction:   "Correction mode — send a German sentence to fix.",
+  translation:  "Translation mode — translate English to German.",
 };
 
 function AITutor() {
   const [messages, setMessages] = useState([
-    { role: "ai", text: "🗣️ Hallo! Wie kann ich dir helfen?" },
+    { role: "ai", text: "Hallo! Wie kann ich dir helfen?" },
   ]);
   const [input, setInput]     = useState("");
   const [mode, setMode]       = useState("conversation");
@@ -50,7 +49,7 @@ function AITutor() {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: "ai", text: "❌ Error connecting to AI. Please try again." },
+        { role: "ai", text: "Error connecting to AI. Please try again." },
       ]);
     } finally {
       setLoading(false);
@@ -62,7 +61,7 @@ function AITutor() {
     if (line.startsWith("German:"))
       return (
         <div key={i} className="german">
-          🗣️ {line.replace("German:", "").trim()}
+          {line.replace("German:", "").trim()}
         </div>
       );
     if (line.startsWith("English:"))
@@ -76,18 +75,18 @@ function AITutor() {
 
   return (
     <AppLayout>
-      <div className="elite-dashboard ai-page">
-        <PageHeader
-          title="AI Tutor"
-          subtitle="Chat, translate, and get corrections in German."
-        />
+      <div className="ai-page">
+        <div className="ai-page-header">
+          <PageHeader
+            title="AI Tutor"
+            subtitle="Chat, translate, and get corrections in German."
+          />
+        </div>
 
-        <div className="section-card ai-tutor-card">
-
+        <div className="ai-tutor-card">
           {/* ── Header ── */}
           <div className="ai-header">
             <div className="ai-controls">
-              {/* Mode pill tabs */}
               <div className="ai-tabs" role="tablist">
                 {MODES.map((m) => (
                   <button
@@ -102,7 +101,6 @@ function AITutor() {
                 ))}
               </div>
 
-              {/* Level select */}
               <select
                 className="ai-level-select"
                 value={level}
@@ -126,8 +124,8 @@ function AITutor() {
                 <div className={`chat-bubble ${msg.role === "user" ? "user" : "ai"}`}>
                   {msg.correction && (
                     <div className="correction-box">
-                      <p className="wrong-word">❌ {msg.correction.wrong}</p>
-                      <p className="correct-word">✅ {msg.correction.correct}</p>
+                      <p className="wrong-word">{msg.correction.wrong}</p>
+                      <p className="correct-word">{msg.correction.correct}</p>
                     </div>
                   )}
                   <div className="formatted-text">
@@ -137,7 +135,6 @@ function AITutor() {
               </div>
             ))}
 
-            {/* Animated typing indicator */}
             {loading && (
               <div className="chat-row left">
                 <div className="chat-bubble ai">
@@ -164,7 +161,6 @@ function AITutor() {
               Send
             </button>
           </div>
-
         </div>
       </div>
     </AppLayout>
