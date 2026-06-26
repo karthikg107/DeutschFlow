@@ -69,6 +69,7 @@ export default function Pricing() {
             <p className="plan-price">
               €2.99<span>/month</span>
             </p>
+            <span className="pricing-trial-badge">7-day free trial included</span>
             <div className="plan-features">
               {premiumFeatures.map((feature) => (
                 <p key={feature}>✓ {feature}</p>
