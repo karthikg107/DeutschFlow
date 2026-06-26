@@ -109,6 +109,10 @@
   overflow-y: auto;
 }
 
+.dashboard-content:has(.ai-page) {
+  overflow-y: hidden;
+}
+
 /* =========================
    MOBILE TOP HEADER (≤ 768px)
 ========================= */
