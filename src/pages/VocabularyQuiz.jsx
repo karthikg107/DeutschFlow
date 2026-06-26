@@ -1,5 +1,6 @@
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
+import { Wrench } from "lucide-react";
 import "../styles/vocabulary.css";
 
 function VocabularyQuiz() {
@@ -14,7 +15,9 @@ function VocabularyQuiz() {
         />
 
         <div className="vocab-coming-soon">
-          <p className="vocab-coming-icon">🚧</p>
+          <div className="vocab-coming-icon">
+            <Wrench size={28} strokeWidth={1.5} />
+          </div>
           <h2>Coming Soon</h2>
           <p>
             Vocabulary quizzes are in development. In the meantime,

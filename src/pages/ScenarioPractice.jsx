@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import { Mic } from "lucide-react";
+import { Mic, CheckCircle } from "lucide-react";
 import speakingScenarios from "../data/speakingScenarios";
 import AppLayout from "../components/Layout/AppLayout";
 import PageHeader from "../components/Layout/PageHeader";
@@ -18,13 +18,13 @@ function ScenarioPractice() {
     (s) => s.id === Number(id)
   );
 
-  const [messages, setMessages]               = useState([]);
-  const [userAnswers, setUserAnswers]         = useState([]);
+  const [messages, setMessages]                 = useState([]);
+  const [userAnswers, setUserAnswers]           = useState([]);
   const [conversationStep, setConversationStep] = useState(0);
-  const [isCompleted, setIsCompleted]         = useState(false);
-  const [isRecording, setIsRecording]         = useState(false);
-  const [isMiaSpeaking, setIsMiaSpeaking]     = useState(false);
-  const [error, setError]                     = useState("");
+  const [isCompleted, setIsCompleted]           = useState(false);
+  const [isRecording, setIsRecording]           = useState(false);
+  const [isMiaSpeaking, setIsMiaSpeaking]       = useState(false);
+  const [error, setError]                       = useState("");
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -151,99 +151,135 @@ function ScenarioPractice() {
     );
   }
 
+  const totalSteps = selectedScenario.questions.length;
+  const currentStep = Math.min(conversationStep + 1, totalSteps);
+  const progressPct = Math.round((currentStep / totalSteps) * 100);
+
   return (
     <AppLayout>
-      <div className="speaking-page">
+      <div className="scenario-page">
         <PageHeader
           backTo="/speaking/scenarios"
           backLabel="Scenarios"
-          title={selectedScenario?.title || "Scenario"}
-          subtitle={selectedScenario?.description || ""}
+          title={selectedScenario.title}
+          subtitle={selectedScenario.description}
         />
 
-        <div className="selected-scenario">
+        {/* Context card */}
+        <div className="scenario-context">
+          <p className="scenario-context-prompt">{selectedScenario.prompt}</p>
+          <div className="scenario-context-divider" />
+          <p className="scenario-context-example">{selectedScenario.example}</p>
+        </div>
 
-          <p><strong>Prompt:</strong></p>
-          <p>{selectedScenario.prompt}</p>
-
-          <h3>Example Answer</h3>
-          <p>{selectedScenario.example}</p>
-
-          {/* Chat history */}
-          <div className="chat-box">
-            {messages.map((msg, i) => (
-              <div
-                key={i}
-                className={msg.sender === "mia" ? "mia-message" : "user-message"}
-              >
-                <strong>{msg.sender === "mia" ? "Mia" : "You"}:</strong>
-                <p>{msg.text}</p>
-              </div>
-            ))}
-            <div ref={messagesEndRef} />
+        {/* Progress */}
+        <div className="scenario-progress">
+          <span className="scenario-progress-label">
+            Step {isCompleted ? totalSteps : currentStep} of {totalSteps}
+          </span>
+          <div className="scenario-progress-track">
+            <div
+              className="scenario-progress-fill"
+              style={{ width: `${isCompleted ? 100 : progressPct}%` }}
+            />
           </div>
+        </div>
 
-          {/* Completed state */}
-          {isCompleted && (
-            <div className="completion-box">
-              <h3>✅ Scenario Completed</h3>
-              <p>You completed: {selectedScenario.title}</p>
+        {/* Chat */}
+        <div className="scenario-chat">
+          {messages.map((msg, i) => (
+            <div
+              key={i}
+              className={`scenario-bubble-wrap ${msg.sender === "mia" ? "mia" : "user"}`}
+            >
+              {msg.sender === "mia" && (
+                <div className="scenario-avatar">M</div>
+              )}
+              <div className="scenario-bubble">{msg.text}</div>
+            </div>
+          ))}
 
-              <h4>Suggested Answers</h4>
-              <div className="answers-list">
-                {selectedScenario.questions.map((item, i) => (
-                  <div key={i} className="answer-item">
-                    <strong>Question</strong>
-                    <p>{item.question}</p>
-                    <strong>Your Answer</strong>
-                    <p>{userAnswers[i] || "No answer"}</p>
-                    <strong>Suggested Answer</strong>
-                    <p>{item.sampleAnswer}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="completion-actions">
-                <button className="completion-btn" onClick={handleTryAgain}>
-                  Try Again
-                </button>
-                <button
-                  className="completion-btn"
-                  onClick={() => {
-                    speechSynthesis.cancel();
-                    navigate("/speaking/scenarios");
-                  }}
-                >
-                  Choose Another Scenario
-                </button>
+          {isRecording && (
+            <div className="scenario-bubble-wrap mia">
+              <div className="scenario-avatar">M</div>
+              <div className="scenario-bubble scenario-listening">
+                <span className="scenario-dot" />
+                <span className="scenario-dot" />
+                <span className="scenario-dot" />
               </div>
             </div>
           )}
 
-          {/* Mic */}
-          {!isCompleted && (
+          {error && (
+            <p className="scenario-error">{error}</p>
+          )}
+
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Completed review */}
+        {isCompleted && (
+          <div className="scenario-complete">
+            <div className="scenario-complete-header">
+              <CheckCircle size={22} strokeWidth={2} />
+              <span>Scenario Complete</span>
+            </div>
+
+            <div className="scenario-answers-grid">
+              {selectedScenario.questions.map((item, i) => (
+                <div key={i} className="scenario-answer-row">
+                  <p className="scenario-answer-q">{item.question}</p>
+                  <div className="scenario-answer-cols">
+                    <div className="scenario-answer-col">
+                      <span className="scenario-col-label">Your answer</span>
+                      <p>{userAnswers[i] || "—"}</p>
+                    </div>
+                    <div className="scenario-answer-col">
+                      <span className="scenario-col-label suggested">Suggested</span>
+                      <p>{item.sampleAnswer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="scenario-complete-actions">
+              <button className="completion-btn" onClick={handleTryAgain}>
+                Try Again
+              </button>
+              <button
+                className="completion-btn"
+                onClick={() => {
+                  speechSynthesis.cancel();
+                  navigate("/speaking/scenarios");
+                }}
+              >
+                All Scenarios
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Fixed mic bar */}
+        {!isCompleted && (
+          <div className="scenario-mic-bar">
             <button
-              className={`mic-btn${isRecording ? " recording" : ""}`}
+              className={`mic-btn${isRecording ? " recording" : ""}${(isRecording || isMiaSpeaking) ? " disabled" : ""}`}
               onClick={startRecording}
               disabled={isRecording || isMiaSpeaking}
               aria-label="Speak your answer"
             >
               <Mic size={28} />
             </button>
-          )}
-
-          {isRecording && <p style={{ marginTop: 12 }}>🎤 Listening…</p>}
-
-          {error && (
-            <p style={{ marginTop: 12, color: "var(--color-red-light)", fontWeight: 600 }}>
-              {error}
+            <p className="mic-hint">
+              {isRecording
+                ? "Listening…"
+                : isMiaSpeaking
+                ? "Mia is speaking…"
+                : "Tap to answer"}
             </p>
-          )}
-
-          {isMiaSpeaking && (
-            <p style={{ marginTop: 12 }}>🔊 Mia is speaking…</p>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </AppLayout>
   );
