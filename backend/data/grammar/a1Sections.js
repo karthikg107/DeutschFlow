@@ -229,40 +229,46 @@ German nouns can be masculine, feminine, or neutral.
       },
 
       {
-        title: "Definite Articles",
+        title: "Definite Articles (the)",
         type: "table",
 
         content: JSON.stringify({
-          headers: [
-            "Gender",
-            "Article",
-            "Example",
-          ],
-
+          headers: ["Gender", "Article", "Example"],
           rows: [
-            [
-              "Masculine",
-              "der",
-              "der Mann",
-            ],
+            ["Masculine", "der", "der Mann (the man)"],
+            ["Feminine", "die", "die Frau (the woman)"],
+            ["Neuter", "das", "das Kind (the child)"],
+            ["Plural", "die", "die Kinder (the children)"],
+          ],
+        }),
+      },
 
-            [
-              "Feminine",
-              "die",
-              "die Frau",
-            ],
+      {
+        title: "Indefinite Articles (a / an)",
+        type: "table",
 
-            [
-              "Neutral",
-              "das",
-              "das Kind",
-            ],
+        content: JSON.stringify({
+          headers: ["Gender", "Article", "Example"],
+          rows: [
+            ["Masculine", "ein", "ein Mann (a man)"],
+            ["Feminine", "eine", "eine Frau (a woman)"],
+            ["Neuter", "ein", "ein Kind (a child)"],
+            ["Plural", "— (no article)", "Kinder (children)"],
+          ],
+        }),
+      },
 
-            [
-              "Plural",
-              "die",
-              "die Kinder",
-            ],
+      {
+        title: "Negative Articles (no / not a)",
+        type: "table",
+
+        content: JSON.stringify({
+          headers: ["Gender", "Article", "Example"],
+          rows: [
+            ["Masculine", "kein", "kein Mann (no man)"],
+            ["Feminine", "keine", "keine Frau (no woman)"],
+            ["Neuter", "kein", "kein Kind (no child)"],
+            ["Plural", "keine", "keine Kinder (no children)"],
           ],
         }),
       },
@@ -272,41 +278,33 @@ German nouns can be masculine, feminine, or neutral.
         type: "examples",
 
         content: JSON.stringify([
-          "Der Mann ist groß.",
-          "Die Frau lernt Deutsch.",
-          "Das Kind spielt.",
-          "Die Kinder lachen.",
+          "Der Mann ist groß. (The man is tall.)",
+          "Das ist eine Frau. (That is a woman.)",
+          "Das ist kein Hund. (That is not a dog.)",
+          "Ich habe keine Zeit. (I have no time.)",
         ]),
       },
 
       {
-  title: "Quick Practice",
-  type: "exercise",
+        title: "Quick Practice",
+        type: "exercise",
 
-  content: JSON.stringify({
-    question:
-      "What is the correct article for 'Mann'?",
-
-    options: [
-      "die",
-      "der",
-      "das",
-    ],
-
-    answer: "der",
-
-    explanation:
-      "'Mann' is masculine, so it uses the article 'der'.",
-  }),
-},
+        content: JSON.stringify({
+          question: "Which article means 'a woman' in German?",
+          options: ["eine Frau", "die Frau", "keine Frau"],
+          answer: "eine Frau",
+          explanation: "'eine' is the indefinite article for feminine nouns. 'die' means 'the woman' and 'keine' means 'no woman'.",
+        }),
+      },
 
       {
         title: "Quick Tips",
         type: "tips",
 
         content: JSON.stringify([
-          "Always learn nouns together with their articles.",
-          "German noun genders are important for grammar later.",
+          "Always learn nouns together with their articles — e.g. 'der Tisch', not just 'Tisch'.",
+          "kein/keine follows the same pattern as ein/eine.",
+          "Plural nouns never use ein — they use die (definite) or keine (negative).",
         ]),
       },
 
@@ -327,30 +325,58 @@ German nouns can be masculine, feminine, or neutral.
         title: "Present Tense Verbs",
         type: "explanation",
 
-        content: `
-German verbs change depending on the subject pronoun.
+        content: `German verbs change their ending depending on the subject — this is called conjugation.
 
-This is called conjugation.
-      `,
+Most regular verbs follow a predictable pattern. Two verbs you must know immediately are haben (to have) and sein (to be) — they are irregular and used in almost every German sentence.`,
       },
 
       {
-        title: "Conjugation of wohnen",
+        title: "Regular verb endings — lernen (to learn)",
         type: "table",
 
         content: JSON.stringify({
-          headers: [
-            "Pronoun",
-            "Verb",
-          ],
-
+          headers: ["Pronoun", "lernen", "Ending"],
           rows: [
-            ["ich", "wohne"],
-            ["du", "wohnst"],
-            ["er / sie / es", "wohnt"],
-            ["wir", "wohnen"],
-            ["ihr", "wohnt"],
-            ["sie / Sie", "wohnen"],
+            ["ich", "lerne", "-e"],
+            ["du", "lernst", "-st"],
+            ["er / sie / es", "lernt", "-t"],
+            ["wir", "lernen", "-en"],
+            ["ihr", "lernt", "-t"],
+            ["sie / Sie", "lernen", "-en"],
+          ],
+        }),
+      },
+
+      {
+        title: "sein — to be (irregular, must memorise)",
+        type: "table",
+
+        content: JSON.stringify({
+          headers: ["Pronoun", "sein"],
+          rows: [
+            ["ich", "bin"],
+            ["du", "bist"],
+            ["er / sie / es", "ist"],
+            ["wir", "sind"],
+            ["ihr", "seid"],
+            ["sie / Sie", "sind"],
+          ],
+        }),
+      },
+
+      {
+        title: "haben — to have (irregular, must memorise)",
+        type: "table",
+
+        content: JSON.stringify({
+          headers: ["Pronoun", "haben"],
+          rows: [
+            ["ich", "habe"],
+            ["du", "hast"],
+            ["er / sie / es", "hat"],
+            ["wir", "haben"],
+            ["ihr", "habt"],
+            ["sie / Sie", "haben"],
           ],
         }),
       },
@@ -360,40 +386,34 @@ This is called conjugation.
         type: "examples",
 
         content: JSON.stringify([
-          "Ich wohne in Berlin.",
-          "Du wohnst in Hamburg.",
-          "Wir wohnen in Deutschland.",
+          "Ich lerne Deutsch. (I learn German.)",
+          "Du wohnst in Hamburg. (You live in Hamburg.)",
+          "Ich bin Student. (I am a student.)",
+          "Er hat ein Auto. (He has a car.)",
+          "Wir sind müde. (We are tired.)",
         ]),
       },
 
       {
-  title: "Quick Practice",
-  type: "exercise",
+        title: "Quick Practice",
+        type: "exercise",
 
-  content: JSON.stringify({
-    question:
-      "What is the correct form of 'wohnen' for 'du'?",
-
-    options: [
-      "wohnst",
-      "wohne",
-      "wohnt",
-    ],
-
-    answer: "wohnst",
-
-    explanation:
-  "'du' usually takes the ending '-st' with regular verbs.",
-  }),
-},
+        content: JSON.stringify({
+          question: "What is the correct form of 'sein' for 'wir'?",
+          options: ["sind", "seid", "ist"],
+          answer: "sind",
+          explanation: "'wir sind' means 'we are'. sein is irregular — bin, bist, ist, sind, seid, sind.",
+        }),
+      },
 
       {
         title: "Quick Tips",
         type: "tips",
 
         content: JSON.stringify([
-          "Most regular German verbs follow similar endings.",
-          "The verb usually comes in the second position.",
+          "Regular verbs: remove -en from the infinitive, then add -e / -st / -t / -en / -t / -en.",
+          "sein and haben are irregular — memorise them, they appear in every conversation.",
+          "The verb always comes in second position in a normal German sentence.",
         ]),
       },
 
@@ -558,33 +578,25 @@ They are used to ask for specific information.
       },
 
       {
-  title: "Quick Practice",
-  type: "exercise",
+        title: "Quick Practice",
+        type: "exercise",
 
-  content: JSON.stringify({
-    question:
-      "What comes first in a German yes/no question?",
-
-    options: [
-      "Subject",
-      "Verb",
-      "Object",
-    ],
-
-    answer: "Verb",
-
-    explanation:
-      "In German yes/no questions, the verb usually comes first.",
-  }),
-},
+        content: JSON.stringify({
+          question: "What does 'Wo' mean in German?",
+          options: ["Who", "What", "Where"],
+          answer: "Where",
+          explanation: "'Wo' means 'where'. Remember: Wer = Who, Was = What, Wo = Where, Wann = When, Warum = Why, Wie = How.",
+        }),
+      },
 
       {
         title: "Quick Tips",
         type: "tips",
 
         content: JSON.stringify([
-          "The verb usually comes directly after the question word.",
-          "W-questions help start conversations in German.",
+          "The verb comes directly after the W-question word: Wo wohnst du?",
+          "Wie heißt du? (What is your name?) — literally 'How are you called?'",
+          "W-questions cannot be answered with yes or no.",
         ]),
       },
 
@@ -657,11 +669,29 @@ In German, the verb usually comes first.
       },
 
       {
+        title: "Quick Practice",
+        type: "exercise",
+
+        content: JSON.stringify({
+          question: "Which sentence is a correct German yes/no question?",
+          options: [
+            "Du lernst Deutsch?",
+            "Lernst du Deutsch?",
+            "Deutsch du lernst?",
+          ],
+          answer: "Lernst du Deutsch?",
+          explanation: "In yes/no questions the verb comes first, then the subject: Lernst (verb) du (subject) Deutsch?",
+        }),
+      },
+
+      {
         title: "Quick Tips",
         type: "tips",
 
         content: JSON.stringify([
           "For yes/no questions, place the verb before the subject.",
+          "Answer with: Ja (yes), Nein (no), or Doch (yes — contradicting a negative).",
+          "Doch is unique to German: 'Lernst du nicht?' — 'Doch!' means 'Actually yes I do!'",
         ]),
       },
 
@@ -694,11 +724,7 @@ Learning numbers is an important A1 skill.
         type: "table",
 
         content: JSON.stringify({
-          headers: [
-            "Number",
-            "German",
-          ],
-
+          headers: ["Number", "German"],
           rows: [
             ["0", "null"],
             ["1", "eins"],
@@ -716,43 +742,72 @@ Learning numbers is an important A1 skill.
       },
 
       {
+        title: "Numbers 11–20 (irregular — must memorise)",
+        type: "table",
+
+        content: JSON.stringify({
+          headers: ["Number", "German"],
+          rows: [
+            ["11", "elf"],
+            ["12", "zwölf"],
+            ["13", "dreizehn"],
+            ["14", "vierzehn"],
+            ["15", "fünfzehn"],
+            ["16", "sechzehn"],
+            ["17", "siebzehn"],
+            ["18", "achtzehn"],
+            ["19", "neunzehn"],
+            ["20", "zwanzig"],
+          ],
+        }),
+      },
+
+      {
+        title: "Numbers 21–100 — the pattern",
+        type: "explanation",
+
+        content: `From 21 onwards German builds numbers as: ones + und + tens.
+
+21 = einundzwanzig (one-and-twenty)
+32 = zweiunddreißig (two-and-thirty)
+45 = fünfundvierzig (five-and-forty)
+
+The tens are: 30 dreißig · 40 vierzig · 50 fünfzig · 60 sechzig · 70 siebzig · 80 achtzig · 90 neunzig · 100 hundert`,
+      },
+
+      {
         title: "Examples",
         type: "examples",
 
         content: JSON.stringify([
-          "Ich bin 20 Jahre alt.",
-          "Der Kaffee kostet 3 Euro.",
-          "Wir haben 2 Bücher.",
+          "Ich bin 21 Jahre alt. (einundzwanzig)",
+          "Der Kaffee kostet 3 Euro. (drei)",
+          "Der Kurs hat 15 Teilnehmer. (fünfzehn)",
+          "Es kostet 99 Euro. (neunundneunzig)",
         ]),
       },
 
       {
-  title: "Quick Practice",
-  type: "exercise",
+        title: "Quick Practice",
+        type: "exercise",
 
-  content: JSON.stringify({
-    question:
-      "What is the German word for 5?",
-
-    options: [
-      "vier",
-      "fünf",
-      "sechs",
-    ],
-
-    answer: "fünf",
-
-    explanation:
-      "'fünf' is the German number for 5.",
-  }),
-},
+        content: JSON.stringify({
+          question: "What is the German word for 12?",
+          options: ["zehn", "zwölf", "zwanzig"],
+          answer: "zwölf",
+          explanation: "11 and 12 are irregular: 'elf' and 'zwölf'. From 13 onwards you add -zehn (like -teen in English).",
+        }),
+      },
 
       {
         title: "Quick Tips",
         type: "tips",
 
         content: JSON.stringify([
-          "German numbers are important for shopping, travel, and conversations.",
+          "11 (elf) and 12 (zwölf) are irregular — memorise them separately.",
+          "13–19 follow a pattern: add -zehn (dreizehn, vierzehn...).",
+          "21–99: say the ones digit first, then 'und', then the tens (einundzwanzig).",
+          "This is the opposite of English — German says 'one-and-twenty', not 'twenty-one'.",
         ]),
       },
 
@@ -785,16 +840,12 @@ The direct object receives the action.
         type: "table",
 
         content: JSON.stringify({
-          headers: [
-            "Nominativ",
-            "Akkusativ",
-          ],
-
+          headers: ["Gender", "Nominativ", "Akkusativ", "Change?"],
           rows: [
-            ["der", "den"],
-            ["die", "die"],
-            ["das", "das"],
-            ["die", "die"],
+            ["Masculine", "der", "den", "✓ changes"],
+            ["Feminine", "die", "die", "no change"],
+            ["Neuter", "das", "das", "no change"],
+            ["Plural", "die", "die", "no change"],
           ],
         }),
       },
@@ -899,12 +950,42 @@ my book, your bag, our house.
       },
 
       {
+        title: "Possessive pronouns in nominative (subject position)",
+        type: "table",
+
+        content: JSON.stringify({
+          headers: ["Pronoun", "Masculine", "Feminine", "Neuter", "Plural"],
+          rows: [
+            ["ich → my", "mein", "meine", "mein", "meine"],
+            ["du → your", "dein", "deine", "dein", "deine"],
+            ["er → his", "sein", "seine", "sein", "seine"],
+            ["sie → her", "ihr", "ihre", "ihr", "ihre"],
+            ["wir → our", "unser", "unsere", "unser", "unsere"],
+            ["ihr → your (pl.)", "euer", "eure", "euer", "eure"],
+          ],
+        }),
+      },
+
+      {
+        title: "Quick Practice",
+        type: "exercise",
+
+        content: JSON.stringify({
+          question: "How do you say 'my car' in German? (Auto = neuter)",
+          options: ["meine Auto", "mein Auto", "meiner Auto"],
+          answer: "mein Auto",
+          explanation: "'Auto' is neuter (das Auto), so the possessive is 'mein' — no extra ending for neuter in nominative.",
+        }),
+      },
+
+      {
         title: "Quick Tips",
         type: "tips",
 
         content: JSON.stringify([
-          "Possessive pronouns change depending on gender and case.",
-          "At A1 level, focus on common everyday usage first.",
+          "At A1, focus on mein/dein/sein/ihr — you'll use these the most.",
+          "The ending matches the noun's gender: mein (m/n), meine (f/pl).",
+          "Tip: possessives follow the same pattern as ein/eine/ein.",
         ]),
       },
 
