@@ -13,76 +13,103 @@ const a1Sections = [
         title: "Introduction",
         type: "explanation",
 
-        content: `
-German uses the Latin alphabet with 26 letters plus ä, ö, ü, and ß.
+        content: `German uses the Latin alphabet with 26 letters plus 4 extra: ä, ö, ü, and ß.
 
-Some letters are pronounced differently from English.
-        `,
+Many letters sound very different from English — especially J, V, W, Z, and Q. Learning the correct sounds from the start will help your pronunciation throughout A1 and beyond.`,
       },
 
       {
-        title: "Special Letters",
+        title: "Full Alphabet Pronunciation",
         type: "table",
 
         content: JSON.stringify({
-          headers: [
-            "Letter",
-            "Pronunciation",
-            "Example",
-          ],
-
+          headers: ["Letter", "Sounds like", "Example word"],
           rows: [
-            ["ä", "eh", "Mädchen"],
-            ["ö", "uh", "schön"],
-            ["ü", "ue", "grün"],
-            ["ß", "ss", "Straße"],
+            ["A", "ah (like 'father')", "Auto"],
+            ["B", "beh", "Buch"],
+            ["C", "tseh", "Café"],
+            ["D", "deh", "Deutsch"],
+            ["E", "eh (like 'bed')", "Essen"],
+            ["F", "eff", "Fisch"],
+            ["G", "geh", "gut"],
+            ["H", "hah", "Haus"],
+            ["I", "ee (like 'see')", "Ich"],
+            ["J", "yot — sounds like English Y", "ja"],
+            ["K", "kah", "Kaffee"],
+            ["L", "ell", "lernen"],
+            ["M", "emm", "Mann"],
+            ["N", "enn", "Nein"],
+            ["O", "oh (like 'go')", "Ort"],
+            ["P", "peh", "Pizza"],
+            ["Q", "koo — always used with U", "Quelle"],
+            ["R", "err — rolled at back of throat", "rot"],
+            ["S", "ess — like 'z' before a vowel", "Sonne"],
+            ["T", "teh", "Tisch"],
+            ["U", "oo (like 'boot')", "und"],
+            ["V", "fow — sounds like English F", "Vater"],
+            ["W", "veh — sounds like English V", "Wasser"],
+            ["X", "iks", "Xylofon"],
+            ["Y", "üpsilon", "Yoga"],
+            ["Z", "tset — sounds like 'ts'", "Zeit"],
           ],
         }),
       },
 
       {
-  title: "Quick Practice",
-  type: "exercise",
+        title: "Special German Letters (Umlauts + ß)",
+        type: "table",
 
-  content: JSON.stringify({
-    question:
-      "Which letter is pronounced like 'ss' in German?",
-
-    options: [
-      "ä",
-      "ß",
-      "ü",
-    ],
-
-    answer: "ß",
-
-    explanation:
-      "'ß' is called Eszett and sounds like 'ss'.",
-  }),
-},
+        content: JSON.stringify({
+          headers: ["Letter", "Sounds like", "Example"],
+          rows: [
+            ["ä", "eh — like 'bed'", "Mädchen"],
+            ["ö", "like 'bird' (British English)", "schön"],
+            ["ü", "say 'ee' with rounded lips", "grün"],
+            ["ß", "ss — called Eszett", "Straße"],
+          ],
+        }),
+      },
 
       {
-        title: "Pronunciation Tips",
+        title: "The Tricky Letters — Easy to Mix Up",
         type: "tips",
 
         content: JSON.stringify([
-          "ä sounds similar to the 'e' in 'bed'.",
-          "ö is pronounced with rounded lips.",
-          "ü does not exist in English pronunciation.",
-          "ß is called Eszett and sounds like 'ss'.",
+          "J sounds like English Y — 'ja' = 'ya', not 'ja'.",
+          "W sounds like English V — 'Wasser' = 'Vasser'.",
+          "V sounds like English F — 'Vater' = 'Fater'.",
+          "Z sounds like 'ts' — 'Zeit' = 'Tsait'.",
+          "S before a vowel sounds like 'z' — 'Sonne' = 'Zonne'.",
+          "ß always sounds like 'ss' — never like English 'b'.",
         ]),
       },
 
       {
-        title: "Examples",
+        title: "Quick Practice",
+        type: "exercise",
+
+        content: JSON.stringify({
+          question: "How is the German letter W pronounced?",
+          options: [
+            "Like English W (as in 'water')",
+            "Like English V (as in 'very')",
+            "Like English F (as in 'fast')",
+          ],
+          answer: "Like English V (as in 'very')",
+          explanation: "German W is pronounced like English V. So 'Wasser' sounds like 'Vasser'. This is one of the most common mistakes for English speakers.",
+        }),
+      },
+
+      {
+        title: "Examples — Full Sentences",
         type: "examples",
 
         content: JSON.stringify([
-          "A → Auto",
-          "B → Buch",
-          "C → Café",
-          "D → Deutsch",
-          "E → Essen",
+          "Ja — pronounced 'ya' (J = Y sound)",
+          "Wasser — pronounced 'Vasser' (W = V sound)",
+          "Vater — pronounced 'Fater' (V = F sound)",
+          "Zeit — pronounced 'Tsait' (Z = TS sound)",
+          "Straße — pronounced 'Shtrasse' (ß = ss)",
         ]),
       },
 
